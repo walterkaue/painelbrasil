@@ -6,9 +6,15 @@
 <title>Página não encontrada</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="/assets/kw.svg" type="image/svg+xml">
+<script>
+/* Mesma restauração de tema da home: sem isto, quem escolheu um tema
+   explicitamente cai no tema do sistema ao bater no 404. */
+(function(){try{var s=localStorage.getItem('kw-tema');
+if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
 <link rel="stylesheet" href="/assets/kw.css">
 </head>
 <body>

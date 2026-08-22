@@ -1,149 +1,250 @@
 /* ═══════════════════════════════════════════════════════════════
    KAUÊ WALTER — site profissional
-   Sistema visual próprio, deliberadamente distinto do outro
-   projeto hospedado neste domínio: nada de tipografia, paleta ou
-   componente compartilhado. Nenhum arquivo em comum.
+   Direção visual: "Casario & Latão"
 
-   Registro: documentação técnica / blueprint de engenharia.
-   Grotesca geométrica + mono, grade visível, azul-petróleo.
+   Claro  · Casario        chão de cal, cinco acentos do casario e da serra
+   Escuro · Couro & Latão  preto-vinho, superfícies em ameixa, um metal quente
+
+   Tipografia: Fraunces (título) · Instrument Sans (corpo) · IBM Plex Mono (dados)
+   Sem framework, sem build. HTML/CSS/JS puros.
+
+   ⚠️ Os TRÊS blocos de tema abaixo (:root, @media prefers-color-scheme,
+   :root[data-theme="dark"]) mudam JUNTOS. Alterar só um produz texto de um
+   tema sobre o fundo do outro.
    ═══════════════════════════════════════════════════════════════ */
 
+/* ── Casario · tema claro ───────────────────────────────────── */
 :root{
   color-scheme: light;
-  --bg:#FBFCFD; --card:#FFFFFF; --ink:#16232F; --ink-2:#47586A; --ink-3:#8496A6;
-  --line:#E3E9EE; --grid:#EFF3F6; --accent:#0E7C86; --accent-soft:#E6F4F5;
-  --shadow:0 1px 2px rgba(22,35,47,.04), 0 10px 30px -18px rgba(22,35,47,.25);
+
+  --bg:#F0F2EF;            /* cal */
+  --surface:#FFFFFF;
+  --surface-2:#E7EBE6;
+  --ink:#1C2321;           /* preto-mata */
+  --ink-2:#4E5A54;
+  --ink-3:#5F6B65;         /* derivado: o mínimo que ainda passa 4,5:1 sobre a cal */
+  --line:#D8DED8;
+
+  /* sistema de acento */
+  --telha:#B94A2E;         /* primário no claro · CTA, links, eyebrow */
+  --mata:#1F6B4A;
+  --serra:#4A6FA5;
+  --manga:#E9A423;         /* forma apenas — ver --manga-ink */
+  --rosa:#D9647A;          /* forma apenas — 3,08:1 como texto, não usar em texto */
+  --manga-ink:#8C5E0E;     /* derivado: manga legível como texto sobre a cal */
+  --on-accent:#FFFFFF;
+
+  --accent:var(--telha);
+  --accent-soft:#F9EFEB;
+
+  /* faixa da serra */
+  --serra-1:#4A6FA5; --serra-2:#1F6B4A; --serra-3:#D9647A;
+  --serra-4:#B94A2E; --serra-5:#E9A423;
+  --serra-sol:#E9A423; --serra-chao:#1C2321;
+
+  --shadow:0 1px 2px rgba(28,35,33,.05), 0 10px 30px -18px rgba(28,35,33,.28);
   --r:12px;
-  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
   --w:1080px;
 }
+
+/* ── Couro & Latão · escuro do sistema ──────────────────────── */
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme: dark;
-    --bg:#0E1620; --card:#16202C; --ink:#E6EDF3; --ink-2:#A9BACA; --ink-3:#6E8093;
-    --line:#243342; --grid:#1A2632; --accent:#3FB0BA; --accent-soft:#123134;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+
+    --bg:#16100F;          /* preto-vinho */
+    --surface:#1F1719;
+    --surface-2:#2A1E23;   /* ameixa */
+    --ink:#F0E7DC;         /* marfim, nunca branco puro */
+    --ink-2:#B0A398;
+    --ink-3:#8F8279;
+    --line:#3A2A2F;
+
+    --telha:#D9946A;       /* couro claro */
+    --mata:#7FA98C;
+    --serra:#B98CC4;       /* ameixa clara */
+    --manga:#D9B15E;       /* latão · primário no escuro */
+    --rosa:#E08B9C;
+    --manga-ink:#D9B15E;
+    --on-accent:#16100F;
+
+    --accent:var(--manga);
+    --accent-soft:#2A1E23;
+
+    --serra-1:#452A4E; --serra-2:#2E4A3A; --serra-3:#6E2436;
+    --serra-4:#A9663F; --serra-5:#D9B15E;
+    --serra-sol:#D9B15E; --serra-chao:#16100F;
+
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px -18px rgba(0,0,0,.85);
   }
 }
+
+/* ── Couro & Latão · escolha explícita no botão "Tema" ──────── */
 :root[data-theme="dark"]{
   color-scheme: dark;
-  --bg:#0E1620; --card:#16202C; --ink:#E6EDF3; --ink-2:#A9BACA; --ink-3:#6E8093;
-  --line:#243342; --grid:#1A2632; --accent:#3FB0BA; --accent-soft:#123134;
-  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+
+  --bg:#16100F;
+  --surface:#1F1719;
+  --surface-2:#2A1E23;
+  --ink:#F0E7DC;
+  --ink-2:#B0A398;
+  --ink-3:#8F8279;
+  --line:#3A2A2F;
+
+  --telha:#D9946A;
+  --mata:#7FA98C;
+  --serra:#B98CC4;
+  --manga:#D9B15E;
+  --rosa:#E08B9C;
+  --manga-ink:#D9B15E;
+  --on-accent:#16100F;
+
+  --accent:var(--manga);
+  --accent-soft:#2A1E23;
+
+  --serra-1:#452A4E; --serra-2:#2E4A3A; --serra-3:#6E2436;
+  --serra-4:#A9663F; --serra-5:#D9B15E;
+  --serra-sol:#D9B15E; --serra-chao:#16100F;
+
+  --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px -18px rgba(0,0,0,.85);
 }
 
+/* ═══ base ═══════════════════════════════════════════════════ */
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
   font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{margin:0;line-height:1.15;letter-spacing:-.03em;font-weight:800;text-wrap:balance}
+
+h1,h2{margin:0;font-family:var(--display);font-weight:600;line-height:1.08;
+  letter-spacing:-.02em;text-wrap:balance;
+  font-variation-settings:"SOFT" 30,"WONK" 1,"opsz" 120}
+h3,h4{margin:0;font-weight:700;line-height:1.2;letter-spacing:-.01em;text-wrap:balance}
+
 a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .w{max-width:var(--w);margin:0 auto;padding:0 22px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 .skip{position:absolute;left:-9999px;background:var(--ink);color:var(--bg);padding:10px 16px;z-index:99}
 .skip:focus{left:0}
 
-/* grade de blueprint, discreta, só no herói */
-.blueprint{background-image:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size:38px 38px;background-position:center top}
-
-/* topo */
-header.top{border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:20}
+/* ═══ topo ═══════════════════════════════════════════════════ */
+header.top{border-bottom:1px solid var(--line);background:var(--surface);position:sticky;top:0;z-index:20}
 .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;
   padding:13px 22px;max-width:var(--w);margin:0 auto;flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.035em;
+.logo{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.02em;
   font-size:17.5px;color:var(--ink);text-decoration:none}
-.logo .mark{width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--bg);
-  display:grid;place-items:center;font-family:var(--mono);font-size:13px;font-weight:600;
-  letter-spacing:-.06em;flex:0 0 30px}
+.logo .mark{width:30px;height:30px;border-radius:8px;background:var(--surface-2);
+  border:1px solid var(--line);color:var(--ink-2);
+  display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:500;
+  letter-spacing:-.02em;flex:0 0 30px}
 .top nav{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
 .top nav a{font-size:14px;color:var(--ink-2);text-decoration:none;padding:7px 11px;border-radius:8px}
-.top nav a:hover{background:var(--grid);color:var(--ink)}
+.top nav a:hover{background:var(--surface-2);color:var(--ink)}
 .tgl{background:none;border:1px solid var(--line);color:var(--ink-2);border-radius:999px;
   padding:6px 13px;font:inherit;font-size:13px;cursor:pointer;margin-left:6px}
-.tgl:hover{border-color:var(--ink-3)}
+.tgl:hover{border-color:var(--ink-3);color:var(--ink)}
 
-/* herói */
+/* ═══ herói ══════════════════════════════════════════════════ */
 .hero{padding:74px 0 56px}
 .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--accent);font-weight:600;margin-bottom:16px}
+  color:var(--accent);font-weight:500;margin-bottom:16px}
 .hero h1{font-size:clamp(34px,6vw,60px);max-width:15ch}
 .hero .role{font-size:clamp(18px,2.4vw,22px);color:var(--ink-2);margin:18px 0 0;max-width:52ch;font-weight:500}
 .hero .pitch{font-size:17px;color:var(--ink-2);margin:22px 0 0;max-width:60ch}
 .cta{display:flex;gap:11px;flex-wrap:wrap;margin-top:30px}
-.btn{display:inline-flex;align-items:center;gap:9px;font:inherit;font-size:15px;font-weight:700;
+.btn{display:inline-flex;align-items:center;gap:9px;font:inherit;font-size:15px;font-weight:600;
   padding:12px 20px;border-radius:10px;text-decoration:none;border:1px solid transparent;transition:.15s}
-.btn.solid{background:var(--ink);color:var(--bg)}
-.btn.solid:hover{background:var(--accent)}
-.btn.ghost{border-color:var(--line);color:var(--ink);background:var(--card)}
+.btn.solid{background:var(--accent);color:var(--on-accent)}
+.btn.solid:hover{background:var(--ink);color:var(--bg)}
+.btn.ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
 .btn.ghost:hover{border-color:var(--ink-3)}
 .btn svg{width:17px;height:17px;fill:currentColor;flex:0 0 17px}
 
-/* números */
+/* ═══ números — ciclam pelo sistema, na ordem ════════════════ */
 .stats{display:grid;gap:1px;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));
   background:var(--line);border:1px solid var(--line);border-radius:var(--r);
   overflow:hidden;margin-top:46px}
-.stat{background:var(--card);padding:20px}
-.stat b{display:block;font-family:var(--mono);font-size:29px;font-weight:600;letter-spacing:-.05em;
-  line-height:1;color:var(--ink)}
+.stat{background:var(--surface);padding:20px}
+.stat b{display:block;font-family:var(--mono);font-size:29px;font-weight:500;letter-spacing:-.03em;
+  line-height:1.1;font-variant-numeric:tabular-nums;color:var(--ink)}
 .stat span{display:block;font-size:13px;color:var(--ink-3);margin-top:8px;line-height:1.45}
+.stat:nth-child(1) b{color:var(--telha)}
+.stat:nth-child(2) b{color:var(--mata)}
+.stat:nth-child(3) b{color:var(--serra)}
+.stat:nth-child(4) b{color:var(--manga-ink)}
 
-/* seções */
+/* ═══ faixa da serra — fecha o herói ═════════════════════════ */
+/* height:auto — a faixa escala junto com a largura, sem cortar o sol
+   nem achatar os morros. Nunca fixar a altura: com viewBox 1600×200
+   qualquer altura fixa obriga a cortar (slice) ou distorcer (none). */
+.serra{display:block;width:100%;height:auto;margin-top:10px}
+
+/* ═══ seções ═════════════════════════════════════════════════ */
 section{padding:56px 0;scroll-margin-top:76px}
 .sec-label{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--ink-3);font-weight:600;margin-bottom:13px}
+  color:var(--accent);font-weight:500;margin-bottom:13px}
 section h2{font-size:clamp(25px,3.6vw,36px);max-width:22ch}
 section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 
-/* pilares */
+/* ═══ pilares — a cor carrega a frente de atuação ════════════
+   01 Técnica = telha · 02 Pessoas = mata · 03 Negócio = serra
+   O rótulo textual ("01 / TÉCNICA") acompanha sempre: a cor
+   reforça, nunca é o único portador da informação.            */
 .pillars{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(276px,1fr));margin-top:30px}
-.pillar{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
-  padding:26px;box-shadow:var(--shadow)}
-.pillar .n{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:600;
-  letter-spacing:.1em;margin-bottom:13px;display:block}
+.pillar{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:26px;box-shadow:var(--shadow);border-top:3px solid var(--line)}
+.pillar .n{font-family:var(--mono);font-size:12px;font-weight:500;
+  letter-spacing:.1em;margin-bottom:13px;display:block;color:var(--ink-2)}
+.pillar:nth-child(1){border-top-color:var(--telha)}
+.pillar:nth-child(1) .n{color:var(--telha)}
+.pillar:nth-child(2){border-top-color:var(--mata)}
+.pillar:nth-child(2) .n{color:var(--mata)}
+.pillar:nth-child(3){border-top-color:var(--serra)}
+.pillar:nth-child(3) .n{color:var(--serra)}
 .pillar h3{font-size:19px;margin-bottom:10px}
 .pillar p{margin:0;font-size:15px;color:var(--ink-2)}
 .pillar ul{margin:13px 0 0;padding-left:19px;font-size:14.5px;color:var(--ink-2)}
 .pillar li{margin:6px 0}
 
-/* trajetória */
+/* ═══ trajetória ═════════════════════════════════════════════ */
 .tl{margin-top:32px;border-left:2px solid var(--line);padding-left:0}
 .job{position:relative;padding:0 0 34px 30px}
 .job::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;
   border-radius:50%;background:var(--bg);border:2px solid var(--ink-3)}
 .job.now::before{background:var(--accent);border-color:var(--accent)}
 .job:last-child{padding-bottom:4px}
-.job .when{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);letter-spacing:-.01em}
+.job .when{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);
+  letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 .job h3{font-size:19.5px;margin:5px 0 2px}
-.job .org{font-size:15px;color:var(--accent);font-weight:700;margin-bottom:11px}
+.job .org{font-size:15px;color:var(--accent);font-weight:600;margin-bottom:11px}
 .job p{margin:0;font-size:15.5px;color:var(--ink-2);max-width:66ch}
 .job p + p{margin-top:11px}
-.job .win{margin-top:13px;background:var(--card);border:1px solid var(--line);
+.job .win{margin-top:13px;background:var(--surface);border:1px solid var(--line);
   border-left:3px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:15px 18px}
 .job .win strong{display:block;font-size:12px;font-family:var(--mono);letter-spacing:.1em;
-  text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+  text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-weight:500}
 .job .win p{font-size:15px;margin:0}
 
-/* formação + stack */
+/* ═══ formação + competências ════════════════════════════════ */
 .two{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:30px}
-.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+.box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
   padding:26px;box-shadow:var(--shadow)}
 .box h3{font-size:19px;margin-bottom:16px}
 .edu{border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:15px}
 .edu:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}
-.edu b{display:block;font-size:15.5px}
+.edu b{display:block;font-size:15.5px;font-weight:700}
 .edu span{display:block;font-size:14px;color:var(--ink-2);margin-top:3px}
-.edu em{display:block;font-family:var(--mono);font-size:12px;color:var(--ink-3);font-style:normal;margin-top:5px}
+.edu em{display:block;font-family:var(--mono);font-size:12px;color:var(--ink-3);
+  font-style:normal;margin-top:5px;font-variant-numeric:tabular-nums}
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
 .tag{font-family:var(--mono);font-size:12.5px;padding:5px 11px;border-radius:7px;
   background:var(--accent-soft);color:var(--accent);font-weight:500}
-.tag.plain{background:var(--grid);color:var(--ink-2)}
+.tag.plain{background:var(--surface-2);color:var(--ink-2)}
 
-/* contato */
-.contact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+/* ═══ contato ════════════════════════════════════════════════ */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
   padding:34px;box-shadow:var(--shadow);margin-top:30px}
 .contact h3{font-size:22px;margin-bottom:10px}
 .contact p{margin:0 0 22px;color:var(--ink-2);max-width:58ch;font-size:16px}
