@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mundo do Trabalho — Painel Brasil | Repente</title>
+<meta name="description" content="O salário mínimo triplicou em poder de compra desde 1994 — e nunca chegou perto do que uma família precisa. Indicadores do trabalho no Brasil, com fonte e método em cada número.">
+<link rel="canonical" href="https://kauewalter.com.br/repente/painel/trabalho/">
+<meta name="author" content="Kauê Sevilhano Walter">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Repente — Painel Brasil">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Triplicou. E ainda falta 4,7 vezes.">
+<meta property="og:description" content="O salário mínimo triplicou em poder de compra desde 1994 — e em 33 anos nunca chegou perto do que o DIEESE calcula que uma família precisa.">
+<meta property="og:url" content="https://kauewalter.com.br/repente/painel/trabalho/">
+<meta property="og:image" content="https://kauewalter.com.br/repente/assets/og-trabalho.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Triplicou. E ainda falta 4,7 vezes.">
+<meta name="twitter:description" content="Indicadores do trabalho no Brasil, com fonte e método em cada número.">
+<meta name="twitter:image" content="https://kauewalter.com.br/repente/assets/og-trabalho.png">
+
+<link rel="icon" href="../../assets/selo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../../assets/base.css">
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="topo-in">
+    <a class="marca" href="../../">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="var(--tinta)"/>
+        <path d="M8 22V10h6.2c2.6 0 4.3 1.5 4.3 3.9 0 1.9-1 3.2-2.8 3.7L19.6 22h-3.3l-3.3-4.9h-1.6V22H8z" fill="var(--papel)"/>
+        <circle cx="23.6" cy="20.4" r="2.4" fill="var(--s2)"/>
+      </svg>
+      Repente<span>· Painel Brasil</span>
+    </a>
+    <button class="tema" id="btnTema" type="button">Alternar tema</button>
+  </div>
+</header>
+
+<div class="trilha">
+  <div><a href="../../">Início</a> › <a href="../../painel/">Painel Brasil</a> › Mundo do Trabalho</div>
+</div>
+
+<nav class="sumario" aria-label="Seções desta página">
+  <ul>
+    <li><a href="#compra">Poder de compra</a></li>
+    <li><a href="#distancia">A distância</a></li>
+    <li><a href="#desemprego">Réguas do desemprego</a></li>
+    <li><a href="#faixas">Faixas de renda</a></li>
+    <li><a href="#pib">Salários no PIB</a></li>
+    <li><a href="#tributos">Quem paga a conta</a></li>
+    <li><a href="#estados">Por estado</a></li>
+    <li><a href="#mundo">No mundo</a></li>
+    <li><a href="#corpo">O preço em corpo</a></li>
+    <li><a href="#metodo">Método</a></li>
+  </ul>
+</nav>
+
+<main id="conteudo">
+<div class="wrap">
+  <div class="heroi">
+    <div class="olho">Painel Brasil · Mundo do Trabalho</div>
+    <h1>Triplicou. E ainda falta 4,7 vezes.</h1>
+    <p class="lead">O salário mínimo brasileiro <strong>triplicou em poder de compra</strong> desde 1994.
+      Isso é verdade, é do IBGE, e ninguém deveria esconder. Em 33 anos, ele nunca chegou perto
+      do que o DIEESE calcula que uma família precisa — <strong>nem uma única vez</strong>.</p>
+
+    <div class="tese">
+      <strong>A tese deste painel</strong>
+      <p>Não é que tudo piora sempre. Um painel que dissesse isso seria desmentido pelo seu próprio
+        primeiro gráfico. O que os dados mostram é mais duro e mais difícil de refutar:
+        <strong>o salário subiu, e a estrutura não mudou.</strong></p>
+      <p>O trabalhador brasileiro conquistou ganho real — e continua entregando a maior parte do que
+        produz. A remuneração do trabalho caiu 5,5 pontos do PIB entre 2016 e 2021 enquanto o lucro
+        subiu 5,1. O décimo mais pobre paga quase o triplo de imposto indireto que o mais rico. Dez
+        pessoas morrem no trabalho por dia. Nenhum desses números melhorou junto com o salário.</p>
+    </div>
+  </div>
+
+  <div class="grade-tiles" id="tiles"></div>
+  <p style="font-size:12.5px;color:var(--tinta-3);margin:2px 0 0">
+    <span class="badge" id="statusDados">Dados de referência</span>
+    <span id="statusTexto"> · conferidos em 22/08/2026. A página tenta atualizar sozinha nas fontes oficiais.</span>
+  </p>
+</div>
+
+<!-- ═══ PODER DE COMPRA ═══ -->
+<section id="compra">
+  <div class="wrap">
+    <div class="rot-sec">Poder de compra · 1994–2026</div>
+    <h2>O que o salário mínimo compra, em reais de hoje</h2>
+    <p class="intro">R$ 70 em 1994 e R$ 1.621 em 2026 não são a mesma moeda. Este gráfico converte o
+      salário mínimo de cada ano para <strong>reais de julho de 2026</strong>, usando o IPCA. É a única
+      forma honesta de comparar três décadas — e o resultado contraria quem diz que nada melhorou.</p>
+
+    <div class="cartao">
+      <div class="cartao-topo">
+        <h3>Salário mínimo real, em reais de julho/2026</h3>
+        <p class="desc">Valor vigente em dezembro de cada ano (2026 = julho), corrigido pelo IPCA.
+          A linha tracejada é o valor nominal — o número que aparecia na carteira na época.</p>
+      </div>
+      <div class="plot" id="plotReal"></div>
+      <div class="legenda">
+        <span><i class="chip" style="background:var(--s1)"></i> Salário mínimo real (reais de jul/2026)</span>
+        <span><i class="chip" style="background:var(--base)"></i> Valor nominal da época</span>
+      </div>
+      <div class="rodape-cartao">
+        <span>Fonte: DIEESE (série histórica do salário mínimo) · IPCA/IBGE · elaboração própria</span>
+        <span>+207% em termos reais entre dez/1994 e jul/2026</span>
+      </div>
+    </div>
+
+    <div class="ressalva verde">
+      <h3>Por que este gráfico está aqui, e não escondido</h3>
+      <p>Um painel que só mostra o que confirma a própria tese é propaganda com aparência de dado.
+        Este número — <strong>o salário mínimo real triplicou</strong> — é a melhor arma do outro lado,
+        e está no topo da página de propósito. Ele é resultado de política deliberada de valorização
+        do mínimo, e negá-lo custaria a credibilidade de tudo o que vem depois.</p>
+      <p>O que o gráfico <em>não</em> diz: que o salário chegou onde precisava chegar, que a
+        distribuição mudou, ou que o trabalhador passou a ficar com uma fatia maior do que produz.
+        As seções seguintes tratam disso — e a resposta é não.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ A DISTÂNCIA ═══ -->
+<section id="distancia">
+  <div class="wrap">
+    <div class="rot-sec">A distância que não fecha · 1994–2026</div>
+    <h2>Trinta e três anos sem chegar perto</h2>
+    <p class="intro">A Constituição de 1988 (art. 7º, IV) diz que o salário mínimo deve atender às
+      necessidades básicas do trabalhador <em>e de sua família</em>: moradia, alimentação, educação,
+      saúde, lazer, vestuário, higiene, transporte e previdência. Todo mês, o DIEESE calcula quanto
+      isso custaria. Este gráfico mostra quantas vezes o valor calculado supera o salário real.</p>
+
+    <div class="cartao">
+      <div class="cartao-topo">
+        <h3>Quantas vezes o salário mínimo necessário supera o vigente</h3>
+        <p class="desc">Se a barra chegasse a 1, o mínimo cumpriria o que a Constituição manda.
+          Em 33 anos a série encostou em 3,83 uma única vez — em 2017. A média do período é 5,39.</p>
+      </div>
+      <div class="plot" id="plotRazao"></div>
+      <div class="legenda">
+        <span><i class="chip" style="background:var(--s2)"></i> Razão entre o necessário (DIEESE) e o mínimo vigente</span>
+        <span><i class="chip" style="background:var(--s3)"></i> Onde a Constituição seria cumprida (1×)</span>
+      </div>
+      <div class="rodape-cartao">
+        <span>Fonte: DIEESE — Pesquisa Nacional da Cesta Básica de Alimentos, dezembro de cada ano (2026 = julho)</span>
+        <span><a href="https://www.dieese.org.br/analisecestabasica/salarioMinimo.html" target="_blank" rel="noopener">Série original</a></span>
+      </div>
+    </div>
+
+    <div class="ressalva">
+      <h3>O que este indicador não é</h3>
+      <ul>
+        <li><strong>Não é um índice de custo de vida.</strong> O DIEESE projeta o "necessário" a partir
+          da cesta básica <em>da capital mais cara do mês</em> — e essa capital muda. Por isso o valor
+          às vezes cai em ano de inflação positiva (2006, 2017, 2023), e por isso caiu 5,2% entre junho
+          e julho de 2026. Ler essas quedas como "o custo de vida caiu" é erro.</li>
+        <li><strong>Não é neutro quanto ao método.</strong> A cesta do DIEESE é uma escolha técnica
+          defensável, não uma verdade natural. Quem discorda do cálculo tem um argumento legítimo —
+          e mesmo cortando o "necessário" pela metade, a distância seguiria acima de 2×.</li>
+        <li><strong>Melhorou de verdade.</strong> A razão era 10,4 em 1994 e é 4,7 hoje. A distância
+          caiu pela metade. Ela simplesmente nunca chegou perto de fechar, sob nenhum governo.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RÉGUAS DO DESEMPREGO ═══ -->
+<section id="desemprego">
+  <div class="wrap">
+    <div class="rot-sec">Réguas do desemprego · 1995–2026</div>
+    <h2>Não existe "a" taxa de desemprego</h2>
+    <p class="intro">Existem várias, e elas medem coisas diferentes. O IBGE já usou três pesquisas
+      distintas para medir desemprego, e afirma em nota técnica que
+      <strong>"as diferenças metodológicas existentes entre as pesquisas inviabilizam o processo de
+      comparações entre elas"</strong>. Além disso, a taxa que vira manchete é a mais estreita de
+      todas. Escolha a régua e veja o que muda.</p>
+
+    <div class="cartao">
+      <div class="controles">
+        <div class="campo">
+          <label for="regua">Régua</label>
+          <select id="regua"></select>
+        </div>
+        <div class="campo" style="flex:1 1 260px">
+          <label>O que esta régua mede</label>
+          <div id="reguaDesc" style="font-size:14px;color:var(--tinta-2);padding-top:4px"></div>
+        </div>
+      </div>
+      <div class="plot" id="plotDesemprego"></div>
+      <div class="legenda" id="legendaDesemprego"></div>
+      <div class="rodape-cartao"><span id="fonteDesemprego"></span></div>
+    </div>
+
+    <div class="ressalva">
+      <h3>Onde a crítica é justa — e onde ela erra</h3>
+      <ul>
+        <li><strong>É verdade que a régua mudou, e o IBGE diz isso.</strong> A PME media 6 regiões
+          metropolitanas, a partir dos 10 anos. A PNAD Contínua mede o país inteiro, a partir dos 14.
+          Ninguém pode dizer "o desemprego caiu de 12,3% em 2003 para 5,4% em 2026" — são pesquisas
+          diferentes medindo universos diferentes.</li>
+        <li><strong>Mas a mudança não foi para baixar o número.</strong> O próprio IBGE registra que a
+          PNAD Contínua mostra taxas <em>sistematicamente mais elevadas</em> que a PME. Na régua nova,
+          2014 foi 7,0% — e não os 4,8% que a régua antiga marcava. Acusar o IBGE de maquiagem é um
+          argumento que se desmonta sozinho e entrega a discussão.</li>
+        <li><strong>O que é de fato enganoso é a manchete.</strong> "Desocupação" conta só quem procurou
+          trabalho nos últimos 30 dias e estava disponível. Não conta quem desistiu de procurar
+          (desalentado), quem trabalha menos horas do que precisa, nem quem está na informalidade.
+          A <strong>subutilização</strong> é mais que o dobro da desocupação. Essa é a briga que se
+          ganha com dado.</li>
+        <li><strong>Há ainda um terceiro problema, pouco conhecido:</strong> em 2024 o IBGE refez a
+          série histórica com um novo banco anual. O ano de 2022 foi divulgado como 9,3% e hoje consta
+          como 9,6%. Não é fraude — é revisão metodológica. Mas significa que
+          <strong>comparar dois anos vindos de divulgações diferentes produz variações que não
+          existiram.</strong> Cada série desta página usa uma safra só.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAIXAS ═══ -->
+<section id="faixas">
+  <div class="wrap">
+    <div class="rot-sec">Faixas de renda · Censo 2022</div>
+    <h2>Sete em cada dez ganhavam até dois salários mínimos</h2>
+    <p class="intro">O retrato mais completo já feito da renda do trabalho no Brasil é o Censo de 2022,
+      que perguntou a todo mundo. Ele mostra a que altura da escada está a maioria — e a resposta é:
+      no primeiro degrau.</p>
+
+    <div class="cartao">
+      <div class="cartao-topo">
+        <h3>Distribuição dos ocupados por faixa de rendimento</h3>
+        <p class="desc">Pessoas de 14 anos ou mais ocupadas, semana de 25 a 31 de julho de 2022.
+          O salário mínimo de referência era R$ 1.212,00.</p>
+      </div>
+      <div class="plot" id="plotFaixas"></div>
+      <div class="rodape-cartao">
+        <span>Fonte: IBGE — Censo Demográfico 2022, Trabalho e Rendimento</span>
+        <span>Ponto único: não é série temporal</span>
+      </div>
+    </div>
+
+    <div class="ressalva">
+      <h3>Três ressalvas obrigatórias sobre este gráfico</h3>
+      <ul>
+        <li><strong>"Até 1 salário mínimo" não é "abaixo de 1 salário mínimo".</strong> A classe do
+          Censo é fechada à direita e <em>inclui</em> quem ganha exatamente o mínimo — que num país onde
+          o mínimo é o piso legal é uma multidão, não um caso de borda. Dizer "35,3% ganham menos que
+          um salário mínimo" é um erro factual que qualquer adversário derruba. O número defensável
+          para "abaixo do mínimo" é <strong>11,2%, que recebem até meio salário</strong>.</li>
+        <li><strong>As faixas de 2 a 3 e de 3 a 5 salários não estão publicadas</strong> nos materiais
+          que consultamos. Por diferença elas somariam cerca de 24% — mas isso é aritmética nossa sobre
+          números arredondados, não dado do IBGE. Por isso a barra aparece agrupada e marcada.</li>
+        <li><strong>É uma foto de 2022, não um filme.</strong> O Censo anterior é de 2010 e usava
+          classes diferentes. Não construa tendência com isto.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SALÁRIOS NO PIB ═══ -->
+<section id="pib">
+  <div class="wrap">
+    <div class="rot-sec">A divisão do bolo · 2010–2021</div>
+    <h2>Quem fica com o que o país produz</h2>
+    <p class="intro">Este é o indicador que mede exploração no sentido mais literal: de tudo o que o
+      Brasil produziu num ano, quanto foi para quem trabalhou e quanto foi para quem detém o capital.
+      O IBGE publica isso nas Contas Nacionais, e a série mostra uma inversão nítida a partir de 2016.</p>
+
+    <div class="cartao">
+      <div class="cartao-topo">
+        <h3>Composição do PIB pela ótica da renda (% do PIB)</h3>
+        <p class="desc">"Remuneração dos empregados" inclui salários e a parte patronal (INSS, FGTS).
+          "Excedente operacional bruto e rendimento misto" é, em linguagem direta, lucro, juros e
+          aluguéis — a renda do capital.</p>
+      </div>
+      <div class="plot" id="plotPib"></div>
+      <div class="legenda">
+        <span><i class="chip" style="background:var(--s1)"></i> Remuneração dos empregados</span>
+        <span><i class="chip" style="background:var(--s2)"></i> Excedente operacional bruto + rendimento misto</span>
+      </div>
+      <div class="rodape-cartao">
+        <span>Fonte: IBGE — Sistema de Contas Nacionais, PIB pela ótica da renda</span>
+        <span>Série interrompida em 2021: o IBGE ainda não publicou 2022–2025</span>
+      </div>
+    </div>
+
+    <div class="ressalva">
+      <h3>O fato afiado, e a armadilha que vem junto</h3>
+      <p><strong>Entre 2016 e 2021, a remuneração do trabalho caiu 5,5 pontos percentuais do PIB
+        (44,7% → 39,2%) enquanto o excedente operacional subiu 5,1 pontos (32,3% → 37,4%).</strong>
+        É praticamente uma transferência ponto a ponto, no período das reformas trabalhista e
+        previdenciária. Este é o número mais forte da página inteira.</p>
+      <ul>
+        <li><strong>A armadilha:</strong> circulam duas séries diferentes com nomes parecidos.
+          "Remuneração dos empregados" (44,7% em 2016) inclui os encargos patronais; "salários" em
+          sentido estrito (35,5% no mesmo ano) é só o que chega ao bolso. A diferença de ~9 pontos são
+          os encargos. <strong>Sempre diga qual conceito está usando</strong> — a versão oficial do IBGE
+          é a primeira, e é a defensável.</li>
+        <li><strong>A série para em 2021.</strong> O IBGE ainda não divulgou a ótica da renda para
+          2022 em diante. Não sabemos o que aconteceu depois, e esta página não vai fingir que sabe.</li>
+        <li><strong>Divergência aberta:</strong> o valor de 2021 aparece como 39,2% em algumas fontes e
+          38,8% em outras. Usamos 39,2% e assinalamos a dúvida.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRIBUTOS ═══ -->
+<section id="tributos">
+  <div class="wrap">
+    <div class="rot-sec">Quem paga a conta</div>
+    <h2>O mais pobre paga quase o triplo de imposto indireto</h2>
+    <p class="intro">Todo mundo paga imposto no arroz, na luz e no botijão — e esse imposto não pergunta
+      quanto você ganha. O resultado é que ele pesa muito mais em quem tem pouco. O IPEA calculou
+      exatamente quanto, a partir da Pesquisa de Orçamentos Familiares do IBGE.</p>
+
+    <div class="cartao">
+      <div class="cartao-topo">
+        <h3>Incidência dos tributos sobre a renda, por décimo de renda familiar per capita</h3>
+        <p class="desc">Cada barra é um décimo da população, do mais pobre ao mais rico.
+          A altura é a fatia da renda que vai embora em tributo.</p>
+      </div>
+      <div class="plot" id="plotTributos"></div>
+      <div class="legenda">
+        <span><i class="chip" style="background:var(--s2)"></i> Tributos indiretos (consumo)</span>
+        <span><i class="chip" style="background:var(--s1)"></i> Tributos diretos (renda e patrimônio)</span>
+      </div>
+      <div class="rodape-cartao">
+        <span>Fonte: IPEA — Carta de Conjuntura nº 60 (jul/2023), sobre Silveira et al. (2022) e POF/IBGE 2017-2018</span>
+        <span><a href="https://www.ipea.gov.br/cartadeconjuntura/wp-content/uploads/2023/07/230706_cc_60_nota_01_reforma_tributaria.pdf" target="_blank" rel="noopener">PDF do IPEA</a></span>
+      </div>
+    </div>
+
+    <div class="ressalva">
+      <h3>Aço, não espantalho: onde este argumento é forte e onde ele não é</h3>
+      <ul>
+        <li><strong>Onde é imbatível:</strong> tributo indireto. O décimo mais pobre entrega
+          <strong>21,2% da renda</strong>; o mais rico, <strong>7,8%</strong>. Quase o triplo.
+          Não há leitura alternativa desse número.</li>
+        <li><strong>Onde o adversário tem razão:</strong> a carga <em>total</em> é relativamente plana
+          — vai de 24,3% nos mais pobres a 18,7% nos mais ricos, com o meio da distribuição em torno de
+          17%. E a curva <strong>não é monotônica</strong>: cai até o sétimo décimo e depois sobe um
+          pouco. Dizer "quanto mais rico, menos paga" é falso para a carga total. Dizer isso e ser
+          corrigido em público custa mais do que o argumento vale.</li>
+        <li><strong>Onde a regressividade reaparece no topo:</strong> pelos dados da Receita Federal
+          analisados pelo IPEA, um assalariado de cerca de R$ 6 mil por mês e alguém com renda de
+          R$ 449 mil por ano pagam a mesma alíquota efetiva — 14,2%. E o <strong>0,01% mais rico paga
+          12,9%</strong>. A progressividade para de funcionar exatamente onde a renda deixa de ser
+          salário e passa a ser lucro e dividendo.</li>
+        <li><strong>Data do dado:</strong> POF 2017-2018, anterior à reforma tributária de 2023.
+          É a POF mais recente que existe, e isso precisa ser dito junto.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ESTADOS ═══ -->
+<section id="estados">
+  <div class="wrap">
+    <div class="rot-sec">Por estado</div>
+    <h2>O mesmo país, dois mercados de trabalho</h2>
+    <p class="intro">A taxa nacional esconde uma distância que é quase de países diferentes: entre
+      Santa Catarina e o Amapá há mais de 7 pontos de desemprego; entre o Distrito Federal e o Maranhão,
+      quase quatro vezes de renda.</p>
+
+    <div class="cartao">
+      <div class="controles">
+        <div class="campo">
+          <label>Indicador</label>
+          <div class="pilulas" id="pilulasUF"></div>
+        </div>
+      </div>
+      <div class="plot" id="plotUF"></div>
+      <div class="rodape-cartao"><span id="fonteUF"></span></div>
+    </div>
+
+    <p class="nota-inline">A taxa de informalidade por estado só está publicada para 8 das 27 unidades
+      nos releases que consultamos — por isso ela não aparece aqui. A tabela completa existe no SIDRA
+      (tabela 8529) e entra numa próxima versão. Buraco declarado é melhor que buraco preenchido.</p>
+  </div>
+</section>
+
+<!-- ═══ MUNDO ═══ -->
+<section id="mundo">
+  <div class="wrap">
+    <div class="rot-sec">No mundo</div>
+    <h2>O que o mínimo brasileiro compra, comparado</h2>
+    <p class="intro">Comparar salário entre países exige converter por paridade de poder de compra —
+      quanto cada moeda realmente compra em casa. A OCDE faz esse cálculo. O resultado põe o Brasil
+      num patamar difícil de defender.</p>
+
+    <div class="cartao">
+      <div class="cartao-topo">
+        <h3>Salário mínimo anual em dólares de paridade de poder de compra, 2024</h3>
+        <p class="desc">Valores anuais em US$ PPC. Quanto maior a barra, mais o mínimo daquele país
+          compra dentro do próprio país.</p>
+      </div>
+      <div class="plot" id="plotMundo"></div>
+      <div class="rodape-cartao">
+        <span>Fonte: base OECD Real Minimum Wages, valores de 2024 · compilação secundária</span>
+        <span>⚠️ apenas países da OCDE e parceiros — Argentina e África do Sul não constam</span>
+      </div>
+    </div>
+
+    <div class="ressalva">
+      <h3>Leia esta comparação com cuidado — ela é a parte mais frágil da página</h3>
+      <ul>
+        <li><strong>O número dos EUA é o mínimo federal</strong> (US$ 15.080), que quase nenhum
+          trabalhador americano de fato recebe: a maioria dos estados tem pisos bem maiores. Usá-lo para
+          dizer "o mínimo americano é baixo" é tecnicamente correto e retoricamente desonesto.</li>
+        <li><strong>Não conseguimos a fonte primária.</strong> A base da OCDE é uma aplicação que não
+          expõe tabela para leitura automática; o valor veio de compilação secundária que declara a
+          OCDE como origem. Está marcado como ⚠️ e será substituído por leitura direta.</li>
+        <li><strong>Comparações internacionais de desemprego e de Gini ficaram de fora</strong> desta
+          versão de propósito: as fontes que encontramos não declaravam o ano de cada país, ou
+          divergiam entre si em vários pontos. Publicar isso seria pedir para ser corrigido.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CORPO ═══ -->
+<section id="corpo">
+  <div class="wrap">
+    <div class="rot-sec">O preço em corpo</div>
+    <h2>O que não aparece na folha de pagamento</h2>
+    <p class="intro">Exploração não se mede só em dinheiro. Mede-se também em quem morre trabalhando,
+      e em quem recebe menos pela mesma hora por causa da cor da pele ou do gênero.</p>
+
+    <div class="cartao">
+      <div class="cartao-topo"><h3>Acidentes e mortes no trabalho — recorde da série em 2025</h3></div>
+      <div class="linhas" id="linhasCorpo"></div>
+      <div class="rodape-cartao">
+        <span>Fonte: Ministério do Trabalho e Emprego, estudo "Acidentes de Trabalho 2016 a 2025" (base INSS + eSocial), abr/2026</span>
+        <span>Só trabalho formal registrado</span>
+      </div>
+    </div>
+
+    <div class="ressalva">
+      <h3>Duas honestidades sobre estes números</h3>
+      <ul>
+        <li><strong>Só contam o trabalho formal.</strong> Com 37,4% de informalidade, uma parte grande
+          dos acidentes simplesmente não entra em nenhuma estatística. O número real é maior, e ninguém
+          sabe quanto.</li>
+        <li><strong>Não publicamos a "taxa de incidência"</strong> que circulou nas matérias sobre o
+          estudo, porque a unidade informada é aritmeticamente impossível — 806 mil acidentes a
+          17,94 por 100 mil trabalhadores exigiria uma força de trabalho de 4,5 bilhões de pessoas.
+          O denominador provavelmente é "por mil vínculos". Até conferirmos no estudo original,
+          fica fora.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MÉTODO ═══ -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="rot-sec">Transparência</div>
+    <h2>Como esta página calcula</h2>
+    <p class="intro">Se você não pode refazer a conta, não é dado — é opinião com número.
+      O método comum a todos os painéis está em <a href="../../sobre/metodo.html">Método e fontes</a>.</p>
+
+    <div class="ressalva azul">
+      <h3>Correção pelo IPCA</h3>
+      <ul>
+        <li>O salário mínimo vigente em <strong>dezembro de cada ano</strong> é multiplicado pelo
+          produto das variações anuais do IPCA dos anos seguintes até dezembro de 2025, e depois pelo
+          IPCA acumulado de janeiro a julho de 2026 (3,44%).</li>
+        <li>Exemplo verificável: R$ 998,00 (dez/2019) × 1,4393 = <strong>R$ 1.436,38</strong> em reais
+          de jul/2026. Outro: R$ 70,00 (dez/1994) × 7,5333 = <strong>R$ 527,32</strong>.</li>
+        <li><strong>Limite honesto:</strong> usar o IPCA anual (dez→dez) em vez do índice mensal
+          introduz aproximação, e ela se acumula ao longo de 32 anos. A ordem de grandeza e a direção
+          não mudam; os centavos, sim.</li>
+        <li><strong>Segundo limite:</strong> o IPCA mede a cesta média do país. Para quem ganha um
+          salário mínimo, o <strong>INPC</strong> — que pesa famílias de 1 a 5 salários — é a régua mais
+          adequada, e daria um resultado um pouco diferente. Entra numa próxima versão.</li>
+        <li><strong>1994 não está no gráfico por acaso.</strong> A inflação do ano-calendário de 1994
+          foi de 916%, com troca de moeda no meio. Usamos apenas o salário vigente em dezembro, já sob
+          o Real, e corrigimos de 1995 em diante.</li>
+      </ul>
+    </div>
+
+    <div class="rolagem">
+      <table class="dados">
+        <thead><tr><th>Indicador</th><th>Fonte primária</th><th>Recorte</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr><td>Salário mínimo nominal</td><td>DIEESE / legislação</td><td>Dez. de cada ano, 1994–2025; jul/2026</td><td>✅ conferido em duas fontes</td></tr>
+          <tr><td>IPCA anual</td><td>IBGE</td><td>1995–2025; 2026 até julho</td><td>✅ conferido</td></tr>
+          <tr><td>Salário mínimo necessário</td><td>DIEESE — Cesta Básica</td><td>Dez. de cada ano, 1994–2025; jul/2026</td><td>✅ conferido</td></tr>
+          <tr><td>Desocupação — PME</td><td>IBGE — Pesquisa Mensal de Emprego</td><td>6 regiões metropolitanas, 10+, média anual</td><td>✅ releases do IBGE · série com buracos</td></tr>
+          <tr><td>Desocupação — PNAD anual</td><td>IBGE — PNAD</td><td>Nacional, 10+, setembro</td><td>⚠️ apenas 5 anos confirmados</td></tr>
+          <tr><td>Desocupação — PNAD Contínua</td><td>IBGE — PNAD Contínua</td><td>Nacional, 14+, 2º trimestre, safra 2T2026</td><td>✅ série completa 2012–2026</td></tr>
+          <tr><td>Subutilização, informalidade, desalento</td><td>IBGE — PNAD Contínua</td><td>Médias anuais, safra 2023–2025</td><td>✅ com buracos declarados</td></tr>
+          <tr><td>Faixas de rendimento</td><td>IBGE — Censo 2022</td><td>Ocupados 14+, julho/2022</td><td>✅ ponto único · faixas 2–5 SM ausentes</td></tr>
+          <tr><td>Salários no PIB</td><td>IBGE — Contas Nacionais</td><td>2010–2021, % do PIB</td><td>✅ até 2021 · 2022+ não publicado</td></tr>
+          <tr><td>Carga tributária por décimo</td><td>IPEA / POF-IBGE 2017-2018</td><td>Renda familiar per capita</td><td>✅ fonte primária</td></tr>
+          <tr><td>Indicadores por UF</td><td>IBGE — PNAD Contínua</td><td>2º tri/2026 e 2025</td><td>⚠️ 10 de 27 UFs cruzadas com o release</td></tr>
+          <tr><td>Salário mínimo em PPC</td><td>Base OECD Real Minimum Wages</td><td>2024, anual</td><td>⚠️ compilação secundária</td></tr>
+          <tr><td>Acidentes e mortes no trabalho</td><td>MTE — estudo 2016–2025</td><td>Trabalho formal</td><td>⚠️ duas fontes secundárias concordantes</td></tr>
+          <tr><td>Rendimento por cor/raça e sexo</td><td>IBGE — Síntese de Indicadores Sociais 2025</td><td>Ano-base 2024</td><td>✅ conferido</td></tr>
+          <tr><td>Índice de Gini internacional</td><td>—</td><td>—</td><td>⏳ fora desta versão: fontes divergentes</td></tr>
+          <tr><td>Insegurança alimentar</td><td>—</td><td>—</td><td>⏳ pendente: fontes não comparáveis entre si</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="nota-inline">Dados públicos de órgãos federais são de uso livre mediante citação da fonte
+      (Decreto 8.777/2016, art. 2º, III). Os gráficos são reconstruídos a partir dos números, não
+      reproduzidos das publicações originais. Erro apontado e confirmado é corrigido em até 72 horas,
+      com registro público da alteração.</p>
+  </div>
+</section>
+
+<!-- ═══ COMPARTILHAR ═══ -->
+<section id="compartilhar">
+  <div class="wrap">
+    <div class="rot-sec">Levar adiante</div>
+    <h2>Manda para quem precisa ver</h2>
+
+    <div class="compartilhar">
+      <h3>Compartilhar esta página</h3>
+      <p>Um dado com fonte vale mais no grupo da família que na bolha. Se algum número aqui te ajudou
+        a explicar alguma coisa para alguém, esse é o uso certo dele.</p>
+
+      <div class="botoes-share"
+           data-url="https://kauewalter.com.br/repente/painel/trabalho/"
+           data-texto="O salário mínimo triplicou desde 1994 — e ainda falta 4,7 vezes para chegar no que uma família precisa. Painel com fonte em cada número:">
+        <button class="btn-share zap" type="button" data-rede="whatsapp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 01-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 01-1.44-5.01c0-5.18 4.22-9.4 9.41-9.4a9.35 9.35 0 016.65 2.76 9.32 9.32 0 012.75 6.65c0 5.19-4.22 9.41-9.4 9.41zM20.5 3.49A11.3 11.3 0 0012.04.02C5.8.02.72 5.1.72 11.34c0 2 .52 3.94 1.52 5.66L.62 23.5l6.64-1.74a11.3 11.3 0 005.4 1.38h.01c6.24 0 11.32-5.08 11.32-11.32 0-3.02-1.18-5.87-3.32-8.01z"/></svg>
+          WhatsApp
+        </button>
+        <button class="btn-share face" type="button" data-rede="facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          Facebook
+        </button>
+        <button class="btn-share insta" type="button" data-rede="instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38C1.36 2.67.94 3.34.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.12-1.38.66-.66 1.08-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.12C21.33 1.36 20.66.94 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm7.85-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+          Instagram
+        </button>
+        <button class="btn-share" type="button" data-rede="copiar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 00-2 2v14h2V3h12V1zm3 4H8a2 2 0 00-2 2v14a2 2 0 002 2h11a2 2 0 002-2V7a2 2 0 00-2-2zm0 16H8V7h11v14z"/></svg>
+          Copiar link
+        </button>
+      </div>
+
+      <p class="aviso-share" id="avisoShare">
+        <strong>Sobre o botão do Instagram:</strong> o Instagram não aceita link compartilhado pela web —
+        é uma limitação da própria plataforma, não uma falha desta página. No celular, o botão abre a
+        bandeja de compartilhamento do sistema, que inclui o Instagram. No computador, ele copia o link
+        para você colar no story, na legenda ou na bio.
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pe">
+  <div class="wrap">
+    <p><strong>Repente — Painel Brasil.</strong> Projeto independente de educação política baseada em
+      evidência, mantido por Kauê Sevilhano Walter. Publicação de posicionamento pessoal sobre questões
+      públicas, amparada no art. 36-A, V da Lei 9.504/1997.
+      <strong>Não há pedido de voto neste site.</strong></p>
+    <p>Esta página é construída com apoio de inteligência artificial em pesquisa, cálculo e redação.
+      A responsabilidade por cada afirmação é humana e tem nome. Nenhuma imagem, voz ou vídeo sintético
+      é publicado aqui.</p>
+    <p><a href="../../painel/">Painel Brasil</a> · <a href="../../sobre/metodo.html">Método e fontes</a></p>
+    <p id="carimbo" class="mono"></p>
+  </div>
+</footer>
+
+<script src="../../assets/painel.js"></script>
+<script src="./dados.js"></script>
+</body>
+</html>
