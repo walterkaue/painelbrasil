@@ -1,0 +1,154 @@
+/* ------------------------------------------------------------------
+   jornal.css — componentes do Jornal Salesforce (kauewalter.com.br/jornal/)
+   Depende de kw.css: NÃO redefine nenhum token de cor, fonte ou tema.
+   Todo :root, media query de tema e data-theme vivem em kw.css — é lá
+   que se muda cor. Este arquivo só monta os componentes da página.
+   ------------------------------------------------------------------ */
+
+/* ---------- seletor de cadernos ----------
+   Links de verdade, não abas em JavaScript: cada caderno tem URL própria,
+   compartilhável e indexável. O caderno atual é marcado com aria-current
+   além da cor — a cor sozinha nunca carrega a informação. */
+.cadernos{display:flex;flex-wrap:wrap;align-items:center;gap:6px;
+  padding:16px 0 0;font-size:14px}
+.cadernos .capa{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);text-decoration:none;margin-right:10px}
+.cadernos .capa:hover{color:var(--ink)}
+.cadernos a.cad{color:var(--ink-2);text-decoration:none;padding:7px 14px;
+  border:1px solid var(--line);border-radius:999px;background:var(--surface);font-weight:500}
+.cadernos a.cad:hover{border-color:var(--ink-3);color:var(--ink)}
+.cadernos a.cad[aria-current="page"]{background:var(--ink);color:var(--bg);
+  border-color:var(--ink);font-weight:600}
+.cadernos a.cad[aria-current="page"]::before{content:"● ";font-size:9px;vertical-align:.18em}
+
+/* ---------- cabeçalho da edição ---------- */
+.jornal-head{padding:28px 0 8px}
+.jornal-head .rule{border-top:3px solid var(--ink);padding-top:18px;
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 32px}
+.jornal-head h1{font-size:clamp(32px,5.4vw,54px);max-width:14ch}
+.jornal-head h1 em{font-style:normal;color:var(--accent)}
+.jornal-head .sub{margin:14px 0 0;color:var(--ink-2);max-width:54ch;font-size:16px}
+.carimbo{font-family:var(--mono);font-size:12px;line-height:1.95;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-3);text-align:right;white-space:nowrap}
+.carimbo b{display:block;color:var(--ink);font-weight:500;letter-spacing:.1em}
+.carimbo .foco{color:var(--accent);letter-spacing:.04em}
+@media (max-width:620px){.carimbo{text-align:left}}
+
+/* ---------- destaque da semana ---------- */
+.destaque{margin-top:26px;background:var(--surface);border:1px solid var(--line);
+  border-left:4px solid var(--telha);border-radius:0 var(--r) var(--r) 0;
+  box-shadow:var(--shadow);padding:26px 28px}
+.destaque.mercado{border-left-color:var(--serra)}
+.destaque h2{font-size:clamp(21px,3vw,29px);margin-bottom:12px;max-width:26ch}
+.destaque p{margin:0 0 11px;color:var(--ink-2);max-width:68ch;font-size:16px}
+.destaque p:last-child{margin-bottom:0}
+.destaque b{color:var(--ink);font-weight:600}
+
+/* ---------- faixa de rótulos ---------- */
+.faixa{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.13em;
+  color:var(--ink-3);margin:0 0 12px;display:flex;flex-wrap:wrap;align-items:center;gap:9px}
+.rot{font-family:var(--mono);font-size:11px;font-weight:500;text-transform:uppercase;
+  letter-spacing:.11em;padding:4px 9px;border-radius:7px;white-space:nowrap}
+/* Fundo sempre --surface: os rótulos aparecem sobre cartão e sobre fundo
+   afundado, e sobre --surface-2 o contraste de telha e serra cai abaixo de
+   4.5:1 no tema claro. Medido, não estimado. */
+.rot.acao{background:var(--surface);color:var(--telha);border:1px solid var(--telha)}
+.rot.preparar{background:var(--surface);color:var(--manga-ink);border:1px solid var(--manga-ink)}
+.rot.observar{background:var(--surface);color:var(--serra);border:1px solid var(--serra)}
+.rot.prazo{background:transparent;color:var(--ink);border:1px solid var(--line);
+  font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.conf{margin-left:auto;text-transform:none;letter-spacing:.01em;font-size:11.5px;color:var(--ink-3)}
+@media (max-width:620px){.conf{margin-left:0;width:100%}}
+
+/* ---------- corpo em duas colunas ---------- */
+.colunas{margin-top:34px;display:grid;grid-template-columns:1fr;gap:34px}
+@media (min-width:940px){
+  .colunas{grid-template-columns:minmax(0,1fr) 272px;gap:44px;align-items:start}
+  .colunas aside{position:sticky;top:82px}
+}
+
+.divisor{display:flex;align-items:center;gap:14px;margin:0 0 18px;
+  font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.16em;
+  color:var(--accent);font-weight:500}
+.divisor::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---------- itens ---------- */
+.itens{display:flex;flex-direction:column;gap:16px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);padding:22px 24px;border-top:3px solid var(--line)}
+.item.acao{border-top-color:var(--telha)}
+.item.preparar{border-top-color:var(--manga-ink)}
+.item.observar{border-top-color:var(--serra)}
+.item h3{font-size:19px;margin:0 0 14px;max-width:34ch}
+
+dl.campos{margin:0;display:flex;flex-direction:column;gap:12px}
+dl.campos > div{display:grid;grid-template-columns:116px minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:620px){dl.campos > div{grid-template-columns:1fr;gap:3px}}
+dl.campos dt{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--ink-3);padding-top:.35em}
+dl.campos dd{margin:0;color:var(--ink-2);max-width:66ch;font-size:15.5px}
+dl.campos dd.fazer{color:var(--ink)}
+dl.campos dd b{font-weight:600;color:var(--ink)}
+
+.fontes{margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);
+  font-family:var(--mono);font-size:12px;color:var(--ink-3);
+  display:flex;flex-wrap:wrap;gap:6px 16px}
+.fontes a{text-decoration:underline}
+
+/* ---------- agenda ---------- */
+.agenda{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);padding:18px 18px 10px}
+.agenda h2{font-family:var(--mono);font-size:12px;font-weight:500;text-transform:uppercase;
+  letter-spacing:.16em;color:var(--accent);margin:0 0 4px;line-height:1.6}
+.agenda .nota{font-size:13px;color:var(--ink-2);margin:0 0 14px;line-height:1.45}
+.linha{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;
+  padding:11px 0;border-top:1px solid var(--line);align-items:baseline}
+.linha:first-of-type{border-top:0}
+.dias{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:500;
+  font-size:17px;letter-spacing:-.02em;color:var(--ink);min-width:3.6ch;text-align:right}
+.dias span{display:block;font-size:10px;letter-spacing:.1em;color:var(--ink-3);text-transform:uppercase}
+.linha.quente .dias{color:var(--telha)}
+.linha.morna .dias{color:var(--manga-ink)}
+.linha .oque{font-size:13.5px;line-height:1.45;color:var(--ink-2)}
+.linha .oque b{display:block;color:var(--ink);font-weight:600}
+.linha .oque time{font-family:var(--mono);font-size:12px;color:var(--ink-3);
+  font-variant-numeric:tabular-nums}
+
+/* ---------- painel de limites ---------- */
+.limites{margin-top:40px;border:1px dashed var(--line);border-radius:var(--r);
+  padding:24px 26px;background:var(--surface-2)}
+.limites h2{font-size:19px;margin-bottom:10px}
+.limites p{margin:0 0 10px;color:var(--ink-2);font-size:15.5px;max-width:74ch}
+.limites ul{margin:0;padding-left:19px;color:var(--ink-2);font-size:15.5px}
+.limites li{margin-bottom:6px}
+.limites li b{color:var(--ink);font-weight:600}
+
+/* ---------- capa: os dois cadernos lado a lado ---------- */
+.cadernos-capa{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  margin-top:30px;align-items:start}
+.caderno{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);padding:26px 28px;border-top:3px solid var(--accent)}
+.caderno.mercado{border-top-color:var(--serra)}
+.caderno > .selo{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:10px}
+.caderno h2{font-size:clamp(21px,2.6vw,27px);margin-bottom:10px}
+.caderno > .oquee{color:var(--ink-2);font-size:15.5px;margin:0 0 18px;max-width:46ch}
+.ultima{border-top:1px dashed var(--line);padding-top:16px}
+.ultima .selo-ultima{font-family:var(--mono);font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:8px}
+.ultima h3{font-size:17.5px;margin:0 0 8px;max-width:34ch}
+.ultima p{margin:0 0 12px;font-size:14.5px;color:var(--ink-2)}
+.ultima .conta{font-family:var(--mono);font-size:12px;color:var(--ink-3);display:block;margin-bottom:14px}
+.ultima .vazio{font-size:14.5px;color:var(--ink-3);margin:0 0 14px}
+
+/* ---------- índice de edições ---------- */
+.edicoes{display:flex;flex-direction:column;gap:14px;margin-top:30px}
+.edicao{display:block;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);box-shadow:var(--shadow);padding:22px 24px;
+  text-decoration:none;color:inherit;border-left:3px solid var(--accent);transition:.15s}
+.edicao:hover{border-left-color:var(--ink);transform:translateY(-1px)}
+.edicao .quando{font-family:var(--mono);font-size:12px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.edicao h3{font-size:19px;margin:7px 0 8px;max-width:38ch;color:var(--ink)}
+.edicao p{margin:0;font-size:15px;color:var(--ink-2);max-width:70ch}
+.edicao .conta{margin-top:11px;font-family:var(--mono);font-size:12px;color:var(--ink-3)}

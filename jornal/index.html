@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jornal — Kauê Walter</title>
+<meta name="description" content="Dois boletins semanais, publicados toda segunda-feira: o Jornal Salesforce, sobre Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce; e o Jornal de segunda-feira, sobre macro e negócios com divulgação oficial atrás.">
+<link rel="canonical" href="https://kauewalter.com.br/jornal/">
+<meta name="author" content="Kauê Walter">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Jornal — Kauê Walter">
+<meta property="og:description" content="Dois boletins semanais publicados toda segunda-feira: Salesforce e mercado. Fonte declarada e nível de confiança em cada item.">
+<meta property="og:url" content="https://kauewalter.com.br/jornal/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jornal — Kauê Walter">
+<meta name="twitter:description" content="Dois boletins semanais publicados toda segunda-feira: Salesforce e mercado.">
+<link rel="icon" href="/assets/kw.svg" type="image/svg+xml">
+<script>
+/* Tema antes da primeira pintura — mesma chave do resto do site. */
+(function(){try{var s=localStorage.getItem('kw-tema');
+if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/kw.css">
+<link rel="stylesheet" href="/assets/jornal.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/"><span class="mark">KW</span> Kauê Walter</a>
+    <nav>
+      <a href="/#atuacao">Atuação</a>
+      <a href="/#trajetoria">Trajetória</a>
+      <a href="/jornal/" aria-current="page">Jornal</a>
+      <a href="/#contato">Contato</a>
+      <button class="tgl" id="tgl" type="button" aria-pressed="false"
+              aria-label="Alternar entre tema claro e escuro">Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="w">
+
+  <nav class="cadernos" aria-label="Cadernos do jornal">
+    <span class="capa">Capa</span>
+    <a class="cad" href="/jornal/salesforce/">Salesforce</a>
+    <a class="cad" href="/jornal/mercado/">Mercado</a>
+  </nav>
+
+  <header class="jornal-head">
+    <div class="rule">
+      <div>
+        <p class="kicker">Toda segunda-feira</p>
+        <h1><em>Dois</em> boletins,<br>uma banca</h1>
+        <p class="sub">Um sobre a plataforma que eu opero todos os dias. Outro sobre o país onde
+          essa operação acontece. Nenhum dos dois publica número sem fonte, e os dois dizem em voz
+          alta o que não conseguiram confirmar.</p>
+      </div>
+      <p class="carimbo">
+        <b>Publicação semanal</b>
+        Segunda de manhã<br>
+        Fontes públicas<br>
+        <span class="foco">Confiança declarada por item</span>
+      </p>
+    </div>
+  </header>
+
+  <div class="cadernos-capa">
+
+    <section class="caderno salesforce">
+      <span class="selo">Caderno 1</span>
+      <h2>Jornal Salesforce</h2>
+      <p class="oquee">Marketing Cloud Engagement e Marketing Cloud Next em detalhe, com Data 360 e
+        Agentforce ao lado. O que mudou no produto e o que isso exige de quem opera a plataforma.</p>
+
+      <!-- ULTIMA-SALESFORCE-INICIO — só a rotina do caderno Salesforce escreve aqui dentro -->
+      <div class="ultima">
+        <span class="selo-ultima">Última edição · nº 1 · 24 ago 2026</span>
+        <h3>A semana em que três prazos caem juntos</h3>
+        <p>O corte de refresh de sandbox do Winter '27, o último exame das certificações de
+          Marketing Cloud em retirada, e o resultado do 2º trimestre fiscal.</p>
+        <span class="conta">8 itens · 5 com prazo</span>
+        <a class="btn solid" href="/jornal/salesforce/2026-08-24/">Ler a edição</a>
+        <a class="btn ghost" href="/jornal/salesforce/">Todas as edições</a>
+      </div>
+      <!-- ULTIMA-SALESFORCE-FIM -->
+    </section>
+
+    <section class="caderno mercado">
+      <span class="selo">Caderno 2</span>
+      <h2>Jornal — edição de segunda-feira</h2>
+      <p class="oquee">Macro e negócios: o que órgão oficial divulgou, o que tem data marcada e o
+        que muda mecanicamente para quem vende tecnologia e serviço no Brasil.</p>
+
+      <!-- ULTIMA-MERCADO-INICIO — só a rotina do caderno Mercado escreve aqui dentro -->
+      <div class="ultima">
+        <span class="selo-ultima">Última edição · nº 1 · 24 ago 2026</span>
+        <h3>Uma semana de calendário cheio e nenhuma surpresa</h3>
+        <p>IPCA-15, PNAD e IPP nesta semana, PIB do 2º trimestre na próxima — e a reforma tributária
+          afrouxando a exigência que ela mesma tinha acabado de criar.</p>
+        <span class="conta">7 itens · 6 com data</span>
+        <a class="btn solid" href="/jornal/mercado/2026-08-24/">Ler a edição</a>
+        <a class="btn ghost" href="/jornal/mercado/">Todas as edições</a>
+      </div>
+      <!-- ULTIMA-MERCADO-FIM -->
+    </section>
+
+  </div>
+
+  <section>
+    <p class="sec-label">O padrão dos dois</p>
+    <h2>Mesmo formato, mesma régua</h2>
+    <div class="two">
+      <div class="box">
+        <h3>Três rótulos, um critério</h3>
+        <p style="color:var(--ink-2);font-size:15.5px;margin:0 0 14px">Um item só entra se tiver
+          data marcada ou se mudar o jeito de trabalhar. Novidade sem consequência prática fica de
+          fora, nos dois cadernos.</p>
+        <div class="tags">
+          <span class="rot acao">Ação</span>
+          <span class="rot preparar">Preparar</span>
+          <span class="rot observar">Observar</span>
+        </div>
+        <p style="color:var(--ink-2);font-size:15px;margin:14px 0 0"><b>Ação</b> tem data e alguém
+          precisa fazer algo. <b>Preparar</b> chega no próximo ciclo. <b>Observar</b> é direção,
+          não tarefa.</p>
+      </div>
+      <div class="box">
+        <h3>De onde vem e o que não vem</h3>
+        <p style="color:var(--ink-2);font-size:15.5px;margin:0 0 12px">Cada item traz o link da
+          fonte e o nível de confiança. Quando a fonte é secundária, está escrito — e o item vem com
+          a linha <b>Conferir</b>, dizendo onde confirmar.</p>
+        <p style="color:var(--ink-2);font-size:15.5px;margin:0 0 12px">O caderno de mercado tem uma
+          regra a mais: <b>nenhuma projeção, nenhuma leitura de para onde o mercado vai</b>. Ele
+          reporta o que foi divulgado e a consequência mecânica disso. Não é recomendação de
+          investimento e não deve ser lido como uma.</p>
+        <p style="color:var(--ink-2);font-size:15.5px;margin:0">Nada específico de cliente entra
+          aqui, em nenhuma edição de nenhum dos dois. Comunicado de canal fechado também não.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <p><strong>Kauê Walter</strong> · Gerente de Marketing e Marketing Cloud Lead na Visum Digital ·
+      Caraguatatuba, São Paulo</p>
+    <p>Página pessoal e profissional. As opiniões e projetos aqui apresentados são de
+      responsabilidade individual e não representam posições de empregadores ou clientes.
+      O conteúdo do caderno de mercado é informativo e não constitui recomendação de investimento.</p>
+  </div>
+</footer>
+
+<script>
+/* A restauração do tema já rodou no <head>. Aqui só o botão. */
+(function(){
+  var b = document.getElementById('tgl');
+  if(!b) return;
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function escuroAgora(){
+    var a = document.documentElement.getAttribute('data-theme');
+    return a ? a === 'dark' : mq.matches;
+  }
+  function sincroniza(){ b.setAttribute('aria-pressed', escuroAgora() ? 'true' : 'false'); }
+  sincroniza();
+  if (mq.addEventListener) mq.addEventListener('change', sincroniza);
+  b.addEventListener('click', function(){
+    var novo = escuroAgora() ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', novo);
+    try{ localStorage.setItem('kw-tema', novo); }catch(e){}
+    sincroniza();
+  });
+})();
+</script>
+
+</body>
+</html>

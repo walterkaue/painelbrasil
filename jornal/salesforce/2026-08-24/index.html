@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jornal Salesforce nº 1 — 24 de agosto de 2026 — Kauê Walter</title>
+<meta name="description" content="A semana em Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce: o corte de sandbox do Winter '27, o último exame das certificações em retirada e os dois agentes de marketing que chegam no release.">
+<link rel="canonical" href="https://kauewalter.com.br/jornal/salesforce/2026-08-24/">
+<meta name="author" content="Kauê Walter">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Jornal Salesforce nº 1 — 24 de agosto de 2026">
+<meta property="og:description" content="Corte de sandbox do Winter '27 em 27/8, último exame das certificações de Marketing Cloud em retirada em 31/8, e os dois agentes de marketing do release.">
+<meta property="og:url" content="https://kauewalter.com.br/jornal/salesforce/2026-08-24/">
+<meta property="article:published_time" content="2026-08-24">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jornal Salesforce nº 1 — 24 de agosto de 2026">
+<meta name="twitter:description" content="Corte de sandbox do Winter '27 em 27/8, último exame das certificações de Marketing Cloud em retirada em 31/8, e os dois agentes de marketing do release.">
+<link rel="icon" href="/assets/kw.svg" type="image/svg+xml">
+<script>
+/* Tema antes da primeira pintura — mesma chave do resto do site. */
+(function(){try{var s=localStorage.getItem('kw-tema');
+if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/kw.css">
+<link rel="stylesheet" href="/assets/jornal.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/"><span class="mark">KW</span> Kauê Walter</a>
+    <nav>
+      <a href="/#atuacao">Atuação</a>
+      <a href="/#trajetoria">Trajetória</a>
+      <a href="/jornal/" aria-current="page">Jornal</a>
+      <a href="/#contato">Contato</a>
+      <button class="tgl" id="tgl" type="button" aria-pressed="false"
+              aria-label="Alternar entre tema claro e escuro">Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="w">
+
+  <nav class="cadernos" aria-label="Cadernos do jornal">
+    <a class="capa" href="/jornal/">← Capa</a>
+    <a class="cad" href="/jornal/salesforce/" aria-current="page">Salesforce</a>
+    <a class="cad" href="/jornal/mercado/">Mercado</a>
+  </nav>
+
+  <header class="jornal-head">
+    <div class="rule">
+      <div>
+        <p class="kicker"><a href="/jornal/salesforce/">Jornal Salesforce</a> · edição nº 1</p>
+        <h1>A semana em que <em>três prazos</em> caem juntos</h1>
+        <p class="sub">Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce,
+          filtrados por uma pergunta só: isso tem prazo ou muda o jeito de trabalhar?</p>
+      </div>
+      <p class="carimbo">
+        <b>Segunda, 24 ago 2026</b>
+        Corte: 24 ago, 08h BRT<br>
+        8 itens · 5 com prazo<br>
+        <span class="foco">MCE · MC Next · Data 360 · Agentforce</span>
+      </p>
+    </div>
+  </header>
+
+  <section class="destaque">
+    <p class="faixa"><span class="rot acao">Decisão da semana</span>
+      <span class="rot prazo">3 dias</span>
+      <span class="conf">confiança alta · datas em fonte oficial</span></p>
+    <h2>A janela de preview do Winter '27 fecha na quinta, e ela não volta</h2>
+    <p>As release notes do Winter '27 saíram em <b>19 de agosto</b>. Quem quiser ver o release rodando
+      antes de ele chegar na conta do cliente precisa ter o sandbox criado ou atualizado até
+      <b>27 de agosto, 17h PT</b> — o preview das instâncias começa a subir em <b>28 de agosto</b>.
+      Depois disso não há segunda janela: a produção entra em três ondas, <b>4 de setembro,
+      2 de outubro e 9 de outubro</b>, e a data de cada org depende da instância dela, não da região
+      nem do porte.</p>
+    <p>O pacote de marketing deste release é grande — dois agentes novos, monitoramento nativo de
+      entregabilidade, personalização atravessando canais e um caminho guiado de MCE para Data 360.
+      Nada disso é do tipo que se testa em produção com calma.</p>
+    <p>E a quinta-feira não é o único corte da semana: o resultado do segundo trimestre fiscal sai
+      na <b>quarta, 26 de agosto</b>, e o último exame das certificações em retirada é
+      <b>segunda que vem, 31 de agosto</b>. Três decisões, sete dias.</p>
+  </section>
+
+  <div class="colunas">
+
+    <div>
+      <p class="divisor">Itens da semana</p>
+      <div class="itens">
+      <!-- ITENS-INICIO — para acrescentar um item à mão, copie o bloco-modelo
+           que está comentado no fim deste arquivo e cole aqui dentro. -->
+
+        <article class="item acao">
+          <p class="faixa"><span class="rot acao">Ação</span>
+            <span class="rot prazo">3 dias</span> Releases
+            <span class="conf">confiança alta</span></p>
+          <h3>Corte de refresh de sandbox: 27 de agosto, 17h PT</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O calendário oficial do Winter '27 está fechado:
+              release notes em <b>19 de agosto</b>, corte de criação e refresh de sandbox em
+              <b>27 de agosto às 17h PT</b>, início do sandbox preview em <b>28 de agosto</b>,
+              produção em <b>4 de setembro, 2 de outubro e 9 de outubro</b>, e o post de release
+              readiness em <b>5 de outubro</b>.</dd></div>
+            <div><dt>Por que importa</dt><dd>É a única oportunidade de rodar regressão de jornadas,
+              automações e integrações contra o release antes de ele chegar em produção. E como a
+              data de produção varia por instância, parte das orgs vira em setembro e parte só em
+              outubro — o que muda a ordem em que o teste precisa acontecer.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Levantar a instância de cada org no Trust,
+              separar quem cai em 4 de setembro e concluir criação ou refresh de sandbox antes de
+              quinta às 17h PT. O guia de sandbox preview da Salesforce mostra o plano de upgrade
+              de cada sandbox.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://admin.salesforce.com/blog/2026/admin-winter-27-release-countdown">Salesforce Admins · contagem regressiva do Winter '27</a>
+            <a href="https://status.salesforce.com/products/all/maintenances">Salesforce Trust · calendário de manutenção</a></p>
+        </article>
+
+        <article class="item acao">
+          <p class="faixa"><span class="rot acao">Ação</span>
+            <span class="rot prazo">7 dias</span> Certificações
+            <span class="conf">confiança média-alta · fonte secundária</span></p>
+          <h3>31 de agosto é o último exame de quatro credenciais de Marketing Cloud</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Das 24 certificações que a Salesforce aposenta em
+              <b>1º de fevereiro de 2027</b>, quatro são de Marketing Cloud: o
+              <b>Marketing Cloud Account Engagement Consultant</b> e os Accredited Professional de
+              <b>Advanced Cross Channel</b>, <b>Intelligence</b> e <b>Personalization</b>.
+              O último dia de exame é <b>31 de agosto de 2026</b>. A Salesforce afirma estar
+              avaliando as competências das três primeiras para incorporá-las a uma certificação
+              <b>Agentforce Marketing</b> prevista para o fim de 2026.</dd></div>
+            <div><dt>Por que importa</dt><dd>São sete dias para decidir se alguém fecha uma trilha
+              que está prestes a sumir do catálogo — e o certificado obtido continua válido depois
+              da retirada, o que muda o cálculo. Vale também revisar material comercial e perfis
+              que ainda citam nomes de credenciais que deixam de existir.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Cruzar as trilhas de estudo em andamento com
+              a lista de retirada antes de 31/8 e decidir explicitamente: fecha agora, ou espera a
+              certificação de Agentforce Marketing.</dd></div>
+            <div><dt>Conferir</dt><dd>A lista completa e a política de validade merecem conferência
+              na página oficial de credenciais da Salesforce antes de virar comunicado — a fonte
+              aqui é secundária.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.apexhours.com/salesforce-2027-certification-retirements-everything-you-need-to-know/">Apex Hours · aposentadoria de certificações 2027</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">Winter '27</span> Agentforce Marketing
+            <span class="conf">confiança média-alta · fonte secundária</span></p>
+          <h3>Dois agentes de marketing entram no release: Goals e Content</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O <b>Marketing Goals Agent</b> traduz objetivo de negócio
+              em estratégia que opera de forma autônoma dentro de guardrails definidos, otimizando
+              campanha em direção ao resultado. O <b>Marketing Content Agent</b> gera conteúdo de
+              e-mail e SMS em escala a partir de brand guidelines e ativos de mídia. Junto vêm as
+              <b>Marketing Completion Actions</b>, que automatizam notificação, autoresponder e
+              atribuição de lead sem exigir um flow dedicado para cada uma.</dd></div>
+            <div><dt>Por que importa</dt><dd>É a primeira leva de Agentforce em marketing com
+              escopo fechado o bastante para virar projeto com começo, meio e fim — e não mais uma
+              prova de conceito. Guardrail e brand guideline deixam de ser conversa abstrata e
+              viram configuração que alguém precisa saber fazer.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Conteúdo é onde a resistência interna é
+              menor: um piloto de Content Agent com escopo pequeno, em base com brand guidelines já
+              organizadas, ensina mais em duas semanas do que três meses de leitura de release
+              note.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforceben.com/10-winter-27-updates-salesforce-marketers-need-to-know/">Salesforce Ben · 10 novidades do Winter '27 para marketers</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">Winter '27</span> Entregabilidade
+            <span class="conf">confiança média-alta · fonte secundária</span></p>
+          <h3>Entregabilidade ganha número: score de 0 a 100 por provedor, com alerta</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O <b>Email Deliverability Health</b> passa a monitorar
+              desempenho por provedor de caixa de entrada, com pontuação de <b>0 a 100</b> e alertas
+              automáticos quando o limiar crítico é cruzado. E o <b>Post-Send Link Editing</b>
+              permite que o suporte da Salesforce corrija o destino de um link rastreado depois do
+              disparo.</dd></div>
+            <div><dt>Por que importa</dt><dd>Entregabilidade sempre foi discutida em modo incêndio,
+              quando a taxa de abertura já caiu e ninguém sabe desde quando. Com número e alerta
+              nativos, ela vira algo que dá para acompanhar e reportar mês a mês — e a conversa
+              muda de "achamos que caiu" para "caiu no provedor X em tal semana".</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Definir agora qual é a leitura mensal desse
+              score e quem olha: métrica nova sem dono vira gráfico que ninguém abre.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforceben.com/10-winter-27-updates-salesforce-marketers-need-to-know/">Salesforce Ben · 10 novidades do Winter '27 para marketers</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">Winter '27</span> Multicanal
+            <span class="conf">confiança média-alta · fonte secundária</span></p>
+          <h3>AMPscript e Handlebars atravessam para WhatsApp, RCS, push e in-app</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>A lógica de personalização passa a ser reaproveitável entre
+              canais: <b>Handlebars e AMPscript</b> se estendem a SMS, WhatsApp, RCS, notificações
+              in-app e push. Landing pages e formulários também ganham Handlebars, AMPscript e HTML
+              customizado.</dd></div>
+            <div><dt>Por que importa</dt><dd>No Brasil o WhatsApp costuma ser o canal que o cliente
+              mais quer e o que mais encarece o projeto, porque a personalização precisava ser
+              reconstruída fora do que já existia em e-mail. Reaproveitar biblioteca de AMPscript
+              madura muda a conta do esforço — e transforma um ativo antigo em vantagem.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Inventariar onde existe AMPscript bem
+              organizado hoje. É esse inventário que decide se a expansão multicanal é semana ou
+              trimestre.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforceben.com/10-winter-27-updates-salesforce-marketers-need-to-know/">Salesforce Ben · 10 novidades do Winter '27 para marketers</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">Winter '27</span> Data 360
+            <span class="conf">confiança média · fonte secundária</span></p>
+          <h3>Conectar Engagement ao Data 360 vira setup guiado no Salesforce Go</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O Winter '27 traz uma experiência de configuração guiada
+              para <b>conectar o Marketing Cloud Engagement ao Data 360</b> através do Salesforce
+              Go — o caminho que liga a plataforma antiga ao Marketing Cloud Next.</dd></div>
+            <div><dt>Por que importa</dt><dd>A Salesforce chama o movimento de convergência, não de
+              migração, e não anunciou data de descontinuação da MCE. Mas facilitar a conexão com o
+              Data 360 é a direção do investimento aparecendo no produto: quanto mais agente, mais
+              grounding em Data 360 — e consumo de Data 360 é linha de custo que sobe sem
+              avisar.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Quem opera MCE hoje ganha mais tratando o
+              Data 360 como projeto de dados com projeção de consumo explícita do que como um
+              conector que se liga e se esquece.</dd></div>
+            <div><dt>Conferir</dt><dd>Paridade de funcionalidades entre MCE e MC Next muda a cada
+              release e fontes secundárias generalizam. Pontos críticos devem ser confirmados nas
+              release notes oficiais.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforceben.com/10-winter-27-updates-salesforce-marketers-need-to-know/">Salesforce Ben · 10 novidades do Winter '27 para marketers</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">já disponível</span> Marketing Cloud Next
+            <span class="conf">confiança média · fonte secundária</span></p>
+          <h3>O Summer '26 do MC Next mostra para onde a plataforma nova está indo</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O compilado do release de Summer '26 do Marketing Cloud
+              Next, publicado em 4 de agosto, traz <b>suporte a AMPscript</b> dentro do Next,
+              <b>Marketing Objects</b> para dados de marketing, <b>Unified Audience Flows</b>,
+              agentes de <b>Campaign Creation</b> e <b>Journey Decision</b>, até <b>150 business
+              units</b>, RCS e pagamento por WhatsApp na Índia — e, na ponte com a plataforma
+              antiga, compartilhamento de código SMS e mapeamento de consentimento entre Engagement
+              e Next.</dd></div>
+            <div><dt>Por que importa</dt><dd>A chegada do AMPscript ao Next é o sinal mais concreto
+              de que a Salesforce quer reduzir o custo de atravessar. E o mapeamento de consentimento
+              entre as duas plataformas é exatamente o tipo de detalhe que decide se uma convivência
+              em paralelo é viável ou vira problema de LGPD.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Ler o compilado com uma pergunta na mão:
+              o que hoje só existe na MCE já tem equivalente no Next? A resposta a essa pergunta é
+              o que separa quem planeja de quem reage.</dd></div>
+            <div><dt>Conferir</dt><dd>Compilado de terceiro. Antes de virar plano, confirmar item a
+              item nas release notes oficiais do Marketing Cloud Next.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://medium.com/@marketingcloudtips/marketing-cloud-next-summer-26-release-highlights-04f6c5abdee6">SFMC Tips · Marketing Cloud Next, Summer '26</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">2 dias</span> Sinal de mercado
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Resultado do 2º trimestre fiscal de 2027 sai quarta, depois do fechamento</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>A Salesforce confirmou <b>26 de agosto</b> como data da
+              divulgação do resultado do segundo trimestre fiscal de 2027, com webcast no
+              mesmo dia após o fechamento do mercado.</dd></div>
+            <div><dt>Por que importa</dt><dd>É a melhor leitura pública de como Agentforce e
+              Data 360 estão de fato vendendo, e de onde a Salesforce vai empurrar o ecossistema no
+              próximo ciclo. O que aparece na chamada de resultado costuma virar prioridade de
+              produto dois trimestres depois.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Vinte minutos na quinta lendo os números de
+              IA e Data 360 valem mais que uma semana de especulação sobre roadmap.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-Date-of-Second-Quarter-Fiscal-2027-Earnings-Release-and-Webcast/default.aspx">Salesforce Investor Relations</a></p>
+        </article>
+
+      <!-- ITENS-FIM -->
+      </div>
+    </div>
+
+    <aside>
+      <div class="agenda">
+        <h2>Agenda</h2>
+        <p class="nota">Contagem a partir de 24 de agosto de 2026.</p>
+
+        <div class="linha quente">
+          <div class="dias">2<span>dias</span></div>
+          <div class="oque"><b>Resultado Q2 FY27</b><time datetime="2026-08-26">26 ago · após o fechamento</time></div>
+        </div>
+        <div class="linha quente">
+          <div class="dias">3<span>dias</span></div>
+          <div class="oque"><b>Corte de refresh de sandbox</b><time datetime="2026-08-27">27 ago · 17h PT</time></div>
+        </div>
+        <div class="linha quente">
+          <div class="dias">4<span>dias</span></div>
+          <div class="oque"><b>Sandbox preview começa</b><time datetime="2026-08-28">28 ago</time></div>
+        </div>
+        <div class="linha quente">
+          <div class="dias">7<span>dias</span></div>
+          <div class="oque"><b>Último exame das certificações em retirada</b><time datetime="2026-08-31">31 ago</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">11<span>dias</span></div>
+          <div class="oque"><b>Winter '27 em produção · onda 1</b><time datetime="2026-09-04">4 set</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">39<span>dias</span></div>
+          <div class="oque"><b>Winter '27 em produção · onda 2</b><time datetime="2026-10-02">2 out</time></div>
+        </div>
+        <div class="linha">
+          <div class="dias">42<span>dias</span></div>
+          <div class="oque"><b>Post de release readiness</b><time datetime="2026-10-05">5 out</time></div>
+        </div>
+        <div class="linha">
+          <div class="dias">46<span>dias</span></div>
+          <div class="oque"><b>Winter '27 em produção · onda 3</b><time datetime="2026-10-09">9 out</time></div>
+        </div>
+        <div class="linha">
+          <div class="dias">161<span>dias</span></div>
+          <div class="oque"><b>24 certificações aposentadas</b><time datetime="2027-02-01">1 fev 2027</time></div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="limites">
+    <h2>O que este jornal não enxerga</h2>
+    <p>Esta edição foi montada só com fontes públicas, e o nível de confiança vem declarado item a
+      item. Onde a fonte é secundária, está escrito — e a recomendação é conferir antes de a
+      informação virar compromisso com alguém.</p>
+    <ul>
+      <li><b>Datas oficiais</b> devem ser confirmadas no Salesforce Trust e nas release notes; blogs
+        de ecossistema erram e replicam o erro entre si.</li>
+      <li><b>Comunicados de Partner Community e de PAM</b> não entram aqui: são canais fechados.</li>
+      <li><b>Nada específico de cliente</b> entra neste jornal, em nenhuma edição. Ele fala de
+        plataforma, não de conta.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <p><strong>Jornal Salesforce</strong> · edição nº 1, publicada em 24 de agosto de 2026 ·
+      <a href="/jornal/salesforce/">todas as edições</a> · <a href="/jornal/">capa</a></p>
+    <p><strong>Kauê Walter</strong> · Gerente de Marketing e Marketing Cloud Lead na Visum Digital ·
+      Caraguatatuba, São Paulo</p>
+    <p>Página pessoal e profissional. As opiniões e projetos aqui apresentados são de
+      responsabilidade individual e não representam posições de empregadores ou clientes.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BLOCO-MODELO · copie daqui para acrescentar um item à mão
+
+     Cole dentro de <div class="itens">, entre ITENS-INICIO e ITENS-FIM.
+     Troque a palavra "acao" por "preparar" ou "observar" nos DOIS lugares
+     (na classe do article e na classe do span do rótulo).
+     A linha "Conferir" só existe quando a fonte é secundária: apague-a
+     quando a fonte for oficial.
+
+<article class="item acao">
+  <p class="faixa"><span class="rot acao">Ação</span>
+    <span class="rot prazo">N dias</span> Assunto
+    <span class="conf">confiança alta · fonte oficial</span></p>
+  <h3>Manchete do item, curta e afirmativa</h3>
+  <dl class="campos">
+    <div><dt>O que mudou</dt><dd>O fato, com data e nome próprio.</dd></div>
+    <div><dt>Por que importa</dt><dd>A consequência prática, sem adjetivo.</dd></div>
+    <div><dt>O que fazer</dt><dd class="fazer">Prática profissional genérica. Nunca movimento comercial, nunca nome de cliente.</dd></div>
+    <div><dt>Conferir</dt><dd>Onde confirmar antes de isso virar compromisso.</dd></div>
+  </dl>
+  <p class="fontes"><a href="https://">Nome da fonte</a></p>
+</article>
+
+     E uma linha da agenda lateral, para colar dentro de div class="agenda".
+     Use "quente" até 7 dias, "morna" de 8 a 45, e sem classe acima disso:
+
+<div class="linha quente">
+  <div class="dias">N<span>dias</span></div>
+  <div class="oque"><b>O que acontece</b><time datetime="2026-01-01">1 jan</time></div>
+</div>
+
+     ============================================================ -->
+
+<script>
+/* A restauração do tema já rodou no <head>. Aqui só o botão. */
+(function(){
+  var b = document.getElementById('tgl');
+  if(!b) return;
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function escuroAgora(){
+    var a = document.documentElement.getAttribute('data-theme');
+    return a ? a === 'dark' : mq.matches;
+  }
+  function sincroniza(){ b.setAttribute('aria-pressed', escuroAgora() ? 'true' : 'false'); }
+  sincroniza();
+  if (mq.addEventListener) mq.addEventListener('change', sincroniza);
+  b.addEventListener('click', function(){
+    var novo = escuroAgora() ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', novo);
+    try{ localStorage.setItem('kw-tema', novo); }catch(e){}
+    sincroniza();
+  });
+})();
+</script>
+
+</body>
+</html>
