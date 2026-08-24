@@ -32,6 +32,7 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
 <link rel="stylesheet" href="assets/kw.css">
+<link rel="stylesheet" href="assets/compartilhar.css">
 </head>
 <body>
 
@@ -42,6 +43,7 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
     <a class="logo" href="./"><span class="mark">KW</span> Kauê Walter</a>
     <nav>
       <a href="#atuacao">Atuação</a>
+      <a href="#biblioteca">Biblioteca</a>
       <a href="#trajetoria">Trajetória</a>
       <a href="#formacao">Formação</a>
       <a href="/jornal/">A Banca</a>
@@ -152,6 +154,60 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
           <li>Estratégia de canal e voz de marca ao longo do ciclo de vida</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIBLIOTECA -->
+<section id="biblioteca">
+  <div class="w">
+    <div class="sec-label">Biblioteca</div>
+    <h2>Material de estudo, aberto</h2>
+    <p class="lead">Prompts, trilhas de certificação e guias em português para quem opera Marketing
+      Cloud. Cada dado com a fonte indicada e, onde a fonte é fraca, com isso escrito. Tudo genérico
+      de plataforma — nenhum dado, nome ou configuração de cliente entra aqui.</p>
+
+    <div class="two">
+      <div class="box">
+        <h3>Prompts de estudo e certificação</h3>
+        <p>Oito prompts para estudar de um jeito em que o modelo ajude em vez de atrapalhar: gerar
+          simulado no peso real do exame, entender por que você errou, e saber onde ele está
+          chutando. Botão de copiar em cada um.</p>
+        <div class="tags" style="margin-bottom:18px">
+          <span class="tag plain">Diagnóstico de lacuna</span>
+          <span class="tag plain">Simulado por peso</span>
+          <span class="tag plain">Autópsia de erro</span>
+          <span class="tag plain">Flashcards</span>
+        </div>
+        <a class="btn ghost" href="/biblioteca/prompts/">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 00-2 2v14h2V3h12V1zm3 4H8a2 2 0 00-2 2v14a2 2 0 002 2h11a2 2 0 002-2V7a2 2 0 00-2-2zm0 16H8V7h11v14z"/></svg>
+          Abrir os prompts
+        </a>
+      </div>
+
+      <div class="box">
+        <h3>Trilhas de estudo — MCE, Data 360 e MC Next</h3>
+        <p>Quatro trilhas por papel, com o que estudar, o que construir e o sinal de que a etapa
+          terminou. Mais o mapa que ninguém atualizou: os nomes de certificação que mudaram, as três
+          que se aposentam em fevereiro de 2027 e a que nasceu em agosto de 2026.</p>
+        <div class="tags" style="margin-bottom:18px">
+          <span class="tag plain">Operação de MCE</span>
+          <span class="tag plain">Consultoria</span>
+          <span class="tag plain">Data 360 e MC Next</span>
+          <span class="tag plain">Desenvolvimento</span>
+        </div>
+        <a class="btn ghost" href="/biblioteca/trilhas/">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6H2v14a2 2 0 002 2h14v-2H4V6zm16-4H8a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>
+          Abrir as trilhas
+        </a>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a class="btn solid" href="/biblioteca/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        Ver a biblioteca inteira
+      </a>
     </div>
   </div>
 </section>
@@ -364,6 +420,10 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
   </div>
 </section>
 
+<div class="w">
+  <div class="kw-share"></div>
+</div>
+
 </main>
 
 <footer class="foot">
@@ -395,5 +455,6 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
   });
 })();
 </script>
+<script src="assets/compartilhar.js" defer></script>
 </body>
 </html>

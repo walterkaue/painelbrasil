@@ -1,0 +1,52 @@
+/* ===========================================================================
+   compartilhar.css — barra de compartilhamento, comum a TODO o lado profissional
+   (home, /jornal/, /biblioteca/). Consome os tokens do kw.css e não define
+   nenhum. Não usar dentro de /repente/ — aquele site tem o dele.
+   =========================================================================== */
+
+.kw-share, .kw-share *{box-sizing:border-box}
+
+.kw-share{
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  margin:40px 0 8px;padding:20px 0 0;border-top:1px solid var(--line);
+}
+
+.kw-share-rotulo{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);margin-right:6px;
+}
+
+.kw-share-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--sans);font-size:14px;font-weight:600;line-height:1;
+  padding:10px 15px;border-radius:9px;
+  border:1px solid var(--line);background:var(--surface);color:var(--ink-2);
+  text-decoration:none;cursor:pointer;transition:.15s;
+}
+.kw-share-btn:hover{color:var(--accent);border-color:var(--accent)}
+.kw-share-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.kw-share-btn svg{flex:none;width:15px;height:15px}
+
+/* estado do "copiar link" — a cor é reforço; o texto do botão sempre muda junto */
+.kw-share-btn[data-estado="ok"]{
+  background:var(--accent);border-color:var(--accent);color:var(--on-accent);
+}
+.kw-share-btn[data-estado="erro"]{
+  color:var(--telha);border-color:var(--telha);
+}
+
+/* leitor de tela: anuncia o resultado da cópia sem depender da cor */
+.kw-share-vivo{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .kw-share-btn{transition-duration:.01ms}
+}
+
+@media (max-width:520px){
+  .kw-share{gap:8px}
+  .kw-share-rotulo{width:100%;margin:0 0 4px}
+  .kw-share-btn{flex:1 1 auto;justify-content:center}
+}

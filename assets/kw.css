@@ -1,9 +1,18 @@
 /* ═══════════════════════════════════════════════════════════════
    KAUÊ WALTER — site profissional
-   Direção visual: "Casario & Latão"
+   Direção visual: "Casario & Latão" · paleta Pau-brasil (rev. 24/08/2026)
 
    Claro  · Casario        chão de cal, cinco acentos do casario e da serra
    Escuro · Couro & Latão  preto-vinho, superfícies em ameixa, um metal quente
+
+   Revisão de 24/08/2026 — os acentos saíram da faixa do laranja:
+     telha  #B94A2E (12°)  →  carmim   #9E2A2B (359°)
+     telha  #D9946A (24°)  →  carmim   #E2888C (357°)   ← era o pior caso
+     serra  #4A6FA5        →  azulejo  #2C5F8A / #85AAD1
+     manga  #E9A423        →  ocre     #C89211 / #D9B15E
+     rosa   #D9647A        →  rosa     #B84E77 / #DE8FB4
+   Fundos, tinta e linhas não mudaram. Os nomes antigos (--telha, --serra,
+   --manga) seguem existindo como apelidos dos novos.
 
    Tipografia: Fraunces (título) · Instrument Sans (corpo) · IBM Plex Mono (dados)
    Sem framework, sem build. HTML/CSS/JS puros.
@@ -25,22 +34,29 @@
   --ink-3:#5F6B65;         /* derivado: o mínimo que ainda passa 4,5:1 sobre a cal */
   --line:#D8DED8;
 
-  /* sistema de acento */
-  --telha:#B94A2E;         /* primário no claro · CTA, links, eyebrow */
+  /* sistema de acento · Pau-brasil */
+  --carmim:#9E2A2B;        /* primário no claro · CTA, links, eyebrow */
   --mata:#1F6B4A;
-  --serra:#4A6FA5;
-  --manga:#E9A423;         /* forma apenas — ver --manga-ink */
-  --rosa:#D9647A;          /* forma apenas — 3,08:1 como texto, não usar em texto */
-  --manga-ink:#8C5E0E;     /* derivado: manga legível como texto sobre a cal */
+  --azulejo:#2C5F8A;
+  --ocre:#C89211;          /* forma apenas — ver --manga-ink */
+  --rosa:#B84E77;          /* 4,78:1 sobre branco — pode ser texto */
+
+  /* apelidos: os nomes antigos continuam válidos para jornal.css,
+     biblioteca.css e qualquer folha que já os use. NÃO REMOVER. */
+  --telha:var(--carmim);
+  --serra:var(--azulejo);
+  --manga:var(--ocre);
+
+  --manga-ink:#8A6410;     /* derivado: ocre legível como texto sobre a cal */
   --on-accent:#FFFFFF;
 
-  --accent:var(--telha);
-  --accent-soft:#F9EFEB;
+  --accent:var(--carmim);
+  --accent-soft:#F7ECEC;
 
   /* faixa da serra */
-  --serra-1:#4A6FA5; --serra-2:#1F6B4A; --serra-3:#D9647A;
-  --serra-4:#B94A2E; --serra-5:#E9A423;
-  --serra-sol:#E9A423; --serra-chao:#1C2321;
+  --serra-1:#2C5F8A; --serra-2:#1F6B4A; --serra-3:#B84E77;
+  --serra-4:#9E2A2B; --serra-5:#C89211;
+  --serra-sol:#C89211; --serra-chao:#1C2321;
 
   --shadow:0 1px 2px rgba(28,35,33,.05), 0 10px 30px -18px rgba(28,35,33,.28);
   --r:12px;
@@ -63,19 +79,25 @@
     --ink-3:#8F8279;
     --line:#3A2A2F;
 
-    --telha:#D9946A;       /* couro claro */
+    --carmim:#E2888C;      /* brasa · matiz 357°, do lado rosado do vermelho */
     --mata:#7FA98C;
-    --serra:#B98CC4;       /* ameixa clara */
-    --manga:#D9B15E;       /* latão · primário no escuro */
-    --rosa:#E08B9C;
+    --azulejo:#85AAD1;
+    --ocre:#D9B15E;        /* latão · primário no escuro */
+    --rosa:#DE8FB4;        /* magenta claro — separado do carmim */
+
+    /* apelidos — ver bloco claro. NÃO REMOVER. */
+    --telha:var(--carmim);
+    --serra:var(--azulejo);
+    --manga:var(--ocre);
+
     --manga-ink:#D9B15E;
     --on-accent:#16100F;
 
-    --accent:var(--manga);
+    --accent:var(--ocre);
     --accent-soft:#2A1E23;
 
-    --serra-1:#452A4E; --serra-2:#2E4A3A; --serra-3:#6E2436;
-    --serra-4:#A9663F; --serra-5:#D9B15E;
+    --serra-1:#2B3F5C; --serra-2:#2E4A3A; --serra-3:#5C2440;
+    --serra-4:#6E2427; --serra-5:#D9B15E;
     --serra-sol:#D9B15E; --serra-chao:#16100F;
 
     --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px -18px rgba(0,0,0,.85);
@@ -94,19 +116,25 @@
   --ink-3:#8F8279;
   --line:#3A2A2F;
 
-  --telha:#D9946A;
+  --carmim:#E2888C;
   --mata:#7FA98C;
-  --serra:#B98CC4;
-  --manga:#D9B15E;
-  --rosa:#E08B9C;
+  --azulejo:#85AAD1;
+  --ocre:#D9B15E;
+  --rosa:#DE8FB4;
+
+  /* apelidos — ver bloco claro. NÃO REMOVER. */
+  --telha:var(--carmim);
+  --serra:var(--azulejo);
+  --manga:var(--ocre);
+
   --manga-ink:#D9B15E;
   --on-accent:#16100F;
 
-  --accent:var(--manga);
+  --accent:var(--ocre);
   --accent-soft:#2A1E23;
 
-  --serra-1:#452A4E; --serra-2:#2E4A3A; --serra-3:#6E2436;
-  --serra-4:#A9663F; --serra-5:#D9B15E;
+  --serra-1:#2B3F5C; --serra-2:#2E4A3A; --serra-3:#5C2440;
+  --serra-4:#6E2427; --serra-5:#D9B15E;
   --serra-sol:#D9B15E; --serra-chao:#16100F;
 
   --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px -18px rgba(0,0,0,.85);
@@ -237,6 +265,9 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
   padding:26px;box-shadow:var(--shadow)}
 .box h3{font-size:19px;margin-bottom:16px}
+/* .box não tinha regra de parágrafo porque a seção Formação só usa .edu e .tags.
+   A seção Biblioteca usa texto corrido dentro do card — daí esta regra. */
+.box p{margin:0 0 16px;font-size:15px;color:var(--ink-2);max-width:62ch}
 .edu{border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:15px}
 .edu:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}
 .edu b{display:block;font-size:15.5px;font-weight:700}
