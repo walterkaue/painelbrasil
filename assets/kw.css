@@ -226,6 +226,11 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 .job .win strong{display:block;font-size:12px;font-family:var(--mono);letter-spacing:.1em;
   text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-weight:500}
 .job .win p{font-size:15px;margin:0}
+/* vídeo no card de destaque — proporção 16:9 travada pelo padding-top,
+   sem altura fixa: escala junto com a largura do card. */
+.job .win .embed{position:relative;width:100%;padding-top:56.25%;margin-top:13px;
+  border-radius:8px;overflow:hidden;background:var(--surface-2)}
+.job .win .embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
 /* ═══ formação + competências ════════════════════════════════ */
 .two{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:30px}
