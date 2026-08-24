@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap do site profissional. O /repente/ tem o seu próprio, em repente/sitemap.xml,
+  e o robots.txt aponta apenas para este arquivo.
+
+  DELIBERADO: aqui entram só as páginas-índice. As edições d'A Banca NÃO são listadas
+  uma a uma — o Google as descobre a partir da capa. Listar edição criaria uma tarefa
+  manual toda segunda-feira, e tarefa manual semanal é tarefa esquecida em três semanas.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://kauewalter.com.br/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <url>
+    <loc>https://kauewalter.com.br/jornal/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://kauewalter.com.br/biblioteca/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://kauewalter.com.br/biblioteca/prompts/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kauewalter.com.br/biblioteca/trilhas/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

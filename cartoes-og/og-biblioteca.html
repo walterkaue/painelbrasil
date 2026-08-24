@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Cartão OG — Biblioteca (1200×630)</title>
+<!--
+  COMO GERAR O PNG (3 cliques, resultado exato):
+  1. Abra este arquivo no Chrome.
+  2. Botão direito sobre o cartão → Inspecionar.
+  3. No painel Elements, clique com o botão direito na linha <div class="cartao">
+     → "Capture node screenshot".
+  Sai um PNG de 1200×630 exatos, com as fontes reais.
+  Salve como  assets/og-biblioteca.png  e suba no repositório.
+
+  Por que não veio pronto: as fontes Fraunces e Instrument Sans só carregam do
+  Google Fonts, e o ambiente onde este arquivo foi montado não tem acesso a elas.
+  Gerar aqui produziria um cartão com a tipografia errada.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<style>
+  :root{
+    --bg:#F0F2EF; --surface:#FFFFFF; --ink:#1C2321; --ink-2:#4E5A54; --ink-3:#5F6B65;
+    --line:#D8DED8; --telha:#B94A2E; --mata:#1F6B4A; --serra:#4A6FA5; --manga:#E9A423;
+    --rosa:#D9647A;
+    --display:"Fraunces",Georgia,"Times New Roman",serif;
+    --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#8a8a8a}
+  body{display:flex;align-items:center;justify-content:center;min-height:100vh}
+
+  .cartao{
+    width:1200px;height:630px;flex:none;position:relative;overflow:hidden;
+    background:var(--bg);font-family:var(--sans);color:var(--ink);
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:72px 80px 0;
+  }
+
+  .topo{display:flex;align-items:center;gap:14px}
+  .marca{width:22px;height:22px;border-radius:6px;background:var(--telha)}
+  .nome{font-size:24px;font-weight:600;letter-spacing:-.01em}
+
+  .kicker{font-family:var(--mono);font-size:18px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink-3);margin:0 0 20px}
+
+  h1{font-family:var(--display);font-weight:600;font-size:104px;line-height:.98;
+    letter-spacing:-.025em;margin:0 0 24px;
+    font-variation-settings:"SOFT" 30,"WONK" 1,"opsz" 120}
+  h1 em{font-style:normal;color:var(--telha)}
+
+  .sub{font-size:27px;line-height:1.4;color:var(--ink-2);max-width:23ch;margin:0}
+
+  .rodape{display:flex;align-items:flex-end;justify-content:space-between;
+    padding-bottom:44px;position:relative;z-index:2}
+  .dominio{font-family:var(--mono);font-size:19px;letter-spacing:.06em;color:var(--ink-2)}
+  .etiquetas{display:flex;gap:10px}
+  .etq{font-family:var(--mono);font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+    padding:7px 14px;border-radius:999px;border:1px solid currentColor;background:var(--surface)}
+  .e1{color:var(--telha)} .e2{color:var(--mata)} .e3{color:var(--serra)}
+
+  .serra{position:absolute;left:0;right:0;bottom:0;width:1200px;height:150px;z-index:1}
+</style>
+</head>
+<body>
+
+<div class="cartao">
+
+  <div class="topo">
+    <span class="marca"></span>
+    <span class="nome">Kauê Walter</span>
+  </div>
+
+  <div class="miolo">
+    <p class="kicker">Acervo aberto</p>
+    <h1>Biblio<em>teca</em></h1>
+    <p class="sub">Prompts, trilhas de certificação e guias para quem opera Marketing Cloud.</p>
+  </div>
+
+  <div class="rodape">
+    <span class="dominio">kauewalter.com.br/biblioteca</span>
+    <span class="etiquetas">
+      <span class="etq e1">Prompts</span>
+      <span class="etq e2">Trilhas</span>
+      <span class="etq e3">Guias</span>
+    </span>
+  </div>
+
+  <svg class="serra" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 150 L0 96 L150 40 L300 104 L420 62 L540 118 L660 74 L790 126 L910 84 L1040 132 L1200 92 L1200 150 Z" fill="#4A6FA5" opacity=".22"/>
+    <path d="M0 150 L0 118 L170 78 L330 126 L470 96 L610 138 L760 106 L900 140 L1050 112 L1200 134 L1200 150 Z" fill="#1F6B4A" opacity=".28"/>
+    <path d="M0 150 L0 136 L200 116 L380 142 L560 124 L740 146 L920 128 L1100 148 L1200 138 L1200 150 Z" fill="#B94A2E" opacity=".85"/>
+  </svg>
+
+</div>
+
+</body>
+</html>
