@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompts de estudo e certificação Salesforce — Kauê Walter</title>
+<meta name="description" content="Oito prompts prontos para estudar para certificação Salesforce com ajuda de IA: diagnóstico de lacuna, simulado no peso do exame, autópsia de erro, flashcards, plano de estudo e revisão de véspera.">
+<link rel="canonical" href="https://kauewalter.com.br/biblioteca/prompts/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kauê Walter">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://kauewalter.com.br/biblioteca/prompts/">
+<meta property="og:title" content="Prompts de estudo e certificação Salesforce">
+<meta property="og:description" content="Oito prompts para estudar para certificação Salesforce de um jeito em que o modelo ajude em vez de atrapalhar.">
+<meta property="og:image" content="https://kauewalter.com.br/assets/og-kw.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prompts de estudo e certificação Salesforce">
+<meta name="twitter:description" content="Oito prompts para estudar para certificação Salesforce de um jeito em que o modelo ajude em vez de atrapalhar.">
+<meta name="twitter:image" content="https://kauewalter.com.br/assets/og-kw.png">
+
+<link rel="icon" href="/assets/kw.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/kw.css">
+<link rel="stylesheet" href="/assets/biblioteca.css">
+
+<script>
+  try{
+    var t = localStorage.getItem('kw-tema');
+    if(t === 'dark' || t === 'light'){ document.documentElement.setAttribute('data-theme', t); }
+  }catch(e){}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/"><span class="mark"></span>Kauê Walter</a>
+    <nav>
+      <a href="/#atuacao">Atuação</a>
+      <a href="/#trajetoria">Trajetória</a>
+      <a href="/#formacao">Formação</a>
+      <a href="/jornal/">A Banca</a>
+      <a href="/biblioteca/">Biblioteca</a>
+      <a href="/#contato">Contato</a>
+      <button class="tgl" id="tgl" type="button" aria-pressed="false" aria-label="Alternar entre tema claro e escuro">Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="bib-wrap estreito">
+
+    <p class="bib-volta"><a href="/biblioteca/">Biblioteca</a><span>/</span>Prompts</p>
+
+    <section class="bib-hero">
+      <p class="bib-kicker">Prompts · versão 1 · 24 ago 2026</p>
+      <h1>Prompts de estudo e certificação Salesforce</h1>
+      <p class="bib-lead">Oito prompts para estudar de um jeito em que o modelo ajude em vez de
+      atrapalhar. Cada um diz o que resolve, o que preencher e — o mais importante — como ele
+      falha.</p>
+    </section>
+
+    <div class="bib-aviso atencao">
+      <h3>Antes de usar: três regras</h3>
+      <ol>
+        <li><strong>Nenhum dado de cliente entra num LLM.</strong> Nome de empresa, volumetria,
+        estrutura de Data Extension real, copy aprovada, print de tela de org, e-mail de contato,
+        CNPJ, número de contrato. Nada. Se o prompt precisa de contexto, invente um cenário
+        genérico — todos os prompts desta página já foram escritos assim de propósito.</li>
+        <li><strong>O modelo erra detalhe de produto.</strong> Ele acerta o conceito e inventa o
+        nome do campo, o limite de caracteres e o comportamento de uma configuração específica.
+        Confira no Exam Guide oficial e no Trailhead antes de decorar. Um quiz gerado por IA é
+        treino de raciocínio, não fonte de verdade.</li>
+        <li><strong>Um prompt não substitui a mão na org.</strong> Estes prompts servem para fixar e
+        para diagnosticar lacuna. A prova cobra decisão de implementação — isso só entra
+        construindo.</li>
+      </ol>
+    </div>
+
+    <ul class="bib-sumario">
+      <li><a href="#p1"><span class="num">01</span>Diagnóstico de lacuna</a></li>
+      <li><a href="#p2"><span class="num">02</span>Gerador de quiz com peso de exame</a></li>
+      <li><a href="#p3"><span class="num">03</span>Autópsia de erro</a></li>
+      <li><a href="#p4"><span class="num">04</span>Flashcards para repetição espaçada</a></li>
+      <li><a href="#p5"><span class="num">05</span>Plano de estudo pela data da prova</a></li>
+      <li><a href="#p6"><span class="num">06</span>Tradutor de conceito para caso real</a></li>
+      <li><a href="#p7"><span class="num">07</span>Revisão de véspera</a></li>
+      <li><a href="#p8"><span class="num">08</span>Explicador de errata de release</a></li>
+    </ul>
+
+    <hr class="bib-rule">
+
+    <article class="bib-prompt" id="p1">
+      <h3><span class="num">PROMPT 01</span>Diagnóstico de lacuna</h3>
+      <p class="bib-linha"><b>Serve para</b> descobrir o que você não sabe antes de gastar semanas estudando o que já sabe.</p>
+      <p class="bib-linha"><b>Preencha</b> <code>[CERTIFICAÇÃO]</code> e <code>[TÓPICOS E PESOS]</code> — copie do Exam Guide oficial.</p>
+      <div class="bib-caixa">
+        <button class="bib-copiar" type="button">Copiar</button>
+        <pre>Você é examinador da certificação [CERTIFICAÇÃO].
+
+Os domínios do exame e seus pesos são:
+[TÓPICOS E PESOS]
+
+Faça um diagnóstico comigo. Para cada domínio, faça UMA pergunta aberta de nível intermediário — não múltipla escolha — e espere minha resposta antes de ir para o próximo. Não me dê a resposta antes de eu responder.
+
+Depois que eu responder todos, monte uma tabela com: domínio, peso no exame, minha nota de 0 a 5, e uma frase dizendo qual é exatamente a lacuna. Ordene por (peso × lacuna), decrescente — quero saber onde estudar primeiro, não onde estou pior.
+
+Ao final, liste as três primeiras coisas que eu deveria estudar e por quê. Para cada uma, indique onde procurar na documentação oficial (módulo do Trailhead ou seção do Salesforce Help). Se não souber o endereço exato, diga "não sei" em vez de inventar um link.</pre>
+      </div>
+      <p class="bib-cuidado"><b>Cuidado:</b> ele vai querer despejar as perguntas todas de uma vez. Se fizer isso, responda “uma por vez, por favor” e siga.</p>
+    </article>
+
+    <article class="bib-prompt" id="p2">
+      <h3><span class="num">PROMPT 02</span>Gerador de quiz com peso de exame</h3>
+      <p class="bib-linha"><b>Serve para</b> treinar na proporção certa. A maioria dos simulados gratuitos distribui as questões por igual, e o exame não faz isso.</p>
+      <p class="bib-linha"><b>Preencha</b> <code>[CERTIFICAÇÃO]</code>, <code>[TÓPICOS E PESOS]</code> e <code>[N]</code>.</p>
+      <div class="bib-caixa">
+        <button class="bib-copiar" type="button">Copiar</button>
+        <pre>Gere um simulado de [N] questões para a certificação [CERTIFICAÇÃO].
+
+Distribua as questões proporcionalmente a estes pesos:
+[TÓPICOS E PESOS]
+
+Regras:
+- Múltipla escolha, 4 alternativas, uma correta — exceto quando o domínio naturalmente pede "escolha 2", e nesse caso avise no enunciado.
+- Cada questão descreve um CENÁRIO DE IMPLEMENTAÇÃO, não uma definição. "O que é X?" é proibido. "Um cliente precisa de X e tem a restrição Y — qual a abordagem?" é o formato.
+- As três alternativas erradas precisam ser plausíveis: erros que alguém que estudou pela metade cometeria de verdade.
+- Numere as questões e NÃO mostre nenhuma resposta agora.
+
+Quando eu mandar minhas respostas, aí sim corrija: para cada questão, diga a alternativa correta, explique por que ela é correta e — isso é o mais importante — explique POR QUE CADA UMA DAS OUTRAS TRÊS ESTÁ ERRADA. Ao final, mostre meu acerto por domínio, em tabela.
+
+Marque com [!] qualquer questão cuja resposta dependa de um detalhe de produto que você não tem certeza sobre a versão atual. Prefiro perder a questão a decorar errado.</pre>
+      </div>
+      <p class="bib-cuidado"><b>Cuidado:</b> o <code>[!]</code> é o item mais valioso do prompt. Se ele nunca marcar nada em 30 questões, desconfie e confira algumas por amostragem.</p>
+    </article>
+
+    <article class="bib-prompt" id="p3">
+      <h3><span class="num">PROMPT 03</span>Autópsia de erro</h3>
+      <p class="bib-linha"><b>Serve para</b> o momento depois do simulado, que é onde o estudo de verdade acontece.</p>
+      <p class="bib-linha"><b>Preencha</b> <code>[QUESTÃO]</code>, <code>[MINHA RESPOSTA]</code> e <code>[RESPOSTA CORRETA]</code>.</p>
+      <div class="bib-caixa">
+        <button class="bib-copiar" type="button">Copiar</button>
+        <pre>Errei esta questão de certificação Salesforce:
+
+Questão: [QUESTÃO]
+Eu respondi: [MINHA RESPOSTA]
+A resposta correta é: [RESPOSTA CORRETA]
+
+Não me console e não repita o enunciado. Responda em quatro partes curtas:
+
+1. O CONCEITO QUE EU NÃO DOMINO. Não "você errou a alternativa B" — qual é o conceito por trás, nomeado.
+2. POR QUE A MINHA ALTERNATIVA É SEDUTORA. Em que situação ela seria a certa? Quero entender a fronteira entre as duas.
+3. A REGRA DE BOLSO que faria eu acertar uma questão parecida no futuro, em uma frase.
+4. ONDE CONFIRMAR isso na documentação oficial. Se não souber, escreva "não sei".</pre>
+      </div>
+      <p class="bib-cuidado"><b>Cuidado:</b> funciona melhor uma questão por vez. Em lote, ele generaliza e você perde o item 2, que é o que ensina.</p>
+    </article>
+
+    <article class="bib-prompt" id="p4">
+      <h3><span class="num">PROMPT 04</span>Flashcards para repetição espaçada</h3>
+      <p class="bib-linha"><b>Serve para</b> transformar um capítulo em cartões que você revisa em 5 minutos por dia.</p>
+      <p class="bib-linha"><b>Preencha</b> <code>[TEMA]</code> e <code>[CERTIFICAÇÃO]</code>.</p>
+      <div class="bib-caixa">
+        <button class="bib-copiar" type="button">Copiar</button>
+        <pre>Gere 20 flashcards sobre [TEMA], no nível cobrado pela certificação [CERTIFICAÇÃO].
+
+Formato: uma linha por cartão, no padrão `frente | verso`, para eu colar direto no Anki.
+
+- A frente é uma pergunta ou um cenário curto. Nunca um termo solto.
+- O verso tem no máximo duas linhas.
+- Nenhum cartão pode ser respondido com "sim" ou "não".
+- Priorize o que se confunde com outra coisa: distinções, limites, ordem de execução, quando usar A em vez de B.
+- Se o verso depender de um valor específico (limite, tamanho, quantidade) que você não tem certeza para a versão atual, escreva o verso como CONFERIR NO EXAM GUIDE em vez de chutar.</pre>
+      </div>
+      <p class="bib-cuidado"><b>Cuidado:</b> revise os 20 antes de importar. Cartão errado decorado é pior que cartão nenhum.</p>
+    </article>
+
+    <article class="bib-prompt" id="p5">
+      <h3><span class="num">PROMPT 05</span>Plano de estudo a partir da data da prova</h3>
+      <p class="bib-linha"><b>Serve para</b> parar de estudar por impulso.</p>
+      <p class="bib-linha"><b>Preencha</b> <code>[CERTIFICAÇÃO]</code>, <code>[DATA DA PROVA]</code>, <code>[HORAS POR SEMANA]</code>, <code>[TÓPICOS E PESOS]</code> e <code>[MINHAS LACUNAS]</code> — a saída do prompt 01.</p>
+      <div class="bib-caixa">
+        <button class="bib-copiar" type="button">Copiar</button>
+        <pre>Monte meu plano de estudo para a certificação [CERTIFICAÇÃO].
+
+- Data da prova: [DATA DA PROVA]
+- Tempo disponível: [HORAS POR SEMANA] por semana
+- Domínios e pesos: [TÓPICOS E PESOS]
+- Minhas lacunas conhecidas: [MINHAS LACUNAS]
+
+Regras do plano:
+- Semana a semana, com data. Cada semana tem UM objetivo principal, não cinco.
+- Aloque tempo por (peso no exame × minha lacuna), não por igual.
+- Toda semana tem uma tarefa prática na org, não só leitura. Descreva a tarefa.
+- A última semana é só revisão e simulado — nenhum tópico novo entra nela.
+- Se o tempo disponível não couber no escopo, DIGA ISSO NA PRIMEIRA LINHA e me mostre o que ficaria de fora, em vez de espremer tudo. Prefiro saber que não dá.
+
+Entregue como tabela: semana, datas, objetivo, o que ler, o que construir, como eu sei que terminei.</pre>
+      </div>
+      <p class="bib-cuidado"><b>Cuidado:</b> ele é otimista com prazo. Se o plano parecer confortável, provavelmente está apertado.</p>
+    </article>
+
+    <article class="bib-prompt" id="p6">
+      <h3><span class="num">PROMPT 06</span>Tradutor de conceito para caso real</h3>
+      <p class="bib-linha"><b>Serve para</b> quando você entendeu a definição e ainda não sabe quando usar.</p>
+      <p class="bib-linha"><b>Preencha</b> <code>[CONCEITO]</code>.</p>
+      <div class="bib-caixa">
+        <button class="bib-copiar" type="button">Copiar</button>
+        <pre>Explique [CONCEITO] do Salesforce Marketing Cloud em quatro camadas:
+
+1. O PROBLEMA QUE EXISTIA ANTES de essa funcionalidade existir. Qual dor ela resolve?
+2. UM CENÁRIO CONCRETO — empresa genérica e fictícia, sem nome real — em que ela é a escolha certa. Descreva a restrição que torna ela a escolha certa.
+3. UM CENÁRIO PARECIDO EM QUE ELA É A ESCOLHA ERRADA, e o que se usa no lugar. Esta é a parte que eu mais preciso.
+4. A PEGADINHA DE PROVA: qual detalhe dessa funcionalidade costuma ser cobrado e confundido.
+
+Ao final, liste o que dessa resposta é conceito estável e o que é detalhe de configuração que pode ter mudado de versão — e que eu preciso conferir na documentação.</pre>
+      </div>
+      <p class="bib-cuidado"><b>Cuidado:</b> a camada 4 é onde ele mais inventa. Trate como hipótese a verificar.</p>
+    </article>
+
+    <article class="bib-prompt" id="p7">
+      <h3><span class="num">PROMPT 07</span>Revisão de véspera</h3>
+      <p class="bib-linha"><b>Serve para</b> as duas horas antes da prova, quando estudar coisa nova é contraprodutivo.</p>
+      <p class="bib-linha"><b>Preencha</b> <code>[CERTIFICAÇÃO]</code> e <code>[DOMÍNIOS ONDE FUI PIOR]</code>.</p>
+      <div class="bib-caixa">
+        <button class="bib-copiar" type="button">Copiar</button>
+        <pre>Amanhã faço a certificação [CERTIFICAÇÃO]. Meus piores domínios nos simulados foram: [DOMÍNIOS ONDE FUI PIOR].
+
+Não me ensine nada novo. Faça só isto:
+
+- 15 afirmações de uma linha sobre esses domínios, que eu leio e confirmo se sei ou não.
+- Depois, as 5 confusões mais comuns nesses domínios, no formato "X não é Y porque…".
+- Por último, 3 estratégias de prova para questões de cenário longo — como eliminar alternativa quando eu não souber a resposta.
+
+Nada de motivação, nada de "você consegue". Só o conteúdo.</pre>
+      </div>
+      <p class="bib-cuidado"><b>Cuidado:</b> se ele começar a introduzir tópico novo, corte. Véspera não é hora de abrir frente.</p>
+    </article>
+
+    <article class="bib-prompt" id="p8">
+      <h3><span class="num">PROMPT 08</span>Explicador de errata de release</h3>
+      <p class="bib-linha"><b>Serve para</b> o dia em que a Salesforce muda algo e o seu material de estudo envelhece.</p>
+      <p class="bib-linha"><b>Preencha</b> <code>[FUNCIONALIDADE]</code> e <code>[RELEASE]</code>.</p>
+      <div class="bib-caixa">
+        <button class="bib-copiar" type="button">Copiar</button>
+        <pre>Estou estudando [FUNCIONALIDADE] para certificação e quero saber se o que eu aprendi ainda vale na release [RELEASE].
+
+Responda em três partes:
+1. O que você sabe sobre essa funcionalidade e até quando essa informação é confiável.
+2. Quais aspectos dela são historicamente instáveis entre releases — ou seja, onde eu devo desconfiar do material antigo.
+3. Exatamente o que eu devo procurar nas Release Notes oficiais para confirmar: que termos buscar, em que seção.
+
+NÃO AFIRME o que mudou nessa release se você não tem essa informação. Diga "não sei, confira nas Release Notes" — é a resposta certa e é a que me ajuda.</pre>
+      </div>
+      <p class="bib-cuidado"><b>Cuidado:</b> este prompt existe justamente porque o modelo tem data de corte. Se ele responder com segurança sobre uma release recente, desconfie mais, não menos.</p>
+    </article>
+
+    <div class="bib-baixar">
+      <p><strong>Quer os oito num arquivo só?</strong> A versão em Markdown abre no Notion, no
+      Obsidian ou em qualquer editor. Lembre que a cópia baixada não se atualiza sozinha — esta
+      página é sempre a versão corrente.</p>
+      <a class="bib-btn" href="/biblioteca/arquivos/prompts-certificacao-salesforce-v1.md" download>Baixar o .md</a>
+    </div>
+
+    <hr class="bib-rule">
+
+    <section class="bib-sec">
+      <h2>Registro de versão</h2>
+      <div class="bib-tabela-rolagem">
+        <table class="bib-tabela">
+          <thead><tr><th>Versão</th><th>Data</th><th>O que mudou</th></tr></thead>
+          <tbody>
+            <tr><td class="num">1</td><td class="num">2026-08-24</td><td>Primeira publicação. 8 prompts.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="bib-nota">Encontrou um erro? Escreva para o e-mail no rodapé da
+      <a href="/#contato">página inicial</a>. Correção confirmada entra numa versão nova, com a data
+      trocada aqui.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <p>Kauê Walter · Gerente de Marketing e Marketing Cloud Lead na Visum Digital · Caraguatatuba, São Paulo</p>
+    <p>Página pessoal e profissional. As opiniões e projetos aqui apresentados são de responsabilidade individual e não representam posições de empregadores ou clientes.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('tgl');
+    if(btn){
+      var atual = function(){
+        var attr = document.documentElement.getAttribute('data-theme');
+        if(attr) return attr;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      };
+      var sincroniza = function(){ btn.setAttribute('aria-pressed', atual() === 'dark' ? 'true' : 'false'); };
+      sincroniza();
+      btn.addEventListener('click', function(){
+        var novo = atual() === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', novo);
+        try{ localStorage.setItem('kw-tema', novo); }catch(e){}
+        sincroniza();
+      });
+    }
+
+    function avisa(b, texto, estado){
+      b.textContent = texto;
+      b.setAttribute('data-estado', estado);
+      setTimeout(function(){ b.textContent = 'Copiar'; b.removeAttribute('data-estado'); }, 2200);
+    }
+
+    function copiaLegado(txt){
+      var ta = document.createElement('textarea');
+      ta.value = txt;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try{ ok = document.execCommand('copy'); }catch(e){ ok = false; }
+      document.body.removeChild(ta);
+      return ok;
+    }
+
+    document.querySelectorAll('.bib-copiar').forEach(function(b){
+      b.addEventListener('click', function(){
+        var pre = b.parentNode.querySelector('pre');
+        if(!pre) return;
+        var txt = pre.textContent;
+        var reserva = function(){
+          var ok = copiaLegado(txt);
+          avisa(b, ok ? 'Copiado' : 'Copie à mão', ok ? 'ok' : 'erro');
+        };
+        if(navigator.clipboard && window.isSecureContext){
+          navigator.clipboard.writeText(txt).then(function(){
+            avisa(b, 'Copiado', 'ok');
+          }).catch(reserva);
+        } else {
+          reserva();
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
