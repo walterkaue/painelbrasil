@@ -25,9 +25,9 @@
 .jornal-head{padding:28px 0 8px}
 .jornal-head .rule{border-top:3px solid var(--ink);padding-top:18px;
   display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 32px}
-.jornal-head h1{font-size:clamp(32px,5.4vw,54px);max-width:14ch}
+.jornal-head h1{font-size:clamp(28px,4.4vw,42px);max-width:14ch}
 .jornal-head h1 em{font-style:normal;color:var(--accent)}
-.jornal-head .sub{margin:14px 0 0;color:var(--ink-2);max-width:54ch;font-size:16px}
+.jornal-head .sub{margin:12px 0 0;color:var(--ink-2);max-width:54ch;font-size:15.5px}
 .carimbo{font-family:var(--mono);font-size:12px;line-height:1.95;letter-spacing:.06em;
   text-transform:uppercase;color:var(--ink-3);text-align:right;white-space:nowrap}
 .carimbo b{display:block;color:var(--ink);font-weight:500;letter-spacing:.1em}
@@ -36,7 +36,7 @@
 
 /* ---------- destaque da semana ---------- */
 .destaque{margin-top:26px;background:var(--surface);border:1px solid var(--line);
-  border-left:4px solid var(--telha);border-radius:0 var(--r) var(--r) 0;
+  border-left:6px solid var(--telha);border-radius:0 var(--r) var(--r) 0;
   box-shadow:var(--shadow);padding:26px 28px}
 .destaque.mercado{border-left-color:var(--serra)}
 .destaque h2{font-size:clamp(21px,3vw,29px);margin-bottom:12px;max-width:26ch}
@@ -75,7 +75,7 @@
 /* ---------- itens ---------- */
 .itens{display:flex;flex-direction:column;gap:16px}
 .item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
-  box-shadow:var(--shadow);padding:22px 24px;border-top:3px solid var(--line)}
+  box-shadow:var(--shadow);padding:22px 24px;border-top:5px solid var(--line)}
 .item.acao{border-top-color:var(--telha)}
 .item.preparar{border-top-color:var(--manga-ink)}
 .item.observar{border-top-color:var(--serra)}
@@ -93,7 +93,7 @@ dl.campos dd b{font-weight:600;color:var(--ink)}
 /* ---------- bloco de leitura (só no caderno de mercado) ----------
    A camada de opinião, separada da camada de fato de propósito.
    Rótulo em texto, sempre: a cor não carrega a informação sozinha. */
-.leitura{margin-top:16px;background:var(--surface-2);border-left:3px solid var(--serra);
+.leitura{margin-top:16px;background:var(--surface-2);border-left:5px solid var(--serra);
   border-radius:0 var(--r) var(--r) 0;padding:14px 18px}
 .leitura .rotulo{font-family:var(--mono);font-size:11px;text-transform:uppercase;
   letter-spacing:.12em;color:var(--ink-2);margin:0 0 8px;font-weight:500}

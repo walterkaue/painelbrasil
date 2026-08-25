@@ -26,14 +26,17 @@ Google — ver seção de Open Graph abaixo.
 - Tokens de cor/tipografia vivem em [assets/kw.css](assets/kw.css) (`:root`, bloco de tema escuro
   via `prefers-color-scheme`, e `:root[data-theme="dark"]` para a escolha manual — **os três mudam
   juntos**). Nunca hardcode uma cor hex num componente novo: use `var(--token)`.
-- O nav do topo é o mesmo em toda página do site principal (não em Repente): `Conteúdo · Atuação ·
-  Trajetória · Formação · Contato`, apontando pra âncoras da home (`/#id`) quando a página não é a
-  home. Se criar página nova em `jornal/` ou `biblioteca/`, copie esse nav — não invente outro.
-- **O nav do topo fica fixo em 5 links + botão de tema, não cresce por vertical nova.** Quando a
-  Biblioteca entrou, ela não virou um 6º link — foi incorporada como âncora dentro de "Conteúdo"
-  (commit `b34f58c`). Regra pra qualquer vertical futura: entra dentro de uma seção/âncora existente
-  da home, nunca como item novo direto no `<nav>`. Isso evita o nav estourar no celular sem precisar
-  de lógica de overflow.
+- O nav do topo é o mesmo em toda página do site principal (não em Repente): `Carreira · A Banca ·
+  Biblioteca · Contato · Tema` (rev. 25/08/2026 — substituiu o modelo anterior de âncoras
+  `Conteúdo · Atuação · Trajetória · Formação · Contato`). "Carreira" aponta pra `/`, "A Banca" pra
+  `/jornal/`, "Biblioteca" pra `/biblioteca/`, e só "Contato" continua âncora (`/#contato`), porque a
+  seção de contato só existe na home. Se criar página nova em `jornal/` ou `biblioteca/`, copie esse
+  nav — não invente outro.
+- **O nav do topo são destinos diretos, não mais um sumário da home.** As seções Atuação, Trajetória
+  e Formação continuam existindo na home (a página não mudou), só saíram do `<nav>` — quem quiser
+  chegar lá rola a página ou usa busca do navegador. Isso mantém o nav fixo em 4 links + botão de
+  tema mesmo que uma vertical de conteúdo nova apareça um dia: cada vertical com página própria
+  (`/algo/`) ganha um link direto; conteúdo que só existe como seção da home, não.
 
 ## SEO on-page
 

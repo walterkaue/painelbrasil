@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════════════════════════
    KAUÊ WALTER — site profissional
-   Direção visual: "Casario & Latão" · paleta Pau-brasil (rev. 24/08/2026)
+   Direção visual: "Casario & Latão" · paleta Pau-brasil (rev. 25/08/2026)
 
-   Claro  · Casario        chão de cal, cinco acentos do casario e da serra
+   Claro  · Azul gelo      neutros frios, cinco acentos do casario e da serra
    Escuro · Couro & Latão  preto-vinho, superfícies em ameixa, um metal quente
 
    Revisão de 24/08/2026 — os acentos saíram da faixa do laranja:
@@ -13,6 +13,12 @@
      rosa   #D9647A        →  rosa     #B84E77 / #DE8FB4
    Fundos, tinta e linhas não mudaram. Os nomes antigos (--telha, --serra,
    --manga) seguem existindo como apelidos dos novos.
+
+   Revisão de 25/08/2026 — só os neutros do tema claro, que estavam com tom
+   esverdeado ("cal"); os 5 acentos acima e o tema escuro não mudaram:
+     bg        #F0F2EF → #EEF2F6      surface-2  #E7EBE6 → #E3E9EF
+     ink       #1C2321 → #1B2430      ink-2      #4E5A54 → #4C5A6B
+     ink-3     #5F6B65 → #566274      line       #D8DED8 → #D3DCE6
 
    Tipografia: Fraunces (título) · Instrument Sans (corpo) · IBM Plex Mono (dados)
    Sem framework, sem build. HTML/CSS/JS puros.
@@ -26,13 +32,14 @@
 :root{
   color-scheme: light;
 
-  --bg:#F0F2EF;            /* cal */
+  --bg:#EEF2F6;            /* gelo — rev. 25/08/2026, só os neutros, era #F0F2EF (cal, esverdeado) */
   --surface:#FFFFFF;
-  --surface-2:#E7EBE6;
-  --ink:#1C2321;           /* preto-mata */
-  --ink-2:#4E5A54;
-  --ink-3:#5F6B65;         /* derivado: o mínimo que ainda passa 4,5:1 sobre a cal */
-  --line:#D8DED8;
+  --surface-2:#E3E9EF;
+  --ink:#1B2430;
+  --ink-2:#4C5A6B;
+  --ink-3:#566274;         /* medido: 4,45:1 sobre --surface-2 com o valor "óbvio" (#5E6B7A) não
+                               passava 4,5:1 — este é o mínimo que passa nas duas superfícies */
+  --line:#D3DCE6;
 
   /* sistema de acento · Pau-brasil */
   --carmim:#9E2A2B;        /* primário no claro · CTA, links, eyebrow */
@@ -175,12 +182,12 @@ header.top{border-bottom:1px solid var(--line);background:var(--surface);positio
 .tgl:hover{border-color:var(--ink-3);color:var(--ink)}
 
 /* ═══ herói ══════════════════════════════════════════════════ */
-.hero{padding:74px 0 56px}
+.hero{padding:56px 0 40px}
 .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--accent);font-weight:500;margin-bottom:16px}
-.hero h1{font-size:clamp(34px,6vw,60px);max-width:15ch}
-.hero .role{font-size:clamp(18px,2.4vw,22px);color:var(--ink-2);margin:18px 0 0;max-width:52ch;font-weight:500}
-.hero .pitch{font-size:17px;color:var(--ink-2);margin:22px 0 0;max-width:60ch}
+.hero h1{font-size:clamp(30px,4.8vw,46px);max-width:15ch}
+.hero .role{font-size:clamp(17px,2.1vw,20px);color:var(--ink-2);margin:14px 0 0;max-width:52ch;font-weight:500}
+.hero .pitch{font-size:16px;color:var(--ink-2);margin:16px 0 0;max-width:60ch}
 .cta{display:flex;gap:11px;flex-wrap:wrap;margin-top:30px}
 .btn{display:inline-flex;align-items:center;gap:9px;font:inherit;font-size:15px;font-weight:600;
   padding:12px 20px;border-radius:10px;text-decoration:none;border:1px solid transparent;transition:.15s}
@@ -222,7 +229,7 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
    reforça, nunca é o único portador da informação.            */
 .pillars{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(276px,1fr));margin-top:30px}
 .pillar{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
-  padding:26px;box-shadow:var(--shadow);border-top:3px solid var(--line)}
+  padding:26px;box-shadow:var(--shadow);border-top:5px solid var(--line)}
 .pillar .n{font-family:var(--mono);font-size:12px;font-weight:500;
   letter-spacing:.1em;margin-bottom:13px;display:block;color:var(--ink-2)}
 .pillar:nth-child(1){border-top-color:var(--telha)}
@@ -246,7 +253,7 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
    A Banca = azulejo, cor livre pra "imprensa/publicação". */
 .hub{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:30px}
 .hub-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);
-  border-radius:var(--r);padding:26px;box-shadow:var(--shadow);border-top:3px solid var(--line);
+  border-radius:var(--r);padding:26px;box-shadow:var(--shadow);border-top:5px solid var(--line);
   color:inherit;text-decoration:none;transition:.15s}
 .hub-card:hover{border-color:var(--ink-3)}
 .hub-card.biblioteca{border-top-color:var(--mata)}
@@ -276,7 +283,7 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 .job p{margin:0;font-size:15.5px;color:var(--ink-2);max-width:66ch}
 .job p + p{margin-top:11px}
 .job .win{margin-top:13px;background:var(--surface);border:1px solid var(--line);
-  border-left:3px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:15px 18px}
+  border-left:5px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:15px 18px}
 .job .win strong{display:block;font-size:12px;font-family:var(--mono);letter-spacing:.1em;
   text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-weight:500}
 .job .win p{font-size:15px;margin:0}

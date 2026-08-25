@@ -18,9 +18,9 @@
 .bib-wrap{max-width:var(--w);margin:0 auto;padding:0 22px}
 .bib-wrap.estreito{max-width:820px}
 
-.bib-hero{padding:56px 0 18px}
-.bib-hero h1{font-size:clamp(32px,5.6vw,54px);margin:0 0 16px}
-.bib-hero .bib-lead{font-size:clamp(17px,2.1vw,20px);color:var(--ink-2);max-width:62ch;margin:0}
+.bib-hero{padding:40px 0 14px}
+.bib-hero h1{font-size:clamp(28px,4.4vw,42px);margin:0 0 12px}
+.bib-hero .bib-lead{font-size:clamp(16px,1.9vw,18px);color:var(--ink-2);max-width:62ch;margin:0}
 
 .bib-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--ink-3);margin:0 0 14px}
@@ -41,7 +41,7 @@
 
 /* ---- aviso de escopo ------------------------------------------------------ */
 
-.bib-aviso{border:1px solid var(--line);border-left:4px solid var(--serra);
+.bib-aviso{border:1px solid var(--line);border-left:6px solid var(--serra);
   background:var(--surface);border-radius:var(--r);padding:20px 22px;margin:28px 0 0}
 .bib-aviso.atencao{border-left-color:var(--telha)}
 .bib-aviso h3{font-family:var(--sans);font-size:15px;font-weight:700;margin:0 0 10px;color:var(--ink)}
@@ -105,15 +105,26 @@
 .bib-card.preparo{background:transparent;box-shadow:none;border-style:dashed}
 .bib-card.preparo h3{color:var(--ink-2)}
 
-/* ---- sumário de âncoras --------------------------------------------------- */
+/* ---- sumário de âncoras ----------------------------------------------------
+   É um índice clicável, não um parágrafo — por isso cada item vira um cartão
+   com borda/sombra própria (mesma linguagem de .bib-card) e uma seta que se
+   desloca no hover. Sem isso a lista lia como texto corrido, indistinguível
+   do resto da página. Ver ".bib-kicker" antes dele no HTML ("Nesta página"),
+   que dá o rótulo que faltava. */
 
-.bib-sumario{margin:24px 0 0;padding:0;list-style:none;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px 22px;
-  border-top:1px solid var(--line);padding-top:18px}
+.bib-sumario{margin:16px 0 0;padding:0;list-style:none;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
 .bib-sumario li{margin:0}
-.bib-sumario a{display:block;padding:7px 0;color:var(--ink-2);text-decoration:none;font-size:15px}
-.bib-sumario a:hover{color:var(--accent)}
-.bib-sumario .num{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-right:9px}
+.bib-sumario a{display:flex;align-items:center;gap:4px;padding:13px 16px;
+  color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);transition:.15s}
+.bib-sumario a:hover{border-color:var(--accent);color:var(--accent)}
+.bib-sumario a::after{content:"→";margin-left:auto;padding-left:10px;
+  font-family:var(--mono);color:var(--ink-3);transition:.15s}
+.bib-sumario a:hover::after{color:var(--accent);transform:translateX(3px)}
+.bib-sumario .num{font-family:var(--mono);font-size:12px;font-weight:700;
+  color:var(--accent);margin-right:9px}
 
 /* ---- bloco de prompt ------------------------------------------------------ */
 
@@ -144,7 +155,7 @@
 .bib-copiar[data-estado="ok"]{color:var(--on-accent);background:var(--accent);border-color:var(--accent)}
 .bib-copiar[data-estado="erro"]{color:var(--telha);border-color:var(--telha)}
 
-.bib-cuidado{margin:0;padding:14px 16px;border-left:3px solid var(--manga-ink);
+.bib-cuidado{margin:0;padding:14px 16px;border-left:5px solid var(--manga-ink);
   background:transparent;color:var(--ink-2);font-size:15px}
 .bib-cuidado b{color:var(--ink)}
 
