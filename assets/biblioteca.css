@@ -106,20 +106,21 @@
 .bib-card.preparo h3{color:var(--ink-2)}
 
 /* ---- sumário de âncoras ----------------------------------------------------
-   É um índice clicável, não um parágrafo — por isso cada item vira um cartão
-   com borda/sombra própria (mesma linguagem de .bib-card) e uma seta que se
-   desloca no hover. Sem isso a lista lia como texto corrido, indistinguível
-   do resto da página. Ver ".bib-kicker" antes dele no HTML ("Nesta página"),
-   que dá o rótulo que faltava. */
+   É um índice clicável, não um parágrafo — por isso vira uma lista com cara
+   de índice de livro: um cartão só, uma linha por item, número em destaque e
+   seta que se desloca no hover. Chegou a ser grade de cartões (auto-fit), mas
+   com contagem de item que não é múltiplo de colunas a última fileira sobrava
+   torta — lista de uma coluna nunca desequilibra, não importa quantos itens
+   existam hoje ou entrem depois. */
 
 .bib-sumario{margin:16px 0 0;padding:0;list-style:none;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
-.bib-sumario li{margin:0}
-.bib-sumario a{display:flex;align-items:center;gap:4px;padding:13px 16px;
-  color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
-  box-shadow:var(--shadow);transition:.15s}
-.bib-sumario a:hover{border-color:var(--accent);color:var(--accent)}
+  border:1px solid var(--line);border-radius:var(--r);background:var(--surface);
+  box-shadow:var(--shadow);overflow:hidden}
+.bib-sumario li{margin:0;border-top:1px solid var(--line)}
+.bib-sumario li:first-child{border-top:0}
+.bib-sumario a{display:flex;align-items:center;gap:4px;padding:14px 20px;
+  color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;transition:.15s}
+.bib-sumario a:hover{background:var(--surface-2);color:var(--accent)}
 .bib-sumario a::after{content:"→";margin-left:auto;padding-left:10px;
   font-family:var(--mono);color:var(--ink-3);transition:.15s}
 .bib-sumario a:hover::after{color:var(--accent);transform:translateX(3px)}
