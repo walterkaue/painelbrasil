@@ -29,6 +29,11 @@ Google — ver seção de Open Graph abaixo.
 - O nav do topo é o mesmo em toda página do site principal (não em Repente): `Conteúdo · Atuação ·
   Trajetória · Formação · Contato`, apontando pra âncoras da home (`/#id`) quando a página não é a
   home. Se criar página nova em `jornal/` ou `biblioteca/`, copie esse nav — não invente outro.
+- **O nav do topo fica fixo em 5 links + botão de tema, não cresce por vertical nova.** Quando a
+  Biblioteca entrou, ela não virou um 6º link — foi incorporada como âncora dentro de "Conteúdo"
+  (commit `b34f58c`). Regra pra qualquer vertical futura: entra dentro de uma seção/âncora existente
+  da home, nunca como item novo direto no `<nav>`. Isso evita o nav estourar no celular sem precisar
+  de lógica de overflow.
 
 ## SEO on-page
 
@@ -66,9 +71,50 @@ Checklist obrigatório no `<head>` de toda página (home, boletim, edição, bib
   PowerShell, `[System.Drawing.Image]::FromFile(...)`) e compare com o que a página declara em
   `og:image:width`/`height` — os dois têm que bater.
 - Cards por vertical, não por artigo: `og-kw.png` (home), `og-biblioteca.png` (as 3 páginas da
-  Biblioteca), `og-jornal.png` (as 5 páginas d'A Banca, incluindo edições). Não é preciso gerar uma
-  imagem nova por edição semanal — é exatamente o tipo de tarefa manual recorrente que o próprio
-  `sitemap.xml` já evita de propósito (ver [LEIA-bloco1.md](LEIA-bloco1.md)).
+  Biblioteca), `og-jornal.png` (as páginas d'A Banca, incluindo edições). Não é preciso gerar uma
+  imagem nova por edição semanal — é exatamente o tipo de tarefa manual recorrente que o
+  `sitemap.xml` já evita de propósito (ver regra logo abaixo, em "A Banca — rotina de publicação
+  semanal").
+- **Testar o card antes de publicar o link, não depois.** O LinkedIn guarda em cache o resultado do
+  primeiro acesso a uma URL — se alguém (inclusive você) já a abriu antes do OG estar certo, o card
+  errado fica preso. Cole a URL no
+  [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) assim que a página subir, e só
+  depois publique o post de verdade. Isso vale principalmente para edição nova d'A Banca, que sai
+  toda semana.
+
+## A Banca — rotina de publicação semanal
+
+Os dois cadernos (Boletim Salesforce e Análise de Mercado) saem **toda semana**, cada um com sua
+própria numeração sequencial — "nº N" é por caderno, não compartilhado entre os dois. Se um caderno
+pular uma semana, o contador dele simplesmente não avança naquele ciclo; **nunca renumerar** uma
+edição já publicada pra tapar o buraco.
+
+- **URL de edição**: `jornal/{salesforce,mercado}/AAAA-MM-DD/index.html`, data de segunda-feira de
+  publicação. `og:type` é `"article"` nas páginas de edição (com `article:published_time`), e
+  `"website"` nas capas/índices (`/jornal/`, `/jornal/salesforce/`, `/jornal/mercado/`).
+- **Sitemap propositalmente sem edição nenhuma.** `sitemap.xml` lista só as páginas-índice
+  (`/`, `/jornal/`, `/biblioteca/` e as duas trilhas). Listar cada edição criaria uma tarefa manual
+  toda segunda — e tarefa manual semanal é tarefa esquecida em três semanas. O Google descobre
+  edição nova a partir da capa do caderno, que sempre linka a mais recente.
+- **Checklist de toda edição nova** (os pontos de inserção já existem como comentário HTML nos
+  arquivos — procure por eles em vez de adivinhar onde colar):
+  1. Criar a página da edição a partir do bloco-modelo comentado no fim de qualquer edição existente
+     (ex.: `jornal/salesforce/2026-08-24/index.html`, seção `BLOCO-MODELO` perto do fechamento do
+     `<body>`).
+  2. Inserir o card da edição em `NOVA-EDICAO-AQUI`, no índice do caderno
+     (`jornal/{caderno}/index.html`) — entra no topo da lista, mais recente primeiro.
+  3. Atualizar o bloco `ULTIMA-{CADERNO}-INICIO/FIM` na capa (`jornal/index.html`) com o resumo da
+     edição nova.
+  4. Acrescentar o item no topo de `jornal/{caderno}/feed.xml` (mais recente primeiro) e manter só
+     as ~20 edições mais recentes no feed — as mais antigas saem do XML mas continuam listadas no
+     índice completo da página.
+  5. Ligar a navegação entre edições: colar o link "Próxima edição" na página da edição **anterior**,
+     e "Edição anterior" na página **nova** (componente `.nav-edicoes`, logo abaixo do
+     `<header class="jornal-head">` — procure o comentário-modelo no arquivo da edição mais recente
+     de cada caderno pra ver exatamente onde colar).
+- **Agrupar por ano só quando fizer sentido.** A lista em `.edicoes` fica simples (sem separador) até
+  conter edições de mais de um ano civil. A partir daí, inserir `<h3>{ano}</h3>` acima do primeiro
+  item de cada ano, ano mais recente primeiro. Não implementar isso antes de precisar.
 
 ## Identidade visual de imagem — modelo: `assets/og-kw.png`
 
@@ -149,6 +195,15 @@ então qualquer coisa commitada fica visível no histórico do Git para sempre, 
   `repente/assets/painel.js` é só formatação/tooltip/tema, e os números do Painel Brasil vêm de
   arquivos como `repente/painel/trabalho/dados.js`, digitados e citados à mão, não de uma API ao
   vivo. Vale como regra para quando/se uma integração de verdade entrar.
+
+## Rodar localmente
+
+```bash
+python3 -m http.server 8000
+```
+
+Servidor é obrigatório — abrir os arquivos direto do disco (`file://`) quebra os caminhos absolutos
+(`/assets/...`, `/jornal/...`) que o site inteiro usa. Ver [README.md](README.md).
 
 ## Git
 

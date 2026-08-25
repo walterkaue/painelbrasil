@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Feed da Análise de Mercado (A Banca). Mantido à mão, um <item> por edição,
+  mais recente primeiro — ver checklist de publicação semanal no CLAUDE.md.
+  Manter só as ~20 edições mais recentes aqui; edições mais antigas seguem
+  listadas no índice completo em /jornal/mercado/.
+-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Análise de Mercado — A Banca</title>
+  <link>https://kauewalter.com.br/jornal/mercado/</link>
+  <atom:link href="https://kauewalter.com.br/jornal/mercado/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Boletim semanal de macro e negócios: o que órgão oficial divulgou, o que tem data marcada e o que muda mecanicamente para quem vende tecnologia e serviço no Brasil.</description>
+  <language>pt-BR</language>
+  <lastBuildDate>Mon, 24 Aug 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 1 — Uma semana de calendário cheio e nenhuma surpresa</title>
+    <link>https://kauewalter.com.br/jornal/mercado/2026-08-24/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/mercado/2026-08-24/</guid>
+    <pubDate>Mon, 24 Aug 2026 08:00:00 -0300</pubDate>
+    <description>Calendário cheio e nenhuma surpresa: IPCA-15 na quarta, PIB do 2º trimestre na semana que vem, e a reforma tributária suspendendo a exigência que tinha acabado de criar.</description>
+  </item>
+
+</channel>
+</rss>

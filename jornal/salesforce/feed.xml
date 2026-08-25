@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Feed do Boletim Salesforce (A Banca). Mantido à mão, um <item> por edição,
+  mais recente primeiro — ver checklist de publicação semanal no CLAUDE.md.
+  Manter só as ~20 edições mais recentes aqui; edições mais antigas seguem
+  listadas no índice completo em /jornal/salesforce/.
+-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Boletim Salesforce — A Banca</title>
+  <link>https://kauewalter.com.br/jornal/salesforce/</link>
+  <atom:link href="https://kauewalter.com.br/jornal/salesforce/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Boletim semanal sobre Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce. Publicado toda segunda-feira, com nível de confiança declarado em cada item.</description>
+  <language>pt-BR</language>
+  <lastBuildDate>Mon, 24 Aug 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 1 — A semana em que três prazos caem juntos</title>
+    <link>https://kauewalter.com.br/jornal/salesforce/2026-08-24/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/salesforce/2026-08-24/</guid>
+    <pubDate>Mon, 24 Aug 2026 08:00:00 -0300</pubDate>
+    <description>Corte de sandbox do Winter '27 em 27/8, último exame das certificações de Marketing Cloud em retirada em 31/8, e os dois agentes de marketing do release.</description>
+  </item>
+
+</channel>
+</rss>

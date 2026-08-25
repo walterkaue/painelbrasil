@@ -153,6 +153,21 @@ dl.campos dd b{font-weight:600;color:var(--ink)}
 .ultima .conta{font-family:var(--mono);font-size:12px;color:var(--ink-3);display:block;margin-bottom:14px}
 .ultima .vazio{font-size:14.5px;color:var(--ink-3);margin:0 0 14px}
 
+/* ---------- navegação entre edições consecutivas ----------
+   Até dois links: o lado sem vizinho fica simplesmente ausente (sem estado
+   desabilitado). Fica logo abaixo de .jornal-head na página de cada edição. */
+.nav-edicoes{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;
+  margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
+.nav-edicoes a{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;
+  color:var(--ink-2);text-decoration:none}
+.nav-edicoes a:hover{color:var(--ink)}
+.nav-edicoes .next{margin-left:auto;text-align:right}
+
+/* ---------- link de feed RSS ---------- */
+.feed-link{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-3);text-decoration:none}
+.feed-link:hover{color:var(--ink)}
+
 /* ---------- índice de edições ---------- */
 .edicoes{display:flex;flex-direction:column;gap:14px;margin-top:30px}
 .edicao{display:block;background:var(--surface);border:1px solid var(--line);
