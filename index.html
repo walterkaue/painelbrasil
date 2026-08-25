@@ -42,11 +42,10 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
   <div class="top-in">
     <a class="logo" href="./"><span class="mark">KW</span> Kauê Walter</a>
     <nav>
+      <a href="#conteudo">Conteúdo</a>
       <a href="#atuacao">Atuação</a>
-      <a href="#biblioteca">Biblioteca</a>
       <a href="#trajetoria">Trajetória</a>
       <a href="#formacao">Formação</a>
-      <a href="/jornal/">A Banca</a>
       <a href="#contato">Contato</a>
       <button class="tgl" id="tgl" type="button" aria-pressed="false"
               aria-label="Alternar entre tema claro e escuro">Tema</button>
@@ -78,10 +77,6 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 013.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
           LinkedIn
         </a>
-        <a class="btn ghost" href="/jornal/">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          A Banca — boletins de segunda
-        </a>
       </div>
 
       <div class="stats">
@@ -105,6 +100,43 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
     <rect x="-60" y="189" width="1720" height="11" fill="var(--serra-chao)"/>
   </svg>
 </div>
+
+<!-- CONTEÚDO -->
+<section id="conteudo">
+  <div class="w">
+    <div class="sec-label">Conteúdo</div>
+    <h2>O que eu publico, toda semana</h2>
+    <p class="lead">Duas frentes abertas ao público: material de estudo sobre Marketing Cloud e um
+      boletim semanal sobre a plataforma e o país. Fonte declarada em tudo — e onde a fonte é fraca,
+      isso está escrito.</p>
+
+    <div class="hub">
+      <a class="hub-card biblioteca" href="/biblioteca/">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6H2v14a2 2 0 002 2h14v-2H4V6zm16-4H8a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg></span>
+        <h3>Biblioteca</h3>
+        <p>Prompts de estudo e trilhas de certificação para quem opera Marketing Cloud — genérico de
+          plataforma, sem dado de cliente.</p>
+        <span class="meta">8 prompts · 4 trilhas</span>
+        <span class="btn solid">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 00-2 2v14h2V3h12V1zm3 4H8a2 2 0 00-2 2v14a2 2 0 002 2h11a2 2 0 002-2V7a2 2 0 00-2-2zm0 16H8V7h11v14z"/></svg>
+          Ver a biblioteca
+        </span>
+      </a>
+
+      <a class="hub-card banca" href="/jornal/">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>
+        <h3>A Banca</h3>
+        <p>Dois boletins toda segunda-feira: um sobre Marketing Cloud, outro sobre mercado — fonte
+          declarada e nível de confiança em cada item.</p>
+        <span class="meta">Toda segunda de manhã</span>
+        <span class="btn solid">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4.24l-8 4.7-8-4.7V6l8 4.7L20 6v2.24z"/></svg>
+          Abrir A Banca
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- ATUAÇÃO -->
 <section id="atuacao">
@@ -154,60 +186,6 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
           <li>Estratégia de canal e voz de marca ao longo do ciclo de vida</li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- BIBLIOTECA -->
-<section id="biblioteca">
-  <div class="w">
-    <div class="sec-label">Biblioteca</div>
-    <h2>Material de estudo, aberto</h2>
-    <p class="lead">Prompts, trilhas de certificação e guias em português para quem opera Marketing
-      Cloud. Cada dado com a fonte indicada e, onde a fonte é fraca, com isso escrito. Tudo genérico
-      de plataforma — nenhum dado, nome ou configuração de cliente entra aqui.</p>
-
-    <div class="two">
-      <div class="box">
-        <h3>Prompts de estudo e certificação</h3>
-        <p>Oito prompts para estudar de um jeito em que o modelo ajude em vez de atrapalhar: gerar
-          simulado no peso real do exame, entender por que você errou, e saber onde ele está
-          chutando. Botão de copiar em cada um.</p>
-        <div class="tags" style="margin-bottom:18px">
-          <span class="tag plain">Diagnóstico de lacuna</span>
-          <span class="tag plain">Simulado por peso</span>
-          <span class="tag plain">Autópsia de erro</span>
-          <span class="tag plain">Flashcards</span>
-        </div>
-        <a class="btn ghost" href="/biblioteca/prompts/">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 00-2 2v14h2V3h12V1zm3 4H8a2 2 0 00-2 2v14a2 2 0 002 2h11a2 2 0 002-2V7a2 2 0 00-2-2zm0 16H8V7h11v14z"/></svg>
-          Abrir os prompts
-        </a>
-      </div>
-
-      <div class="box">
-        <h3>Trilhas de estudo — MCE, Data 360 e MC Next</h3>
-        <p>Quatro trilhas por papel, com o que estudar, o que construir e o sinal de que a etapa
-          terminou. Mais o mapa que ninguém atualizou: os nomes de certificação que mudaram, as três
-          que se aposentam em fevereiro de 2027 e a que nasceu em agosto de 2026.</p>
-        <div class="tags" style="margin-bottom:18px">
-          <span class="tag plain">Operação de MCE</span>
-          <span class="tag plain">Consultoria</span>
-          <span class="tag plain">Data 360 e MC Next</span>
-          <span class="tag plain">Desenvolvimento</span>
-        </div>
-        <a class="btn ghost" href="/biblioteca/trilhas/">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6H2v14a2 2 0 002 2h14v-2H4V6zm16-4H8a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>
-          Abrir as trilhas
-        </a>
-      </div>
-    </div>
-
-    <div class="cta">
-      <a class="btn solid" href="/biblioteca/">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        Ver a biblioteca inteira
-      </a>
     </div>
   </div>
 </section>

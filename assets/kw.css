@@ -236,6 +236,32 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 .pillar ul{margin:13px 0 0;padding-left:19px;font-size:14.5px;color:var(--ink-2)}
 .pillar li{margin:6px 0}
 
+/* ═══ conteúdo — vitrine da Biblioteca e d'A Banca ═══════════
+   Mesmo tratamento visual dos pilares (borda superior colorida),
+   pra carregar o mesmo peso: são as duas frentes de conteúdo
+   público, precisam competir de igual pra igual com o resto da
+   página, não sumir num botão ghost. Cartão inteiro é o link —
+   sem botão real aninhado, .btn aqui é só o rótulo visual.
+   Biblioteca = mata (mesma leitura de "conhecimento" dos pilares),
+   A Banca = azulejo, cor livre pra "imprensa/publicação". */
+.hub{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:30px}
+.hub-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);padding:26px;box-shadow:var(--shadow);border-top:3px solid var(--line);
+  color:inherit;text-decoration:none;transition:.15s}
+.hub-card:hover{border-color:var(--ink-3)}
+.hub-card.biblioteca{border-top-color:var(--mata)}
+.hub-card.banca{border-top-color:var(--azulejo)}
+.hub-card .ico{width:40px;height:40px;border-radius:10px;background:var(--surface-2);
+  display:grid;place-items:center;margin-bottom:16px}
+.hub-card .ico svg{width:20px;height:20px;fill:currentColor}
+.hub-card.biblioteca .ico{color:var(--mata)}
+.hub-card.banca .ico{color:var(--azulejo)}
+.hub-card h3{font-size:20px;margin-bottom:8px;color:var(--ink)}
+.hub-card p{margin:0;font-size:15px;color:var(--ink-2);flex:1}
+.hub-card .meta{display:block;font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:16px}
+.hub-card .btn{margin-top:16px;align-self:flex-start;pointer-events:none}
+.hub-card:hover .btn.solid{background:var(--ink);color:var(--bg)}
+
 /* ═══ trajetória ═════════════════════════════════════════════ */
 .tl{margin-top:32px;border-left:2px solid var(--line);padding-left:0}
 .job{position:relative;padding:0 0 34px 30px}
