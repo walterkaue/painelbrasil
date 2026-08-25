@@ -223,6 +223,11 @@ section{padding:56px 0;scroll-margin-top:76px}
 section h2{font-size:clamp(25px,3.6vw,36px);max-width:22ch}
 section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 
+/* motivo decorativo acima do rótulo de seção — mesma família visual
+   da faixa da serra do herói, em escala menor. Puramente ornamental. */
+.sec-motif{margin-bottom:12px}
+.sec-motif svg{display:block;width:120px;height:auto}
+
 /* ═══ pilares — a cor carrega a frente de atuação ════════════
    01 Técnica = telha · 02 Pessoas = mata · 03 Negócio = serra
    O rótulo textual ("01 / TÉCNICA") acompanha sempre: a cor
@@ -230,14 +235,17 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 .pillars{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(276px,1fr));margin-top:30px}
 .pillar{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
   padding:26px;box-shadow:var(--shadow);border-top:5px solid var(--line)}
+.n-row{display:flex;align-items:center;gap:9px;margin-bottom:13px}
 .pillar .n{font-family:var(--mono);font-size:12px;font-weight:500;
-  letter-spacing:.1em;margin-bottom:13px;display:block;color:var(--ink-2)}
+  letter-spacing:.1em;display:block;color:var(--ink-2)}
+.ico-pilar{width:22px;height:22px;flex:0 0 22px;color:var(--ink-2)}
+.ico-pilar svg{width:100%;height:100%;fill:currentColor}
 .pillar:nth-child(1){border-top-color:var(--telha)}
-.pillar:nth-child(1) .n{color:var(--telha)}
+.pillar:nth-child(1) .n,.pillar:nth-child(1) .ico-pilar{color:var(--telha)}
 .pillar:nth-child(2){border-top-color:var(--mata)}
-.pillar:nth-child(2) .n{color:var(--mata)}
+.pillar:nth-child(2) .n,.pillar:nth-child(2) .ico-pilar{color:var(--mata)}
 .pillar:nth-child(3){border-top-color:var(--serra)}
-.pillar:nth-child(3) .n{color:var(--serra)}
+.pillar:nth-child(3) .n,.pillar:nth-child(3) .ico-pilar{color:var(--serra)}
 .pillar h3{font-size:19px;margin-bottom:10px}
 .pillar p{margin:0;font-size:15px;color:var(--ink-2)}
 .pillar ul{margin:13px 0 0;padding-left:19px;font-size:14.5px;color:var(--ink-2)}
@@ -274,7 +282,16 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 .job{position:relative;padding:0 0 34px 30px}
 .job::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;
   border-radius:50%;background:var(--bg);border:2px solid var(--ink-3)}
-.job.now::before{background:var(--accent);border-color:var(--accent)}
+/* cor cíclica pelos acentos da serra — cada marcador "pisca" uma cor do
+   sistema, sem trocar o significado (o texto e a data continuam a
+   fonte real da informação, a cor é só reforço visual). */
+.tl .job:nth-child(5n+1)::before{border-color:var(--mata)}
+.tl .job:nth-child(5n+2)::before{border-color:var(--azulejo)}
+.tl .job:nth-child(5n+3)::before{border-color:var(--rosa)}
+.tl .job:nth-child(5n+4)::before{border-color:var(--carmim)}
+.tl .job:nth-child(5n+5)::before{border-color:var(--ocre)}
+.tl .job.now::before{width:15px;height:15px;left:-8.5px;top:5.5px;
+  background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
 .job:last-child{padding-bottom:4px}
 .job .when{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);
   letter-spacing:-.01em;font-variant-numeric:tabular-nums}
@@ -311,6 +328,11 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 .tag{font-family:var(--mono);font-size:12.5px;padding:5px 11px;border-radius:7px;
   background:var(--accent-soft);color:var(--accent);font-weight:500}
 .tag.plain{background:var(--surface-2);color:var(--ink-2)}
+
+/* eco da faixa da serra — fecha a página com o mesmo motivo que abre
+   o herói, versão reduzida e centralizada, puramente decorativo. */
+.echo-wrap{text-align:center;padding-top:14px}
+.echo-serra{width:180px;height:auto}
 
 /* ═══ contato ════════════════════════════════════════════════ */
 .contact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);

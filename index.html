@@ -141,6 +141,13 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
 <!-- ATUAÇÃO -->
 <section id="atuacao">
   <div class="w">
+    <div class="sec-motif" aria-hidden="true">
+      <svg viewBox="0 0 140 36" focusable="false">
+        <circle cx="122" cy="10" r="7" fill="var(--serra-sol)"/>
+        <path d="M0 36 L26 6 L52 36 Z" fill="var(--serra-2)"/>
+        <path d="M40 36 Q62 20 84 36 Z" fill="var(--serra-1)"/>
+      </svg>
+    </div>
     <div class="sec-label">Atuação</div>
     <h2>Três frentes que se alimentam</h2>
     <p class="lead">Não acredito em gestor que perdeu a mão técnica, nem em técnico que não olha
@@ -148,7 +155,12 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
 
     <div class="pillars">
       <div class="pillar">
-        <span class="n">01 / TÉCNICA</span>
+        <div class="n-row">
+          <span class="ico-pilar" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3L21 20H3z"/></svg>
+          </span>
+          <span class="n">01 / TÉCNICA</span>
+        </div>
         <h3>Arquitetura em Marketing Cloud</h3>
         <p>Sigo como referência técnica do time, não só como gestor. Atuo como Tech Lead em
           desenvolvimento complexo.</p>
@@ -162,7 +174,12 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
       </div>
 
       <div class="pillar">
-        <span class="n">02 / PESSOAS</span>
+        <div class="n-row">
+          <span class="ico-pilar" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><circle cx="7" cy="12" r="6"/><circle cx="18.5" cy="12" r="4.2"/></svg>
+          </span>
+          <span class="n">02 / PESSOAS</span>
+        </div>
         <h3>Formação de time</h3>
         <p>É a parte do trabalho que mais me move. Já contratei, treinei e promovi — e vi gente que
           formei virar coordenadora depois que saí.</p>
@@ -175,7 +192,12 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
       </div>
 
       <div class="pillar">
-        <span class="n">03 / NEGÓCIO</span>
+        <div class="n-row">
+          <span class="ico-pilar" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><rect x="2" y="14" width="5" height="8"/><rect x="9.5" y="9" width="5" height="13"/><rect x="17" y="3" width="5" height="19"/></svg>
+          </span>
+          <span class="n">03 / NEGÓCIO</span>
+        </div>
         <h3>Estratégia e relacionamento</h3>
         <p>A ponte entre o que a tecnologia faz e o que a liderança do cliente precisa entender
           para decidir.</p>
@@ -193,6 +215,13 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
 <!-- TRAJETÓRIA -->
 <section id="trajetoria">
   <div class="w">
+    <div class="sec-motif" aria-hidden="true">
+      <svg viewBox="0 0 140 36" focusable="false">
+        <circle cx="18" cy="9" r="6" fill="var(--serra-sol)"/>
+        <path d="M88 36 L114 4 L140 36 Z" fill="var(--serra-4)"/>
+        <path d="M50 36 Q72 18 94 36 Z" fill="var(--serra-3)"/>
+      </svg>
+    </div>
     <div class="sec-label">Trajetória</div>
     <h2>De estagiário em crédito a líder de Marketing Cloud</h2>
     <p class="lead">Uma linha só, sem desvio: analisar dado, estruturar processo, formar gente.</p>
@@ -295,19 +324,13 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
       </div>
 
       <div class="job">
-        <div class="when">2013</div>
-        <h3>Finalista — Bota Pra Fazer</h3>
-        <div class="org">Endeavor Brasil</div>
-        <p>Curso de empreendedorismo da Endeavor, ainda na graduação: autoconhecimento, jornada do
-          empreendedor e construção de negócio com pouco recurso — a primeira vez que testei ideia de
-          produto contra cliente real.</p>
-      </div>
-
-      <div class="job">
-        <div class="when">2010</div>
-        <h3>Entrada na UFSCar</h3>
-        <div class="org">Engenharia de Produção</div>
-        <p>Início da formação que dá a base analítica e de processo que uso até hoje.</p>
+        <div class="when">2010 — 2013</div>
+        <h3>Entrada na UFSCar e primeiro contato com empreendedorismo</h3>
+        <div class="org">Engenharia de Produção · Finalista, Bota Pra Fazer (Endeavor Brasil)</div>
+        <p>Início da formação que dá a base analítica e de processo que uso até hoje (detalhe em
+          Formação, mais abaixo) e, ainda na graduação, a primeira vez que testei ideia de produto
+          contra cliente real — autoconhecimento, jornada do empreendedor e construção de negócio
+          com pouco recurso.</p>
       </div>
     </div>
   </div>
@@ -369,6 +392,14 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
     </div>
   </div>
 </section>
+
+<div class="w echo-wrap">
+  <svg class="echo-serra" viewBox="0 0 220 70" aria-hidden="true" focusable="false">
+    <circle cx="188" cy="16" r="10" fill="var(--serra-sol)"/>
+    <path d="M40 70 L100 12 L160 70 Z" fill="var(--serra-2)"/>
+    <rect x="0" y="62" width="220" height="8" fill="var(--serra-chao)"/>
+  </svg>
+</div>
 
 <!-- CONTATO -->
 <section id="contato">
