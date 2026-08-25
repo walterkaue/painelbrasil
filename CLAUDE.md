@@ -125,6 +125,31 @@ atualizado junto com o estado (padrão usado em `biblioteca/prompts/index.html`)
 - Scripts de terceiro (analytics, formulário) sempre com `defer` ou `async` — nunca bloqueando o
   `<head>`. Ver `assets/compartilhar.js`, que já segue isso.
 
+## Segurança — realidade de "HTML estático, repositório público, sem backend"
+
+O maior risco real aqui não é técnico, é de **exposição por publicação**: o repositório é público,
+então qualquer coisa commitada fica visível no histórico do Git para sempre, mesmo revertida depois.
+
+- **Nunca** commitar chave de API, token, e-mail interno ou dado de cliente. Se algo sensível for
+  commitado por engano, **reverter não basta** — o commit continua no histórico. É preciso reescrever
+  o histórico ou revogar a credencial exposta, e isso é aviso imediato a você, nunca silêncio.
+- **O arquivo `CNAME` nunca se apaga.** Já vale como regra de não quebrar o site (ver README), mas
+  também é segurança: sem ele o domínio cai do GitHub Pages e fica sujeito a ser reclamado por outra
+  conta enquanto o DNS ainda apontar pra lá.
+- **GitHub Pages não aceita cabeçalho HTTP customizado** (tipo CSP ou X-Content-Type-Options) sem um
+  proxy na frente, que este projeto não tem. Um arquivo `_headers` estilo Netlify não funciona aqui.
+  Se um dia entrar CSP, só dá via `<meta http-equiv="Content-Security-Policy">` no `<head>` — mais
+  fraco que cabeçalho real — e precisa testar contra os scripts existentes (tema, `compartilhar.js`,
+  `repente/assets/painel.js`) antes de publicar.
+- **Script novo de CDN** (analytics, biblioteca de gráfico): confirmar manutenção ativa e licença
+  compatível, e adicionar `integrity` + `crossorigin` na tag. Isso **não se aplica** ao link do Google
+  Fonts já em uso — a resposta dele varia por navegador, então um hash de integridade fixo quebra.
+- **Dado externo inserido no DOM deve usar `textContent`, nunca `innerHTML` com o valor bruto.** Hoje
+  isso é mais preventivo que urgente: nada no site busca dado externo em tempo de execução —
+  `repente/assets/painel.js` é só formatação/tooltip/tema, e os números do Painel Brasil vêm de
+  arquivos como `repente/painel/trabalho/dados.js`, digitados e citados à mão, não de uma API ao
+  vivo. Vale como regra para quando/se uma integração de verdade entrar.
+
 ## Git
 
 **Nunca commitar ou dar `push` sem o usuário pedir explicitamente**, mesmo depois de terminar uma
