@@ -224,9 +224,13 @@ section h2{font-size:clamp(25px,3.6vw,36px);max-width:22ch}
 section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 
 /* motivo decorativo acima do rótulo de seção — mesma família visual
-   da faixa da serra do herói, em escala menor. Puramente ornamental. */
-.sec-motif{margin-bottom:12px}
-.sec-motif svg{display:block;width:120px;height:auto}
+   da faixa da serra do herói, em escala bem menor. Puramente ornamental.
+   width/height também vêm como atributo no <svg> (não só aqui): um SVG
+   com viewBox e sem tamanho intrínseco cai no padrão do navegador
+   (bem maior que isto) se o CSS externo demorar a chegar — o atributo
+   garante o tamanho certo desde o primeiro paint. */
+.sec-motif{margin-bottom:10px}
+.sec-motif svg{display:block;width:100px;height:26px}
 
 /* ═══ pilares — a cor carrega a frente de atuação ════════════
    01 Técnica = telha · 02 Pessoas = mata · 03 Negócio = serra
@@ -238,8 +242,11 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 .n-row{display:flex;align-items:center;gap:9px;margin-bottom:13px}
 .pillar .n{font-family:var(--mono);font-size:12px;font-weight:500;
   letter-spacing:.1em;display:block;color:var(--ink-2)}
-.ico-pilar{width:22px;height:22px;flex:0 0 22px;color:var(--ink-2)}
-.ico-pilar svg{width:100%;height:100%;fill:currentColor}
+/* mesmo tratamento em selo dos ícones da vitrine (.hub-card .ico), só que
+   menor: aqui o ícone é reforço ao lado do rótulo, não o card inteiro. */
+.ico-pilar{width:28px;height:28px;flex:0 0 28px;border-radius:8px;
+  background:var(--surface-2);display:grid;place-items:center;color:var(--ink-2)}
+.ico-pilar svg{display:block;fill:currentColor}
 .pillar:nth-child(1){border-top-color:var(--telha)}
 .pillar:nth-child(1) .n,.pillar:nth-child(1) .ico-pilar{color:var(--telha)}
 .pillar:nth-child(2){border-top-color:var(--mata)}
