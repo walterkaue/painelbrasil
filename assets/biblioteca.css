@@ -22,6 +22,11 @@
 .bib-hero h1{font-size:clamp(28px,4.4vw,42px);margin:0 0 12px}
 .bib-hero .bib-lead{font-size:clamp(16px,1.9vw,18px);color:var(--ink-2);max-width:62ch;margin:0}
 
+/* cena Pássaros — fecha o herói, fundo discreto, sem linha de chão.
+   Só decorativa: aria-hidden, nunca a peça principal da seção. */
+.bib-cena{margin-top:22px}
+.bib-cena svg{display:block;width:480px;max-width:100%;height:auto}
+
 .bib-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--ink-3);margin:0 0 14px}
 

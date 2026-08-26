@@ -232,6 +232,13 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
 .sec-motif{margin-bottom:10px}
 .sec-motif svg{display:block;width:100px;height:26px}
 
+/* cenas reaproveitadas do repertório Litoral/Pássaros — mesma ideia do
+   .sec-motif, só que com a cena completa. Contidas em .w, nunca full-bleed
+   como a serra do herói: aqui é fundo discreto, não a peça principal. */
+.sec-cena{margin-bottom:10px}
+.sec-cena svg{display:block}
+.sec-cena--passaros svg{width:180px;height:30px}
+
 /* ═══ pilares — a cor carrega a frente de atuação ════════════
    01 Técnica = telha · 02 Pessoas = mata · 03 Negócio = serra
    O rótulo textual ("01 / TÉCNICA") acompanha sempre: a cor
@@ -336,10 +343,10 @@ section p.lead{color:var(--ink-2);max-width:66ch;margin:16px 0 0;font-size:17px}
   background:var(--accent-soft);color:var(--accent);font-weight:500}
 .tag.plain{background:var(--surface-2);color:var(--ink-2)}
 
-/* eco da faixa da serra — fecha a página com o mesmo motivo que abre
-   o herói, versão reduzida e centralizada, puramente decorativo. */
+/* eco do Litoral — fecha a página antes do Contato, cena completa em vez
+   do triângulo+sol de antes, ainda contida e centralizada. */
 .echo-wrap{text-align:center;padding-top:14px}
-.echo-serra{width:180px;height:auto}
+.echo-cena{width:440px;max-width:100%;height:auto}
 
 /* ═══ contato ════════════════════════════════════════════════ */
 .contact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
