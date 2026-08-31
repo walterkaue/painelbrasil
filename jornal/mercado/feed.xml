@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/mercado/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal de macro e negócios: o que órgão oficial divulgou, o que tem data marcada e o que muda mecanicamente para quem vende tecnologia e serviço no Brasil.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 24 Aug 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 31 Aug 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 2 — Três índices de preço caem na mesma semana</title>
+    <link>https://kauewalter.com.br/jornal/mercado/2026-08-31/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/mercado/2026-08-31/</guid>
+    <pubDate>Mon, 31 Aug 2026 08:00:00 -0300</pubDate>
+    <description>Três índices de preço caíram na mesma semana, o desemprego ficou em 5,3% e o governo central teve superávit em julho sem tirar o ano do vermelho. Mais uma correção da edição anterior.</description>
+  </item>
 
   <item>
     <title>nº 1 — Uma semana de calendário cheio e nenhuma surpresa</title>

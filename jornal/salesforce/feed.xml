@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/salesforce/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal sobre Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce. Publicado toda segunda-feira, com nível de confiança declarado em cada item.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 24 Aug 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 31 Aug 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 2 — A semana em que o MCP Server virou infraestrutura, não anúncio</title>
+    <link>https://kauewalter.com.br/jornal/salesforce/2026-08-31/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/salesforce/2026-08-31/</guid>
+    <pubDate>Mon, 31 Aug 2026 08:00:00 -0300</pubDate>
+    <description>Onda 1 de produção do Winter '27 em 4/9, corte de client secrets antigos em 30/9, e o MCP Server da Marketing Cloud Engagement chegando a GA com dezenas de ferramentas novas.</description>
+  </item>
 
   <item>
     <title>nº 1 — A semana em que três prazos caem juntos</title>
