@@ -275,3 +275,11 @@ Servidor é obrigatório — abrir os arquivos direto do disco (`file://`) quebr
 **Nunca commitar ou dar `push` sem o usuário pedir explicitamente**, mesmo depois de terminar uma
 tarefa de otimização/SEO. Mostrar o que mudou e esperar confirmação — "pode publicar" é a autorização,
 não a conclusão da tarefa em si.
+
+## Backlog — GitHub Issues, não outro lugar
+
+Ideia, pendência, decisão adiada ou "vale revisitar depois" vira **issue no repositório**
+(`walterkaue/painelbrasil`), via `github-mcp-server` (ver seção de ferramentas de bancada). Não
+criar arquivo `TODO.md` nem lista solta em outro lugar — issue é o único backlog do projeto.
+Fechar sempre com comentário explicando o que foi feito (ou por que não precisava), nunca fechar
+sem registrar o motivo.
