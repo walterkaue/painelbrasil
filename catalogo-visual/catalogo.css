@@ -1,0 +1,106 @@
+/* ═══════════════════════════════════════════════════════════════
+   CATÁLOGO TEMPORÁRIO — não é página do site, não segue o checklist
+   de <head>/SEO/nav. Serve só pra escolher um estilo por número.
+   Reaproveita os tokens de ../assets/kw.css (cores, fontes, --r,
+   --shadow) — nada de cor nova fora da paleta Pau-brasil.
+   ═══════════════════════════════════════════════════════════════ */
+
+body{max-width:1180px;margin:0 auto;padding:34px 22px 90px}
+
+.cat-head{margin-bottom:8px}
+.cat-head .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:10px}
+.cat-head h1{font-family:var(--display);font-size:clamp(24px,3.4vw,34px);margin:0 0 10px;
+  font-variation-settings:"SOFT" 30,"WONK" 1,"opsz" 120}
+.cat-head p{color:var(--ink-2);max-width:66ch;margin:0 0 6px;font-size:15.5px}
+.cat-head .voltar{display:inline-block;margin-top:6px;font-size:14px}
+
+/* legenda dos 10 estilos */
+.legenda{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px 18px;
+  margin:22px 0 36px;padding:18px 20px;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r)}
+.legenda div{font-size:13.5px;color:var(--ink-2)}
+.legenda b{font-family:var(--mono);color:var(--accent);margin-right:6px}
+
+/* rótulo de linha — ocupa as 5 colunas, uma vez por estilo */
+.style-row-label{grid-column:1/-1;display:flex;align-items:baseline;gap:10px;
+  margin:30px 0 12px;padding-top:22px;border-top:1px solid var(--line)}
+.style-row-label:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.style-row-label .idx{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.style-row-label h2{font-family:var(--display);font-size:19px;margin:0;
+  font-variation-settings:"SOFT" 30,"WONK" 1,"opsz" 90}
+.style-row-label span.desc{font-size:13px;color:var(--ink-3)}
+
+/* grade 5×10 */
+.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media (max-width:760px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+
+.cell{position:relative;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);min-height:128px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;overflow:hidden;padding:10px}
+.cell .num{position:absolute;top:7px;left:9px;font-family:var(--mono);font-size:11px;
+  color:var(--ink-3);z-index:5}
+.cell .rotulo{position:absolute;bottom:6px;left:0;right:0;text-align:center;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;color:var(--ink-3);z-index:5}
+.cell .deco{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.cell .ico,.cell .art{position:relative;z-index:2;width:30px;height:30px}
+.cell .art{width:84px;height:56px}
+
+/* variáveis de cor por coluna — mesmo conceito, cor consistente em
+   toda coluna, qualquer que seja o estilo da linha */
+.c1{--col:var(--carmim)}
+.c2{--col:var(--mata)}
+.c3{--col:var(--azulejo)}
+.c4{--col:var(--ocre)}
+.c5{--col:var(--rosa)}
+
+/* base — todo ícone/arte parte daqui; cada estilo sobrescreve o que precisa */
+.cell .ico{fill:var(--col);stroke:none}
+.cell .art .a-1{fill:var(--col)}
+.cell .art .a-2{fill:var(--ink-3)}
+.cell .art .a-ground{fill:var(--serra-chao)}
+.cell .art .a-sun{fill:var(--serra-sol)}
+
+/* ── 01 · Pau-brasil Flat — a linguagem atual do site, sem alteração ── */
+
+/* ── 02 · Traço Único — contorno só, nada de preenchimento ── */
+.style-2 .ico,.style-2 .art *{fill:none!important;stroke:var(--col);
+  stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+.cell.style-2{border-color:var(--ink-3)}
+
+/* ── 03 · Azulejo — motivo de ladrilho atrás, ícone em negativo ── */
+.style-3 .ico,.style-3 .art *{fill:var(--bg)!important}
+.style-3 .deco .t1{fill:var(--col)}
+.style-3 .deco .t2{fill:var(--ink-3)}
+
+/* ── 04 · Recorte — cópia deslocada atrás, feito colagem de papel ── */
+.style-4 .sombra{fill:var(--ink-3);opacity:.55}
+.style-4 .frente{fill:var(--col)}
+
+/* ── 05 · Pontilhismo — preenchimento em pontos ── */
+.style-5 .ico,.style-5 .art .a-1,.style-5 .art .a-2{fill:url(#dots)!important}
+.cell.style-5{border-width:2px;border-color:var(--col)}
+
+/* ── 06 · Bloco Bruto — contorno grosso, cantos quadrados ── */
+.cell.style-6{border-radius:0;border-width:2px;border-color:var(--ink)}
+.style-6 .ico,.style-6 .art *{stroke:var(--ink);stroke-width:1.5;paint-order:stroke fill}
+
+/* ── 07 · Fita & Bandeira — bandeirinha atrás, ícone em negativo ── */
+.style-7 .ico,.style-7 .art *{fill:var(--bg)!important}
+.style-7 .deco path{fill:var(--col)}
+.style-7 .deco path:nth-child(2n){fill:var(--ink-3)}
+
+/* ── 08 · Raios do Sol — sol raiando atrás, medalhão de contraste ── */
+.style-8 .deco line{stroke:var(--col);stroke-width:1.4;opacity:.75}
+.style-8 .medalhao{fill:var(--bg)}
+.style-8 .ico,.style-8 .art *{fill:var(--ink)!important}
+
+/* ── 09 · Ondas — faixas de mar atrás, ícone na frente ── */
+.style-9 .deco .onda1{fill:var(--azulejo);opacity:.9}
+.style-9 .deco .onda2{fill:var(--mata);opacity:.55}
+
+/* ── 10 · Xilogravura — traço torto de xilogravura/cordel ── */
+.cell.style-10{background:var(--bg);border-width:2px;border-color:var(--ink)}
+.style-10 .ico,.style-10 .art{filter:url(#rough)}
+.style-10 .ico,.style-10 .art *{fill:var(--ink)!important}
+.style-10 .deco line{stroke:var(--ink);opacity:.5}

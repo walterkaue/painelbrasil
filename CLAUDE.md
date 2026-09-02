@@ -139,6 +139,9 @@ Repente), o modelo de arte é [assets/og-kw.png](assets/og-kw.png):
 - Cards novos seguem o padrão dos moldes em [cartoes-og/](cartoes-og/og-biblioteca.html): HTML com
   os tokens de `kw.css`, capturado a 1200×630 via "Capture node screenshot" no Chrome DevTools — não
   existe pipeline automatizado de geração de imagem neste projeto, e não deve existir (ver abaixo).
+- [catalogo-visual/](catalogo-visual/cenas.html) é a mesma ideia de `cartoes-og/` — ferramenta de
+  bancada versionada, não é página do site (`noindex,nofollow`, sem nav). Reúne o repertório de
+  cenas e ícones no tratamento Pau-brasil Flat pra comparar estilo antes de desenhar um SVG novo.
 
 ## Alt text
 

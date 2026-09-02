@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repertório de cenas — Pau-brasil Flat</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="../assets/kw.css">
+<link rel="stylesheet" href="catalogo.css">
+<style>
+.cenas-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:10px}
+@media (max-width:820px){.cenas-grid{grid-template-columns:1fr}}
+.cena{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:18px 18px 16px;box-shadow:var(--shadow)}
+.cena .stage{position:relative;border-radius:8px;overflow:hidden;background:var(--bg)}
+.cena .stage .num{position:absolute;top:8px;left:10px;font-family:var(--mono);font-size:12px;
+  color:var(--ink-3);background:var(--surface);padding:2px 7px;border-radius:6px;z-index:2}
+.cena svg.scene{display:block;width:100%;height:auto}
+.cena h3{font-size:17px;margin:14px 0 4px}
+.cena p{margin:0;font-size:13.5px;color:var(--ink-2);max-width:56ch}
+.nota{background:var(--accent-soft);border-radius:var(--r);padding:16px 20px;margin:20px 0 8px;
+  font-size:14px;color:var(--ink-2)}
+.nota b{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<!-- v2 — refeito depois do feedback: a v1 tinha sobreposição, opacidade em
+     camadas e elementos demais, distante da economia visual do herói.
+     Ferramenta de bancada, versionada — não faz parte do site publicado. -->
+
+<div class="cat-head">
+  <div class="kicker">Catálogo de bancada · uso interno · v2</div>
+  <h1>Repertório de cenas — Pau-brasil Flat</h1>
+  <p>Refeito na gramática exata do herói da home: poucas formas, cor sólida (nada de opacidade em
+    camada), todo elemento assentado na mesma linha de base, e vãos generosos entre eles em vez de
+    sobreposição. Trocadas as duas cenas que tinham ficado parecidas por duas ideias novas.</p>
+  <a class="voltar" href="artes.html">← Catálogo de estilos (10 tratamentos)</a>
+</div>
+
+<div class="nota"><b>O que mudou da v1:</b> menos formas por cena (4–6, não 8–14), sem duas formas
+  ocupando o mesmo espaço, sem transparência empilhada — cada forma é uma cor só, sólida, com
+  limite definido. "Terra ampla" e "Litoral com coqueiro" saíram por serem quase a mesma composição
+  de outra cena; entraram <b>Voo de pássaros</b> e <b>Horizonte partido</b>, mais ousadas.</div>
+
+<div class="cenas-grid">
+
+  <div class="cena">
+    <div class="stage"><span class="num">1</span>
+      <svg class="scene" viewBox="0 0 360 120">
+        <rect x="0" y="114" width="360" height="6" fill="var(--ocre)"/>
+        <circle cx="308" cy="24" r="11" fill="var(--ocre)"/>
+        <path d="M36 114 L92 32 L148 114 Z" fill="var(--mata)"/>
+        <path d="M160 114 Q260 78 360 114 Z" fill="var(--azulejo)"/>
+      </svg>
+    </div>
+    <h3>1 · Litoral</h3>
+    <p>Uma montanha só, um mar só, sol isolado no vão vazio — cada forma na sua própria faixa,
+      sem uma cobrir a outra.</p>
+  </div>
+
+  <div class="cena">
+    <div class="stage"><span class="num">2</span>
+      <svg class="scene" viewBox="0 0 360 120">
+        <rect x="0" y="114" width="360" height="6" fill="var(--carmim)"/>
+        <path d="M0 114 Q180 84 360 114 Z" fill="var(--ocre)"/>
+        <circle cx="70" cy="98" r="8" fill="var(--mata)"/>
+        <circle cx="180" cy="88" r="8" fill="var(--mata)"/>
+        <circle cx="290" cy="98" r="8" fill="var(--mata)"/>
+      </svg>
+    </div>
+    <h3>2 · Terra &amp; Café</h3>
+    <p>Um só declive de terraço, três arbustos bem espaçados apoiados nele — terra roxa na base
+      (carmim), em vez das duas faixas empilhadas da v1.</p>
+  </div>
+
+  <div class="cena">
+    <div class="stage"><span class="num">3</span>
+      <svg class="scene" viewBox="0 0 360 120">
+        <rect x="0" y="114" width="360" height="6" fill="var(--ocre)"/>
+        <path d="M90 114 Q86 76 78 46" fill="none" stroke="var(--ink-2)" stroke-width="4" stroke-linecap="round"/>
+        <path d="M78 46 Q56 34 42 44 Q62 46 78 46" fill="var(--mata)"/>
+        <path d="M78 46 Q100 32 116 42 Q96 46 78 46" fill="var(--mata)"/>
+        <path d="M78 46 Q70 20 82 6 Q88 26 78 46" fill="var(--mata)"/>
+        <path d="M280 114 Q276 82 270 58" fill="none" stroke="var(--ink-2)" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M270 58 Q250 48 238 56 Q254 58 270 58" fill="var(--azulejo)"/>
+        <path d="M270 58 Q288 46 300 54 Q284 58 270 58" fill="var(--azulejo)"/>
+      </svg>
+    </div>
+    <h3>3 · Coqueiros</h3>
+    <p>Só dois, bem afastados um do outro — o de trás menor e em azulejo (profundidade pela cor,
+      não por transparência), fronde simplificada a três folhas.</p>
+  </div>
+
+  <div class="cena">
+    <div class="stage"><span class="num">4</span>
+      <svg class="scene" viewBox="0 0 360 120">
+        <circle cx="60" cy="26" r="9" fill="var(--ocre)"/>
+        <path d="M110 40 Q120 30 130 40 Q140 30 150 40" fill="none" stroke="var(--ink-2)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M190 64 Q200 54 210 64 Q220 54 230 64" fill="none" stroke="var(--ink-2)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M250 30 Q258 22 266 30 Q274 22 282 30" fill="none" stroke="var(--ink-2)" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M150 80 Q158 72 166 80 Q174 72 182 80" fill="none" stroke="var(--ink-2)" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h3>4 · Voo de pássaros <span style="font-weight:400;color:var(--ink-3)">— novidade</span></h3>
+    <p>Sem chão nenhum — só céu. Quatro traços de pássaro em alturas diferentes e um sol, o mínimo
+      possível de tinta no espaço. A mais ousada do lote.</p>
+  </div>
+
+  <div class="cena">
+    <div class="stage"><span class="num">5</span>
+      <svg class="scene" viewBox="0 0 360 120">
+        <rect x="0" y="114" width="360" height="6" fill="var(--ocre)"/>
+        <circle cx="40" cy="26" r="10" fill="var(--rosa)"/>
+        <path d="M0 114 Q70 84 140 114 Z" fill="var(--ocre)"/>
+        <path d="M150 114 Q230 92 310 114 Z" fill="var(--carmim)"/>
+      </svg>
+    </div>
+    <h3>5 · Dunas</h3>
+    <p>Morros baixos e macios em vez de pico — outra silhueta, tom quente de fim de tarde, sol em
+      rosa (a quinta cor da marca ganhando uma cena só dela).</p>
+  </div>
+
+  <div class="cena">
+    <div class="stage"><span class="num">6</span>
+      <svg class="scene" viewBox="0 0 360 120">
+        <line x1="0" y1="70" x2="360" y2="70" stroke="var(--ink-2)" stroke-width="1.5"/>
+        <path d="M110 70 A60 60 0 0 1 230 70 Z" fill="var(--carmim)"/>
+      </svg>
+    </div>
+    <h3>6 · Horizonte partido <span style="font-weight:400;color:var(--ink-3)">— novidade</span></h3>
+    <p>Uma linha, um meio-sol. Só isso. A mais radical em economia — testa até onde "elegante"
+      pode ir com uma forma só.</p>
+  </div>
+
+</div>
+</body>
+</html>
