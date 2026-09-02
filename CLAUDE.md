@@ -117,11 +117,13 @@ edição já publicada pra tapar o buraco.
      de cada caderno pra ver exatamente onde colar).
   6. **"Ouvir o resumo" em áudio — padrão desde 02/09/2026, todo caderno, toda edição.** Escrever
      um roteiro próprio (não é o parágrafo do site colado, é texto pensado pra fala — ver exemplos
-     em `jornal/roteiros-audio/`), gerar no ElevenLabs (plano Free, voz Roger — ver
-     [jornal/creditos-elevenlabs.md](jornal/creditos-elevenlabs.md) pro processo completo, o log de
-     créditos usados e a regra de prioridade se o mês apertar), salvar como `resumo.mp3` na pasta da
-     edição, e colar o bloco `<div class="ouvir" data-ouvir-edicao hidden>...</div>` (copie de
-     qualquer edição existente) logo abaixo de `.nav-edicoes`.
+     em `jornal/roteiros-audio/`). **Antes de gerar, conferir a tabela "Calendário de teste de
+     vozes" em [jornal/creditos-elevenlabs.md](jornal/creditos-elevenlabs.md)** — enquanto o teste
+     da issue #12 estiver ativo (até 05/10/2026), a voz da semana é a que está lá, não sempre Roger.
+     Gerar no ElevenLabs (plano Free — mesmo arquivo tem o processo completo, o log de créditos
+     usados e a regra de prioridade se o mês apertar), salvar como `resumo.mp3` na pasta da edição,
+     e colar o bloco `<div class="ouvir" data-ouvir-edicao hidden>...</div>` (copie de qualquer
+     edição existente) logo abaixo de `.nav-edicoes`.
 - **Agrupar por ano só quando fizer sentido.** A lista em `.edicoes` fica simples (sem separador) até
   conter edições de mais de um ano civil. A partir daí, inserir `<h3>{ano}</h3>` acima do primeiro
   item de cada ano, ano mais recente primeiro. Não implementar isso antes de precisar.

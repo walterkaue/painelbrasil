@@ -31,9 +31,33 @@ do plano.
 
 **Sobre a voz (Roger):** é uma voz "Default" da ElevenLabs — **todas as vozes Default expiram em
 31/12/2026** e não podem mais ser usadas pra gerar áudio novo depois disso (áudio já gerado e
-hospedado aqui continua tocando normal, é só a geração futura que para). Decisão consciente de
-ficar com Roger por enquanto (02/09/2026) — revisitar a troca de voz antes de dezembro, ver
-candidatas nativas de pt-BR levantadas: Rafael Valente, Marcus Coelho, Pedro Costa, Scheila.
+hospedado aqui continua tocando normal, é só a geração futura que para). Por isso o teste de voz
+abaixo — ver issue [#12](https://github.com/walterkaue/painelbrasil/issues/12).
+
+## Calendário de teste de vozes (issue #12)
+
+**Antes de gerar o áudio da semana, confira esta tabela** — é aqui que fica registrado qual voz usar
+enquanto o teste está ativo. Fora do período de teste, a voz corrente é a da última linha "adotada".
+
+Candidatas levantadas via fonte terceira ([json2video.com](https://json2video.com/ai-voices/elevenlabs/languages/portuguese/),
+catálogo independente, não é página de marketing da ElevenLabs), filtradas pelas que a própria
+descrição já cita caso de uso de notícia/jornalismo/informativo — não é achismo de tom.
+
+| Semana | Segunda | Voz planejada | Descrição (fonte terceira) | Status |
+|---|---|---|---|---|
+| 1 | 07/09/2026 | **Guga** | "Perfect for News" | pendente |
+| 2 | 14/09/2026 | **Dan Rocha** | "tom jornalístico, ideal pra reportagem de notícia" | pendente |
+| 3 | 21/09/2026 | **Rômulo Franklin** | "locutor de rádio, 20 anos de experiência" | pendente |
+| 4 | 28/09/2026 | **Bia - Versatile** | "combina autoridade técnica e calor humano" (única candidata feminina do teste) | pendente |
+| 5 | 05/10/2026 | **Rafael Valente** | "Brazilian Professional Narrator" — ponto de comparação com a pesquisa anterior | pendente |
+
+**Depois de 05/10/2026:** rodada de decisão final — recap comparativo das 5 semanas + checagem se
+surgiu dado novo de terceiro nesse meio tempo (voz nova, alguma removida), antes de fechar a escolha
+definitiva. Prazo prático segue sendo meados de dezembro de 2026, então essa janela dá folga real
+caso a decisão exija regenerar áudio.
+
+**Atualizar o `status` de cada linha** (pendente → gerado → adotada/descartada) conforme cada semana
+acontece, e anotar aqui qualquer impressão de ouvido que não caiba só no status.
 
 ## Regra de prioridade quando o mês apertar
 
