@@ -14,10 +14,13 @@
   const INT  = n => n.toLocaleString('pt-BR', {maximumFractionDigits:0});
 
   /* ── DOM ─────────────────────────────────────── */
+  // `h` vira innerHTML sem sanitização — só chamar com literal/dado local
+  // digitado à mão (dados.js), nunca com texto vindo de API ou input do
+  // usuário. Ver regra em CLAUDE.md, seção Segurança.
   const el = (t, c, h) => {
     const e = document.createElement(t);
     if (c) e.className = c;
-    if (h != null) e.innerHTML = h;
+    if (h != null) e.innerHTML = h; // nosemgrep: dom-innerhtml-valor-nao-literal -- todo caller hoje passa literal ou dado hardcoded de dados.js, ver aviso acima
     return e;
   };
   const limpa = id => {
@@ -74,7 +77,7 @@
         const dd = Math.abs(fx(i, d) - px);
         if (dd < dist) { dist = dd; melhor = i; }
       });
-      t.innerHTML = fmt(itens[melhor]);
+      t.innerHTML = fmt(itens[melhor]); // nosemgrep: dom-innerhtml-valor-nao-literal -- itens vem de dados.js (digitado à mão), fmt é formatador local do chamador
       t.style.opacity = 1;
       t.style.left = Math.min(ev.clientX + 14, window.innerWidth - 270) + 'px';
       t.style.top  = (ev.clientY - 10) + 'px';
@@ -122,7 +125,7 @@
 
     const fala = (msg, ok) => {
       if (!aviso) return;
-      aviso.innerHTML = msg;
+      aviso.innerHTML = msg; // nosemgrep: dom-innerhtml-valor-nao-literal -- fala() só é chamada com literais fixos definidos logo abaixo, nunca dado externo
       aviso.style.color = ok ? 'var(--s3)' : 'var(--tinta-3)';
     };
 

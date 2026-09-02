@@ -252,6 +252,14 @@ então qualquer coisa commitada fica visível no histórico do Git para sempre, 
   `repente/assets/painel.js` é só formatação/tooltip/tema, e os números do Painel Brasil vêm de
   arquivos como `repente/painel/trabalho/dados.js`, digitados e citados à mão, não de uma API ao
   vivo. Vale como regra para quando/se uma integração de verdade entrar.
+  - **Checagem automática:** `semgrep` (instalado via `pip install --user semgrep`, sem conta —
+    o plugin oficial da Anthropic pede login pra recursos de nuvem que não usamos aqui) com a
+    regra custom em [.semgrep/innerhtml-valor-bruto.yaml](.semgrep/innerhtml-valor-bruto.yaml).
+    Rodar: `semgrep scan --config .semgrep/innerhtml-valor-bruto.yaml assets/ repente/assets/
+    repente/painel/`. Achado confirmado seguro (rastreado até constante hardcoded, nunca dado
+    externo) leva `// nosemgrep: dom-innerhtml-valor-nao-literal -- motivo` na própria linha —
+    não amplie a regra com `pattern-not` pra calar caso específico, isso mascara achado futuro
+    de verdade.
 
 ## Rodar localmente
 

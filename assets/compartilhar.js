@@ -61,7 +61,7 @@
     li.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
     li.target = '_blank';
     li.rel = 'noopener noreferrer';
-    li.innerHTML = ICONES.linkedin + '<span>LinkedIn</span>';
+    li.innerHTML = ICONES.linkedin + '<span>LinkedIn</span>'; // nosemgrep: dom-innerhtml-valor-nao-literal -- ICONES.* é constante hardcoded acima, nunca dado externo
     li.setAttribute('aria-label', 'Compartilhar esta página no LinkedIn (abre em nova aba)');
     caixa.appendChild(li);
 
@@ -71,7 +71,7 @@
     wa.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(titulo + ' — ' + url);
     wa.target = '_blank';
     wa.rel = 'noopener noreferrer';
-    wa.innerHTML = ICONES.whatsapp + '<span>WhatsApp</span>';
+    wa.innerHTML = ICONES.whatsapp + '<span>WhatsApp</span>'; // nosemgrep: dom-innerhtml-valor-nao-literal -- ICONES.* é constante hardcoded acima, nunca dado externo
     wa.setAttribute('aria-label', 'Compartilhar esta página no WhatsApp (abre em nova aba)');
     caixa.appendChild(wa);
 
@@ -80,15 +80,15 @@
     cp.type = 'button';
     cp.className = 'kw-share-btn';
     var rotuloCopiar = '<span>Copiar link</span>';
-    cp.innerHTML = ICONES.link + rotuloCopiar;
+    cp.innerHTML = ICONES.link + rotuloCopiar; // nosemgrep: dom-innerhtml-valor-nao-literal -- rotuloCopiar é literal fixo definido acima, nunca dado externo
     cp.setAttribute('aria-label', 'Copiar o endereço desta página');
 
     function avisa(texto, estado) {
-      cp.innerHTML = ICONES.link + '<span>' + texto + '</span>';
+      cp.innerHTML = ICONES.link + '<span>' + texto + '</span>'; // nosemgrep: dom-innerhtml-valor-nao-literal -- avisa() só é chamada com literais fixos ('Link copiado' etc.), nunca dado externo
       cp.setAttribute('data-estado', estado);
       vivo.textContent = texto;
       window.setTimeout(function () {
-        cp.innerHTML = ICONES.link + rotuloCopiar;
+        cp.innerHTML = ICONES.link + rotuloCopiar; // nosemgrep: dom-innerhtml-valor-nao-literal -- rotuloCopiar é literal fixo definido acima, nunca dado externo
         cp.removeAttribute('data-estado');
         vivo.textContent = '';
       }, 2200);

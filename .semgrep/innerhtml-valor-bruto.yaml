@@ -1,0 +1,13 @@
+rules:
+  - id: dom-innerhtml-valor-nao-literal
+    languages: [javascript]
+    severity: ERROR
+    message: >
+      innerHTML recebendo valor que não é uma string literal fixa (aspas simples ou duplas).
+      Regra do CLAUDE.md: "dado externo inserido no DOM deve usar textContent, nunca innerHTML
+      com o valor bruto." Template literal (com ${...} ou não), variável ou retorno de função
+      aqui precisam de revisão manual antes de confirmar que é seguro.
+    patterns:
+      - pattern: $EL.innerHTML = $VAL
+      - pattern-not: $EL.innerHTML = "..."
+      - pattern-not: $EL.innerHTML = '...'
