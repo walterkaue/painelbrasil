@@ -34,6 +34,7 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
 <link rel="stylesheet" href="/assets/kw.css">
 <link rel="stylesheet" href="/assets/jornal.css">
+<script src="/assets/ouvir.js" defer></script>
 </head>
 <body>
 
@@ -83,6 +84,15 @@ if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)
   <nav class="nav-edicoes" aria-label="Navegar entre edições">
     <a class="prev" href="/jornal/mercado/2026-08-24/">← Edição anterior · nº 1</a>
   </nav>
+
+  <div class="ouvir" data-ouvir-edicao hidden>
+    <button type="button" class="ouvir-btn">
+      <span class="ouvir-icone" aria-hidden="true" focusable="false"></span>
+      <span class="ouvir-rotulo">Ouvir o resumo</span>
+    </button>
+    <span class="ouvir-tempo" data-ouvir-tempo hidden></span>
+    <audio data-ouvir-audio preload="none" src="/jornal/mercado/2026-08-31/resumo.mp3"></audio>
+  </div>
 
   <section class="destaque mercado">
     <p class="faixa"><span class="rot observar">Abertura</span>

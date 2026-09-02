@@ -171,6 +171,23 @@ dl.campos dd b{font-weight:600;color:var(--ink)}
 .nav-edicoes a:hover{color:var(--ink)}
 .nav-edicoes .next{margin-left:auto;text-align:right}
 
+/* ---------- "Ouvir o resumo" — áudio gerado via ElevenLabs, issue #1 ----------
+   <audio> real, player customizado por cima (ver assets/ouvir.js). Some
+   sozinho via [hidden] se o navegador não suportar. Ícone de play/pausa
+   trocado via JS, desenhado à mão — nunca ícone de biblioteca. */
+.ouvir{display:flex;flex-wrap:wrap;align-items:center;gap:12px;
+  margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.ouvir-btn{display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;
+  color:var(--ink-2);background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:6px 16px 6px 6px;cursor:pointer;transition:.15s}
+.ouvir-btn:hover{border-color:var(--accent);color:var(--ink)}
+.ouvir-icone{width:26px;height:26px;flex:none;border-radius:50%;
+  background:var(--accent);color:var(--on-accent);
+  display:flex;align-items:center;justify-content:center}
+.ouvir-icone svg{width:12px;height:12px}
+.ouvir-tempo{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+
 /* ---------- link de feed RSS ---------- */
 .feed-link{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;
   text-transform:uppercase;color:var(--ink-3);text-decoration:none}
