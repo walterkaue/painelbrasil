@@ -1,0 +1,24 @@
+#!/bin/sh
+# Bloqueia o commit se houver segredo (chave de API, token) no diff staged.
+# CLAUDE.md do projeto: "reverter não basta" uma vez commitado — isso barra antes.
+
+TH="$(command -v trufflehog 2>/dev/null)"
+if [ -z "$TH" ] && [ -x "$HOME/tools/trufflehog.exe" ]; then
+  TH="$HOME/tools/trufflehog.exe"
+fi
+
+if [ -z "$TH" ]; then
+  echo "aviso: trufflehog não encontrado (PATH nem ~/tools) — checagem de segredo pulada." >&2
+  exit 0
+fi
+
+git diff --staged --diff-filter=ACM | "$TH" stdin --fail --no-update --log-level=-1
+status=$?
+
+if [ $status -ne 0 ]; then
+  echo "" >&2
+  echo "commit bloqueado: trufflehog encontrou possível segredo no que está staged." >&2
+  echo "revise a saída acima antes de commitar de novo." >&2
+fi
+
+exit $status

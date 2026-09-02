@@ -161,8 +161,10 @@ atualizado junto com o estado (padrão usado em `biblioteca/prompts/index.html`)
 
 ## Performance e imagens — realidade deste ambiente
 
-- **Não há ferramenta de otimização de imagem disponível neste ambiente** (sem ImageMagick,
-  pngquant, cwebp — só o `convert.exe` do Windows, que não serve pra imagem). Redimensionar/
+- **`pngquant` e `cwebp` estão instalados** em `%USERPROFILE%\tools\` (fora do repo — não são
+  ativo do site, são ferramenta de bancada) e no PATH do usuário. `pngquant.exe` aqui é a build
+  2.17.0 (não a 3.0.3 mais recente — é a última que o site oficial distribui pronta pra Windows;
+  suficiente pra compressão com perda controlada). Continua sem ImageMagick. Redimensionar/
   comprimir é sempre um passo manual: gerar já no tamanho certo (1200×630 pro card social) em vez de
   publicar um PNG grande e confiar em CSS pra encolher.
 - Antes de adicionar imagem nova, meça o arquivo. Como referência do que já está no ar: os 4 PNGs
@@ -182,6 +184,10 @@ então qualquer coisa commitada fica visível no histórico do Git para sempre, 
 - **Nunca** commitar chave de API, token, e-mail interno ou dado de cliente. Se algo sensível for
   commitado por engano, **reverter não basta** — o commit continua no histórico. É preciso reescrever
   o histórico ou revogar a credencial exposta, e isso é aviso imediato a você, nunca silêncio.
+- **Hook de pre-commit com TruffleHog já ativo** (`.githooks/pre-commit`, ligado via
+  `git config core.hooksPath .githooks`) — escaneia o diff staged e bloqueia o commit se achar
+  segredo verificado. Só pega o que está staged: não é substituto de reescrever histórico se algo já
+  foi commitado antes do hook existir.
 - **O arquivo `CNAME` nunca se apaga.** Já vale como regra de não quebrar o site (ver README), mas
   também é segurança: sem ele o domínio cai do GitHub Pages e fica sujeito a ser reclamado por outra
   conta enquanto o DNS ainda apontar pra lá.

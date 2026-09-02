@@ -1,0 +1,81 @@
+name: Checklist da Banca
+
+# Audita o checklist manual de publicação semanal (ver CLAUDE.md, seção
+# "A Banca — rotina de publicação semanal"). Não bloqueia o GitHub Pages —
+# é só um sinal (X vermelho no commit) se algum passo do checklist ficou
+# faltando. A decisão editorial continua sendo sua.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "jornal/salesforce/**"
+      - "jornal/mercado/**"
+  workflow_dispatch:
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Conferir checklist da edição nova
+        run: |
+          set -e
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            BEFORE="HEAD~1"
+          fi
+
+          ADDED=$(git diff --name-only --diff-filter=A "$BEFORE" "${{ github.sha }}" -- 'jornal/salesforce/*/index.html' 'jornal/mercado/*/index.html' || true)
+
+          if [ -z "$ADDED" ]; then
+            echo "Nenhuma página de edição nova neste push — nada a conferir."
+            exit 0
+          fi
+
+          FAIL=0
+          for FILE in $ADDED; do
+            CADERNO=$(echo "$FILE" | cut -d/ -f2)
+            DATA=$(echo "$FILE" | cut -d/ -f3)
+            CADERNO_UP=$(echo "$CADERNO" | tr '[:lower:]' '[:upper:]')
+            echo "::group::Edição $CADERNO $DATA"
+
+            INDEX="jornal/$CADERNO/index.html"
+            FEED="jornal/$CADERNO/feed.xml"
+            REL="/jornal/$CADERNO/$DATA/"
+
+            if ! grep -q "$REL" "$INDEX" 2>/dev/null; then
+              echo "::error file=$INDEX::Card da edição $DATA não encontrado no índice do caderno (checklist item 2)."
+              FAIL=1
+            fi
+
+            if ! grep -q "$REL" "$FEED" 2>/dev/null; then
+              echo "::error file=$FEED::Edição $DATA não encontrada em feed.xml (checklist item 4)."
+              FAIL=1
+            fi
+
+            if ! grep -q "Edição anterior" "$FILE" 2>/dev/null; then
+              echo "::error file=$FILE::Link 'Edição anterior' não encontrado na página nova (checklist item 5)."
+              FAIL=1
+            fi
+
+            MARK="ULTIMA-${CADERNO_UP}-INICIO"
+            if ! grep -q "$MARK" "jornal/index.html" 2>/dev/null; then
+              echo "::warning file=jornal/index.html::Bloco $MARK não encontrado — confira se a capa foi atualizada (checklist item 3)."
+            elif ! grep -A 20 "$MARK" "jornal/index.html" | grep -q "$DATA"; then
+              echo "::warning file=jornal/index.html::Bloco da capa não parece citar $DATA — confira o checklist item 3 manualmente."
+            fi
+
+            echo "::endgroup::"
+          done
+
+          if [ "$FAIL" -eq 1 ]; then
+            echo "Checklist incompleto — ver detalhes acima."
+            exit 1
+          fi
+
+          echo "Checklist da Banca ok para todas as edições novas deste push."
