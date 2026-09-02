@@ -1,0 +1,25 @@
+name: Semgrep — innerHTML com valor bruto
+
+# Segunda camada da issue #5/#13: o hook de pre-commit já roda isso local,
+# mas pode ser burlado com --no-verify. Este workflow não pode.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.js"
+      - ".semgrep/**"
+  workflow_dispatch:
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Instalar semgrep
+        run: pip install semgrep
+
+      - name: Rodar regra innerHTML
+        run: semgrep scan --config .semgrep/innerhtml-valor-bruto.yaml --error assets/ repente/assets/ repente/painel/

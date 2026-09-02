@@ -19,6 +19,30 @@ if [ $status -ne 0 ]; then
   echo "" >&2
   echo "commit bloqueado: trufflehog encontrou possível segredo no que está staged." >&2
   echo "revise a saída acima antes de commitar de novo." >&2
+  exit $status
 fi
 
-exit $status
+# Bloqueia o commit se innerHTML receber valor bruto (issue #5/#13) — só
+# roda se algum .js estiver staged, pra não pesar em commit que não toca JS.
+JS_STAGED="$(git diff --staged --name-only --diff-filter=ACM -- '*.js')"
+if [ -n "$JS_STAGED" ]; then
+  SG="$(command -v semgrep 2>/dev/null)"
+  if [ -z "$SG" ] && [ -x "$HOME/AppData/Roaming/Python/Python312/Scripts/semgrep.exe" ]; then
+    SG="$HOME/AppData/Roaming/Python/Python312/Scripts/semgrep.exe"
+  fi
+
+  if [ -z "$SG" ]; then
+    echo "aviso: semgrep não encontrado (PATH) — checagem de innerHTML pulada." >&2
+  else
+    "$SG" scan --config .semgrep/innerhtml-valor-bruto.yaml --error --quiet $JS_STAGED
+    status=$?
+    if [ $status -ne 0 ]; then
+      echo "" >&2
+      echo "commit bloqueado: semgrep encontrou innerHTML com valor não-literal em .js staged." >&2
+      echo "revise, ou marque como revisado com // nosemgrep: dom-innerhtml-valor-nao-literal -- motivo" >&2
+      exit $status
+    fi
+  fi
+fi
+
+exit 0
