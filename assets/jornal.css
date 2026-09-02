@@ -22,14 +22,17 @@
 .cadernos a.cad[aria-current="page"]::before{content:"● ";font-size:9px;vertical-align:.18em}
 
 /* ---------- cabeçalho da edição ---------- */
-.jornal-head{padding:28px 0 8px}
+.jornal-head{padding:28px 0 0}
 .jornal-head .rule{border-top:3px solid var(--ink);padding-top:18px;
   display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 32px}
 
 /* cena Litoral — fecha o topo d'A Banca, efeito de panorama de capa.
-   Fundo discreto: contida, sem linha de chão além da própria cena. */
+   Fundo discreto: contida, sem linha de chão além da própria cena.
+   Largura padronizada em 50% no desktop / 100% no mobile (ver biblioteca.css
+   para a mesma regra na cena da Biblioteca — as duas seguem o mesmo padrão). */
 .jornal-cena{margin-top:24px}
-.jornal-cena svg{display:block;width:640px;max-width:100%;height:auto}
+.jornal-cena svg{display:block;width:50%;height:auto}
+@media (max-width:620px){.jornal-cena svg{width:100%}}
 .jornal-head h1{font-size:clamp(28px,4.4vw,42px);max-width:14ch}
 .jornal-head h1 em{font-style:normal;color:var(--accent)}
 .jornal-head .sub{margin:12px 0 0;color:var(--ink-2);max-width:54ch;font-size:15.5px}
@@ -142,7 +145,7 @@ dl.campos dd b{font-weight:600;color:var(--ink)}
 
 /* ---------- capa: os dois cadernos lado a lado ---------- */
 .cadernos-capa{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  margin-top:30px;align-items:start}
+  margin-top:10px;align-items:start}
 .caderno{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
   box-shadow:var(--shadow);padding:26px 28px;border-top:3px solid var(--accent)}
 .caderno.mercado{border-top-color:var(--serra)}
