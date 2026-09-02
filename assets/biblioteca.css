@@ -49,7 +49,7 @@
 .bib-aviso{border:1px solid var(--line);border-left:6px solid var(--serra);
   background:var(--surface);border-radius:var(--r);padding:20px 22px;margin:28px 0 0}
 .bib-aviso.atencao{border-left-color:var(--telha)}
-.bib-aviso h3{font-family:var(--sans);font-size:15px;font-weight:700;margin:0 0 10px;color:var(--ink)}
+.bib-aviso h2, .bib-aviso h3{font-family:var(--sans);font-size:15px;font-weight:700;margin:0 0 10px;color:var(--ink)}
 .bib-aviso p, .bib-aviso li{margin:0 0 10px;color:var(--ink-2);font-size:15.5px}
 .bib-aviso ol, .bib-aviso ul{margin:0;padding-left:20px}
 .bib-aviso > :last-child{margin-bottom:0}
@@ -137,9 +137,9 @@
 .bib-prompt{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);
   padding:26px 24px;margin:0 0 22px;box-shadow:var(--shadow);scroll-margin-top:80px}
 
-.bib-prompt h3{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.15;
+.bib-prompt h2{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.15;
   letter-spacing:-.015em;margin:0 0 14px;color:var(--ink)}
-.bib-prompt h3 .num{font-family:var(--mono);font-size:13px;color:var(--ink-3);
+.bib-prompt h2 .num{font-family:var(--mono);font-size:13px;color:var(--ink-3);
   letter-spacing:.08em;display:block;margin-bottom:6px;font-weight:400}
 
 .bib-linha{margin:0 0 12px;color:var(--ink-2);font-size:15.5px}
