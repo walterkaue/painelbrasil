@@ -28,8 +28,9 @@ description: Captura o card OG (1200x630px) de um molde HTML em cartoes-og/ ou r
    Fraunces/Archivo.
 4. Capturar: `html2canvas(el, {width:1200, height:630, scale:1, backgroundColor:null, useCORS:true})`,
    depois `canvas.toDataURL('image/png')`. `el` é `document.querySelector('.cartao')` nos moldes do
-   site principal (confirmado em `cartoes-og/og-biblioteca.html`) — conferir se o molde do Repente
-   usa a mesma classe antes de assumir.
+   site principal (`cartoes-og/*.html`, confirmado em `og-biblioteca.html`) — nos moldes do Repente
+   (`repente/cartoes-og/*.html`) o elemento é `.card`, classe diferente. Conferir sempre no molde
+   específico antes de assumir.
 5. O retorno do `javascript_tool` estoura o limite de token — a base64 cai num arquivo `.txt` de
    resultado. Decodificar esse JSON duas vezes com Python pra chegar no PNG bruto, salvo no
    scratchpad (nunca direto em `assets/`).
