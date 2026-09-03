@@ -70,9 +70,9 @@ Checklist obrigatório no `<head>` de toda página (home, boletim, edição, bib
 
 - **Imagem sempre em 1200×630px exatos.** O LinkedIn não escala bem imagem fora da proporção
   1.91:1, e URL relativa (`/assets/...`) falha no card — sempre `https://kauewalter.com.br/...`.
-  Antes de referenciar um PNG novo em `og:image`, confira o tamanho real do arquivo (ex.: no
-  PowerShell, `[System.Drawing.Image]::FromFile(...)`) e compare com o que a página declara em
-  `og:image:width`/`height` — os dois têm que bater.
+  Antes de referenciar um PNG novo em `og:image`, rodar a Skill
+  [verifying-open-graph-tags](.claude/skills/verifying-open-graph-tags/SKILL.md), que confere o
+  checklist inteiro (inclusive se o tamanho declarado bate com o arquivo real) de uma vez.
 - Cards por vertical, não por artigo: `og-kw.png` (home), `og-biblioteca.png` (as 3 páginas da
   Biblioteca), `og-jornal.png` (as páginas d'A Banca, incluindo edições). Não é preciso gerar uma
   imagem nova por edição semanal — é exatamente o tipo de tarefa manual recorrente que o
@@ -153,40 +153,11 @@ Repente), o modelo de arte é [assets/og-kw.png](assets/og-kw.png):
 
 ## Captura de card OG — processo (site principal e Repente)
 
-Vale tanto pra [cartoes-og/](cartoes-og/og-biblioteca.html) (tokens de `kw.css`) quanto pra
+Ver Skill [capturing-og-card](.claude/skills/capturing-og-card/SKILL.md) para o processo completo
+(receita `html2canvas` + checklist de qualidade). Vale tanto pra
+[cartoes-og/](cartoes-og/og-biblioteca.html) (tokens de `kw.css`) quanto pra
 [repente/cartoes-og/](repente/cartoes-og/og-repente.html) (tokens de `repente/assets/base.css`) —
-só muda o molde, o processo de captura é o mesmo.
-
-**Captura via `html2canvas` é o padrão** — não é mais passo manual obrigatório no DevTools.
-Receita, nessa ordem:
-
-1. Servidor local rodando (`python3 -m http.server 8123`, `.claude/launch.json`), abrir o molde no
-   Browser pane com viewport 1200×630 (`resize_window`).
-2. Injetar `html2canvas` 1.4.1 via CDN **com versão e hash SRI fixos** — não trocar sem atualizar
-   os dois juntos (é a mesma regra de "Script novo de CDN" da seção Segurança, só que aplicada aqui
-   porque agora isso roda toda vez que um card é gerado, não é mais uma exceção pontual):
-   ```html
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-     integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
-     crossorigin="anonymous"></script>
-   ```
-3. **`await document.fonts.ready` antes de chamar `html2canvas` — nunca pular esse passo.** É a
-   causa mais provável de a imagem final sair com a fonte de sistema em vez de Fraunces/Archivo.
-4. `html2canvas(el, {width:1200, height:630, scale:1, backgroundColor:null, useCORS:true})`, depois
-   `canvas.toDataURL('image/png')`.
-5. Extrair o base64 pro arquivo (o retorno do `javascript_tool` estoura o limite de token e cai num
-   arquivo `.txt` de resultado — decodificar esse JSON duas vezes, com Python, pra chegar no PNG).
-
-**Checklist de qualidade antes de commitar qualquer card gerado assim — nenhum item é opcional:**
-
-1. Conferir a dimensão do PNG bruto = 1200×630 exato, antes de comprimir.
-2. Ler a imagem de volta e comparar visualmente com o molde renderizado no navegador — fonte, cor,
-   alinhamento, sombra. **Se algo destoar, não commitar** — volta pro "Capture node screenshot"
-   manual do DevTools só pra aquele card específico; `html2canvas` é o padrão, não uma garantia.
-3. Comprimir com `pngquant` (ver Performance e imagens) e conferir a dimensão de novo depois — a
-   compressão não pode mudar largura/altura.
-4. Conferir que `og:image:width`/`og:image:height` na página batem com o arquivo final.
-5. Apagar os PNGs intermediários do scratchpad — só o arquivo final comprimido entra em `assets/`.
+só muda o molde, o processo é o mesmo.
 
 ## Alt text
 
@@ -212,12 +183,9 @@ atualizado junto com o estado (padrão usado em `biblioteca/prompts/index.html`)
 - **`pngquant` e `cwebp` estão instalados** em `%USERPROFILE%\tools\` (fora do repo — não são
   ativo do site, são ferramenta de bancada) e no PATH do usuário. `pngquant.exe` aqui é a build
   2.17.0 (não a 3.0.3 mais recente — é a última que o site oficial distribui pronta pra Windows;
-  suficiente pra compressão com perda controlada). Continua sem ImageMagick. Redimensionar/
-  comprimir é sempre um passo manual: gerar já no tamanho certo (1200×630 pro card social) em vez de
-  publicar um PNG grande e confiar em CSS pra encolher.
-- Antes de adicionar imagem nova, meça o arquivo. Como referência do que já está no ar: os 4 PNGs
-  de compartilhamento do site ficam entre 21KB e 85KB — não existe imagem de herói de artigo no site
-  hoje (nem prompt nem boletim usa imagem no corpo do texto).
+  suficiente pra compressão com perda controlada). Continua sem ImageMagick. Ver Skill
+  [optimizing-images](.claude/skills/optimizing-images/SKILL.md) pro processo de comprimir sem
+  mudar dimensão.
 - Se algum dia entrar imagem de artigo (print de release note, por exemplo): `width`/`height` no
   `<img>` sempre (evita CLS), `loading="lazy"` se estiver abaixo da dobra, `loading="eager"` só na
   imagem principal acima da dobra.
