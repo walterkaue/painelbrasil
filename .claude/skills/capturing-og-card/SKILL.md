@@ -27,7 +27,9 @@ description: Captura o card OG (1200x630px) de um molde HTML em cartoes-og/ ou r
    Pular esse passo é a causa mais provável da imagem sair com fonte de sistema em vez de
    Fraunces/Archivo.
 4. Capturar: `html2canvas(el, {width:1200, height:630, scale:1, backgroundColor:null, useCORS:true})`,
-   depois `canvas.toDataURL('image/png')`.
+   depois `canvas.toDataURL('image/png')`. `el` é `document.querySelector('.cartao')` nos moldes do
+   site principal (confirmado em `cartoes-og/og-biblioteca.html`) — conferir se o molde do Repente
+   usa a mesma classe antes de assumir.
 5. O retorno do `javascript_tool` estoura o limite de token — a base64 cai num arquivo `.txt` de
    resultado. Decodificar esse JSON duas vezes com Python pra chegar no PNG bruto, salvo no
    scratchpad (nunca direto em `assets/`).
@@ -38,6 +40,12 @@ description: Captura o card OG (1200x630px) de um molde HTML em cartoes-og/ ou r
 - [ ] Comparação visual com o molde renderizado no navegador (fonte, cor, alinhamento, sombra). **Se
       algo destoar, não commitar** — volta pro "Capture node screenshot" manual do DevTools só pra
       esse card específico. `html2canvas` é o padrão, não uma garantia.
+      **Não usar diff de pixel exato contra o PNG publicado como critério** — testado em 03/09/2026
+      recapturando `og-biblioteca.png`: dimensão bateu 1200×630 exato e a comparação visual não
+      mostrou diferença nenhuma, mas um diff de pixel bruto contra o arquivo publicado (que já passou
+      por `pngquant`) acusou ~12% dos pixels divergindo — é ruído esperado da quantização de paleta
+      com perda, não sinal de captura errada. Julgamento visual é o teste certo aqui, não comparação
+      byte a byte.
 - [ ] Comprimir com a Skill [optimizing-images](../optimizing-images/SKILL.md) e conferir a dimensão
       de novo depois — a compressão não pode mudar largura/altura.
 - [ ] Rodar a Skill [verifying-open-graph-tags](../verifying-open-graph-tags/SKILL.md) na página que
