@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/salesforce/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal sobre Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce. Publicado toda segunda-feira, com nível de confiança declarado em cada item.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 31 Aug 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 07 Sep 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 3 — A semana em que setembro virou um funil de prazos, com o Dreamforce na saída</title>
+    <link>https://kauewalter.com.br/jornal/salesforce/2026-09-07/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/salesforce/2026-09-07/</guid>
+    <pubDate>Mon, 07 Sep 2026 08:00:00 -0300</pubDate>
+    <description>Dreamforce 2026 confirmado para 15–17 de setembro, corte de client secrets antigos da MCE em 30 de setembro, inscrições da Marketing Champions até 26 de setembro, e a nova certificação Marketing Cloud Next Consultant com guia de exame oficial.</description>
+  </item>
 
   <item>
     <title>nº 2 — A semana em que o MCP Server virou infraestrutura, não anúncio</title>

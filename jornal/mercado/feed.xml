@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/mercado/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal de macro e negócios: o que órgão oficial divulgou, o que tem data marcada e o que muda mecanicamente para quem vende tecnologia e serviço no Brasil.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 31 Aug 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 07 Sep 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 3 — O PIB sobe 0,5%, mas o consumo não segue</title>
+    <link>https://kauewalter.com.br/jornal/mercado/2026-09-07/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/mercado/2026-09-07/</guid>
+    <pubDate>Mon, 07 Sep 2026 08:00:00 -0300</pubDate>
+    <description>O PIB cresceu 0,5% no trimestre puxado pela agropecuária enquanto o consumo das famílias caiu, a indústria subiu concentrada num setor só, e a semana pesou mais no lado regulatório: escala 6x1 na CCJ do Senado e três movimentos da Receita Federal.</description>
+  </item>
 
   <item>
     <title>nº 2 — Três índices de preço caem na mesma semana</title>
