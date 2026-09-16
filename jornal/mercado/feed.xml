@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/mercado/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal de macro e negócios: o que órgão oficial divulgou, o que tem data marcada e o que muda mecanicamente para quem vende tecnologia e serviço no Brasil.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 07 Sep 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 14 Sep 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 4 — O calendário eleitoral chega à pauta econômica</title>
+    <link>https://kauewalter.com.br/jornal/mercado/2026-09-14/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/mercado/2026-09-14/</guid>
+    <pubDate>Mon, 14 Sep 2026 08:00:00 -0300</pubDate>
+    <description>Duas pautas com peso para quem vende tecnologia no Brasil ficam presas ao calendário eleitoral: a PEC da escala 6x1 é adiada para depois de outubro, e o Redata (incentivo a data centers) aguarda sanção até 25 de setembro. O IPCA de agosto caiu por um desconto tarifário pontual, não por desinflação ampla.</description>
+  </item>
 
   <item>
     <title>nº 3 — O PIB sobe 0,5%, mas o consumo não segue</title>

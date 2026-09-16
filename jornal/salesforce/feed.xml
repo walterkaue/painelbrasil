@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/salesforce/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal sobre Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce. Publicado toda segunda-feira, com nível de confiança declarado em cada item.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 07 Sep 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 14 Sep 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 4 — Dreamforce começa amanhã, num setembro que já entregou parte da base antes do palco</title>
+    <link>https://kauewalter.com.br/jornal/salesforce/2026-09-14/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/salesforce/2026-09-14/</guid>
+    <pubDate>Mon, 14 Sep 2026 08:00:00 -0300</pubDate>
+    <description>Dreamforce 2026 começa amanhã, com keynote confirmado para terça e sessão para investidores na quarta. GA da Agentic Segmentation and Activation em 12 de outubro, corte de client secrets antigos da MCE em 30 de setembro, e a Trusted Enterprise AI Harness anunciada esta semana.</description>
+  </item>
 
   <item>
     <title>nº 3 — A semana em que setembro virou um funil de prazos, com o Dreamforce na saída</title>

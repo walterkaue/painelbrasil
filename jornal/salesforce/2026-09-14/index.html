@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boletim Salesforce nº 4 — 14 de setembro de 2026 — Kauê Walter</title>
+<meta name="description" content="A véspera do Dreamforce 2026 (15 a 17 de setembro, com keynote na terça e sessão para investidores na quarta), a disponibilidade geral da Agentic Segmentation and Activation em 12 de outubro, o corte de client secrets antigos da MCE em 30 de setembro, e o fechamento das inscrições da Marketing Champions em 26 de setembro.">
+<link rel="canonical" href="https://kauewalter.com.br/jornal/salesforce/2026-09-14/">
+<meta name="author" content="Kauê Walter">
+<meta property="og:site_name" content="Kauê Walter">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Boletim Salesforce nº 4 — 14 de setembro de 2026">
+<meta property="og:description" content="Dreamforce 2026 começa amanhã, com keynote confirmado para terça e sessão para investidores na quarta. Mais: GA da Agentic Segmentation and Activation em 12 de outubro, corte de client secrets antigos da MCE em 30 de setembro, e a Trusted Enterprise AI Harness anunciada esta semana.">
+<meta property="og:url" content="https://kauewalter.com.br/jornal/salesforce/2026-09-14/">
+<meta property="article:published_time" content="2026-09-14">
+<meta property="og:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Boletim Salesforce nº 4 — 14 de setembro de 2026 — A Banca">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boletim Salesforce nº 4 — 14 de setembro de 2026">
+<meta name="twitter:description" content="Dreamforce 2026 começa amanhã, com keynote confirmado para terça e sessão para investidores na quarta. Mais: GA da Agentic Segmentation and Activation em 12 de outubro, corte de client secrets antigos da MCE em 30 de setembro, e a Trusted Enterprise AI Harness anunciada esta semana.">
+<meta name="twitter:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<link rel="icon" href="/assets/kw.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Boletim Salesforce — RSS" href="/jornal/salesforce/feed.xml">
+<script>
+/* Tema antes da primeira pintura — mesma chave do resto do site. */
+(function(){try{var s=localStorage.getItem('kw-tema');
+if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/kw.css">
+<link rel="stylesheet" href="/assets/jornal.css">
+<script src="/assets/ouvir.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/"><span class="mark">KW</span> Kauê Walter</a>
+    <nav>
+      <a href="/">Carreira</a>
+      <a href="/jornal/" aria-current="page">A Banca</a>
+      <a href="/biblioteca/">Biblioteca</a>
+      <a href="/#contato">Contato</a>
+      <button class="tgl" id="tgl" type="button" aria-pressed="false"
+              aria-label="Alternar entre tema claro e escuro">Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="w">
+
+  <nav class="cadernos" aria-label="Cadernos do jornal">
+    <a class="capa" href="/jornal/">← Capa</a>
+    <a class="cad" href="/jornal/salesforce/" aria-current="page">Salesforce</a>
+    <a class="cad" href="/jornal/mercado/">Mercado</a>
+  </nav>
+
+  <header class="jornal-head">
+    <div class="rule">
+      <div>
+        <p class="kicker"><a href="/jornal/salesforce/">Boletim Salesforce</a> · edição nº 4</p>
+        <h1>Dreamforce começa amanhã, num setembro que já entregou parte da base antes do palco</h1>
+        <p class="sub">Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce,
+          filtrados por uma pergunta só: isso tem prazo ou muda o jeito de trabalhar?</p>
+      </div>
+      <p class="carimbo">
+        <b>Segunda, 14 set 2026</b>
+        Corte: 14 set, 08h BRT<br>
+        6 itens · 5 com prazo<br>
+        <span class="foco">MCE · MC Next · Data 360 · Agentforce</span>
+      </p>
+    </div>
+  </header>
+
+  <nav class="nav-edicoes" aria-label="Navegar entre edições">
+    <a class="prev" href="/jornal/salesforce/2026-09-07/">← Edição anterior · nº 3</a>
+  </nav>
+
+  <div class="ouvir" data-ouvir-edicao hidden>
+    <button type="button" class="ouvir-btn">
+      <span class="ouvir-icone" aria-hidden="true" focusable="false"></span>
+      <span class="ouvir-rotulo">Ouvir o resumo</span>
+    </button>
+    <span class="ouvir-tempo" data-ouvir-tempo hidden></span>
+    <audio data-ouvir-audio preload="none" src="/jornal/salesforce/2026-09-14/resumo.mp3"></audio>
+  </div>
+
+  <section class="destaque">
+    <p class="faixa"><span class="rot acao">Decisão da semana</span>
+      <span class="rot prazo">1 dia</span>
+      <span class="conf">confiança alta · fonte oficial</span></p>
+    <h2>O Dreamforce 2026 abre amanhã, com hora certa para o keynote e para a sessão de investidores</h2>
+    <p>O Dreamforce 2026 acontece de <b>15 a 17 de setembro</b>, em São Francisco e pelo Salesforce+.
+      O keynote principal está marcado para <b>terça, 15 de setembro, às 10h no horário do
+      Pacífico</b>, com Marc Benioff explorando o tema da empresa agêntica. Na <b>quarta, 16 de
+      setembro, às 13h no horário do Pacífico</b>, a Salesforce transmite uma sessão para investidores
+      e analistas sobre inovação de produto e framework financeiro — os dois horários, que na edição
+      passada vinham de um veículo secundário, agora estão confirmados direto no site de relações com
+      investidores da empresa. O guia oficial do evento para administradores lista sessões dedicadas a
+      Data 360 (incluindo uma introdução ao produto) e ao Agentforce Coworker, mas nenhuma trilha
+      batizada especificamente de Marketing Cloud — a cobertura da plataforma de marketing deve vir
+      embutida nos anúncios de produto do keynote.</p>
+    <p>Antes do palco, a Salesforce já publicou dois anúncios que tocam Marketing Cloud Next e Data
+      360. O primeiro tem data: a <b>Agentic Segmentation and Activation</b>, que deixa o time de
+      marketing descrever público-alvo em linguagem natural enquanto o sistema monta o plano de
+      audiência e ativa a campanha, chega em disponibilidade geral em <b>12 de outubro</b>. O segundo é
+      arquitetura, não feature: a <b>Trusted Enterprise AI Harness</b>, anunciada em 10 de setembro,
+      reúne Data 360 com Agentforce, Tableau, MuleSoft e Informatica num framework único de contexto,
+      governança e segurança para agentes — sem data fechada de lançamento, só a promessa de começar a
+      chegar no início do ano fiscal de 2028.</p>
+    <p>Do lado do calendário administrativo, nada mudou desde a semana passada: o corte de client
+      secrets antigos da MCE segue para <b>30 de setembro</b>, e as inscrições da Marketing Champions
+      fecham em <b>26 de setembro</b>. As ondas 2 e 3 do Winter '27 seguem confirmadas para <b>2 e 9 de
+      outubro</b> — e é nessas ondas, segundo blogs especializados que cobriram o release antes do
+      lançamento, que devem chegar recursos como o placar de saúde de entregabilidade de e-mail e a
+      configuração guiada entre a MCE e o Data 360, ainda sem confirmação na documentação oficial desta
+      sessão de apuração.</p>
+  </section>
+
+  <div class="colunas">
+
+    <div>
+      <p class="divisor">Itens da semana</p>
+      <div class="itens">
+      <!-- ITENS-INICIO — para acrescentar um item à mão, copie o bloco-modelo
+           que está comentado no fim deste arquivo e cole aqui dentro. -->
+
+        <article class="item acao">
+          <p class="faixa"><span class="rot acao">Ação</span>
+            <span class="rot prazo">1 dia</span> Eventos
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Dreamforce 2026 abre amanhã em São Francisco, com keynote às 10h e sessão de investidores às 13h no dia seguinte</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O evento vai de <b>15 a 17 de setembro</b>. A Salesforce
+              confirmou, no site de relações com investidores, o horário do keynote principal —
+              <b>terça, 15 de setembro, 10h no horário do Pacífico</b> — e da sessão para investidores e
+              analistas sobre framework financeiro — <b>quarta, 16 de setembro, 13h no horário do
+              Pacífico</b>. O guia do evento para administradores lista sessões de Data 360 e Agentforce
+              Coworker, sem trilha própria batizada de Marketing Cloud.</dd></div>
+            <div><dt>Por que importa</dt><dd>É o evento em que a Salesforce historicamente concentra
+              anúncios de produto para o próximo ciclo — em edições recentes, isso incluiu capacidades de
+              Marketing Cloud Next e Agentforce Marketing. Sem trilha batizada de Marketing Cloud no guia
+              público, o que sair de novo para a plataforma deve vir dentro do keynote principal ou de
+              sessões específicas reveladas só no evento.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Confirmar as sessões de Data 360 e Agentforce
+              Coworker na agenda pessoal do evento hoje, e reservar as duas horas do keynote e da sessão
+              de investidores para acompanhar ao vivo pelo Salesforce+ caso não haja presença física.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/dreamforce/">Salesforce · Dreamforce 2026</a>
+            <a href="https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-Upcoming-Events-at-Dreamforce/default.aspx">Salesforce Investor Relations · eventos do Dreamforce 2026</a>
+            <a href="https://admin.salesforce.com/blog/2026/salesforce-admins-guide-to-dreamforce-2026">Salesforce Admins · guia do Dreamforce 2026</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">28 dias</span> Agentforce Marketing
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Agentic Segmentation and Activation chega em disponibilidade geral em 12 de outubro</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>A Salesforce confirmou, no anúncio oficial do release Winter
+              '27, que a <b>Agentic Segmentation and Activation</b> — recurso que deixa o marketing
+              descrever público-alvo em linguagem natural enquanto o sistema monta o plano de audiência e
+              ativa a campanha em plataformas de anúncio — fica geralmente disponível em <b>12 de outubro
+              de 2026</b>. O mesmo anúncio cita a Marketing Goals Agent como piloto, já em produção em
+              algumas contas, sem data de disponibilidade geral.</dd></div>
+            <div><dt>Por que importa</dt><dd>É um recurso de Agentforce Marketing com data fechada de GA,
+              diferente da maioria dos anúncios do ciclo, que seguem em piloto sem previsão pública. Muda
+              o fluxo de montagem de segmento de campanha para quem adotar.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Mapear, antes de 12 de outubro, em quais campanhas
+              a segmentação por linguagem natural substituiria a montagem manual de público hoje, para
+              testar assim que o recurso abrir na org.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/news/stories/winter-2027-product-release-announcement/">Salesforce News · anúncio do release Winter '27</a></p>
+        </article>
+
+        <article class="item acao">
+          <p class="faixa"><span class="rot acao">Ação</span>
+            <span class="rot prazo">16 dias</span> Segurança · APIs
+            <span class="conf">confiança média-alta · fonte secundária</span></p>
+          <h3>Faltam pouco mais de duas semanas para o corte de client secrets antigos na MCE</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Nada mudou desde a edição anterior: os client secrets de API da
+              Marketing Cloud Engagement que existiam antes da política de expiração de 180 dias expiram
+              todos juntos em <b>30 de setembro de 2026</b>. Faltam <b>16 dias</b>.</dd></div>
+            <div><dt>Por que importa</dt><dd>Integração que depende de client secret para de autenticar
+              no dia seguinte ao prazo, sem aviso adicional além do que já foi comunicado.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Quem ainda não levantou o inventário de onde cada
+              secret está configurado precisa fazer isso nesta semana: restam pouco mais de duas semanas
+              para gerar a credencial nova no Installed Package, atualizar cada sistema dependente e testar
+              antes do corte.</dd></div>
+            <div><dt>Conferir</dt><dd>A regra geral de 180 dias está confirmada na documentação oficial de
+              desenvolvedores; o prazo fixo de 30/9 para secrets antigos vem de fonte secundária e merece
+              checagem contra a lista real de secrets da conta em Setup.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://sfmarketing.cloud/2026/03/27/marketing-cloud-engagement-client-secret-expiration-what-it-means-and-how-to-rotate-your-api-credentials-before-september-30-2026/">sfmarketing.cloud · expiração de client secret na MCE</a>
+            <a href="https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rotate-oauth2-secret.html">Salesforce Developers · rotação de client secret OAuth 2.0</a></p>
+        </article>
+
+        <article class="item acao">
+          <p class="faixa"><span class="rot acao">Ação</span>
+            <span class="rot prazo">12 dias</span> Comunidade
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Inscrições para a turma 2026 de Marketing Champions fecham em 26 de setembro</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Nada mudou desde a edição anterior: a candidatura para a turma
+              2026 do programa Marketing Champions — reconhecimento para quem lidera estratégia ou
+              operação de marketing e usa tecnologia de Marketing Cloud há pelo menos um ano — fecha em
+              <b>26 de setembro</b>, faltam <b>12 dias</b>. A triagem inicial vai até 23 de outubro, e o
+              anúncio dos escolhidos sai em 26 de outubro.</dd></div>
+            <div><dt>Por que importa</dt><dd>É acesso a rede de relacionamento com líderes de produto,
+              participação em eventos da Salesforce e visibilidade pública. Funcionário da Salesforce não
+              pode participar.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Quem se encaixa no perfil — liderança de marketing
+              com um ano de experiência na plataforma e disposição para produzir conteúdo trimestral — pode
+              se autoindicar ou indicar alguém do time antes do fechamento.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/applications-for-the-marketing-champions-class-of-2026-are-open/">Salesforce Blog · candidaturas para a turma 2026 de Marketing Champions</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">18 dias</span> Releases
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Ondas 2 e 3 do Winter '27 chegam em 2 e 9 de outubro, com recursos específicos de Marketing Cloud Next ainda não confirmados na documentação oficial</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>A onda 1 do Winter '27, de 4 de setembro, já passou sem boletim
+              oficial de intercorrência encontrado até o fechamento desta edição. As ondas 2 e 3 seguem
+              confirmadas para <b>2 de outubro</b> e <b>9 de outubro</b>, por instância. Blogs
+              especializados publicados antes do lançamento do release listam, para a Marketing Cloud
+              Next, um placar de saúde de entregabilidade de e-mail com alertas automáticos, ações de
+              conclusão de jornada para automatizar follow-up sem montar fluxo dedicado, e uma configuração
+              guiada para conectar a MCE ao Marketing Cloud Next via Salesforce Go.</dd></div>
+            <div><dt>Por que importa</dt><dd>São mudanças de fluxo de trabalho, não só de interface: o
+              placar de entregabilidade muda como o time monitora reputação de envio, e a configuração
+              guiada reduz etapas manuais de quem ainda não conectou MCE e Marketing Cloud Next.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Confirmar no Salesforce Trust em qual onda a
+              instância de cada org está, e testar o placar de entregabilidade e as ações de conclusão
+              assim que o recurso aparecer em sandbox, antes de assumir que já está ativo em produção.</dd></div>
+            <div><dt>Conferir</dt><dd>A data das ondas vem de fonte oficial. Já a lista de recursos vem de
+              Salesforce Ben e SFMC Tips, publicados em 18 de agosto — antes do lançamento do release —, e
+              não foi possível confirmar a chegada efetiva contra a documentação oficial de release notes
+              nesta sessão, porque help.salesforce.com não carregou o conteúdo sem JavaScript no ambiente
+              de apuração.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://admin.salesforce.com/blog/2026/admin-winter-27-release-countdown">Salesforce Admins · contagem regressiva do Winter '27</a>
+            <a href="https://www.salesforceben.com/10-winter-27-updates-salesforce-marketers-need-to-know/">Salesforce Ben · 10 novidades do Winter '27 para marketing</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Data 360 · Arquitetura
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Trusted Enterprise AI Harness reúne Data 360 e mais cinco tecnologias num framework único para agentes</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>A Salesforce anunciou, em <b>10 de setembro</b>, a Trusted
+              Enterprise AI Harness: uma arquitetura que combina tecnologias do portfólio Data 360 com
+              Agentforce, Tableau, MuleSoft, Informatica e Guardian em seis capacidades — contexto,
+              agência, ação, governança, segurança e roteamento de modelo. Parte da base já está
+              disponível hoje; a experiência unificada começa a chegar no início do ano fiscal de 2028,
+              sem data específica.</dd></div>
+            <div><dt>Por que importa</dt><dd>É um anúncio de direção de plataforma, não de feature isolada
+              para adotar amanhã. Sinaliza que decisões futuras de arquitetura de dados em Marketing Cloud
+              Next vão passar por esse framework comum, em vez de integrações pontuais.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Acompanhar os próximos anúncios do Dreamforce para
+              ver que parte dessa arquitetura toca diretamente Marketing Cloud Next e Data 360, antes de
+              desenhar qualquer projeto de integração de dados em cima da promessa.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/news/stories/enterprise-ai-harness/">Salesforce News · Trusted Enterprise AI Harness</a></p>
+        </article>
+
+      <!-- ITENS-FIM -->
+      </div>
+    </div>
+
+    <aside>
+      <div class="agenda">
+        <h2>Agenda</h2>
+        <p class="nota">Contagem a partir de 14 de setembro de 2026.</p>
+
+        <div class="linha quente">
+          <div class="dias">1<span>dias</span></div>
+          <div class="oque"><b>Dreamforce 2026 · keynote principal</b><time datetime="2026-09-15">15 set</time></div>
+        </div>
+        <div class="linha quente">
+          <div class="dias">2<span>dias</span></div>
+          <div class="oque"><b>Sessão para investidores no Dreamforce</b><time datetime="2026-09-16">16 set</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">12<span>dias</span></div>
+          <div class="oque"><b>Fecham inscrições da Marketing Champions</b><time datetime="2026-09-26">26 set</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">16<span>dias</span></div>
+          <div class="oque"><b>Corte de client secrets antigos da MCE</b><time datetime="2026-09-30">30 set</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">18<span>dias</span></div>
+          <div class="oque"><b>Winter '27 em produção · onda 2</b><time datetime="2026-10-02">2 out</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">21<span>dias</span></div>
+          <div class="oque"><b>Post de release readiness</b><time datetime="2026-10-05">5 out</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">25<span>dias</span></div>
+          <div class="oque"><b>Winter '27 em produção · onda 3</b><time datetime="2026-10-09">9 out</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">28<span>dias</span></div>
+          <div class="oque"><b>GA da Agentic Segmentation and Activation</b><time datetime="2026-10-12">12 out</time></div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="limites">
+    <h2>O que este jornal não enxerga</h2>
+    <p>Esta edição foi montada só com fontes públicas, e o nível de confiança vem declarado item a
+      item. Onde a fonte é secundária, está escrito — e a recomendação é conferir antes de a
+      informação virar compromisso com alguém.</p>
+    <ul>
+      <li><b>Datas oficiais</b> devem ser confirmadas no Salesforce Trust e nas release notes; blogs
+        de ecossistema erram e replicam o erro entre si.</li>
+      <li><b>status.salesforce.com e help.salesforce.com</b> dependem de JavaScript e não abriram no
+        ambiente de apuração desta edição — onde isso afetou um item, está registrado nele.</li>
+      <li><b>Comunicados de Partner Community e de PAM</b> não entram aqui: são canais fechados.</li>
+      <li><b>Nada específico de cliente</b> entra neste jornal, em nenhuma edição. Ele fala de
+        plataforma, não de conta.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <p><strong>Boletim Salesforce</strong> · edição nº 4, publicada em 14 de setembro de 2026 ·
+      <a href="/jornal/salesforce/">todas as edições</a> · <a href="/jornal/">capa</a></p>
+    <p><strong>Kauê Walter</strong> · Gerente de Marketing e Marketing Cloud Lead na Visum Digital ·
+      Caraguatatuba, São Paulo</p>
+    <p>Página pessoal e profissional. As opiniões e projetos aqui apresentados são de
+      responsabilidade individual e não representam posições de empregadores ou clientes.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BLOCO-MODELO · copie daqui para acrescentar um item à mão
+
+     Cole dentro de <div class="itens">, entre ITENS-INICIO e ITENS-FIM.
+     Troque a palavra "acao" por "preparar" ou "observar" nos DOIS lugares
+     (na classe do article e na classe do span do rótulo).
+     A linha "Conferir" só existe quando a fonte é secundária: apague-a
+     quando a fonte for oficial.
+
+<article class="item acao">
+  <p class="faixa"><span class="rot acao">Ação</span>
+    <span class="rot prazo">N dias</span> Assunto
+    <span class="conf">confiança alta · fonte oficial</span></p>
+  <h3>Manchete do item, curta e afirmativa</h3>
+  <dl class="campos">
+    <div><dt>O que mudou</dt><dd>O fato, com data e nome próprio.</dd></div>
+    <div><dt>Por que importa</dt><dd>A consequência prática, sem adjetivo.</dd></div>
+    <div><dt>O que fazer</dt><dd class="fazer">Prática profissional genérica. Nunca movimento comercial, nunca nome de cliente.</dd></div>
+    <div><dt>Conferir</dt><dd>Onde confirmar antes de isso virar compromisso.</dd></div>
+  </dl>
+  <p class="fontes"><a href="https://">Nome da fonte</a></p>
+</article>
+
+     E uma linha da agenda lateral, para colar dentro de div class="agenda".
+     Use "quente" até 7 dias, "morna" de 8 a 45, e sem classe acima disso:
+
+<div class="linha quente">
+  <div class="dias">N<span>dias</span></div>
+  <div class="oque"><b>O que acontece</b><time datetime="2026-01-01">1 jan</time></div>
+</div>
+
+     ============================================================ -->
+
+<script>
+/* A restauração do tema já rodou no <head>. Aqui só o botão. */
+(function(){
+  var b = document.getElementById('tgl');
+  if(!b) return;
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function escuroAgora(){
+    var a = document.documentElement.getAttribute('data-theme');
+    return a ? a === 'dark' : mq.matches;
+  }
+  function sincroniza(){ b.setAttribute('aria-pressed', escuroAgora() ? 'true' : 'false'); }
+  sincroniza();
+  if (mq.addEventListener) mq.addEventListener('change', sincroniza);
+  b.addEventListener('click', function(){
+    var novo = escuroAgora() ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', novo);
+    try{ localStorage.setItem('kw-tema', novo); }catch(e){}
+    sincroniza();
+  });
+})();
+</script>
+
+</body>
+</html>

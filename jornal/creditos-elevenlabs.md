@@ -19,6 +19,8 @@ texto foi escrito pra leitura na tela, não pra fala.
 | 02/09/2026 | Análise de Mercado nº 2 (31/08) | 775 | 1.461 / 10.000* | [jornal/mercado/2026-08-31/resumo.mp3](mercado/2026-08-31/resumo.mp3) |
 | 07/09/2026 | Boletim Salesforce nº 3 (07/09) | 662 | 2.123 / 10.000* | [jornal/salesforce/2026-09-07/resumo.mp3](salesforce/2026-09-07/resumo.mp3) |
 | 07/09/2026 | Análise de Mercado nº 3 (07/09) | 656 | 2.779 / 10.000* | [jornal/mercado/2026-09-07/resumo.mp3](mercado/2026-09-07/resumo.mp3) |
+| 16/09/2026 | Boletim Salesforce nº 4 (14/09) | 795 | 3.574 / 10.000* | [jornal/salesforce/2026-09-14/resumo.mp3](salesforce/2026-09-14/resumo.mp3) |
+| 16/09/2026 | Análise de Mercado nº 4 (14/09) | 685 | 4.259 / 10.000* | [jornal/mercado/2026-09-14/resumo.mp3](mercado/2026-09-14/resumo.mp3) |
 
 \* calculado pelo padrão 1:1 já confirmado no primeiro áudio — não conferido com o saldo real da
 conta nesta linha, atualizar se divergir.
@@ -53,7 +55,7 @@ descrição já cita caso de uso de notícia/jornalismo/informativo — não é 
 | Semana | Segunda | Voz planejada | Descrição (fonte terceira) | Status |
 |---|---|---|---|---|
 | 1 | 07/09/2026 | **Guga** | "Perfect for News" | gerado — voz usada foi "Guga - Diplomatic and Intimidating", mais grave/pausada que o Roger; ritmo ~12 car./s contra ~13 car./s do Roger |
-| 2 | 14/09/2026 | **Dan Rocha** | "tom jornalístico, ideal pra reportagem de notícia" | pendente |
+| 2 | 14/09/2026 | **Dan Rocha** | "tom jornalístico, ideal pra reportagem de notícia" | gerado — voz usada foi "Dan Rocha"; 56s pro Salesforce (795 caracteres, ~14,1 car./s), 50s pro Mercado (685 caracteres, ~13,6 car./s); ritmo mais ágil que o Guga (semana 1), condizente com a descrição de tom jornalístico/reportagem |
 | 3 | 21/09/2026 | **Rômulo Franklin** | "locutor de rádio, 20 anos de experiência" | pendente |
 | 4 | 28/09/2026 | **Bia - Versatile** | "combina autoridade técnica e calor humano" (única candidata feminina do teste) | pendente |
 | 5 | 05/10/2026 | **Rafael Valente** | "Brazilian Professional Narrator" — ponto de comparação com a pesquisa anterior | pendente |
