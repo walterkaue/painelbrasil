@@ -2,10 +2,13 @@
    PAINEL BRASIL — MUNDO DO TRABALHO
    Dados-semente e desenho dos gráficos desta página.
 
-   Conferidos em 22/08/2026. Nada aqui é estimado ou interpolado:
-   onde não há dado confirmado em fonte, há null.
+   Conferidos em 22/08/2026, exceto a série pnadc (desocupação da
+   PNAD Contínua), extraída e conferida em 21/09/2026.
+   Nada aqui é estimado ou interpolado: onde não há dado confirmado
+   em fonte, há null.
    O caderno com as ressalvas de comparabilidade de cada série
-   fica em `caderno-dados-painel` no repositório do projeto.
+   (`caderno-dados-painel`) não foi encontrado neste repositório em
+   21/09/2026 — a origem de cada série está no campo `fonte` dela.
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -13,6 +16,7 @@
 
   const D = {
     extraidoEm: '2026-08-22',
+    pnadcExtraidoEm: '2026-09-21',
     base: 'reais de julho de 2026',
 
     /* [ano, nominal, real(jul/2026), necessário DIEESE, razão]
@@ -37,24 +41,27 @@
       [2026, 1621, 1621.00, 7687.01, 4.74]
     ],
 
-    /* As réguas do desemprego. O IBGE afirma em nota técnica que as
-       pesquisas não são comparáveis entre si — por isso cada uma é
-       uma série separada, nunca uma linha só. */
+    /* As réguas do desemprego. O IBGE afirma em release (13/01/2014,
+       id 14552 da Agência de Notícias) que as pesquisas não são
+       comparáveis entre si — por isso cada uma é uma série separada,
+       nunca uma linha só. */
     reguas: [
       {id:'pnadc', nome:'PNAD Contínua — desocupação (2º trimestre)',
        desc:'Nacional, 14 anos ou mais. Conta quem não tinha trabalho, procurou nos últimos 30 dias e estava disponível. É a taxa que vira manchete — e a mais estreita.',
        unidade:'%', cor:'var(--s1)',
-       fonte:'IBGE — PNAD Contínua, 2º trimestre de cada ano, safra 2T2026 (série recalculada na mesma divulgação)',
+       fonte:'IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099 (taxa de desocupação, 14 anos ou mais, Brasil), 2º trimestre de cada ano. Extraído em 21/09/2026. Série reponderada pelo IBGE em 15/08/2025 (Nota Técnica 02/2025).',
        serie:[[2012,7.6],[2013,7.5],[2014,6.9],[2015,8.4],[2016,11.4],[2017,13.1],[2018,12.6],
               [2019,12.1],[2020,13.6],[2021,14.2],[2022,9.3],[2023,8.0],[2024,6.9],[2025,5.8],[2026,5.4]]},
       {id:'subut', nome:'PNAD Contínua — subutilização',
        desc:'Soma desocupados, subocupados por insuficiência de horas e força de trabalho potencial (inclui quem desistiu de procurar). É mais que o dobro da desocupação.',
        unidade:'%', cor:'var(--s2)',
+       ultimoAparte:'2026 = 2º trimestre, não média anual — por isso não se liga ao ponto de 2025',
        fonte:'IBGE — PNAD Contínua, taxa composta de subutilização, médias anuais (safra 2023–2025); 2026 = 2º trimestre',
-       serie:[[2019,24.4],[2022,20.9],[2023,18.0],[2024,16.2],[2025,14.5],[2026,12.9]]},
+       serie:[[2019,24.4],[2020,null],[2021,null],[2022,20.9],[2023,18.0],[2024,16.2],[2025,14.5],[2026,12.9]]},
       {id:'inform', nome:'PNAD Contínua — informalidade',
        desc:'Fatia dos ocupados sem carteira, sem CNPJ e sem contribuição previdenciária. Não é desemprego: é trabalho sem proteção nenhuma.',
        unidade:'%', cor:'var(--s4)',
+       ultimoAparte:'2026 = 2º trimestre, não média anual — por isso não se liga ao ponto de 2025',
        fonte:'IBGE — PNAD Contínua, taxa de informalidade, médias anuais (Retrospectiva 2024); 2026 = 2º trimestre',
        serie:[[2016,39.1],[2017,40.6],[2018,40.9],[2019,40.9],[2020,37.6],[2021,39.5],[2022,39.4],
               [2023,39.2],[2024,39.0],[2025,38.1],[2026,37.4]]},
@@ -62,18 +69,20 @@
        desc:'Pessoas que queriam trabalhar mas desistiram de procurar. Não entram na taxa de desocupação — por definição, não estão procurando.',
        unidade:'mi', cor:'var(--s3)',
        fonte:'IBGE — PNAD Contínua, desalentados, médias anuais (safra 2023–2025)',
-       serie:[[2014,1.6],[2021,5.6],[2022,4.3],[2023,3.7],[2024,3.3],[2025,2.9]]},
+       serie:[[2014,1.6],[2015,null],[2016,null],[2017,null],[2018,null],[2019,null],[2020,null],
+              [2021,5.6],[2022,4.3],[2023,3.7],[2024,3.3],[2025,2.9]]},
       {id:'pme', nome:'PME — desocupação (régua antiga, 2003–2015)',
-       desc:'Apenas 6 regiões metropolitanas, a partir dos 10 anos. Encerrada em 2016. O IBGE afirma que a PNAD Contínua mostra taxas SISTEMATICAMENTE MAIS ALTAS que esta — a régua antiga não era mais severa, era mais estreita.',
+       desc:'Apenas 6 regiões metropolitanas, a partir dos 10 anos. Encerrada em 2016.',
        unidade:'%', cor:'var(--tinta-3)',
        fonte:'IBGE — Pesquisa Mensal de Emprego, médias anuais, releases da Agência de Notícias. Série com buracos (2007 e 2008 não localizados)',
-       serie:[[2003,12.4],[2004,11.5],[2005,9.8],[2006,10.0],[2009,8.1],[2010,6.7],[2011,6.0],
+       serie:[[2003,12.4],[2004,11.5],[2005,9.8],[2006,10.0],[2007,null],[2008,null],[2009,8.1],[2010,6.7],[2011,6.0],
               [2012,5.5],[2013,5.4],[2014,4.8],[2015,6.8]]},
       {id:'pnad', nome:'PNAD anual — desocupação (régua mais antiga)',
-       desc:'Nacional, 10 anos ou mais, medida na última semana de setembro. Descontinuada em 2015. Só cinco anos puderam ser confirmados em fonte primária — os pontos são pontos, não uma tendência.',
+       desc:'Nacional (sem a área rural de seis estados do Norte até 2003), 10 anos ou mais, medida na última semana de setembro. Descontinuada em 2015. A origem destes percentuais está em conferência: no SIDRA, esta pesquisa publica só a contagem de desocupados, não a taxa. Os pontos são pontos, não uma tendência. Até 2003, a PNAD não cobria a área rural de Rondônia, Acre, Amazonas, Roraima, Pará e Amapá (nota do IBGE na tabela 1868 do SIDRA). Os pontos de 1995 e 2003 não representam o país inteiro.',
        unidade:'%', cor:'var(--base)', pontos:true,
-       fonte:'IBGE — PNAD anual. ⚠️ Série incompleta: apenas 5 anos confirmados. Não sustenta narrativa.',
-       serie:[[1995,6.1],[2003,9.7],[2006,8.5],[2008,7.1],[2009,8.3]]}
+       fonte:'IBGE — PNAD anual. ⚠️ Série incompleta (5 anos) e com a origem dos percentuais em conferência. Não sustenta narrativa.',
+       serie:[[1995,6.1],[1996,null],[1997,null],[1998,null],[1999,null],[2000,null],[2001,null],[2002,null],
+              [2003,9.7],[2004,null],[2005,null],[2006,8.5],[2007,null],[2008,7.1],[2009,8.3]]}
     ],
 
     /* Censo 2022 — salário mínimo de referência R$ 1.212 */
@@ -254,10 +263,13 @@
     lg.appendChild(el('span', null, '<i class="chip" style="background:' + r.cor + '"></i> ' + r.nome));
     if (r.pontos) lg.appendChild(el('span', null,
       '<span style="color:var(--s4)">⚠️ série incompleta — pontos isolados, não tendência</span>'));
+    if (r.ultimoAparte) lg.appendChild(el('span', null,
+      '<span style="color:' + r.cor + '">◇</span> ' + r.ultimoAparte));
 
+    /* null = ano sem dado dentro do intervalo coberto: a linha quebra ali. */
     const d = r.serie, W = 900, H = 330, mL = 52, mR = 26, mT = 28, mB = 44;
     const iw = W - mL - mR, ih = H - mT - mB;
-    const vals = d.map(p => p[1]), max = Math.ceil(Math.max(...vals) * 1.25);
+    const vals = d.map(p => p[1]).filter(v => v !== null), max = Math.ceil(Math.max(...vals) * 1.25);
     const anos = d.map(p => p[0]), a0 = Math.min(...anos), a1 = Math.max(...anos);
     const x = a => mL + ((a - a0) / Math.max(1, a1 - a0)) * iw;
     const y = v => mT + ih - (v / max) * ih;
@@ -268,10 +280,22 @@
       svg.appendChild(mk('line', {x1:mL, x2:W-mR, y1:y(v), y2:y(v), stroke:'var(--grade)','stroke-width':1}));
       svg.appendChild(txt(NUM(v, 0) + (r.unidade === '%' ? '%' : ''), mL - 9, y(v) + 4, {'text-anchor':'end'}));
     }
-    if (!r.pontos) svg.appendChild(mk('path', {d: d.map((p,i)=>`${i?'L':'M'}${x(p[0])},${y(p[1])}`).join(' '),
-      fill:'none', stroke:r.cor, 'stroke-width':2.5, 'stroke-linejoin':'round','stroke-linecap':'round'}));
+    const aparte = i => r.ultimoAparte && i === d.length - 1;
+    if (!r.pontos) {
+      let tr = '', seguido = false;
+      d.forEach((p, i) => {
+        if (p[1] === null || aparte(i)) { seguido = false; return; }
+        tr += (seguido ? 'L' : 'M') + x(p[0]) + ',' + y(p[1]) + ' ';
+        seguido = true;
+      });
+      svg.appendChild(mk('path', {d: tr, fill:'none', stroke:r.cor, 'stroke-width':2.5,
+        'stroke-linejoin':'round','stroke-linecap':'round'}));
+    }
     d.forEach((p, i) => {
-      svg.appendChild(mk('circle', {cx:x(p[0]), cy:y(p[1]), r:r.pontos?5.5:3.4, fill:r.cor,
+      if (p[1] === null) return;
+      if (aparte(i)) svg.appendChild(mk('rect', {x:x(p[0]) - 4.5, y:y(p[1]) - 4.5, width:9, height:9,
+        transform:`rotate(45 ${x(p[0])} ${y(p[1])})`, fill:'var(--superficie)', stroke:r.cor, 'stroke-width':2.5}));
+      else svg.appendChild(mk('circle', {cx:x(p[0]), cy:y(p[1]), r:r.pontos?5.5:3.4, fill:r.cor,
         stroke:'var(--superficie)','stroke-width':2}));
       if (i === 0 || i === d.length - 1 || p[1] === Math.max(...vals))
         svg.appendChild(txt(NUM(p[1],1) + (r.unidade === '%' ? '%' : ' mi'), x(p[0]), y(p[1]) - 13,
@@ -284,7 +308,7 @@
     svg.appendChild(mk('line', {x1:mL, x2:W-mR, y1:y(0), y2:y(0), stroke:'var(--base)','stroke-width':1}));
 
     limpa('plotDesemprego').appendChild(svg);
-    hover(svg, d, (i, p) => x(p[0]),
+    hover(svg, d.filter(p => p[1] !== null), (i, p) => x(p[0]),
       p => `<strong>${p[0]}</strong><br>${NUM(p[1],1)}${r.unidade === '%' ? '%' : ' milhões'}`, W);
   }
 
@@ -467,6 +491,20 @@
   }
 
   /* ── atualização automática, sem quebrar nada ── */
+  const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho',
+                 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+
+  /* A API devolve o trimestre móvel pelo código AAAAMM do ÚLTIMO mês:
+     202607 = maio a julho de 2026. Os dois meses anteriores podem cair
+     no ano anterior (202602 = dezembro de 2025 a fevereiro de 2026). */
+  function rotuloTrimestreMovel(cod) {
+    if (!/^\d{6}$/.test(cod)) return null;
+    const ano = +cod.slice(0, 4), mf = +cod.slice(4);
+    if (mf < 1 || mf > 12) return null;
+    const mi = (mf + 9) % 12, anoI = mf < 3 ? ano - 1 : ano;
+    return 'de ' + MESES[mi] + (anoI !== ano ? ' de ' + anoI : '') + ' a ' + MESES[mf - 1] + ' de ' + ano;
+  }
+
   async function tentarAtualizar() {
     try {
       const ctrl = new AbortController(), to = setTimeout(() => ctrl.abort(), 6000);
@@ -479,16 +517,23 @@
       const ks = Object.keys(serie).sort(), ult = ks[ks.length - 1];
       const v = parseFloat(String(serie[ult]).replace(',', '.'));
       if (!isFinite(v)) return;
+      const rot = rotuloTrimestreMovel(ult);
+      if (!rot) return;
       const b = document.getElementById('statusDados');
-      b.textContent = 'Atualizado ao vivo';
+      b.textContent = 'Consulta ao vivo ao IBGE';
       b.classList.add('viva');
-      document.getElementById('statusTexto').textContent =
-        ' · último período na API do IBGE: ' + ult + ' — desocupação ' + NUM(v, 1) + '%.';
+      /* acrescenta ao texto de referência; nunca o substitui */
+      document.getElementById('statusConsulta').textContent =
+        ' Última consulta ao IBGE: taxa de desocupação no trimestre móvel ' + rot + ': ' + NUM(v, 1) +
+        '% (PNAD Contínua, tabela 6381). É um recorte diferente do 2º trimestre usado nos gráficos.';
     } catch (e) { /* silêncio proposital: o dado-semente já está correto */ }
   }
 
   /* ── partida ─────────────────────────────────── */
   carimbo('carimbo', D.extraidoEm, D.base);
+  const selo = document.getElementById('carimbo');
+  if (selo) selo.textContent += ' · série de desocupação da PNAD Contínua extraída em ' +
+    new Date(D.pnadcExtraidoEm + 'T12:00:00').toLocaleDateString('pt-BR');
   tiles(); plotReal(); plotRazao(); plotFaixas(); plotPib();
   plotTributos(); plotMundo(); linhasCorpo(); controles(); tentarAtualizar();
 })();

@@ -63,6 +63,7 @@
     <li><a href="#mundo">No mundo</a></li>
     <li><a href="#corpo">O preço em corpo</a></li>
     <li><a href="#metodo">Método</a></li>
+    <li><a href="#correcoes">Correções</a></li>
   </ul>
 </nav>
 
@@ -90,7 +91,8 @@
   <div class="grade-tiles" id="tiles"></div>
   <p style="font-size:12.5px;color:var(--tinta-3);margin:2px 0 0">
     <span class="badge" id="statusDados">Dados de referência</span>
-    <span id="statusTexto"> · conferidos em 22/08/2026. A página tenta atualizar sozinha nas fontes oficiais.</span>
+    <span id="statusTexto"> · conferidos em 22/08/2026 (a série de desocupação da PNAD Contínua, em 21/09/2026). A página tenta atualizar sozinha nas fontes oficiais.</span>
+    <span id="statusConsulta"></span>
   </p>
 </div>
 
@@ -183,9 +185,11 @@
     <div class="rot-sec">Réguas do desemprego · 1995–2026</div>
     <h2>Não existe "a" taxa de desemprego</h2>
     <p class="intro">Existem várias, e elas medem coisas diferentes. O IBGE já usou três pesquisas
-      distintas para medir desemprego, e afirma em nota técnica que
-      <strong>"as diferenças metodológicas existentes entre as pesquisas inviabilizam o processo de
-      comparações entre elas"</strong>. Além disso, a taxa que vira manchete é a mais estreita de
+      distintas para medir desemprego, e afirma em release que
+      <strong>"As três pesquisas possuem metodologias diferentes e os resultados não são
+      comparáveis."</strong> (IBGE, Agência de Notícias, release
+      <a href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/14552-asi-pnad-continua-fornecera-informacoes-ineditas-sobre-mercado-de-trabalho-brasileiro" target="_blank" rel="noopener">"PNAD Contínua fornecerá informações inéditas sobre mercado de trabalho brasileiro"</a>,
+      13/01/2014, seção "Processo de transição termina em dezembro de 2014"). Além disso, a taxa que vira manchete é a mais estreita de
       todas. Escolha a régua e veja o que muda.</p>
 
     <div class="cartao">
@@ -209,22 +213,29 @@
       <ul>
         <li><strong>É verdade que a régua mudou, e o IBGE diz isso.</strong> A PME media 6 regiões
           metropolitanas, a partir dos 10 anos. A PNAD Contínua mede o país inteiro, a partir dos 14.
-          Ninguém pode dizer "o desemprego caiu de 12,3% em 2003 para 5,4% em 2026" — são pesquisas
+          Ninguém pode dizer "o desemprego caiu desde 2003 até os 5,4% de 2026" — são pesquisas
           diferentes medindo universos diferentes.</li>
-        <li><strong>Mas a mudança não foi para baixar o número.</strong> O próprio IBGE registra que a
-          PNAD Contínua mostra taxas <em>sistematicamente mais elevadas</em> que a PME. Na régua nova,
-          2014 foi 7,0% — e não os 4,8% que a régua antiga marcava. Acusar o IBGE de maquiagem é um
-          argumento que se desmonta sozinho e entrega a discussão.</li>
+        <li><strong>Mas a mudança não baixou o número.</strong> Nos quatro anos em que as duas
+          séries desta página coexistem (2012 a 2015), o 2º trimestre da PNAD Contínua ficou acima da
+          média anual da PME: em 2014, por exemplo, 6,9% contra 4,8%. As pesquisas têm universos e
+          períodos diferentes, então a diferença não mede nada com exatidão — mas também não mostra
+          número puxado para baixo. Acusar o IBGE de maquiagem, com estes números, é um argumento
+          frágil e entrega a discussão.</li>
         <li><strong>O que é de fato enganoso é a manchete.</strong> "Desocupação" conta só quem procurou
           trabalho nos últimos 30 dias e estava disponível. Não conta quem desistiu de procurar
           (desalentado), quem trabalha menos horas do que precisa, nem quem está na informalidade.
           A <strong>subutilização</strong> é mais que o dobro da desocupação. Essa é a briga que se
           ganha com dado.</li>
-        <li><strong>Há ainda um terceiro problema, pouco conhecido:</strong> em 2024 o IBGE refez a
-          série histórica com um novo banco anual. O ano de 2022 foi divulgado como 9,3% e hoje consta
-          como 9,6%. Não é fraude — é revisão metodológica. Mas significa que
-          <strong>comparar dois anos vindos de divulgações diferentes produz variações que não
-          existiram.</strong> Cada série desta página usa uma safra só.</li>
+        <li><strong>Há ainda um terceiro problema, pouco conhecido.</strong> Séries oficiais são
+          revisadas: em 15/08/2025 o IBGE reponderou toda a série da PNAD Contínua (Nota Técnica
+          02/2025). Por isso esta página informa a data em que cada número foi extraído. Isso não é
+          fraude, mas
+          <strong>comparar dois anos vindos de divulgações diferentes pode produzir variações que não
+          existiram.</strong> Só a série de desocupação da PNAD Contínua foi extraída de uma safra
+          única e conferida (21/09/2026). As de subutilização e de informalidade misturam médias
+          anuais até 2025 com o 2º trimestre de 2026. Nas de subutilização, informalidade, desalento,
+          PME e PNAD anual, a safra de cada ponto não está registrada, e a padronização está
+          pendente.</li>
       </ul>
     </div>
   </div>
@@ -501,9 +512,9 @@
           <tr><td>IPCA anual</td><td>IBGE</td><td>1995–2025; 2026 até julho</td><td>✅ conferido</td></tr>
           <tr><td>Salário mínimo necessário</td><td>DIEESE — Cesta Básica</td><td>Dez. de cada ano, 1994–2025; jul/2026</td><td>✅ conferido</td></tr>
           <tr><td>Desocupação — PME</td><td>IBGE — Pesquisa Mensal de Emprego</td><td>6 regiões metropolitanas, 10+, média anual</td><td>✅ releases do IBGE · série com buracos</td></tr>
-          <tr><td>Desocupação — PNAD anual</td><td>IBGE — PNAD</td><td>Nacional, 10+, setembro</td><td>⚠️ apenas 5 anos confirmados</td></tr>
-          <tr><td>Desocupação — PNAD Contínua</td><td>IBGE — PNAD Contínua</td><td>Nacional, 14+, 2º trimestre, safra 2T2026</td><td>✅ série completa 2012–2026</td></tr>
-          <tr><td>Subutilização, informalidade, desalento</td><td>IBGE — PNAD Contínua</td><td>Médias anuais, safra 2023–2025</td><td>✅ com buracos declarados</td></tr>
+          <tr><td>Desocupação — PNAD anual</td><td>IBGE — PNAD</td><td>Nacional (sem a área rural de seis estados do Norte até 2003), 10+, setembro</td><td>⚠️ 5 anos; origem dos percentuais em conferência</td></tr>
+          <tr><td>Desocupação — PNAD Contínua</td><td>IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099</td><td>Nacional, 14+, 2º trimestre de cada ano, extraído em 21/09/2026</td><td>✅ série completa 2012–2026</td></tr>
+          <tr><td>Subutilização, informalidade, desalento</td><td>IBGE — PNAD Contínua</td><td>Médias anuais até 2025 e 2º trimestre de 2026; safra de cada ponto não registrada</td><td>⚠️ com buracos declarados · safras não padronizadas</td></tr>
           <tr><td>Faixas de rendimento</td><td>IBGE — Censo 2022</td><td>Ocupados 14+, julho/2022</td><td>✅ ponto único · faixas 2–5 SM ausentes</td></tr>
           <tr><td>Salários no PIB</td><td>IBGE — Contas Nacionais</td><td>2010–2021, % do PIB</td><td>✅ até 2021 · 2022+ não publicado</td></tr>
           <tr><td>Carga tributária por décimo</td><td>IPEA / POF-IBGE 2017-2018</td><td>Renda familiar per capita</td><td>✅ fonte primária</td></tr>
@@ -562,6 +573,128 @@
         bandeja de compartilhamento do sistema, que inclui o Instagram. No computador, ele copia o link
         para você colar no story, na legenda ou na bio.
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CORREÇÕES ═══ -->
+<section id="correcoes">
+  <div class="wrap">
+    <div class="rot-sec">Transparência · registro público</div>
+    <h2>Correções</h2>
+    <p class="intro">Todo texto trocado nesta página fica registrado aqui: a data, o texto antigo
+      copiado literalmente, o texto novo e o motivo. Nada sai da página sem ficar registrado. A regra
+      geral está na <a href="../../sobre/metodo.html">política de correção</a>.</p>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — Fonte da série PNAD Contínua</h3>
+      <ul>
+        <li><strong>Texto antigo (rodapé do gráfico):</strong> “IBGE — PNAD Contínua, 2º trimestre de cada ano, safra 2T2026 (série recalculada na mesma divulgação)”</li>
+        <li><strong>Texto novo:</strong> “IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099 (taxa de desocupação, 14 anos ou mais, Brasil), 2º trimestre de cada ano. Extraído em 21/09/2026. Série reponderada pelo IBGE em 15/08/2025 (Nota Técnica 02/2025).”</li>
+        <li><strong>Texto antigo (tabela de método, colunas “Fonte primária” e “Recorte”):</strong> “IBGE — PNAD Contínua” · “Nacional, 14+, 2º trimestre, safra 2T2026”</li>
+        <li><strong>Texto novo (tabela de método):</strong> “IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099” · “Nacional, 14+, 2º trimestre de cada ano, extraído em 21/09/2026”</li>
+        <li><strong>Motivo:</strong> o texto anterior dizia que a série foi recalculada na divulgação do 2º trimestre de 2026; os metadados do IBGE registram a última modificação dos trimestres de 2012 a 2025 em 15/08/2025. Os 15 valores da série foram conferidos contra a tabela 6468 nesta data e coincidem.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — Comparação entre a PME e a PNAD Contínua (taxa de 2014 e citação ao IBGE)</h3>
+      <ul>
+        <li><strong>Texto antigo:</strong> “Mas a mudança não foi para baixar o número. O próprio IBGE registra que a PNAD Contínua mostra taxas sistematicamente mais elevadas que a PME. Na régua nova, 2014 foi 7,0% — e não os 4,8% que a régua antiga marcava. Acusar o IBGE de maquiagem é um argumento que se desmonta sozinho e entrega a discussão.”</li>
+        <li><strong>Texto novo:</strong> “Mas a mudança não baixou o número. Nos quatro anos em que as duas séries desta página coexistem (2012 a 2015), o 2º trimestre da PNAD Contínua ficou acima da média anual da PME: em 2014, por exemplo, 6,9% contra 4,8%. As pesquisas têm universos e períodos diferentes, então a diferença não mede nada com exatidão — mas também não mostra número puxado para baixo. Acusar o IBGE de maquiagem, com estes números, é um argumento frágil e entrega a discussão.”</li>
+        <li><strong>Motivo (taxa):</strong> 7,0% não é o valor do IBGE para o 2º trimestre de 2014; o valor é 6,9%, o mesmo da série do gráfico.</li>
+        <li><strong>Motivo (citação):</strong> a frase atribuída ao IBGE (taxas “sistematicamente mais elevadas”) não tem fonte registrada e não consta do release de 13/01/2014; saiu, e a comparação passou a se apoiar só nos números desta página, com o período de cada um dito no texto (2º trimestre da PNAD Contínua contra média anual da PME).</li>
+        <li><strong>Motivo (tom):</strong> “não foi para baixar” afirmava intenção, que os dados não mostram, e “se desmonta sozinho” afirmava mais do que uma comparação entre pesquisas diferentes sustenta.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — Revisão da série e “uma safra só”</h3>
+      <ul>
+        <li><strong>Texto antigo:</strong> “Há ainda um terceiro problema, pouco conhecido: em 2024 o IBGE refez a série histórica com um novo banco anual. O ano de 2022 foi divulgado como 9,3% e hoje consta como 9,6%. Não é fraude — é revisão metodológica. Mas significa que comparar dois anos vindos de divulgações diferentes produz variações que não existiram. Cada série desta página usa uma safra só.”</li>
+        <li><strong>Texto novo:</strong> “Há ainda um terceiro problema, pouco conhecido. Séries oficiais são revisadas: em 15/08/2025 o IBGE reponderou toda a série da PNAD Contínua (Nota Técnica 02/2025). Por isso esta página informa a data em que cada número foi extraído. Isso não é fraude, mas comparar dois anos vindos de divulgações diferentes pode produzir variações que não existiram. Só a série de desocupação da PNAD Contínua foi extraída de uma safra única e conferida (21/09/2026). As de subutilização e de informalidade misturam médias anuais até 2025 com o 2º trimestre de 2026. Nas de subutilização, informalidade, desalento, PME e PNAD anual, a safra de cada ponto não está registrada, e a padronização está pendente.”</li>
+        <li><strong>Motivo (exemplo):</strong> o valor publicado hoje para o 2º trimestre de 2022 é 9,3%; a revisão citada não aparece na fonte. A frase sobre a série refeita em 2024 saiu junto, por não ter fonte registrada; a revisão documentada é a de 15/08/2025.</li>
+        <li><strong>Motivo (redação):</strong> “revisão metodológica” saiu porque o conteúdo da Nota Técnica 02/2025 não foi conferido para esta página, e “produz” virou “pode produzir” porque a página não demonstra que a reponderação alterou algum valor destas séries.</li>
+        <li><strong>Motivo (safras):</strong> “cada série usa uma safra só” não vale para várias séries. Só a da PNAD Contínua tem safra única e conferida; nas de subutilização e de informalidade, a fonte de cada uma mostra médias anuais e o 2º trimestre de 2026 na mesma linha; nas demais, a safra de cada ponto não está registrada.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — Taxa de 2003 no exemplo de comparação</h3>
+      <ul>
+        <li><strong>Texto antigo:</strong> “Ninguém pode dizer "o desemprego caiu de 12,3% em 2003 para 5,4% em 2026" — são pesquisas diferentes medindo universos diferentes.”</li>
+        <li><strong>Texto novo:</strong> “Ninguém pode dizer "o desemprego caiu desde 2003 até os 5,4% de 2026" — são pesquisas diferentes medindo universos diferentes.”</li>
+        <li><strong>Motivo:</strong> o texto dizia 12,3% e o gráfico da PME diz 12,4% para 2003; nenhum dos dois foi conferido na fonte.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — Consulta ao vivo ao IBGE e datas de conferência</h3>
+      <ul>
+        <li><strong>Texto antigo (selo):</strong> “Atualizado ao vivo”</li>
+        <li><strong>Texto novo (selo):</strong> “Consulta ao vivo ao IBGE”</li>
+        <li><strong>Texto antigo (frase do resultado):</strong> “· último período na API do IBGE: [código do período] — desocupação [X]%.”</li>
+        <li><strong>Texto novo (frase do resultado):</strong> “Última consulta ao IBGE: taxa de desocupação no trimestre móvel de [mês inicial] a [mês final] de [ano]: [X]% (PNAD Contínua, tabela 6381). É um recorte diferente do 2º trimestre usado nos gráficos.”</li>
+        <li><strong>Texto antigo (conferência, topo):</strong> “· conferidos em 22/08/2026. A página tenta atualizar sozinha nas fontes oficiais.” — quando a consulta funcionava, esse texto era substituído pela frase do resultado.</li>
+        <li><strong>Texto novo (conferência, topo):</strong> “· conferidos em 22/08/2026 (a série de desocupação da PNAD Contínua, em 21/09/2026). A página tenta atualizar sozinha nas fontes oficiais.” Agora ele permanece sempre, e a frase do resultado é acrescentada depois dele.</li>
+        <li><strong>Texto antigo (rodapé):</strong> “Dados conferidos em 22/08/2026 · valores reais em reais de julho de 2026 · página aberta em [data]”</li>
+        <li><strong>Texto novo (rodapé):</strong> o mesmo, seguido de “ · série de desocupação da PNAD Contínua extraída em 21/09/2026”.</li>
+        <li><strong>Motivo:</strong> a consulta só acrescenta a última taxa; os gráficos e cartões continuam sendo os dados conferidos em 22/08/2026, então essa data não pode sumir. A série de desocupação da PNAD Contínua foi extraída depois (21/09/2026), e as duas datas agora aparecem. O código de período mostrado antes era o do último mês de um trimestre móvel, sem que isso fosse dito, e esse recorte não é o 2º trimestre dos gráficos.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — Anos sem dado nos gráficos das réguas do desemprego</h3>
+      <ul>
+        <li><strong>Texto antigo e novo:</strong> nenhum (mudança no desenho do gráfico).</li>
+        <li><strong>Motivo:</strong> o gráfico ligava pontos por cima de anos sem dado; agora a linha quebra onde falta dado. Afeta a PME (2007 e 2008), a subutilização (2020 e 2021) e o desalento (2015 a 2020). A PNAD anual só tem pontos e não muda na aparência.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — Ponto de 2026 em subutilização e informalidade</h3>
+      <ul>
+        <li><strong>Texto antigo:</strong> nenhum. O ponto de 2026 era desenhado como os demais e ligado ao de 2025.</li>
+        <li><strong>Acréscimo (legenda dos gráficos de subutilização e de informalidade):</strong> “2026 = 2º trimestre, não média anual — por isso não se liga ao ponto de 2025”, com o ponto de 2026 em marcador diferente (losango vazado) e sem linha até o ponto de 2025.</li>
+        <li><strong>Motivo:</strong> segundo a fonte de cada série, os pontos até 2025 são médias anuais e o de 2026 é o 2º trimestre; a linha contínua sugeria que medem a mesma coisa.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — PNAD anual: origem e cobertura</h3>
+      <ul>
+        <li><strong>Texto antigo (descrição, abertura):</strong> “Nacional, 10 anos ou mais, medida na última semana de setembro.”</li>
+        <li><strong>Texto novo (descrição, abertura):</strong> “Nacional (sem a área rural de seis estados do Norte até 2003), 10 anos ou mais, medida na última semana de setembro.”</li>
+        <li><strong>Texto antigo (descrição):</strong> “Só cinco anos puderam ser confirmados em fonte primária — os pontos são pontos, não uma tendência.”</li>
+        <li><strong>Texto novo (descrição):</strong> “A origem destes percentuais está em conferência: no SIDRA, esta pesquisa publica só a contagem de desocupados, não a taxa. Os pontos são pontos, não uma tendência.”</li>
+        <li><strong>Acréscimo (descrição):</strong> “Até 2003, a PNAD não cobria a área rural de Rondônia, Acre, Amazonas, Roraima, Pará e Amapá (nota do IBGE na tabela 1868 do SIDRA). Os pontos de 1995 e 2003 não representam o país inteiro.”</li>
+        <li><strong>Texto antigo (rodapé do gráfico):</strong> “IBGE — PNAD anual. ⚠️ Série incompleta: apenas 5 anos confirmados. Não sustenta narrativa.”</li>
+        <li><strong>Texto novo (rodapé do gráfico):</strong> “IBGE — PNAD anual. ⚠️ Série incompleta (5 anos) e com a origem dos percentuais em conferência. Não sustenta narrativa.”</li>
+        <li><strong>Texto antigo (tabela de método, colunas “Recorte” e “Estado”):</strong> “Nacional, 10+, setembro” · “⚠️ apenas 5 anos confirmados”</li>
+        <li><strong>Texto novo (tabela de método):</strong> “Nacional (sem a área rural de seis estados do Norte até 2003), 10+, setembro” · “⚠️ 5 anos; origem dos percentuais em conferência”</li>
+        <li><strong>Motivo:</strong> no SIDRA esta pesquisa publica só a contagem de desocupados, não a taxa, e a cobertura até 2003 não incluía a área rural de seis estados do Norte. Os textos que ainda diziam “confirmados” ou apenas “Nacional” foram alinhados a isso.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — Tabela de método: subutilização, informalidade e desalento</h3>
+      <ul>
+        <li><strong>Texto antigo (colunas “Recorte” e “Estado”):</strong> “Médias anuais, safra 2023–2025” · “✅ com buracos declarados”</li>
+        <li><strong>Texto novo:</strong> “Médias anuais até 2025 e 2º trimestre de 2026; safra de cada ponto não registrada” · “⚠️ com buracos declarados · safras não padronizadas”</li>
+        <li><strong>Motivo:</strong> alinhar a tabela ao texto sobre safras (ver “Revisão da série e ‘uma safra só’”).</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>21/09/2026 — Citações atribuídas ao IBGE</h3>
+      <ul>
+        <li><strong>Texto antigo (descrição da PME):</strong> “O IBGE afirma que a PNAD Contínua mostra taxas SISTEMATICAMENTE MAIS ALTAS que esta — a régua antiga não era mais severa, era mais estreita.”</li>
+        <li><strong>Texto novo:</strong> frase retirada.</li>
+        <li><strong>Motivo:</strong> não há fonte registrada para a frase; ela volta quando o documento for localizado.</li>
+        <li><strong>Texto antigo (introdução da seção):</strong> “e afirma em nota técnica que "as diferenças metodológicas existentes entre as pesquisas inviabilizam o processo de comparações entre elas".”</li>
+        <li><strong>Texto novo:</strong> “e afirma em release que "As três pesquisas possuem metodologias diferentes e os resultados não são comparáveis." (IBGE, Agência de Notícias, release "PNAD Contínua fornecerá informações inéditas sobre mercado de trabalho brasileiro", 13/01/2014, seção "Processo de transição termina em dezembro de 2014").” O título do release é um link para o texto do IBGE.</li>
+        <li><strong>Motivo:</strong> a citação anterior estava atribuída a uma nota técnica, sem fonte registrada, e não consta do release de 13/01/2014; a nova está nesse release, com link.</li>
+      </ul>
     </div>
   </div>
 </section>
