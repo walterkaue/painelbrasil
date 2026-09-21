@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/mercado/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal de macro e negócios: o que órgão oficial divulgou, o que tem data marcada e o que muda mecanicamente para quem vende tecnologia e serviço no Brasil.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 14 Sep 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 21 Sep 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 5 — O Redata sai da sanção do jeito que entrou</title>
+    <link>https://kauewalter.com.br/jornal/mercado/2026-09-21/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/mercado/2026-09-21/</guid>
+    <pubDate>Mon, 21 Sep 2026 08:00:00 -0300</pubDate>
+    <description>O Redata (incentivo fiscal a data centers) foi sancionado em 15 de setembro sem nenhum veto às cinco condições do texto — resposta à pergunta que a edição anterior deixou em aberto. O Copom cortou a Selic pela quinta vez seguida, para 13,75% ao ano, mas trocou a promessa de continuidade por uma linguagem mais cautelosa. O varejo caiu 0,8% em julho, e a Receita Federal abriu prazo até 30 de setembro para empresas do Simples Nacional escolherem o modelo de recolhimento do IBS e da CBS de 2027.</description>
+  </item>
 
   <item>
     <title>nº 4 — O calendário eleitoral chega à pauta econômica</title>

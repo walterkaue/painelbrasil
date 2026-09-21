@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/salesforce/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal sobre Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce. Publicado toda segunda-feira, com nível de confiança declarado em cada item.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 14 Sep 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 21 Sep 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 5 — O Dreamforce passou sem trilha própria de Marketing Cloud, mas a semana entregou uma data de GA e um release note que faltava confirmar</title>
+    <link>https://kauewalter.com.br/jornal/salesforce/2026-09-21/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/salesforce/2026-09-21/</guid>
+    <pubDate>Mon, 21 Sep 2026 08:00:00 -0300</pubDate>
+    <description>O Campaign Agent ganhou anúncio oficial e data de disponibilidade geral em outubro na Marketing Cloud Next — e apareceu no resumo do keynote principal do Dreamforce. As release notes oficiais do Winter '27 confirmaram o placar de saúde de entregabilidade e a configuração guiada do MC Next. Os prazos de client secrets da MCE e da Marketing Champions seguem correndo.</description>
+  </item>
 
   <item>
     <title>nº 4 — Dreamforce começa amanhã, num setembro que já entregou parte da base antes do palco</title>
