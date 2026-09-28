@@ -91,7 +91,7 @@
   <div class="grade-tiles" id="tiles"></div>
   <p style="font-size:12.5px;color:var(--tinta-3);margin:2px 0 0">
     <span class="badge" id="statusDados">Dados de referência</span>
-    <span id="statusTexto"> · conferidos em 22/08/2026 (a série de desocupação da PNAD Contínua, em 21/09/2026). A página tenta atualizar sozinha nas fontes oficiais.</span>
+    <span id="statusTexto"> · conferidos em 22/08/2026 (a desocupação da PNAD Contínua: série nacional em 21/09/2026 e por UF em 23/09/2026). A página tenta atualizar sozinha nas fontes oficiais.</span>
     <span id="statusConsulta"></span>
   </p>
 </div>
@@ -219,16 +219,22 @@
           séries desta página coexistem (2012 a 2015), o 2º trimestre da PNAD Contínua ficou acima da
           média anual da PME: em 2014, por exemplo, 6,9% contra 4,8%. As pesquisas têm universos e
           períodos diferentes, então a diferença não mede nada com exatidão — mas também não mostra
-          número puxado para baixo. Acusar o IBGE de maquiagem, com estes números, é um argumento
-          frágil e entrega a discussão.</li>
+          número puxado para baixo. O IBGE registra o mesmo padrão nas regiões metropolitanas:
+          "Os resultados trimestrais da PNAD Contínua, para as regiões metropolitanas, mostram taxas
+          de desocupação sistematicamente mais elevadas que as da PME." (IBGE, nota técnica
+          <a href="https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Nota_Tecnica/Nota_Tecnica_Diferencas_Metodologicas_das_pesquisas_PNAD_PME_e_PNAD_Continua.pdf" target="_blank" rel="noopener">"Principais diferenças metodológicas entre as pesquisas PME, PNAD e PNAD Contínua"</a>,
+          24/11/2015, seção "Introdução"). Acusar o IBGE de maquiagem, com estes números, é um
+          argumento frágil e entrega a discussão.</li>
         <li><strong>O que é de fato enganoso é a manchete.</strong> "Desocupação" conta só quem procurou
           trabalho nos últimos 30 dias e estava disponível. Não conta quem desistiu de procurar
           (desalentado), quem trabalha menos horas do que precisa, nem quem está na informalidade.
           A <strong>subutilização</strong> é mais que o dobro da desocupação. Essa é a briga que se
           ganha com dado.</li>
         <li><strong>Há ainda um terceiro problema, pouco conhecido.</strong> Séries oficiais são
-          revisadas: em 15/08/2025 o IBGE reponderou toda a série da PNAD Contínua (Nota Técnica
-          02/2025). Por isso esta página informa a data em que cada número foi extraído. Isso não é
+          revisadas: a Nota Técnica 02/2025 (31/07/2025) reponderou a série da PNAD Contínua desde
+          2012 com as populações do Censo 2022, mantida a metodologia, e os metadados da tabela 6468
+          registram a última modificação dos trimestres em 15/08/2025. Por isso esta página informa a
+          data em que cada número foi extraído. Isso não é
           fraude, mas
           <strong>comparar dois anos vindos de divulgações diferentes pode produzir variações que não
           existiram.</strong> Só a série de desocupação da PNAD Contínua foi extraída de uma safra
@@ -518,7 +524,8 @@
           <tr><td>Faixas de rendimento</td><td>IBGE — Censo 2022</td><td>Ocupados 14+, julho/2022</td><td>✅ ponto único · faixas 2–5 SM ausentes</td></tr>
           <tr><td>Salários no PIB</td><td>IBGE — Contas Nacionais</td><td>2010–2021, % do PIB</td><td>✅ até 2021 · 2022+ não publicado</td></tr>
           <tr><td>Carga tributária por décimo</td><td>IPEA / POF-IBGE 2017-2018</td><td>Renda familiar per capita</td><td>✅ fonte primária</td></tr>
-          <tr><td>Indicadores por UF</td><td>IBGE — PNAD Contínua</td><td>2º tri/2026 e 2025</td><td>⚠️ 10 de 27 UFs cruzadas com o release</td></tr>
+          <tr><td>Desocupação por UF</td><td>IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099</td><td>2º trimestre de 2026, 14+, 27 UFs; extraído em 23/09/2026</td><td>✅ 27 de 27 conferidas</td></tr>
+          <tr><td>Rendimento domiciliar per capita por UF</td><td>IBGE — PNAD Contínua</td><td>2025</td><td>⚠️ não conferido nesta rodada</td></tr>
           <tr><td>Salário mínimo em PPC</td><td>Base OECD Real Minimum Wages</td><td>2024, anual</td><td>⚠️ compilação secundária</td></tr>
           <tr><td>Acidentes e mortes no trabalho</td><td>MTE — estudo 2016–2025</td><td>Trabalho formal</td><td>⚠️ duas fontes secundárias concordantes</td></tr>
           <tr><td>Rendimento por cor/raça e sexo</td><td>IBGE — Síntese de Indicadores Sociais 2025</td><td>Ano-base 2024</td><td>✅ conferido</td></tr>
@@ -585,6 +592,40 @@
     <p class="intro">Todo texto trocado nesta página fica registrado aqui: a data, o texto antigo
       copiado literalmente, o texto novo e o motivo. Nada sai da página sem ficar registrado. A regra
       geral está na <a href="../../sobre/metodo.html">política de correção</a>.</p>
+
+    <div class="ressalva azul">
+      <h3>23/09/2026 — Desocupação por UF conferida na fonte</h3>
+      <ul>
+        <li><strong>Texto antigo (rodapé do gráfico por UF):</strong> “IBGE — PNAD Contínua Trimestral, 2º trimestre de 2026. ⚠️ 10 das 27 UFs cruzadas com o release do IBGE; as demais vêm de compilação secundária e serão conferidas no SIDRA.”</li>
+        <li><strong>Texto novo:</strong> “IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099 (taxa de desocupação, 14 anos ou mais), por Unidade da Federação, 2º trimestre de 2026. Extraído em 23/09/2026: as 27 UFs e o total Brasil (5,4%) conferidos.”</li>
+        <li><strong>Texto antigo (tabela de método):</strong> “Indicadores por UF” · “IBGE — PNAD Contínua” · “2º tri/2026 e 2025” · “⚠️ 10 de 27 UFs cruzadas com o release”</li>
+        <li><strong>Texto novo (tabela de método, agora em duas linhas):</strong> “Desocupação por UF” · “IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099” · “2º trimestre de 2026, 14+, 27 UFs; extraído em 23/09/2026” · “✅ 27 de 27 conferidas” — e “Rendimento domiciliar per capita por UF” · “IBGE — PNAD Contínua” · “2025” · “⚠️ não conferido nesta rodada”</li>
+        <li><strong>Texto antigo (datas de conferência, topo e rodapé):</strong> “(a série de desocupação da PNAD Contínua, em 21/09/2026)” e “ · série de desocupação da PNAD Contínua extraída em 21/09/2026”</li>
+        <li><strong>Texto novo:</strong> “(a desocupação da PNAD Contínua: série nacional em 21/09/2026 e por UF em 23/09/2026)” e “ · série de desocupação da PNAD Contínua extraída em 21/09/2026 (por UF, em 23/09/2026)”</li>
+        <li><strong>Motivo:</strong> nenhum valor mudou. Os 27 valores digitados coincidem com a tabela 6468 no nível de Unidade da Federação para o 2º trimestre de 2026, e o 5,4% de “Brasil” coincide com o total nacional da mesma tabela. O aviso sobre 10 UFs cruzadas deixou de valer. A linha da tabela de método foi separada porque o rendimento por UF (2025) não foi conferido nesta rodada.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>23/09/2026 — Nota técnica do IBGE localizada: a frase da PME volta, com a ressalva das regiões metropolitanas</h3>
+      <ul>
+        <li><strong>Texto antigo (descrição da PME):</strong> “Apenas 6 regiões metropolitanas, a partir dos 10 anos. Encerrada em 2016.”</li>
+        <li><strong>Texto novo:</strong> “Apenas 6 regiões metropolitanas, a partir dos 10 anos. Encerrada em 2016. Segundo o IBGE, os resultados trimestrais da PNAD Contínua para as regiões metropolitanas mostram taxas de desocupação sistematicamente mais elevadas que as da PME (nota técnica de 24/11/2015).”</li>
+        <li><strong>Acréscimo (bullet “Mas a mudança não baixou o número”):</strong> “O IBGE registra o mesmo padrão nas regiões metropolitanas: "Os resultados trimestrais da PNAD Contínua, para as regiões metropolitanas, mostram taxas de desocupação sistematicamente mais elevadas que as da PME." (IBGE, nota técnica "Principais diferenças metodológicas entre as pesquisas PME, PNAD e PNAD Contínua", 24/11/2015, seção "Introdução").” O título da nota é um link para o texto do IBGE.</li>
+        <li><strong>Motivo:</strong> a frase retirada em 21/09/2026 consta dessa nota técnica do IBGE, na Introdução, mas com uma ressalva que a versão antiga omitia: o texto do IBGE fala das <em>regiões metropolitanas</em>, não do país. A citação “as diferenças metodológicas existentes entre as pesquisas inviabilizam o processo de comparações entre elas”, também trocada em 21/09/2026, consta da mesma nota, na seção “Principais Diferenças Metodológicas”, e a atribuição a “nota técnica” que a página tinha antes estava correta. A introdução da seção segue com a citação do release de 13/01/2014. O trecho “a régua antiga não era mais severa, era mais estreita”, que fechava a frase antiga, não foi restaurado: não está na nota.</li>
+      </ul>
+    </div>
+
+    <div class="ressalva azul">
+      <h3>23/09/2026 — Data e natureza da reponderação da PNAD Contínua</h3>
+      <ul>
+        <li><strong>Texto antigo (fonte da série nacional):</strong> “… Série reponderada pelo IBGE em 15/08/2025 (Nota Técnica 02/2025).”</li>
+        <li><strong>Texto novo:</strong> “… Série reponderada pelo IBGE com as populações do Censo 2022, a partir de 2012, mantida a metodologia (Nota Técnica 02/2025, de 31/07/2025); os metadados da tabela registram a última modificação dos trimestres de 2012 a 2025 em 15/08/2025.”</li>
+        <li><strong>Texto antigo (parágrafo sobre revisão de séries):</strong> “Séries oficiais são revisadas: em 15/08/2025 o IBGE reponderou toda a série da PNAD Contínua (Nota Técnica 02/2025). Por isso esta página informa a data em que cada número foi extraído.”</li>
+        <li><strong>Texto novo:</strong> “Séries oficiais são revisadas: a Nota Técnica 02/2025 (31/07/2025) reponderou a série da PNAD Contínua desde 2012 com as populações do Censo 2022, mantida a metodologia, e os metadados da tabela 6468 registram a última modificação dos trimestres em 15/08/2025. Por isso esta página informa a data em que cada número foi extraído.”</li>
+        <li><strong>Motivo:</strong> a nota técnica é datada de 31/07/2025 (Diretoria de Pesquisas). Ela diz que as estimativas dos trimestres móveis passaram a ser divulgadas com os novos pesos naquela data e que a mesma metodologia foi aplicada à série desde 2012; a data de 15/08/2025 vem dos metadados da tabela 6468, não da nota. A nota também não fala em revisão metodológica: atualiza as populações usadas nos pesos. Os gráficos do anexo, que mostram o impacto nos indicadores, não foram lidos.</li>
+      </ul>
+    </div>
 
     <div class="ressalva azul">
       <h3>21/09/2026 — Fonte da série PNAD Contínua</h3>

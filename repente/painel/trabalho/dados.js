@@ -3,7 +3,8 @@
    Dados-semente e desenho dos gráficos desta página.
 
    Conferidos em 22/08/2026, exceto a série pnadc (desocupação da
-   PNAD Contínua), extraída e conferida em 21/09/2026.
+   PNAD Contínua), extraída e conferida em 21/09/2026, e a desocupação
+   por UF (uf.desoc), extraída e conferida em 23/09/2026.
    Nada aqui é estimado ou interpolado: onde não há dado confirmado
    em fonte, há null.
    O caderno com as ressalvas de comparabilidade de cada série
@@ -17,6 +18,7 @@
   const D = {
     extraidoEm: '2026-08-22',
     pnadcExtraidoEm: '2026-09-21',
+    ufDesocExtraidoEm: '2026-09-23',
     base: 'reais de julho de 2026',
 
     /* [ano, nominal, real(jul/2026), necessário DIEESE, razão]
@@ -49,7 +51,7 @@
       {id:'pnadc', nome:'PNAD Contínua — desocupação (2º trimestre)',
        desc:'Nacional, 14 anos ou mais. Conta quem não tinha trabalho, procurou nos últimos 30 dias e estava disponível. É a taxa que vira manchete — e a mais estreita.',
        unidade:'%', cor:'var(--s1)',
-       fonte:'IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099 (taxa de desocupação, 14 anos ou mais, Brasil), 2º trimestre de cada ano. Extraído em 21/09/2026. Série reponderada pelo IBGE em 15/08/2025 (Nota Técnica 02/2025).',
+       fonte:'IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099 (taxa de desocupação, 14 anos ou mais, Brasil), 2º trimestre de cada ano. Extraído em 21/09/2026. Série reponderada pelo IBGE com as populações do Censo 2022, a partir de 2012, mantida a metodologia (Nota Técnica 02/2025, de 31/07/2025); os metadados da tabela registram a última modificação dos trimestres de 2012 a 2025 em 15/08/2025.',
        serie:[[2012,7.6],[2013,7.5],[2014,6.9],[2015,8.4],[2016,11.4],[2017,13.1],[2018,12.6],
               [2019,12.1],[2020,13.6],[2021,14.2],[2022,9.3],[2023,8.0],[2024,6.9],[2025,5.8],[2026,5.4]]},
       {id:'subut', nome:'PNAD Contínua — subutilização',
@@ -72,7 +74,7 @@
        serie:[[2014,1.6],[2015,null],[2016,null],[2017,null],[2018,null],[2019,null],[2020,null],
               [2021,5.6],[2022,4.3],[2023,3.7],[2024,3.3],[2025,2.9]]},
       {id:'pme', nome:'PME — desocupação (régua antiga, 2003–2015)',
-       desc:'Apenas 6 regiões metropolitanas, a partir dos 10 anos. Encerrada em 2016.',
+       desc:'Apenas 6 regiões metropolitanas, a partir dos 10 anos. Encerrada em 2016. Segundo o IBGE, os resultados trimestrais da PNAD Contínua para as regiões metropolitanas mostram taxas de desocupação sistematicamente mais elevadas que as da PME (nota técnica de 24/11/2015).',
        unidade:'%', cor:'var(--tinta-3)',
        fonte:'IBGE — Pesquisa Mensal de Emprego, médias anuais, releases da Agência de Notícias. Série com buracos (2007 e 2008 não localizados)',
        serie:[[2003,12.4],[2004,11.5],[2005,9.8],[2006,10.0],[2007,null],[2008,null],[2009,8.1],[2010,6.7],[2011,6.0],
@@ -105,7 +107,7 @@
 
     uf: {
       desoc: {titulo:'Taxa de desocupação por estado', unidade:'%', inverso:true,
-        fonte:'IBGE — PNAD Contínua Trimestral, 2º trimestre de 2026. ⚠️ 10 das 27 UFs cruzadas com o release do IBGE; as demais vêm de compilação secundária e serão conferidas no SIDRA.',
+        fonte:'IBGE — PNAD Contínua trimestral, tabela 6468, variável 4099 (taxa de desocupação, 14 anos ou mais), por Unidade da Federação, 2º trimestre de 2026. Extraído em 23/09/2026: as 27 UFs e o total Brasil (5,4%) conferidos.',
         dados:[['SC',2.1],['MT',2.2],['ES',2.3],['RO',2.6],['MS',2.7],['PR',3.1],['MG',3.8],['GO',4.0],
                ['TO',4.1],['RS',4.2],['RR',5.0],['PB',5.4],['SP',5.4],['RN',5.6],['MA',6.0],['PA',6.2],
                ['DF',6.5],['AC',6.6],['CE',6.6],['RJ',7.1],['AM',7.5],['AL',7.9],['SE',7.9],['PI',8.3],
@@ -532,8 +534,9 @@
   /* ── partida ─────────────────────────────────── */
   carimbo('carimbo', D.extraidoEm, D.base);
   const selo = document.getElementById('carimbo');
+  const dt = s => new Date(s + 'T12:00:00').toLocaleDateString('pt-BR');
   if (selo) selo.textContent += ' · série de desocupação da PNAD Contínua extraída em ' +
-    new Date(D.pnadcExtraidoEm + 'T12:00:00').toLocaleDateString('pt-BR');
+    dt(D.pnadcExtraidoEm) + ' (por UF, em ' + dt(D.ufDesocExtraidoEm) + ')';
   tiles(); plotReal(); plotRazao(); plotFaixas(); plotPib();
   plotTributos(); plotMundo(); linhasCorpo(); controles(); tentarAtualizar();
 })();
