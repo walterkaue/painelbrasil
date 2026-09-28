@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/mercado/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal de macro e negócios: o que órgão oficial divulgou, o que tem data marcada e o que muda mecanicamente para quem vende tecnologia e serviço no Brasil.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 21 Sep 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 28 Sep 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 6 — O Copom confirma a cautela na mesma semana em que a inflação sobe</title>
+    <link>https://kauewalter.com.br/jornal/mercado/2026-09-28/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/mercado/2026-09-28/</guid>
+    <pubDate>Mon, 28 Sep 2026 08:00:00 -0300</pubDate>
+    <description>A ata do Copom, divulgada em 22 de setembro, confirma a cautela do comunicado anterior sem repetir a promessa de continuidade do ciclo — o teste que a edição passada deixou registrado. Três dias depois, o IPCA-15 de setembro subiu 0,70%, acima do teto das estimativas, puxado pelo fim do Bônus de Itaipu. O Banco Central mudou regras do Pix contra fraude, o CADE abriu consulta pública sobre seu regimento interno, e a ANPD manteve suspensas as lives do Discord no Brasil.</description>
+  </item>
 
   <item>
     <title>nº 5 — O Redata sai da sanção do jeito que entrou</title>

@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/salesforce/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal sobre Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce. Publicado toda segunda-feira, com nível de confiança declarado em cada item.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 21 Sep 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 28 Sep 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 6 — As release notes do Data 360 confirmam GA do Data 360 Marketing Agent em 2 de outubro — no mesmo dia da onda 2 do Winter '27</title>
+    <link>https://kauewalter.com.br/jornal/salesforce/2026-09-28/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/salesforce/2026-09-28/</guid>
+    <pubDate>Mon, 28 Sep 2026 08:00:00 -0300</pubDate>
+    <description>O corte de client secrets antigos da MCE, até aqui apoiado em blog técnico, ganhou confirmação num artigo oficial do Salesforce Help: faltam 2 dias. As release notes oficiais do Data 360 confirmaram o Data 360 Marketing Agent, pendência da edição anterior, com GA em 2 de outubro. As inscrições da Marketing Champions fecharam, com anúncio da turma em 26 de outubro, e o Campaign Agent segue para outubro sem dia exato.</description>
+  </item>
 
   <item>
     <title>nº 5 — O Dreamforce passou sem trilha própria de Marketing Cloud, mas a semana entregou uma data de GA e um release note que faltava confirmar</title>
