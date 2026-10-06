@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/mercado/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal de macro e negócios: o que órgão oficial divulgou, o que tem data marcada e o que muda mecanicamente para quem vende tecnologia e serviço no Brasil.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 28 Sep 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 05 Oct 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 7 — A desocupação trava na mínima do ano enquanto a indústria perde fôlego e o calendário fiscal vira operação</title>
+    <link>https://kauewalter.com.br/jornal/mercado/2026-10-05/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/mercado/2026-10-05/</guid>
+    <pubDate>Mon, 05 Oct 2026 08:00:00 -0300</pubDate>
+    <description>A desocupação do trimestre encerrado em agosto repete os 5,3% do trimestre até julho, no mesmo mês em que o IPP sobe 0,36% e a produção industrial cai 0,6%. O prazo para o Simples Nacional escolher o modelo de recolhimento do IBS e da CBS em 2027 se encerrou em 30 de setembro, a informação de IBS e CBS na NFS-e passou a ser exigida desde 1º de outubro, e o Senado inicia o debate da PEC do fim da escala 6x1 dois dias depois do primeiro turno das eleições gerais.</description>
+  </item>
 
   <item>
     <title>nº 6 — O Copom confirma a cautela na mesma semana em que a inflação sobe</title>

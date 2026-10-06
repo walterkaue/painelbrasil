@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/salesforce/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal sobre Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce. Publicado toda segunda-feira, com nível de confiança declarado em cada item.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 28 Sep 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 05 Oct 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 7 — As release notes da Marketing Cloud Engagement voltam a abrir depois de ficarem fora do ar na edição anterior, e revelam um pacote de segurança que nasce direto do corte de client secrets que passou nesta semana</title>
+    <link>https://kauewalter.com.br/jornal/salesforce/2026-10-05/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/salesforce/2026-10-05/</guid>
+    <pubDate>Mon, 05 Oct 2026 08:00:00 -0300</pubDate>
+    <description>A onda 2 do Winter '27 chegou ao calendário geral em 2 de outubro, e as release notes oficiais da MCE voltaram a carregar, revelando um pacote de segurança (MFA resistente a phishing, revogação automática de secret) e 40 ferramentas novas no MCP Server. O prazo do corte de client secrets antigos passou em 30 de setembro sem intercorrência confirmada em fonte aberta, e a Salesforce anunciou a aquisição da Listen Labs. Marketing Champions e Campaign Agent seguem sem desenvolvimento novo.</description>
+  </item>
 
   <item>
     <title>nº 6 — As release notes do Data 360 confirmam GA do Data 360 Marketing Agent em 2 de outubro — no mesmo dia da onda 2 do Winter '27</title>

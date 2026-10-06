@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boletim Salesforce nº 7 — 5 de outubro de 2026 — Kauê Walter</title>
+<meta name="description" content="As release notes da Marketing Cloud Engagement voltam a abrir depois de ficarem fora do ar na edição anterior e revelam um pacote de segurança e 40 novas ferramentas de automação por MCP Server. A onda 2 do Winter '27 chegou ao calendário geral em 2 de outubro, e o corte de client secrets antigos da MCE passou em 30 de setembro sem intercorrência confirmada em fonte aberta.">
+<link rel="canonical" href="https://kauewalter.com.br/jornal/salesforce/2026-10-05/">
+<meta name="author" content="Kauê Walter">
+<meta property="og:site_name" content="Kauê Walter">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Boletim Salesforce nº 7 — 5 de outubro de 2026">
+<meta property="og:description" content="As release notes da Marketing Cloud Engagement voltam a abrir e revelam um pacote de segurança e 40 novas ferramentas de automação por MCP Server. A onda 2 do Winter '27 chegou ao calendário em 2 de outubro, e o corte de client secrets antigos da MCE passou em 30 de setembro sem intercorrência confirmada em fonte aberta.">
+<meta property="og:url" content="https://kauewalter.com.br/jornal/salesforce/2026-10-05/">
+<meta property="article:published_time" content="2026-10-05">
+<meta property="og:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Boletim Salesforce nº 7 — 5 de outubro de 2026 — A Banca">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boletim Salesforce nº 7 — 5 de outubro de 2026">
+<meta name="twitter:description" content="As release notes da Marketing Cloud Engagement voltam a abrir e revelam um pacote de segurança e 40 novas ferramentas de automação por MCP Server. A onda 2 do Winter '27 chegou ao calendário em 2 de outubro, e o corte de client secrets antigos da MCE passou em 30 de setembro sem intercorrência confirmada em fonte aberta.">
+<meta name="twitter:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<link rel="icon" href="/assets/kw.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Boletim Salesforce — RSS" href="/jornal/salesforce/feed.xml">
+<script>
+/* Tema antes da primeira pintura — mesma chave do resto do site. */
+(function(){try{var s=localStorage.getItem('kw-tema');
+if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/kw.css">
+<link rel="stylesheet" href="/assets/jornal.css">
+<script src="/assets/ouvir.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/"><span class="mark">KW</span> Kauê Walter</a>
+    <nav>
+      <a href="/">Carreira</a>
+      <a href="/jornal/" aria-current="page">A Banca</a>
+      <a href="/biblioteca/">Biblioteca</a>
+      <a href="/#contato">Contato</a>
+      <button class="tgl" id="tgl" type="button" aria-pressed="false"
+              aria-label="Alternar entre tema claro e escuro">Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="w">
+
+  <nav class="cadernos" aria-label="Cadernos do jornal">
+    <a class="capa" href="/jornal/">← Capa</a>
+    <a class="cad" href="/jornal/salesforce/" aria-current="page">Salesforce</a>
+    <a class="cad" href="/jornal/mercado/">Mercado</a>
+  </nav>
+
+  <header class="jornal-head">
+    <div class="rule">
+      <div>
+        <p class="kicker"><a href="/jornal/salesforce/">Boletim Salesforce</a> · edição nº 7</p>
+        <h1>As release notes da Marketing Cloud Engagement voltam a abrir depois de ficarem fora do ar na edição anterior, e revelam um pacote de segurança que nasce direto do corte de client secrets que passou nesta semana</h1>
+        <p class="sub">Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce,
+          filtrados por uma pergunta só: isso tem prazo ou muda o jeito de trabalhar?</p>
+      </div>
+      <p class="carimbo">
+        <b>Segunda, 5 out 2026</b>
+        Corte: 5 out, 08h BRT<br>
+        8 itens · 3 com prazo<br>
+        <span class="foco">MCE · MC Next · Data 360 · Agentforce</span>
+      </p>
+    </div>
+  </header>
+
+  <nav class="nav-edicoes" aria-label="Navegar entre edições">
+    <a class="prev" href="/jornal/salesforce/2026-09-28/">← Edição anterior · nº 6</a>
+  </nav>
+
+  <div class="ouvir" data-ouvir-edicao hidden>
+    <button type="button" class="ouvir-btn">
+      <span class="ouvir-icone" aria-hidden="true" focusable="false"></span>
+      <span class="ouvir-rotulo">Ouvir o resumo</span>
+    </button>
+    <span class="ouvir-tempo" data-ouvir-tempo hidden></span>
+    <audio data-ouvir-audio preload="none" src="/jornal/salesforce/2026-10-05/resumo.mp3"></audio>
+  </div>
+
+  <section class="destaque">
+    <p class="faixa"><span class="rot acao">Decisão da semana</span>
+      <span class="rot prazo">4 dias</span>
+      <span class="conf">confiança alta · fonte oficial</span></p>
+    <h2>A onda 2 do Winter '27 chegou ao calendário geral em 2 de outubro, as release notes oficiais da Marketing Cloud Engagement voltaram a carregar depois de ficarem fora do ar na edição passada, e o prazo do corte de client secrets antigos passou em 30 de setembro sem intercorrência confirmada em fonte aberta</h2>
+    <p>A semana entre 29 de setembro e 5 de outubro resolveu um problema de apuração em vez de trazer um
+      anúncio isolado. Na edição nº 6, as release notes oficiais da Marketing Cloud Engagement para o
+      Winter '27 não carregaram em nenhuma tentativa, e o pacote de novidades do Marketing Cloud Next
+      entrou só com cobertura de terceiro. Nesta sessão elas abriram normalmente, e o que estava atrás
+      delas é maior do que uma lista de recursos: uma seção inteira de <b>segurança</b> — painel de
+      postura, log de acesso a Data Extension, MFA resistente a phishing, allowlist de IP, autenticação
+      step-up, painel de client secrets e revogação automática de secret — e a expansão do MCP Server da
+      Engagement com <b>40 ferramentas novas</b> de automação por linguagem natural.</p>
+    <p>Do lado do calendário: a onda 2 de produção do Winter '27, prevista para 2 de outubro, já passou
+      segundo o cronograma geral do Salesforce Admins — mas a data de chegada efetiva em cada instância
+      segue dependendo do calendário de manutenção próprio dela, não do calendário público. É nessa onda
+      que o Data 360 Marketing Agent (edição nº 6) e o pacote de segurança descrito acima deixam de ser
+      "anunciado" e passam a ser "potencialmente ativo", instância por instância. A onda 3 chega em 9 de
+      outubro — faltam 4 dias.</p>
+    <p>O prazo do corte de client secrets antigos da MCE, acompanhado desde a edição nº 3, também passou:
+      30 de setembro já ficou atrás. Esta sessão não encontrou comunicado oficial relatando intercorrência,
+      mas <b>status.salesforce.com</b> voltou a não carregar no ambiente de apuração — a mesma limitação
+      já registrada na edição nº 6 — então a ausência de notícia não pode ser lida como confirmação de que
+      nada quebrou. Os dois threads de calendário administrativo seguem sem desenvolvimento novo: a
+      triagem da Marketing Champions continua até 23 de outubro, com anúncio em 26, e o Campaign Agent
+      segue previsto para outubro, sem dia exato. Separadamente, em 29 de setembro a Salesforce anunciou
+      acordo para adquirir a Listen Labs, plataforma de pesquisa de cliente com IA que o comunicado oficial
+      diz que vai "complementar Marketing Cloud" — sem cronograma de integração divulgado.</p>
+  </section>
+
+  <div class="colunas">
+
+    <div>
+      <p class="divisor">Itens da semana</p>
+      <div class="itens">
+      <!-- ITENS-INICIO — para acrescentar um item à mão, copie o bloco-modelo
+           que está comentado no fim deste arquivo e cole aqui dentro. -->
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">4 dias</span> Releases
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Onda 2 do Winter '27 chegou ao calendário geral em 2 de outubro — a onda 3 vem em 4 dias</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Segundo o texto oficial do Salesforce Admins, relido nesta
+              sessão, a onda 2 de produção do Winter '27 estava marcada para <b>2 de outubro de 2026</b>,
+              e essa data já passou no cronograma geral. O mesmo texto avisa que a chegada efetiva do
+              release em cada instância segue o calendário de manutenção próprio dela, não o calendário
+              público — "a onda chegou" não significa que todo recurso já está ativo em toda instância. A
+              onda 3 chega em <b>9 de outubro</b>. Faltam <b>4 dias</b>.</dd></div>
+            <div><dt>Por que importa</dt><dd>É nesta janela que o Data 360 Marketing Agent (edição nº 6) e
+              o pacote de segurança da MCE (item abaixo) passam de "anunciado" para "potencialmente
+              disponível" — mas só instância por instância, na data que o calendário de manutenção dela
+              indicar.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Conferir o Maintenance Calendar do Salesforce Trust
+              para a data exata de cada instância, e não assumir que um recurso do Winter '27 já está
+              ativo sem testar em sandbox.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://admin.salesforce.com/blog/2026/admin-winter-27-release-countdown">Salesforce Admins · contagem regressiva do Winter '27</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">vigente</span> Segurança · MCE
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>As release notes da MCE voltam a abrir e revelam um pacote de segurança para o Winter '27</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Pela primeira vez desde a edição nº 6 — quando ficaram fora do ar
+              em todas as tentativas —, as release notes oficiais da Marketing Cloud Engagement para o
+              Winter '27 carregaram normalmente nesta sessão. Elas trazem uma seção de "Security
+              Enhancements" com sete itens: um <b>painel de postura de segurança</b> que consolida health
+              score e status de conta, <b>log de acesso a Data Extension</b> na Advanced Audit Trail,
+              suporte a <b>MFA resistente a phishing</b> (Touch ID, Face ID), gestão de <b>allowlist de
+              IP</b> para login administrativo, <b>autenticação step-up</b> antes de tarefas críticas, um
+              <b>painel-resumo de client secrets</b> de API por installed package, e <b>revogação
+              automática de secret</b> quando um comprometimento é detectado.</dd></div>
+            <div><dt>Por que importa</dt><dd>As duas últimas peças — o painel de client secrets e a
+              revogação automática — respondem direto ao tipo de episódio que esta edição acompanha desde
+              a nº 3: troca de credencial feita manualmente, sem painel central, até o prazo de 30 de
+              setembro (ver item abaixo). É recurso que muda rotina de operação, não só configuração
+              pontual.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Quando o Winter '27 chegar à instância, revisar o
+              novo painel de client secrets antes de presumir que a rotação anterior está completa, e
+              avaliar a adoção de MFA resistente a phishing para contas administrativas.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://help.salesforce.com/s/articleView?id=mc_rn_release_notes.htm&language=en_US&type=5">Salesforce Help · Release Notes, Marketing Cloud Engagement (Winter '27)</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">vigente</span> Automação · MCP Server
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O MCP Server da Engagement ganha 40 ferramentas novas de automação</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>As mesmas release notes trazem a expansão do MCP Server da
+              Marketing Cloud Engagement — que chegou à disponibilidade geral em junho de 2026 (edição
+              nº 2) — com a adição de <b>40 ferramentas novas</b> para gestão por linguagem natural:
+              atividades de Automation Studio, campanhas, pastas do Content Builder, operações em lote de
+              dados, consultas a Data Extension, exclusão de contato e recuperação de histórico de
+              rastreamento de e-mail.</dd></div>
+            <div><dt>Por que importa</dt><dd>Amplia o que pode ser delegado a um agente de IA conectado
+              via MCP, de leitura e consulta para operação de rotina — inclusive exclusão de contato, uma
+              ação que normalmente exige trilha de auditoria clara.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Testar o conjunto ampliado de ferramentas num
+              cliente de IA conectado por MCP antes de liberar qualquer ação que grave ou exclua dado, e
+              confirmar que o log de auditoria captura a ação como originada do agente, não só do usuário
+              que o configurou.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://help.salesforce.com/s/articleView?id=mc_rn_release_notes.htm&language=en_US&type=5">Salesforce Help · Release Notes, Marketing Cloud Engagement (Winter '27)</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">concluído</span> Segurança · APIs
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O prazo do corte de client secrets antigos passou em 30 de setembro, sem intercorrência confirmada em fonte aberta</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>A data acompanhada desde a edição nº 3 e confirmada em fonte
+              oficial na edição nº 6 chegou: em <b>30 de setembro de 2026</b>, os client secrets de API da
+              Marketing Cloud Engagement anteriores à política de expiração de 180 dias deixaram de
+              funcionar, segundo o mesmo artigo do Salesforce Help. Esta sessão não encontrou comunicado
+              oficial relatando volume de impacto ou intercorrência.</dd></div>
+            <div><dt>Por que importa</dt><dd>Ausência de notícia não é a mesma coisa que ausência de
+              problema — só significa que nada apareceu em fonte aberta e lida nesta sessão.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Quem ainda não confirmou a autenticação de cada
+              integração depois do corte, confirma agora: o efeito, segundo a documentação oficial, é
+              falha silenciosa de autenticação, sem aviso adicional além do que já foi comunicado.</dd></div>
+            <div><dt>Conferir</dt><dd>status.salesforce.com depende de JavaScript e não carregou no
+              ambiente de apuração desta sessão — a mesma limitação registrada na edição nº 6 — então não
+              foi possível confirmar incidente específico de Marketing Cloud Engagement por essa via.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://help.salesforce.com/s/articleView?id=005389124&language=en_US&type=1">Salesforce Help · Marketing Cloud Engagement Secret Expiration and Time-To-Live (TTL)</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Journey Builder · Mensageria
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Ajustes menores no Journey Builder e na mensageria confirmados nas release notes do Winter '27</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>No mesmo documento, um conjunto de ajustes menores, todos
+              datados: tokens de nome de arquivo passam a ser tratados sem diferenciar maiúscula de
+              minúscula nas atividades do Automation Studio (adicionado na semana de 16 de setembro), o
+              Journey Builder elimina envio duplicado de e-mail para o mesmo endereço (mesma semana), um
+              painel consolidado de notificações do Journey reúne alertas e avisos num só lugar (mesma
+              semana), a validação de template de Direct Send passa a identificar divergência de categoria
+              antes do envio (atualizado na semana de 21 de setembro), e mensagens utilitárias de WhatsApp
+              enviadas por Direct Send podem pular a pré-aprovação de template (mesma semana).</dd></div>
+            <div><dt>Por que importa</dt><dd>Nenhum ajuste muda o fluxo de trabalho sozinho, mas o conjunto
+              reduz retrabalho de diagnóstico em automação e mensageria — o tipo de mudança que
+              normalmente passa despercebido até alguém tropeçar nele em produção.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Revisar o changelog de setembro das release notes da
+              MCE ao planejar o próximo ciclo de QA de automação, em vez de descobrir os ajustes só quando
+              um teste muda de comportamento sem explicação aparente.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://help.salesforce.com/s/articleView?id=mc_rn_release_notes.htm&language=en_US&type=5">Salesforce Help · Release Notes, Marketing Cloud Engagement (Winter '27)</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> M&amp;A · Pesquisa de cliente
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Salesforce anuncia aquisição da Listen Labs, plataforma de pesquisa de cliente com IA</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Em <b>29 de setembro de 2026</b>, a Salesforce anunciou acordo
+              definitivo para adquirir a Listen Labs, descrita no comunicado oficial como uma plataforma
+              de pesquisa de cliente e simulação humana baseada em IA, com acesso a uma rede de mais de 50
+              milhões de participantes em mais de 120 idiomas. O comunicado diz que a tecnologia vai
+              "complementar Marketing Cloud, Service Cloud e o portfólio mais amplo de IA" da empresa, sem
+              detalhar cronograma de integração nem mencionar Data 360 ou Agentforce Marketing por
+              nome.</dd></div>
+            <div><dt>Por que importa</dt><dd>Se integrada à Marketing Cloud, a tecnologia aponta para
+              pesquisa de cliente e simulação de público dentro do mesmo ambiente onde a campanha já é
+              criada — mas isso ainda não está confirmado, só anunciado como direção.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Não tratar como recurso disponível: é anúncio de
+              aquisição, não de produto. Acompanhar as próximas edições para a primeira menção de
+              integração nas release notes oficiais.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/news/stories/salesforce-signs-definitive-agreement-to-acquire-listen-labs/">Salesforce News · aquisição da Listen Labs</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">21 dias</span> Comunidade
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Marketing Champions: nada mudou na triagem, faltam 21 dias para o anúncio da turma</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Nada de novo desde a edição nº 6: a fase de triagem inicial da
+              turma 2026 do programa Marketing Champions, relida nesta sessão na mesma página oficial,
+              segue até <b>23 de outubro</b>, com anúncio da turma selecionada em <b>26 de outubro</b>.
+              Faltam 18 dias para o fim da triagem e <b>21 dias</b> para o anúncio.</dd></div>
+            <div><dt>Por que importa</dt><dd>Para quem se candidatou ou indicou alguém, o próximo marco
+              continua sendo informativo, não uma tarefa.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Marcar 26 de outubro no calendário; nenhuma ação é
+              exigida até lá.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/applications-for-the-marketing-champions-class-of-2026-are-open/">Salesforce Blog · candidaturas para a turma 2026 de Marketing Champions</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">outubro</span> Agentforce Marketing
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Campaign Agent segue para GA em outubro na Marketing Cloud Next, sem dia exato</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Nada mudou desde a edição nº 6: a página oficial do Campaign
+              Agent, relida nesta sessão, continua dizendo apenas que o recurso chega a disponibilidade
+              geral na Marketing Cloud Next "em outubro", sem data específica.</dd></div>
+            <div><dt>Por que importa</dt><dd>Segue sendo o recurso de Agentforce Marketing mais perto de
+              virar realidade prática para quem monta campanha, mas o planejamento de adoção continua sem
+              data-limite para mirar.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Manter o mapeamento de qual campanha recorrente
+              testar primeiro e vigiar a página oficial por um dia exato — mesma recomendação da edição
+              anterior, ainda válida.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/introducing-the-campaign-agent-that-turns-goals-into-growth/">Salesforce Blog · Campaign Agent</a>
+            <a href="https://www.salesforce.com/marketing/agentic-marketing/ai-marketing-agents/">Salesforce · Campaign Agent na Marketing Cloud</a></p>
+        </article>
+
+      <!-- ITENS-FIM -->
+      </div>
+    </div>
+
+    <aside>
+      <div class="agenda">
+        <h2>Agenda</h2>
+        <p class="nota">Contagem a partir de 5 de outubro de 2026.</p>
+
+        <div class="linha quente">
+          <div class="dias">4<span>dias</span></div>
+          <div class="oque"><b>Winter '27 em produção · onda 3</b><time datetime="2026-10-09">9 out</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">18<span>dias</span></div>
+          <div class="oque"><b>Fim da triagem inicial da Marketing Champions</b><time datetime="2026-10-23">23 out</time></div>
+        </div>
+        <div class="linha morna">
+          <div class="dias">21<span>dias</span></div>
+          <div class="oque"><b>Anúncio da turma 2026 da Marketing Champions</b><time datetime="2026-10-26">26 out</time></div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="limites">
+    <h2>O que este jornal não enxerga</h2>
+    <p>Esta edição foi montada só com fontes públicas, e o nível de confiança vem declarado item a
+      item. Onde a fonte é secundária, está escrito — e a recomendação é conferir antes de a
+      informação virar compromisso com alguém.</p>
+    <ul>
+      <li><b>status.salesforce.com</b> segue dependendo de JavaScript e não carregou no ambiente de
+        apuração desta sessão — a mesma limitação já registrada na edição nº 6. Não foi possível
+        confirmar, por essa via, se o corte de client secrets de 30 de setembro causou algum incidente
+        de Marketing Cloud Engagement.</li>
+      <li><b>sfupdates.com</b>, um resumo semanal secundário que esta sessão tentou consultar para
+        cobertura cruzada da semana, bloqueou a leitura automática (robots.txt). Nenhum item desta
+        edição depende dele — as release notes oficiais abriram normalmente nesta sessão —, mas a
+        tentativa não teve sucesso.</li>
+      <li><b>Comunicados de Partner Community e de PAM</b> não entram aqui: são canais fechados.</li>
+      <li><b>Nada específico de cliente</b> entra neste jornal, em nenhuma edição. Ele fala de
+        plataforma, não de conta.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <p><strong>Boletim Salesforce</strong> · edição nº 7, publicada em 5 de outubro de 2026 ·
+      <a href="/jornal/salesforce/">todas as edições</a> · <a href="/jornal/">capa</a></p>
+    <p><strong>Kauê Walter</strong> · Gerente de Marketing e Marketing Cloud Lead na Visum Digital ·
+      Caraguatatuba, São Paulo</p>
+    <p>Página pessoal e profissional. As opiniões e projetos aqui apresentados são de
+      responsabilidade individual e não representam posições de empregadores ou clientes.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BLOCO-MODELO · copie daqui para acrescentar um item à mão
+
+     Cole dentro de <div class="itens">, entre ITENS-INICIO e ITENS-FIM.
+     Troque a palavra "acao" por "preparar" ou "observar" nos DOIS lugares
+     (na classe do article e na classe do span do rótulo).
+     A linha "Conferir" só existe quando a fonte é secundária: apague-a
+     quando a fonte for oficial.
+
+<article class="item acao">
+  <p class="faixa"><span class="rot acao">Ação</span>
+    <span class="rot prazo">N dias</span> Assunto
+    <span class="conf">confiança alta · fonte oficial</span></p>
+  <h3>Manchete do item, curta e afirmativa</h3>
+  <dl class="campos">
+    <div><dt>O que mudou</dt><dd>O fato, com data e nome próprio.</dd></div>
+    <div><dt>Por que importa</dt><dd>A consequência prática, sem adjetivo.</dd></div>
+    <div><dt>O que fazer</dt><dd class="fazer">Prática profissional genérica. Nunca movimento comercial, nunca nome de cliente.</dd></div>
+    <div><dt>Conferir</dt><dd>Onde confirmar antes de isso virar compromisso.</dd></div>
+  </dl>
+  <p class="fontes"><a href="https://">Nome da fonte</a></p>
+</article>
+
+     E uma linha da agenda lateral, para colar dentro de div class="agenda".
+     Use "quente" até 7 dias, "morna" de 8 a 45, e sem classe acima disso:
+
+<div class="linha quente">
+  <div class="dias">N<span>dias</span></div>
+  <div class="oque"><b>O que acontece</b><time datetime="2026-01-01">1 jan</time></div>
+</div>
+
+     ============================================================ -->
+
+<script>
+/* A restauração do tema já rodou no <head>. Aqui só o botão. */
+(function(){
+  var b = document.getElementById('tgl');
+  if(!b) return;
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function escuroAgora(){
+    var a = document.documentElement.getAttribute('data-theme');
+    return a ? a === 'dark' : mq.matches;
+  }
+  function sincroniza(){ b.setAttribute('aria-pressed', escuroAgora() ? 'true' : 'false'); }
+  sincroniza();
+  if (mq.addEventListener) mq.addEventListener('change', sincroniza);
+  b.addEventListener('click', function(){
+    var novo = escuroAgora() ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', novo);
+    try{ localStorage.setItem('kw-tema', novo); }catch(e){}
+    sincroniza();
+  });
+})();
+</script>
+
+</body>
+</html>
