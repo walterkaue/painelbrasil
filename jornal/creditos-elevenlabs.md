@@ -27,6 +27,8 @@ texto foi escrito pra leitura na tela, não pra fala.
 | 28/09/2026 | Análise de Mercado nº 6 (28/09) | 659 | 6.973 / 10.000* | [jornal/mercado/2026-09-28/resumo.mp3](mercado/2026-09-28/resumo.mp3) |
 | 06/10/2026 | Boletim Salesforce nº 7 (05/10) | 713 | 713 / 10.000* (ciclo de outubro) | [jornal/salesforce/2026-10-05/resumo.mp3](salesforce/2026-10-05/resumo.mp3) |
 | 06/10/2026 | Análise de Mercado nº 7 (05/10) | 708 | 1.421 / 10.000* | [jornal/mercado/2026-10-05/resumo.mp3](mercado/2026-10-05/resumo.mp3) |
+| 12/10/2026 | Boletim Salesforce nº 8 (12/10) | 671 | 2.092 / 10.000* | [jornal/salesforce/2026-10-12/resumo.mp3](salesforce/2026-10-12/resumo.mp3) |
+| 12/10/2026 | Análise de Mercado nº 8 (12/10) | 716 | 2.808 / 10.000* | [jornal/mercado/2026-10-12/resumo.mp3](mercado/2026-10-12/resumo.mp3) |
 
 \* calculado pelo padrão 1:1 já confirmado no primeiro áudio — não conferido com o saldo real da
 conta nesta linha, atualizar se divergir.
@@ -65,6 +67,8 @@ descrição já cita caso de uso de notícia/jornalismo/informativo — não é 
 | 3 | 21/09/2026 | **Rômulo Franklin** | "locutor de rádio, 20 anos de experiência" | gerado — voz usada foi "Rômulo Franklin"; 59s pro Salesforce (736 caracteres, ~12,5 car./s), 63s pro Mercado (665 caracteres, ~10,6 car./s); duração medida no navegador (58,7s e 62,8s). Ritmo mais lento que o Dan Rocha (semana 2) no Mercado — impressão de ouvido: a preencher |
 | 4 | 28/09/2026 | **Bia - Versatile** | "combina autoridade técnica e calor humano" (única candidata feminina do teste) | gerado — voz usada foi "Bia - Versatile"; 55s pro Salesforce (654 caracteres, ~11,9 car./s), 57s pro Mercado (659 caracteres, ~11,5 car./s); duração medida pelos frames do MP3 (54,8s e 57,2s). Impressão de ouvido: a preencher |
 | 5 | 05/10/2026 | **Rafael Valente** | "Brazilian Professional Narrator" — ponto de comparação com a pesquisa anterior | gerado — voz usada foi "Rafael Valente"; 57s pro Salesforce (713 caracteres, ~12,4 car./s), 60s pro Mercado (708 caracteres, ~11,9 car./s); duração medida pelos frames do MP3 (57,3s e 59,7s). Impressão de ouvido: a preencher |
+
+**Voz provisória a partir de 12/10/2026:** Rafael Valente (a da semana 5), até a decisão final abaixo. Nº 8: 52s pro Salesforce (671 caracteres, ~13,0 car./s), 59s pro Mercado (716 caracteres, ~12,1 car./s).
 
 **Depois de 05/10/2026:** rodada de decisão final — recap comparativo das 5 semanas + checagem se
 surgiu dado novo de terceiro nesse meio tempo (voz nova, alguma removida), antes de fechar a escolha

@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/salesforce/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal sobre Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce. Publicado toda segunda-feira, com nível de confiança declarado em cada item.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 05 Oct 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 12 Oct 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 8 — A onda 3 encerra, no calendário geral, o ciclo de três ondas do Winter '27, o Data 360 troca o widget de engajamento de perfil por uma nova linha do tempo, e metade das fontes oficiais deste boletim não abriu nesta sessão</title>
+    <link>https://kauewalter.com.br/jornal/salesforce/2026-10-12/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/salesforce/2026-10-12/</guid>
+    <pubDate>Mon, 12 Oct 2026 08:00:00 -0300</pubDate>
+    <description>A contagem regressiva oficial confirma que a onda 3 do Winter '27, em 9 de outubro, encerra as três datas de produção do release no calendário geral. O Data 360 passou a ter uma nova Linha do Tempo de Engajamento no lugar do widget antigo, e o Agentforce reroteia os modelos Gemini usados por agente em 20 de outubro. O corte de client secrets da MCE segue sem intercorrência confirmada, e o Campaign Agent e a Marketing Champions ficam pendentes para a próxima edição por falha de acesso a fontes oficiais nesta sessão.</description>
+  </item>
 
   <item>
     <title>nº 7 — As release notes da Marketing Cloud Engagement voltam a abrir depois de ficarem fora do ar na edição anterior, e revelam um pacote de segurança que nasce direto do corte de client secrets que passou nesta semana</title>

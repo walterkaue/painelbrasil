@@ -12,7 +12,15 @@
   <atom:link href="https://kauewalter.com.br/jornal/mercado/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Boletim semanal de macro e negócios: o que órgão oficial divulgou, o que tem data marcada e o que muda mecanicamente para quem vende tecnologia e serviço no Brasil.</description>
   <language>pt-BR</language>
-  <lastBuildDate>Mon, 05 Oct 2026 08:00:00 -0300</lastBuildDate>
+  <lastBuildDate>Mon, 12 Oct 2026 08:00:00 -0300</lastBuildDate>
+
+  <item>
+    <title>nº 8 — O IPCA de setembro passa do teto da meta contínua enquanto o Senado antecipa para quarta a votação do fim da escala 6x1 e o superávit comercial dobra em um ano</title>
+    <link>https://kauewalter.com.br/jornal/mercado/2026-10-12/</link>
+    <guid isPermaLink="true">https://kauewalter.com.br/jornal/mercado/2026-10-12/</guid>
+    <pubDate>Mon, 12 Oct 2026 08:00:00 -0300</pubDate>
+    <description>O IPCA de setembro subiu 0,82% e levou o acumulado de 12 meses a 4,58%, acima do teto de 4,5% da meta contínua — o Boletim Focus de 5 de outubro já projetava inflação de 5,01% para 2026. O Senado antecipou para quarta-feira (14) a votação em primeiro turno do fim da escala 6x1, a Secex/MDIC registrou superávit comercial de US$ 7,74 bilhões em setembro, mais que o dobro do mesmo mês de 2025, e uma instrução normativa do Banco Central tirou a regra própria de limite do Pix por aproximação.</description>
+  </item>
 
   <item>
     <title>nº 7 — A desocupação trava na mínima do ano enquanto a indústria perde fôlego e o calendário fiscal vira operação</title>

@@ -1,6 +1,6 @@
 # Roteiro — Boletim Salesforce nº 7, 05/10/2026
 
-**Caracteres:** 713 · **Status:** gerado — [resumo.mp3](../salesforce/2026-10-05/resumo.mp3), voz Rafael Valente, 57s,, semana 5 do teste de vozes, issue #12
+**Caracteres:** 713 · **Status:** gerado — [resumo.mp3](../salesforce/2026-10-05/resumo.mp3), voz Rafael Valente, 57s, semana 5 do teste de vozes, issue #12
 
 Cole este texto no ElevenLabs. Não é o parágrafo do site copiado — reescrito pra soar bem em voz
 alta, cortado pro orçamento de créditos.
