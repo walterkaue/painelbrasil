@@ -2,8 +2,9 @@
 """Gera o resumo.mp3 de uma edição d'A Banca pela API do ElevenLabs.
 
 Lê a narração do roteiro (tudo depois do separador ---), confere o teto de
-caracteres e grava o MP3 no caminho de saída. A chave vem da variável de
-ambiente ELEVENLABS_API_KEY — nunca de argumento, arquivo do repo ou log.
+caracteres e grava o MP3 no caminho de saída. Na nuvem, a chave é um segredo do
+ambiente que injeta o cabeçalho xi-api-key; localmente, use ELEVENLABS_API_KEY.
+Nunca passe a chave por argumento, arquivo do repo ou log.
 
 Uso:
   python gerar_audio.py <roteiro.md> <saida.mp3> [--voz VOICE_ID] [--ensaio]
@@ -11,7 +12,7 @@ Uso:
 --ensaio gera só uma frase curta (~60 caracteres) para testar chave, rede e
 voz sem gastar o orçamento da semana.
 
-Códigos de saída: 0 ok · 2 sem chave · 3 roteiro acima do teto · 4 erro da API
+Códigos de saída: 0 ok · 2 chave ausente ou inválida (401) · 3 roteiro acima do teto · 4 erro da API
 """
 import json
 import os
@@ -42,10 +43,10 @@ def main():
         print(__doc__)
         return 1
 
+    # Na nuvem, a chave fica num segredo do ambiente que injeta o cabeçalho xi-api-key
+    # nas chamadas a api.elevenlabs.io: o script não vê o valor e não precisa dele.
+    # Localmente, ELEVENLABS_API_KEY ainda funciona.
     chave = os.environ.get("ELEVENLABS_API_KEY", "").strip()
-    if not chave:
-        print("ERRO: variável ELEVENLABS_API_KEY ausente no ambiente. Áudio não gerado.")
-        return 2
 
     roteiro, saida = Path(args[0]), Path(args[1])
     texto = FRASE_ENSAIO if ensaio else narracao(roteiro.read_text(encoding="utf-8"))
@@ -53,10 +54,13 @@ def main():
         print(f"ERRO: narração com {len(texto)} caracteres, acima do teto de {TETO}. Corte o roteiro.")
         return 3
 
+    cabecalhos = {"Content-Type": "application/json", "Accept": "audio/mpeg"}
+    if chave:
+        cabecalhos["xi-api-key"] = chave
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voz}?output_format=mp3_44100_128",
         data=json.dumps({"text": texto, "model_id": MODELO}).encode("utf-8"),
-        headers={"xi-api-key": chave, "Content-Type": "application/json", "Accept": "audio/mpeg"},
+        headers=cabecalhos,
         method="POST",
     )
     try:
@@ -66,6 +70,9 @@ def main():
     except urllib.error.HTTPError as e:
         corpo = e.read().decode("utf-8", "replace")[:500]
         print(f"ERRO da API ElevenLabs: HTTP {e.code} — {corpo}")
+        if e.code == 401:
+            print("Sem chave válida: confira o segredo do ambiente (cabeçalho xi-api-key, site api.elevenlabs.io).")
+            return 2
         return 4
     except urllib.error.URLError as e:
         print(f"ERRO de rede ao chamar api.elevenlabs.io: {e.reason} (o ambiente libera esse domínio?)")

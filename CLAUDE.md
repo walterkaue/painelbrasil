@@ -127,7 +127,8 @@ edição já publicada pra tapar o buraco.
 - **Rotina na nuvem (desde 23/11/2026).** As duas edições são produzidas toda segunda às 4h (Brasília)
   por uma rotina do Claude Code na nuvem, que segue [.claude/rotinas/banca-semanal.md](.claude/rotinas/banca-semanal.md):
   apura, escreve, passa pelo agente [revisor-banca](.claude/agents/revisor-banca.md), gera o áudio
-  pela API do ElevenLabs (`ELEVENLABS_API_KEY` no ambiente da nuvem) e abre um PR no branch
+  pela API do ElevenLabs (chave guardada como segredo do ambiente "Default" da nuvem, que injeta o
+  cabeçalho `xi-api-key` nas chamadas a `api.elevenlabs.io`) e abre um PR no branch
   `claude/banca-AAAA-MM-DD`. A Vercel gera a prévia do branch (`vercel.json` desliga o deploy da
   `main` lá — o site oficial continua só no GitHub Pages). **Nada vai ao ar sem o merge do Kauê.**
   Mudou o método? Edite o roteiro da rotina no repositório, não o prompt da rotina.
