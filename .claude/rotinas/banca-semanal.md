@@ -15,8 +15,9 @@ Leia `CLAUDE.md` inteiro antes de começar. Responda sempre em português do Bra
 - Nunca inventar fato, número, data ou link. Se uma fonte não abriu, isso vai para a seção de
   limites da edição, não para a manchete.
 - Nada específico de cliente, nada de canal fechado (Partner Community, PAM), nenhuma fonte paga.
-- A chave do ElevenLabs só existe na variável `ELEVENLABS_API_KEY`. Nunca imprimir, gravar ou
-  commitar a chave.
+- A chave do ElevenLabs é um segredo do ambiente da nuvem: o cabeçalho `xi-api-key` é injetado
+  nas chamadas a `api.elevenlabs.io`, e a rotina nunca vê o valor. Nunca tente ler, imprimir ou
+  gravar a chave.
 - `CNAME` e `.nojekyll` não se tocam. `/jornal/` e `/repente/` nunca se linkam.
 
 ## 0. Preparar

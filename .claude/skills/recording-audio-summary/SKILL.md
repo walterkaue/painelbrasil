@@ -49,7 +49,7 @@ mês apertado).
 
 1. Gerar no ElevenLabs com a voz corrente (Rafael Valente, `dX7gRq1dIvLTgUaWpEFn`, até a decisão
    final da issue #12). Pela API: `python .claude/skills/recording-audio-summary/scripts/gerar_audio.py <roteiro> <pasta-da-edição>/resumo.mp3`
-   (precisa de `ELEVENLABS_API_KEY` no ambiente; `--ensaio` testa com uma frase curta). Uma tentativa
+   (na nuvem a chave vem do segredo do ambiente; localmente, `ELEVENLABS_API_KEY`; `--ensaio` testa com uma frase curta). Uma tentativa
    só — se a API recusar, registre o motivo e siga sem áudio.
 2. Salvar como `resumo.mp3` na pasta da edição (`jornal/{caderno}/{AAAA-MM-DD}/resumo.mp3`).
 3. Colar o bloco `<div class="ouvir" data-ouvir-edicao hidden>...</div>` (copie de qualquer edição
