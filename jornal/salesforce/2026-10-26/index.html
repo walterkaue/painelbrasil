@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boletim Salesforce nº 10 — 26 de outubro de 2026 — Kauê Walter</title>
+<meta name="description" content="O reroteamento dos modelos Gemini no Agentforce, previsto para 20 de outubro, é confirmado em produção. A Marketing Cloud entra em outubro com uma leva de recursos em GA do Winter '27, o Data 360 ganha o Agent Context Engine em preview, e a Salesforce assina acordo para comprar a Braze.">
+<link rel="canonical" href="https://kauewalter.com.br/jornal/salesforce/2026-10-26/">
+<meta name="author" content="Kauê Walter">
+<meta property="og:site_name" content="Kauê Walter">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Boletim Salesforce nº 10 — 26 de outubro de 2026">
+<meta property="og:description" content="O reroteamento dos modelos Gemini no Agentforce é confirmado em produção. A Marketing Cloud GA uma leva de recursos do Winter '27 — Campaign Agent, Personalized Paths e Headless Marketing entre eles. O Data 360 ganha o Agent Context Engine em preview, e a Salesforce assina acordo para comprar a Braze.">
+<meta property="og:url" content="https://kauewalter.com.br/jornal/salesforce/2026-10-26/">
+<meta property="article:published_time" content="2026-10-26">
+<meta property="og:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Boletim Salesforce nº 10 — 26 de outubro de 2026 — A Banca">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boletim Salesforce nº 10 — 26 de outubro de 2026">
+<meta name="twitter:description" content="O reroteamento dos modelos Gemini no Agentforce é confirmado em produção. A Marketing Cloud GA uma leva de recursos do Winter '27, o Data 360 ganha o Agent Context Engine em preview, e a Salesforce assina acordo para comprar a Braze.">
+<meta name="twitter:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<link rel="icon" href="/assets/kw.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Boletim Salesforce — RSS" href="/jornal/salesforce/feed.xml">
+<script>
+/* Tema antes da primeira pintura — mesma chave do resto do site. */
+(function(){try{var s=localStorage.getItem('kw-tema');
+if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/kw.css">
+<link rel="stylesheet" href="/assets/jornal.css">
+<script src="/assets/ouvir.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/"><span class="mark">KW</span> Kauê Walter</a>
+    <nav>
+      <a href="/">Carreira</a>
+      <a href="/jornal/" aria-current="page">A Banca</a>
+      <a href="/biblioteca/">Biblioteca</a>
+      <a href="/#contato">Contato</a>
+      <button class="tgl" id="tgl" type="button" aria-pressed="false"
+              aria-label="Alternar entre tema claro e escuro">Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="w">
+
+  <nav class="cadernos" aria-label="Cadernos do jornal">
+    <a class="capa" href="/jornal/">← Capa</a>
+    <a class="cad" href="/jornal/salesforce/" aria-current="page">Salesforce</a>
+    <a class="cad" href="/jornal/mercado/">Mercado</a>
+  </nav>
+
+  <header class="jornal-head">
+    <div class="rule">
+      <div>
+        <p class="kicker"><a href="/jornal/salesforce/">Boletim Salesforce</a> · edição nº 10</p>
+        <h1>O reroteamento dos modelos Gemini no Agentforce, previsto para 20 de outubro, é confirmado em produção, a Marketing Cloud entra em outubro com uma leva de recursos em disponibilidade geral do Winter '27 — Campaign Agent, Personalized Paths e Headless Marketing entre eles —, o Data 360 ganha o Agent Context Engine em preview, e a Salesforce assina acordo para comprar a Braze por US$ 5,66 bilhões</h1>
+        <p class="sub">Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce,
+          filtrados por uma pergunta só: isso tem prazo ou muda o jeito de trabalhar?</p>
+      </div>
+      <p class="carimbo">
+        <b>Segunda, 26 out 2026</b>
+        Corte: 26 out, 08h BRT<br>
+        9 itens · 0 com prazo<br>
+        <span class="foco">MCE · MC Next · Data 360 · Agentforce</span>
+      </p>
+    </div>
+  </header>
+
+  <nav class="nav-edicoes" aria-label="Navegar entre edições">
+    <a class="prev" href="/jornal/salesforce/2026-10-19/">← Edição anterior · nº 9</a>
+    <a class="next" href="/jornal/salesforce/2026-11-02/">Próxima edição · nº 11 →</a>
+  </nav>
+
+  <div class="ouvir" data-ouvir-edicao hidden>
+    <button type="button" class="ouvir-btn">
+      <span class="ouvir-icone" aria-hidden="true" focusable="false"></span>
+      <span class="ouvir-rotulo">Ouvir o resumo</span>
+    </button>
+    <span class="ouvir-tempo" data-ouvir-tempo hidden></span>
+    <audio data-ouvir-audio preload="none" src="/jornal/salesforce/2026-10-26/resumo.mp3"></audio>
+  </div>
+
+  <section class="destaque">
+    <p class="faixa"><span class="rot acao">Decisão da semana</span>
+      <span class="rot prazo">vigente</span>
+      <span class="conf">confiança alta · fonte oficial</span></p>
+    <h2>O reroteamento dos modelos Gemini para 3.5 no Agentforce, acompanhado desde a edição nº 8, está confirmado em produção desde 20 de outubro, e o blog oficial da Marketing Cloud lista uma leva de recursos chegando à disponibilidade geral ao longo do mês — mas esta edição não conseguiu abrir o changelog consolidado de release notes que sustentou o detalhe das últimas semanas</h2>
+    <p>Esta sessão roda sozinha, sem ninguém para aprovar o acesso a um endereço novo quando a
+      ferramenta de busca pede confirmação — e foi exatamente isso que aconteceu com o
+      <b>changelog consolidado de notas de versão do Salesforce Help</b>, fonte de prioridade 2 deste
+      caderno e a base das últimas edições: a tentativa de abertura ficou esperando uma aprovação que
+      nunca chegou, e a página não pôde ser lida. Isso está declarado em vez de contornado — os
+      detalhes estão em "O que este jornal não enxerga". <b>admin.salesforce.com</b> e
+      <b>salesforce.com/blog</b> abriram normalmente e sustentam a edição de hoje. O
+      <b>status.salesforce.com</b> continua a exigir JavaScript e não carregou — a mesma falha
+      registrada desde a edição nº 6.</p>
+    <p>O que se confirmou: o blog oficial do Salesforce Admins, relido nesta sessão, mantém que a
+      partir de <b>20 de outubro de 2026</b> toda requisição endereçada aos modelos Gemini 2.5 Pro,
+      Flash e Flash-Lite dentro do Agentforce passou a ser redirecionada automaticamente para as
+      versões Gemini 3.5 correspondentes — a mudança virou fato consumado, não mais prazo futuro.
+      Separadamente, o blog oficial da Salesforce sobre o release de outubro de Marketing Cloud, lido
+      por completo nesta sessão, lista seis recursos chegando à disponibilidade geral neste mês: o
+      Campaign Agent (Agentic Campaigns e Agentic Content), o Account Discovery Agent, Personalized
+      Paths dentro do Flow, o envio urgente para até 5 milhões de usuários do app mobile, o Sender
+      Rating Score com alertas de entregabilidade, e o Headless Marketing — este último o único que o
+      texto associa explicitamente à Marketing Cloud Next, via Headless 360 MCP Server. Os demais, o
+      próprio blog não diz se são da Engagement ou da Next.</p>
+    <p>No Data 360, o blog oficial descreve o <b>Agent Context Engine</b> (ACE), uma camada de
+      contexto compartilhado entre agentes — construída sobre o Data 360 — hoje em preview, sem data
+      de disponibilidade geral. E a Salesforce assinou acordo definitivo para comprar a
+      <b>Braze</b> por US$ 5,66 bilhões, com fechamento previsto para o ano fiscal 2028 da companhia;
+      o comunicado oficial da aquisição não pôde ser aberto nesta sessão pelo mesmo motivo do
+      changelog, então este item vem de cobertura jornalística que reproduz o anúncio, com confiança
+      rebaixada e linha "Conferir" apontando para a fonte primária.</p>
+  </section>
+
+  <div class="colunas">
+
+    <div>
+      <p class="divisor">Itens da semana</p>
+      <div class="itens">
+      <!-- ITENS-INICIO — para acrescentar um item à mão, copie o bloco-modelo
+           que está comentado no fim deste arquivo e cole aqui dentro. -->
+
+        <article class="item acao">
+          <p class="faixa"><span class="rot acao">Ação</span>
+            <span class="rot prazo">vigente</span> Agentforce · Modelos
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O reroteamento dos modelos Gemini para 3.5 no Agentforce, previsto para 20 de outubro, está confirmado em produção</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O blog oficial do Salesforce Admins, relido nesta sessão,
+              confirma que a partir de <b>20 de outubro de 2026</b> toda requisição endereçada aos
+              modelos Gemini 2.5 Pro, Gemini 2.5 Flash e Gemini 2.5 Flash-Lite dentro do Agentforce
+              passou a ser redirecionada automaticamente para as versões Gemini 3.5 correspondentes —
+              a mesma mudança acompanhada desde a edição nº 8, agora em vigor, não mais em prazo.</dd></div>
+            <div><dt>Por que importa</dt><dd>Qualquer agente construído sobre o Agentforce que
+              dependa desses modelos — incluindo os agentes de Agentforce Marketing descritos em
+              edições anteriores — já está respondendo com Gemini 3.5 em produção, com ou sem
+              comparação prévia feita.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Quem ainda não comparou a resposta do agente
+              de antes e depois da troca no Prompt Builder ou no Einstein Studio, fazer isso agora —
+              não é mais teste, é produção desde sábado.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://admin.salesforce.com/blog/2026/jens-top-winter-27-release-features-for-admins">Salesforce Admins · principais recursos do Winter '27 para administradores</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">vigente</span> Marketing Cloud · Agentes
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Campaign Agent chega à disponibilidade geral, com campanhas e conteúdo gerados por objetivo</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O blog oficial da Salesforce sobre o release de outubro de
+              Marketing Cloud, lido nesta sessão, confirma disponibilidade geral (GA) para o
+              <b>Campaign Agent</b> em duas frentes: Agentic Campaigns, que ajusta a campanha a cada
+              cliente em tempo real no lugar de uma jornada fixa, e Agentic Content, que transforma um
+              objetivo de campanha em conteúdo multilíngue e alinhado à marca para e-mail, SMS, RCS e
+              MMS. O texto fala em "Marketing Cloud" de forma genérica, sem dizer se o recurso é da
+              Engagement ou da Next.</dd></div>
+            <div><dt>Por que importa</dt><dd>É a substituição declarada da jornada pré-configurada
+              por uma lógica que decide em tempo real — muda o que significa "montar uma campanha"
+              para quem opera a plataforma.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Testar o Campaign Agent em sandbox com um
+              objetivo de campanha real antes de decidir se ele substitui uma jornada hoje mantida à
+              mão.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/marketing-cloud-winter-27-release-what-you-need-to-know/">Salesforce · o que saber sobre o release de Marketing Cloud do Winter '27</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">vigente</span> Marketing Cloud · Agentes
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Account Discovery Agent chega à disponibilidade geral, mapeando quem está ativo dentro de uma conta</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O mesmo blog oficial confirma GA, ainda em outubro de 2026,
+              para o <b>Account Discovery Agent</b>: ele acompanha o engajamento de todo o grupo de
+              compra de uma conta usando dados de CRM, e sinaliza quem está ativo e quem não está.</dd></div>
+            <div><dt>Por que importa</dt><dd>Hoje esse mapeamento costuma ser feito à mão, cruzando
+              relatório de engajamento com a lista de contatos da conta — o agente promete entregar
+              isso pronto.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Nenhuma ação imediata; vale avaliar, na próxima
+              revisão de conta-chave, se o mapeamento do agente bate com o que o time já sabia sobre
+              quem está engajado.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/marketing-cloud-winter-27-release-what-you-need-to-know/">Salesforce · o que saber sobre o release de Marketing Cloud do Winter '27</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">vigente</span> Marketing Cloud · Flow
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Flow ganha Personalized Paths, roteando cada cliente pelo caminho mais provável de converter</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O mesmo blog oficial confirma GA, ainda em outubro de 2026,
+              para os <b>Personalized Paths</b> dentro do Flow: cada cliente passa a ser roteado pelo
+              caminho com maior chance de atingir uma métrica de conversão definida por quem configura
+              o fluxo.</dd></div>
+            <div><dt>Por que importa</dt><dd>É mais uma peça que decide caminho em tempo real, na
+              mesma semana em que o Campaign Agent faz o mesmo em nível de campanha — o padrão do
+              release é substituir a jornada fixa por decisão contínua.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Mapear um fluxo hoje ramificado manualmente por
+              regra fixa e testar se o Personalized Paths entrega resultado equivalente ou melhor.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/marketing-cloud-winter-27-release-what-you-need-to-know/">Salesforce · o que saber sobre o release de Marketing Cloud do Winter '27</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Marketing Cloud · Mobile
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O app mobile ganha envio urgente para até 5 milhões de usuários em 90 segundos</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O mesmo blog oficial confirma GA, ainda em outubro de 2026,
+              para o envio urgente de notificação por app mobile ("Mobile App Flash Sending"),
+              capaz de alcançar até 5 milhões de usuários em até 90 segundos.</dd></div>
+            <div><dt>Por que importa</dt><dd>É capacidade pensada para alerta de verdade — segurança,
+              mudança operacional, incidente — não para campanha promocional; usar fora desse
+              propósito tende a cansar a base.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Nenhuma ação imediata; vale definir, com quem
+              decide o uso de push, em que situação esse canal de urgência pode ser acionado.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/marketing-cloud-winter-27-release-what-you-need-to-know/">Salesforce · o que saber sobre o release de Marketing Cloud do Winter '27</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">vigente</span> Marketing Cloud · Entregabilidade
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Sender Rating Score chega com alertas e recomendações de entregabilidade em GA</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O mesmo blog oficial confirma GA, ainda em outubro de 2026,
+              para o <b>Sender Rating Score</b>: uma nota geral de reputação de envio, com limites de
+              alerta configuráveis e recomendação de correção guiada quando um limite é cruzado.</dd></div>
+            <div><dt>Por que importa</dt><dd>Reputação de envio hoje costuma ser acompanhada em
+              painel externo ou de forma reativa, depois que a entrega já caiu — ter o alerta dentro
+              da própria plataforma encurta o tempo de reação.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Configurar os limites de alerta do Sender
+              Rating Score esta semana, em vez de esperar a próxima queda de entregabilidade para
+              descobrir que ele existia.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/marketing-cloud-winter-27-release-what-you-need-to-know/">Salesforce · o que saber sobre o release de Marketing Cloud do Winter '27</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Marketing Cloud Next · MCP Server
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Headless Marketing chega à disponibilidade geral na Marketing Cloud Next, operando campanha por agente externo</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O mesmo blog oficial confirma GA, ainda em outubro de 2026,
+              para o <b>Headless Marketing</b> — este sim associado explicitamente à
+              <b>Marketing Cloud Next</b> — que permite rodar campanha, programa de fidelidade,
+              personalização e pipeline de dados por agente de IA externo, via Headless 360 MCP
+              Server.</dd></div>
+            <div><dt>Por que importa</dt><dd>Abre caminho para orquestrar marketing a partir de um
+              agente que não vive dentro da interface da Marketing Cloud Next — relevante para quem já
+              automatiza outras partes do fluxo por script ou agente.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Nenhuma ação imediata; vale mapear, com o time
+              técnico, se algum fluxo hoje operado manualmente na interface poderia passar pelo
+              Headless 360 MCP Server.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/marketing-cloud-winter-27-release-what-you-need-to-know/">Salesforce · o que saber sobre o release de Marketing Cloud do Winter '27</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Data 360 · Agentes
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Data 360 ganha o Agent Context Engine, uma camada de contexto compartilhado entre agentes, ainda em preview</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O blog oficial da Salesforce, lido nesta sessão, apresenta o
+              <b>Agent Context Engine</b> (ACE): uma camada construída sobre o Data 360 que monta,
+              para cada chamada de agente, um contexto já filtrado por permissão — perfil do cliente,
+              memórias relevantes, sinais em tempo real e um recorte de grafo de conhecimento. Funciona
+              com agentes do Agentforce e também com agentes construídos em Google ADK, AWS Bedrock,
+              LangGraph ou OpenAI SDK, por código de SDK ou ferramenta MCP. O artigo diz que o ACE
+              "está em preview agora" e não informa data de disponibilidade geral.</dd></div>
+            <div><dt>Por que importa</dt><dd>Hoje cada agente costuma manter seu próprio índice de
+              busca, isolado dos demais — o ACE propõe uma fonte de contexto só, com permissão e
+              proveniência registradas, para que agentes diferentes não precisem repetir o mesmo
+              trabalho de busca nem arriscar ver dado que não deveriam.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Nenhuma ação imediata — é preview, não GA; vale
+              acompanhar se o Data 360 Marketing Agent e os agentes de Agentforce Marketing já citados
+              em edições anteriores passam a usar o ACE quando ele chegar a disponibilidade geral.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/blog/agent-context-engine-trusted-shared-context/">Salesforce · o Agent Context Engine</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Marketing Cloud · M&amp;A
+            <span class="conf">confiança média-alta · fonte secundária</span></p>
+          <h3>A Salesforce assina acordo definitivo para comprar a Braze por US$ 5,66 bilhões</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Cobertura jornalística do anúncio, lida nesta sessão, relata
+              que a Salesforce assinou acordo definitivo para comprar a <b>Braze</b> por cerca de
+              US$ 5,66 bilhões (US$ 47,50 por ação, em dinheiro) em 20 de outubro de 2026, com
+              fechamento previsto para o ano fiscal 2028 da Salesforce (que começa em fevereiro de
+              2027), sujeito a aprovação dos acionistas da Braze e dos reguladores. A cobertura diz que
+              a Braze passaria a integrar o Customer 360, com a Marketing Cloud como "casa principal",
+              e que a decisão de IA da Braze deve se conectar a Data 360, Customer 360, Agentforce e
+              SIForce — sem cronograma de integração divulgado e sem anúncio de nome ou pacote de
+              produto.</dd></div>
+            <div><dt>Por que importa</dt><dd>É uma aquisição de porte (mais do que o dobro do valor
+              pago pela ExactTarget em 2013, segundo a mesma cobertura) na mesma área de atuação da
+              Marketing Cloud — personalização de tempo real e multicanal para marcas B2C de alto
+              volume — mesmo sem data de integração definida.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Nenhuma ação imediata; vale acompanhar o
+              anúncio oficial da Salesforce quando ele puder ser lido, antes de assumir qualquer
+              mudança de pacote ou preço da Marketing Cloud por causa deste negócio.</dd></div>
+            <div><dt>Conferir</dt><dd>O comunicado oficial da Salesforce sobre a aquisição
+              (salesforce.com/news) não pôde ser aberto nesta sessão; o relato acima vem de cobertura
+              de terceiro que cita o comunicado, não do comunicado em si.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.cmswire.com/customer-experience/why-is-salesforce-buying-braze-and-what-happens-to-marketing-cloud/">CMSWire · o que o acordo com a Braze significa para quem usa Marketing Cloud</a></p>
+        </article>
+
+      <!-- ITENS-FIM -->
+      </div>
+    </div>
+
+    <aside>
+      <div class="agenda">
+        <h2>Agenda</h2>
+        <p class="nota">Contagem a partir de 26 de outubro de 2026. Nenhuma data futura com
+          confirmação de fonte aberta nesta edição — o fechamento da aquisição da Braze foi anunciado
+          para o ano fiscal 2028 da Salesforce (a partir de fevereiro de 2027), sem dia exato
+          divulgado, por isso não entra como linha de agenda.</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="limites">
+    <h2>O que este jornal não enxerga</h2>
+    <p>Esta edição foi montada só com fontes públicas, e o nível de confiança vem declarado item a
+      item. Onde a fonte é secundária, está escrito — e a recomendação é conferir antes de a
+      informação virar compromisso com alguém.</p>
+    <ul>
+      <li><b>O changelog consolidado de notas de versão do Salesforce Help</b> — fonte de prioridade 2
+        deste caderno, base do nível de detalhe das últimas edições — não pôde ser aberto nesta
+        sessão: a ferramenta de busca pediu confirmação de acesso a um endereço que ela não tinha
+        visto antes, e esta sessão roda sem ninguém para responder a essa confirmação. Isso significa
+        que esta edição não conferiu release note linha a linha para Marketing Cloud Engagement ou
+        Marketing Cloud Next — o que entrou veio do blog oficial de resumo do release, que é fonte
+        primária, mas menos granular que o changelog.</li>
+      <li><b>O comunicado oficial da aquisição da Braze</b>, em salesforce.com/news, teve o mesmo
+        problema de acesso. O item sobre a Braze nesta edição vem de cobertura jornalística que
+        reproduz o anúncio, com confiança rebaixada para média-alta.</li>
+      <li><b>status.salesforce.com</b> continua a exigir JavaScript e não carregou nesta sessão — a
+        mesma falha registrada desde a edição nº 6. Não foi possível confirmar por essa via se há
+        janela de manutenção ou incidente afetando alguma instância esta semana.</li>
+      <li><b>A distinção entre Marketing Cloud Engagement e Marketing Cloud Next</b> não ficou clara
+        no blog oficial para a maioria dos itens de Marketing Cloud desta edição — só o Headless
+        Marketing vem explicitamente associado à Next. Os demais estão descritos aqui como "Marketing
+        Cloud", sem forçar uma atribuição que a fonte não deu.</li>
+      <li><b>investor.salesforce.com</b> não foi consultado nesta sessão; não há verificação própria
+        sobre comunicado financeiro da semana.</li>
+      <li><b>Comunicados de Partner Community e de PAM</b> não entram aqui: são canais fechados.</li>
+      <li><b>Nada específico de cliente</b> entra neste jornal, em nenhuma edição. Ele fala de
+        plataforma, não de conta.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <p><strong>Boletim Salesforce</strong> · edição nº 10, publicada em 26 de outubro de 2026 ·
+      <a href="/jornal/salesforce/">todas as edições</a> · <a href="/jornal/">capa</a></p>
+    <p><strong>Kauê Walter</strong> · Gerente de Marketing e Marketing Cloud Lead na Visum Digital ·
+      Caraguatatuba, São Paulo</p>
+    <p>Página pessoal e profissional. As opiniões e projetos aqui apresentados são de
+      responsabilidade individual e não representam posições de empregadores ou clientes.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BLOCO-MODELO · copie daqui para acrescentar um item à mão
+
+     Cole dentro de <div class="itens">, entre ITENS-INICIO e ITENS-FIM.
+     Troque a palavra "acao" por "preparar" ou "observar" nos DOIS lugares
+     (na classe do article e na classe do span do rótulo).
+     A linha "Conferir" só existe quando a fonte é secundária: apague-a
+     quando a fonte for oficial.
+
+<article class="item acao">
+  <p class="faixa"><span class="rot acao">Ação</span>
+    <span class="rot prazo">N dias</span> Assunto
+    <span class="conf">confiança alta · fonte oficial</span></p>
+  <h3>Manchete do item, curta e afirmativa</h3>
+  <dl class="campos">
+    <div><dt>O que mudou</dt><dd>O fato, com data e nome próprio.</dd></div>
+    <div><dt>Por que importa</dt><dd>A consequência prática, sem adjetivo.</dd></div>
+    <div><dt>O que fazer</dt><dd class="fazer">Prática profissional genérica. Nunca movimento comercial, nunca nome de cliente.</dd></div>
+    <div><dt>Conferir</dt><dd>Onde confirmar antes de isso virar compromisso.</dd></div>
+  </dl>
+  <p class="fontes"><a href="https://">Nome da fonte</a></p>
+</article>
+
+     E uma linha da agenda lateral, para colar dentro de div class="agenda".
+     Use "quente" até 7 dias, "morna" de 8 a 45, e sem classe acima disso:
+
+<div class="linha quente">
+  <div class="dias">N<span>dias</span></div>
+  <div class="oque"><b>O que acontece</b><time datetime="2026-01-01">1 jan</time></div>
+</div>
+
+     ============================================================ -->
+
+<script>
+/* A restauração do tema já rodou no <head>. Aqui só o botão. */
+(function(){
+  var b = document.getElementById('tgl');
+  if(!b) return;
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function escuroAgora(){
+    var a = document.documentElement.getAttribute('data-theme');
+    return a ? a === 'dark' : mq.matches;
+  }
+  function sincroniza(){ b.setAttribute('aria-pressed', escuroAgora() ? 'true' : 'false'); }
+  sincroniza();
+  if (mq.addEventListener) mq.addEventListener('change', sincroniza);
+  b.addEventListener('click', function(){
+    var novo = escuroAgora() ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', novo);
+    try{ localStorage.setItem('kw-tema', novo); }catch(e){}
+    sincroniza();
+  });
+})();
+</script>
+
+</body>
+</html>

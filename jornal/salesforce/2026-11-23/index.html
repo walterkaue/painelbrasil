@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boletim Salesforce nº 14 — 23 de novembro de 2026 — Kauê Walter</title>
+<meta name="description" content="Marketing Cloud Next, Data 360 e Marketing Cloud Engagement continuam bloqueados nesta sessão, e a página consolidada de changelog que salvou a edição anterior voltou com uma versão que parece desatualizada. O que confirmou: a Salesforce anuncia com a Microsoft o Copilotforce, levando o Agentforce Coworker ao Teams e dando ao Data 360 compartilhamento de dado sem cópia com o Microsoft Fabric; e a API do status oficial revela quatro degradações recentes em Agentforce e Marketing Cloud, todas já resolvidas.">
+<link rel="canonical" href="https://kauewalter.com.br/jornal/salesforce/2026-11-23/">
+<meta name="author" content="Kauê Walter">
+<meta property="og:site_name" content="Kauê Walter">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Boletim Salesforce nº 14 — 23 de novembro de 2026">
+<meta property="og:description" content="Marketing Cloud Next, Data 360 e Marketing Cloud Engagement continuam bloqueados nas duas rotas conhecidas do Salesforce Help nesta sessão, e a página consolidada do changelog, que sustentou a edição anterior, veio com uma versão que parece desatualizada. O que confirmou: a Salesforce anuncia com a Microsoft o Copilotforce, levando o Agentforce Coworker ao Teams e dando ao Data 360 compartilhamento de dado sem cópia com o Microsoft Fabric; e a API pública do status oficial da Salesforce, nova nesta função para o boletim, revela quatro degradações recentes em Agentforce e Marketing Cloud — todas já resolvidas.">
+<meta property="og:url" content="https://kauewalter.com.br/jornal/salesforce/2026-11-23/">
+<meta property="article:published_time" content="2026-11-23">
+<meta property="og:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Boletim Salesforce nº 14 — 23 de novembro de 2026 — A Banca">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boletim Salesforce nº 14 — 23 de novembro de 2026">
+<meta name="twitter:description" content="Marketing Cloud Next, Data 360 e Marketing Cloud Engagement continuam bloqueados nesta sessão, e o changelog que salvou a edição anterior veio com uma versão desatualizada. O que confirmou: Copilotforce (Salesforce + Microsoft) e quatro degradações recentes já resolvidas, achadas pela API do status oficial.">
+<meta name="twitter:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<link rel="icon" href="/assets/kw.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Boletim Salesforce — RSS" href="/jornal/salesforce/feed.xml">
+<script>
+/* Tema antes da primeira pintura — mesma chave do resto do site. */
+(function(){try{var s=localStorage.getItem('kw-tema');
+if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/kw.css">
+<link rel="stylesheet" href="/assets/jornal.css">
+<script src="/assets/ouvir.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/"><span class="mark">KW</span> Kauê Walter</a>
+    <nav>
+      <a href="/">Carreira</a>
+      <a href="/jornal/" aria-current="page">A Banca</a>
+      <a href="/biblioteca/">Biblioteca</a>
+      <a href="/#contato">Contato</a>
+      <button class="tgl" id="tgl" type="button" aria-pressed="false"
+              aria-label="Alternar entre tema claro e escuro">Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="w">
+
+  <nav class="cadernos" aria-label="Cadernos do jornal">
+    <a class="capa" href="/jornal/">← Capa</a>
+    <a class="cad" href="/jornal/salesforce/" aria-current="page">Salesforce</a>
+    <a class="cad" href="/jornal/mercado/">Mercado</a>
+  </nav>
+
+  <header class="jornal-head">
+    <div class="rule">
+      <div>
+        <p class="kicker"><a href="/jornal/salesforce/">Boletim Salesforce</a> · edição nº 14</p>
+        <h1>Marketing Cloud Next, Data 360 e Marketing Cloud Engagement seguem com as três notas de versão bloqueadas nesta sessão, e a página consolidada de changelog que salvou a edição anterior volta com uma versão que parece desatualizada — o que confirmou foi a Salesforce anunciando com a Microsoft o Copilotforce, e a API do status oficial revelando quatro degradações recentes em Agentforce e Marketing Cloud, todas já resolvidas</h1>
+        <p class="sub">Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce,
+          filtrados por uma pergunta só: isso tem prazo ou muda o jeito de trabalhar?</p>
+      </div>
+      <p class="carimbo">
+        <b>Segunda, 23 nov 2026</b>
+        Corte: 23 nov, 07h BRT<br>
+        3 itens · 0 com prazo<br>
+        <span class="foco">MCE · MC Next · Data 360 · Agentforce</span>
+      </p>
+    </div>
+  </header>
+
+  <nav class="nav-edicoes" aria-label="Navegar entre edições">
+    <a class="prev" href="/jornal/salesforce/2026-11-16/">← Edição anterior · nº 13</a>
+  </nav>
+
+  <div class="ouvir" data-ouvir-edicao hidden>
+    <button type="button" class="ouvir-btn">
+      <span class="ouvir-icone" aria-hidden="true" focusable="false"></span>
+      <span class="ouvir-rotulo">Ouvir o resumo</span>
+    </button>
+    <span class="ouvir-tempo" data-ouvir-tempo hidden></span>
+    <audio data-ouvir-audio preload="none" src="/jornal/salesforce/2026-11-23/resumo.mp3"></audio>
+  </div>
+
+  <section class="destaque">
+    <p class="faixa"><span class="rot observar">Panorama da semana</span>
+      <span class="rot prazo">vigente</span>
+      <span class="conf">confiança alta · fonte oficial</span></p>
+    <h2>As três notas de versão mais importantes deste boletim continuam bloqueadas, e a fonte que salvou a edição passada veio, nesta sessão, com uma versão que parece atrasada em pelo menos duas semanas</h2>
+    <p>Nesta sessão, as três páginas de notas de versão de <b>Marketing Cloud Next</b>
+      (<code>release-notes.rn_marketing.htm</code>), <b>Data 360</b> (<code>release-notes.rn_c360_truth.htm</code>)
+      e <b>Marketing Cloud Engagement</b> (<code>mc_rn_release_notes.htm</code>, testada também no ID alternativo
+      <code>release-notes.rn_marketing_engagement.htm</code> e em dois números de release encontrados por busca,
+      258 e 262) voltaram a travar, como nas edições nº 10 a nº 13. O endereço novo (<code>/s/articleView</code>)
+      devolveu a tela "Sorry to interrupt / CSS Error" em toda tentativa com essas três páginas. O endereço antigo
+      (<code>/apex/HTViewHelpDoc</code>) — que salvou a edição nº 12 para essas mesmas três páginas — veio bloqueado
+      por confirmação de acesso sem resposta a tempo nas três tentativas desta sessão, mesmo depois de o domínio
+      <code>help.salesforce.com</code> já ter carregado conteúdo real de outra página sua nesta mesma sessão. Isso é
+      um achado novo: a trava de confirmação de acesso não parece ser só por domínio, como as edições anteriores
+      supunham — ela pode recair sobre um endereço específico mesmo com o domínio já liberado para outro endereço
+      dele.</p>
+    <p>A página consolidada <b>"Release Note Changes"</b> (<code>release-notes.rn_change_log.htm</code>), que
+      sustentou por completo a edição nº 13, carregou de novo nesta sessão — mas trouxe um sinal de alerta. A seção
+      de Agentforce foi lida de ponta a ponta nesta sessão, 54 notas conferidas uma a uma, e nenhuma delas tem rótulo
+      "Added" ou "Updated" mais recente que a semana de 12 de outubro de 2026. Isso significa que essa versão não
+      tem as três notas que a própria edição nº 13 confirmou, com fonte, como acrescentadas na semana de 26 de
+      outubro — o encerramento automático de chamada do Agentforce Voice, a troca de motor do Agentforce Builder
+      para GPT-5.6 Luna, e a data de reroteamento dos modelos Gemini 3.6 e 3.7 Flash. Como o changelog lido nesta
+      sessão contradiz um fato que este próprio boletim já confirmou com fonte, a conclusão mais honesta é que esta
+      sessão recebeu uma cópia em cache da página, atrasada em pelo menos duas semanas — não que nada mudou desde
+      então. Por isso, nenhum item novo desta edição vem dessa fonte, e a pendência fica registrada para a próxima
+      sessão testar de novo.</p>
+    <p>O que entrou nesta edição veio de dois lugares que esta sessão conseguiu abrir de verdade. A newsroom oficial
+      da Salesforce (<code>salesforce.com/news</code>) publicou em 17 de novembro o anúncio do <b>Copilotforce</b>,
+      parceria com a Microsoft que leva o Agentforce Coworker ao Microsoft Teams e permite ao Data 360 trocar dado
+      sem cópia com o Microsoft Fabric. E o status oficial da plataforma (<code>status.salesforce.com</code>), cuja
+      página em HTML continua sendo uma casca em JavaScript sem conteúdo visível, respondeu com dado real pela
+      primeira vez nesta função através da sua API pública (<code>api.status.salesforce.com</code>) — de onde vêm os
+      dois itens de confiabilidade desta edição, sobre Agentforce e sobre Marketing Cloud.</p>
+  </section>
+
+  <div class="colunas">
+
+    <div>
+      <p class="divisor">Itens da semana</p>
+      <div class="itens">
+      <!-- ITENS-INICIO — para acrescentar um item à mão, copie o bloco-modelo
+           que está comentado no fim deste arquivo e cole aqui dentro. -->
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Agentforce · Data 360 · Copilotforce
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>A Salesforce anuncia com a Microsoft o Copilotforce: o Agentforce Coworker chega ao Microsoft Teams em piloto, e o Data 360 passa a trocar dado sem cópia com o Microsoft Fabric, com a camada de compartilhamento ainda em preview público e beta</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>A newsroom oficial da Salesforce publicou em 17 de novembro de 2026 o
+              anúncio do Copilotforce, parceria com a Microsoft com três componentes: "Salesforce em Microsoft
+              Copilot" (acesso a dado de cliente do Salesforce dentro do Copilot, com escrita de volta ao CRM
+              mediante confirmação do usuário), "Sales Cloud no Teams" (painel de pipeline e cota, com cartões
+              adaptativos para atualizar campos de oportunidade) e compartilhamento de dado entre Data 360 e
+              Microsoft Fabric. A própria página classifica a disponibilidade de cada parte: "Salesforce em
+              Microsoft Copilot" como <b>preview público (beta)</b>, "Sales Cloud no Teams" como <b>piloto</b>, a
+              consulta federada do Data 360 sobre dado do Fabric (Data Federation) como <b>disponibilidade
+              geral</b>, e o compartilhamento de dado do Data 360 para o OneLake do Fabric como <b>preview público,
+              beta</b>. Nenhuma das quatro frentes tem data de calendário divulgada na página.</dd></div>
+            <div><dt>Por que importa</dt><dd>É a primeira integração oficial de dado entre o Data 360 e o ecossistema
+              Microsoft por fora de conectores de terceiros — a consulta federada já está em disponibilidade geral.
+              Para quem opera em conta que mistura Salesforce e Microsoft 365/Fabric, isso muda onde o dado de
+              segmentação pode viver sem precisar ser duplicado.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Quem usa Data 360 em ambiente com Microsoft Fabric, conferir a
+              documentação de Data Federation (já GA) antes de desenhar integração nova por fora dela; quem avaliar
+              o compartilhamento de dado para o OneLake, lembrar que a camada ainda é preview público em beta, sem
+              data de disponibilidade geral anunciada.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://www.salesforce.com/news/stories/copilotforce-announcement/">Salesforce News · Copilotforce</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Agentforce · Confiabilidade
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O status oficial da Salesforce registra duas degradações do Agentforce em outubro, ambas resolvidas em poucas horas: falha no Coworker em 21 de outubro, e falha de requisição com modelos de LLM de terceiros em 30 de outubro</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>A API pública do status oficial da Salesforce
+              (<code>api.status.salesforce.com</code>) registra duas degradações resolvidas no serviço Agentforce.
+              Em 21 de outubro, entre 00h25 e 02h07 UTC, uma falha afetou o Agentforce Coworker com requisições
+              intermitentes para um subconjunto de clientes; o status voltou ao normal até as 03h30 UTC do mesmo
+              dia. Em 30 de outubro, entre 12h37 e 18h06 UTC, requisições do Agentforce que usam modelo de LLM
+              hospedado por terceiro passaram a falhar; a resolução foi confirmada às 18h31 UTC do mesmo dia.</dd></div>
+            <div><dt>Por que importa</dt><dd>Nenhum dos dois incidentes ficou em aberto, e ambos duraram poucas
+              horas — mas são o primeiro dado de confiabilidade do Agentforce que este boletim conseguiu confirmar
+              em fonte oficial, numa semana em que as notas de versão do produto não puderam ser lidas.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Nenhuma ação corretiva pendente. Quem registrou erro de
+              requisição do Agentforce Coworker na noite de 20 de outubro, entre 21h25 e 23h07, ou falha usando modelo
+              de terceiro em 30 de outubro, entre 9h37 e 15h06 (horário de Brasília), pode confirmar nos próprios logs que coincide com esses
+              dois intervalos, já resolvidos, em vez de abrir investigação nova.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://api.status.salesforce.com/v1/incidents">Salesforce Trust Status · API de incidentes</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Marketing Cloud Engagement · Marketing Cloud Growth · Confiabilidade
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O mesmo status oficial mostra duas degradações em produtos de Marketing Cloud, ambas resolvidas: domínios de rastreamento de marca na Engagement, em 30 de outubro, e fluxos disparados por segmento no Marketing Starter/Pro-Suite, entre 31 de outubro e 2 de novembro</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>A mesma API de status registra, para a Marketing Cloud Engagement no Stack
+              6, uma degradação entre 02h00 e 13h38 UTC de 30 de outubro: clientes usando domínio de rastreamento de
+              marca tiveram erro intermitente e carregamento lento ao clicar em link de e-mail, já resolvida. Para o
+              Marketing Starter/Pro-Suite (camada do Marketing Cloud Growth), registra outra degradação entre 31 de
+              outubro (00h18 UTC) e 2 de novembro (18h49 UTC): fluxos disparados por segmento podem não ter
+              completado as ações configuradas, com impacto variando conforme o desenho do fluxo — também já
+              resolvida.</dd></div>
+            <div><dt>Por que importa</dt><dd>São duas janelas de risco operacional já encerradas, não um problema em
+              curso. Quem usa domínio de rastreamento de marca próprio na Engagement, ou fluxo disparado por
+              segmento no Growth/Starter/Pro-Suite, teve exposição possível nessas duas janelas específicas.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Nenhuma ação agora. Quem revisar relatório de entrega ou log
+              de automação desses dois períodos e notar comportamento anômalo pode descartar causa já resolvida em
+              vez de abrir chamado novo; se o comportamento persistir fora dessas janelas, aí sim vale abrir
+              caso.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://api.status.salesforce.com/v1/incidents">Salesforce Trust Status · API de incidentes</a></p>
+        </article>
+
+      <!-- ITENS-FIM -->
+      </div>
+    </div>
+
+    <aside>
+      <div class="agenda">
+        <h2>Agenda</h2>
+        <p class="nota">Nenhuma data nova e exata foi confirmada em fonte nesta sessão. O Copilotforce chega em
+          preview público, piloto e disponibilidade geral parcial, sem calendário divulgado na própria página. As
+          datas de reroteamento dos modelos Gemini 3.6 e 3.7 Flash, confirmadas na edição nº 13, não puderam ser
+          reconferidas nesta sessão — a fonte que as confirmou voltou, desta vez, com uma versão que parece
+          desatualizada (ver o panorama da semana). Elas continuam valendo; quem quiser a data exata, está na
+          <a href="/jornal/salesforce/2026-11-16/">edição anterior</a>. Por isso esta seção fica sem linha nova
+          esta semana.</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="limites">
+    <h2>O que este jornal não enxerga</h2>
+    <p>Esta edição foi montada só com fontes públicas, e o nível de confiança vem declarado item a item. Esta
+      semana, de novo, o que não foi possível ver pesa mais do que o que foi — e inclui um achado novo sobre a
+      própria confiabilidade de uma fonte que este boletim já tinha usado.</p>
+    <ul>
+      <li><b>As três páginas de notas de versão de Marketing Cloud Next, Data 360 e Marketing Cloud Engagement não
+        abriram, por nenhum dos dois endereços conhecidos.</b> O endereço novo (<code>/s/articleView?id=…&amp;type=5</code>)
+        devolveu a tela "Sorry to interrupt / CSS Error" em todas as tentativas com essas três páginas, inclusive em
+        dois números de release encontrados por busca (258 e 262) para a Engagement. O endereço antigo
+        (<code>/apex/HTViewHelpDoc?id=…</code>) veio bloqueado por confirmação de acesso sem resposta a tempo nas
+        três tentativas — mesmo depois de o domínio <code>help.salesforce.com</code> já ter carregado conteúdo real
+        de outra página sua nesta mesma sessão. Isso sugere que a trava de confirmação de acesso pode ser por
+        endereço específico, não só por domínio.</li>
+      <li><b>A página consolidada "Release Note Changes" abriu, mas a versão lida parece desatualizada.</b> A seção
+        de Agentforce foi conferida de ponta a ponta nesta sessão (54 notas) e sua entrada mais recente é da semana
+        de 12 de outubro de 2026 — sem as três notas da semana de 26 de outubro que a própria edição nº 13 já
+        confirmou com essa mesma fonte. Tratar como cache atrasado, não como "nada mudou desde então": é uma
+        pendência para a próxima sessão testar de novo, não uma conclusão desta edição.</li>
+      <li><b>admin.salesforce.com</b> abriu dois posts específicos — um podcast de 15 de outubro sobre prontidão
+        para o Winter '27 (que menciona o Agentforce Builder Central em beta e confirma que o "Setup with
+        Agentforce" chegou à disponibilidade geral, não exigindo mais o Data 360 para parte das tarefas) e um
+        checklist de contagem regressiva de 6 de agosto, já com todas as datas no passado. Nenhum dos dois cobre
+        Marketing Cloud Engagement, Marketing Cloud Next ou Data 360 além dessa única menção.</li>
+      <li><b>status.salesforce.com em HTML</b> (<code>/products/all</code> e <code>/products/MCPersonalization</code>)
+        continua sendo uma casca em JavaScript sem conteúdo visível sem executar o script. A API pública do mesmo
+        serviço (<code>api.status.salesforce.com</code>) abriu e deu os dois incidentes citados nos itens desta
+        edição — mas o endpoint de incidentes tem cerca de 95 mil caracteres, e a leitura cobriu de ponta a ponta
+        só os primeiros 80 mil; o restante não foi conferido linha a linha, então um incidente adicional de
+        novembro envolvendo os quatro produtos deste boletim, fora dessa faixa, não pode ser descartado.</li>
+      <li><b>investor.salesforce.com</b> abriu e deu só o anúncio da data de resultado do 3º trimestre fiscal de
+        2026 (divulgação em 2 de dezembro de 2026) — sem citar Marketing Cloud, Data 360 ou Agentforce no corpo do
+        texto.</li>
+      <li><b>Duas fontes secundárias testadas e que não serviram como item:</b> um artigo do Salesforce Ben sobre a
+        reconstrução da Marketing Cloud para IA, sem data de publicação visível e com número não verificável (taxa
+        de clique atribuída a "um relatório recente da Forbes" sem link); e um módulo do Trailhead sobre Data 360,
+        MuleSoft, Tableau e Informatica no Winter '27, sem nenhuma data de disponibilidade declarada. Nenhum dos
+        dois entrou como item por falta de data confirmável.</li>
+      <li><b>Comunicados de Partner Community e de PAM</b> não entram aqui: são canais fechados.</li>
+      <li><b>Nada específico de cliente</b> entra neste jornal, em nenhuma edição. Ele fala de plataforma, não de
+        conta.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <p><strong>Boletim Salesforce</strong> · edição nº 14, publicada em 23 de novembro de 2026 ·
+      <a href="/jornal/salesforce/">todas as edições</a> · <a href="/jornal/">capa</a></p>
+    <p><strong>Kauê Walter</strong> · Gerente de Marketing e Marketing Cloud Lead na Visum Digital ·
+      Caraguatatuba, São Paulo</p>
+    <p>Página pessoal e profissional. As opiniões e projetos aqui apresentados são de
+      responsabilidade individual e não representam posições de empregadores ou clientes.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BLOCO-MODELO · copie daqui para acrescentar um item à mão
+
+     Cole dentro de <div class="itens">, entre ITENS-INICIO e ITENS-FIM.
+     Troque a palavra "acao" por "preparar" ou "observar" nos DOIS lugares
+     (na classe do article e na classe do span do rótulo).
+     A linha "Conferir" só existe quando a fonte é secundária: apague-a
+     quando a fonte for oficial.
+
+<article class="item acao">
+  <p class="faixa"><span class="rot acao">Ação</span>
+    <span class="rot prazo">N dias</span> Assunto
+    <span class="conf">confiança alta · fonte oficial</span></p>
+  <h3>Manchete do item, curta e afirmativa</h3>
+  <dl class="campos">
+    <div><dt>O que mudou</dt><dd>O fato, com data e nome próprio.</dd></div>
+    <div><dt>Por que importa</dt><dd>A consequência prática, sem adjetivo.</dd></div>
+    <div><dt>O que fazer</dt><dd class="fazer">Prática profissional genérica. Nunca movimento comercial, nunca nome de cliente.</dd></div>
+    <div><dt>Conferir</dt><dd>Onde confirmar antes de isso virar compromisso.</dd></div>
+  </dl>
+  <p class="fontes"><a href="https://">Nome da fonte</a></p>
+</article>
+
+     E uma linha da agenda lateral, para colar dentro de div class="agenda".
+     Use "quente" até 7 dias, "morna" de 8 a 45, e sem classe acima disso:
+
+<div class="linha quente">
+  <div class="dias">N<span>dias</span></div>
+  <div class="oque"><b>O que acontece</b><time datetime="2026-01-01">1 jan</time></div>
+</div>
+
+     ============================================================ -->
+
+<script>
+/* A restauração do tema já rodou no <head>. Aqui só o botão. */
+(function(){
+  var b = document.getElementById('tgl');
+  if(!b) return;
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function escuroAgora(){
+    var a = document.documentElement.getAttribute('data-theme');
+    return a ? a === 'dark' : mq.matches;
+  }
+  function sincroniza(){ b.setAttribute('aria-pressed', escuroAgora() ? 'true' : 'false'); }
+  sincroniza();
+  if (mq.addEventListener) mq.addEventListener('change', sincroniza);
+  b.addEventListener('click', function(){
+    var novo = escuroAgora() ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', novo);
+    try{ localStorage.setItem('kw-tema', novo); }catch(e){}
+    sincroniza();
+  });
+})();
+</script>
+
+</body>
+</html>
