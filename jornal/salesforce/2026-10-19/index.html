@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boletim Salesforce nº 9 — 19 de outubro de 2026 — Kauê Walter</title>
+<meta name="description" content="O reroteamento dos modelos Gemini no Agentforce, acompanhado desde a edição anterior, chega em 1 dia. O Data 360 ganha validação de segmento com população filtrada e criação de segmento pelo MCP Server, e o Agentforce soma modelos e recursos de Prompt Builder em GA. Esta edição não encontrou novidade oficial de Marketing Cloud Engagement ou Marketing Cloud Next na semana — e isso está declarado.">
+<link rel="canonical" href="https://kauewalter.com.br/jornal/salesforce/2026-10-19/">
+<meta name="author" content="Kauê Walter">
+<meta property="og:site_name" content="Kauê Walter">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Boletim Salesforce nº 9 — 19 de outubro de 2026">
+<meta property="og:description" content="O reroteamento dos modelos Gemini no Agentforce chega em 1 dia. O Data 360 ganha duas ferramentas de segmentação, e o Agentforce soma modelos e recursos de Prompt Builder em GA. Esta edição não achou novidade oficial de MCE ou MC Next na semana — e diz isso.">
+<meta property="og:url" content="https://kauewalter.com.br/jornal/salesforce/2026-10-19/">
+<meta property="article:published_time" content="2026-10-19">
+<meta property="og:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Boletim Salesforce nº 9 — 19 de outubro de 2026 — A Banca">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boletim Salesforce nº 9 — 19 de outubro de 2026">
+<meta name="twitter:description" content="O reroteamento dos modelos Gemini no Agentforce chega em 1 dia. O Data 360 ganha duas ferramentas de segmentação, e o Agentforce soma modelos e recursos de Prompt Builder em GA. Esta edição não achou novidade oficial de MCE ou MC Next na semana — e diz isso.">
+<meta name="twitter:image" content="https://kauewalter.com.br/assets/og-jornal.png">
+<link rel="icon" href="/assets/kw.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Boletim Salesforce — RSS" href="/jornal/salesforce/feed.xml">
+<script>
+/* Tema antes da primeira pintura — mesma chave do resto do site. */
+(function(){try{var s=localStorage.getItem('kw-tema');
+if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/kw.css">
+<link rel="stylesheet" href="/assets/jornal.css">
+<script src="/assets/ouvir.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/"><span class="mark">KW</span> Kauê Walter</a>
+    <nav>
+      <a href="/">Carreira</a>
+      <a href="/jornal/" aria-current="page">A Banca</a>
+      <a href="/biblioteca/">Biblioteca</a>
+      <a href="/#contato">Contato</a>
+      <button class="tgl" id="tgl" type="button" aria-pressed="false"
+              aria-label="Alternar entre tema claro e escuro">Tema</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="w">
+
+  <nav class="cadernos" aria-label="Cadernos do jornal">
+    <a class="capa" href="/jornal/">← Capa</a>
+    <a class="cad" href="/jornal/salesforce/" aria-current="page">Salesforce</a>
+    <a class="cad" href="/jornal/mercado/">Mercado</a>
+  </nav>
+
+  <header class="jornal-head">
+    <div class="rule">
+      <div>
+        <p class="kicker"><a href="/jornal/salesforce/">Boletim Salesforce</a> · edição nº 9</p>
+        <h1>O reroteamento dos modelos Gemini usados por agente no Agentforce chega em 1 dia, o Data 360 ganha validação de segmento com população filtrada e criação de segmento pelo MCP Server, e esta edição não encontrou novidade oficial de Marketing Cloud Engagement ou Marketing Cloud Next na semana</h1>
+        <p class="sub">Marketing Cloud Engagement, Marketing Cloud Next, Data 360 e Agentforce,
+          filtrados por uma pergunta só: isso tem prazo ou muda o jeito de trabalhar?</p>
+      </div>
+      <p class="carimbo">
+        <b>Segunda, 19 out 2026</b>
+        Corte: 19 out, 08h BRT<br>
+        6 itens · 1 com prazo<br>
+        <span class="foco">MCE · MC Next · Data 360 · Agentforce</span>
+      </p>
+    </div>
+  </header>
+
+  <nav class="nav-edicoes" aria-label="Navegar entre edições">
+    <a class="prev" href="/jornal/salesforce/2026-10-12/">← Edição anterior · nº 8</a>
+    <a class="next" href="/jornal/salesforce/2026-10-26/">Próxima edição · nº 10 →</a>
+  </nav>
+
+  <div class="ouvir" data-ouvir-edicao hidden>
+    <button type="button" class="ouvir-btn">
+      <span class="ouvir-icone" aria-hidden="true" focusable="false"></span>
+      <span class="ouvir-rotulo">Ouvir o resumo</span>
+    </button>
+    <span class="ouvir-tempo" data-ouvir-tempo hidden></span>
+    <audio data-ouvir-audio preload="none" src="/jornal/salesforce/2026-10-19/resumo.mp3"></audio>
+  </div>
+
+  <section class="destaque">
+    <p class="faixa"><span class="rot acao">Decisão da semana</span>
+      <span class="rot prazo">1 dia</span>
+      <span class="conf">confiança alta · fonte oficial</span></p>
+    <h2>O reroteamento dos modelos Gemini 2.5 para 3.5 dentro do Agentforce, acompanhado desde a edição nº 8, entra em vigor amanhã, 20 de outubro; o Agentforce Observability ganha uma visão nova de sessões e intents a partir de hoje; e o Data 360 soma duas ferramentas de segmentação — mas esta sessão não achou release note datada da semana para Marketing Cloud Engagement ou Marketing Cloud Next</h2>
+    <p>Esta semana a apuração teve menos atrito do que a anterior: <b>admin.salesforce.com</b>,
+      <b>help.salesforce.com</b> e <b>salesforce.com/blog</b> abriram normalmente, e o changelog
+      consolidado de notas de versão do Salesforce Help pôde ser lido por completo para o período de
+      12 a 18 de outubro. A única falha repetida foi o <b>status.salesforce.com</b>, que continua a
+      exigir JavaScript e não carregou nesta sessão — a mesma limitação registrada desde a edição
+      nº 6. Mesmo com acesso mais aberto, esta sessão não encontrou, no changelog consolidado nem nas
+      páginas dedicadas de release notes, nenhuma entrada datada da semana para <b>Marketing Cloud
+      Engagement</b> ou <b>Marketing Cloud Next</b> — o foco principal deste boletim. Isso está
+      declarado em vez de contornado com item de outra semana; os detalhes estão em "O que este
+      jornal não enxerga".</p>
+    <p>O que se confirmou em fonte aberta ficou concentrado em Agentforce e Data 360. O blog oficial
+      do Salesforce Admins, relido nesta sessão, mantém a data de <b>20 de outubro de 2026</b> para o
+      reroteamento automático de toda requisição endereçada aos modelos Gemini 2.5 Pro, Flash e
+      Flash-Lite dentro do Agentforce para as versões Gemini 3.5 correspondentes — mudança de
+      infraestrutura que alcança qualquer agente construído sobre esses modelos, inclusive os agentes
+      de Agentforce Marketing. Faltando um dia, é o item com prazo mais apertado desta edição.
+      Separadamente, o changelog consolidado do Salesforce Help registra que o Agentforce
+      Observability recebeu, a partir de <b>19 de outubro</b> (hoje), uma visão nova de sessões e
+      intents para orgs no release Winter '27.</p>
+    <p>No Data 360, o mesmo changelog, na semana de 12 de outubro, registra duas adições à tela de
+      Segments: validação da lógica de um segmento com o detalhamento da população filtrada, e a
+      possibilidade de criar e gerenciar segmentos pelo Data 360 MCP Server. No próprio Agentforce,
+      o Prompt Builder ganhou disponibilidade geral (GA) para lógica condicional em prompt templates e
+      para grounding com arquivos do Microsoft Office, texto e e-mail, e a família de modelos GPT-6
+      (Luna, Sol e Astra) e o Claude Opus 5.5 passaram a estar disponíveis em geral dentro do
+      Agentforce — mais uma variável a testar na mesma semana em que o roteamento de modelo já está
+      mudando por conta própria.</p>
+  </section>
+
+  <div class="colunas">
+
+    <div>
+      <p class="divisor">Itens da semana</p>
+      <div class="itens">
+      <!-- ITENS-INICIO — para acrescentar um item à mão, copie o bloco-modelo
+           que está comentado no fim deste arquivo e cole aqui dentro. -->
+
+        <article class="item acao">
+          <p class="faixa"><span class="rot acao">Ação</span>
+            <span class="rot prazo">1 dia</span> Agentforce · Modelos
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Agentforce reroteia os modelos Gemini usados por agente a partir de amanhã, 20 de outubro</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>Nada mudou na data: o blog oficial do Salesforce Admins,
+              relido nesta sessão, confirma que a partir de <b>20 de outubro de 2026</b> toda
+              requisição endereçada aos modelos Gemini 2.5 Pro, Gemini 2.5 Flash e Gemini 2.5
+              Flash-Lite dentro do Agentforce passa a ser redirecionada automaticamente para as
+              versões Gemini 3.5 Pro, Flash e Flash-Lite. É a mesma mudança acompanhada desde a
+              edição nº 8 — a diferença é que agora falta um dia, não oito.</dd></div>
+            <div><dt>Por que importa</dt><dd>Qualquer agente construído sobre o Agentforce que
+              dependa desses modelos — incluindo os agentes de Agentforce Marketing descritos em
+              edições anteriores, como o Goals Agent e o Content Agent — pode mudar de comportamento
+              de resposta a partir de amanhã, sem que ninguém tenha pedido a mudança.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Quem ainda não comparou a resposta atual
+              (Gemini 2.5) com a nova rota (Gemini 3.5) no Prompt Builder e no Einstein Studio, fazer
+              isso hoje — a partir de amanhã a troca já estará em produção, não em teste.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://admin.salesforce.com/blog/2026/jens-top-winter-27-release-features-for-admins">Salesforce Admins · principais recursos do Winter '27 para administradores</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">vigente</span> Agentforce · Observability
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Agentforce Observability ganha uma visão nova de sessões e intents, disponível desde hoje para orgs no Winter '27</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O changelog consolidado de notas de versão do Salesforce
+              Help, relido nesta sessão, registra uma nova visão de sessões e intents no Agentforce
+              Observability, disponível em orgs no release Winter '27 a partir de <b>19 de outubro de
+              2026</b> — hoje. A mesma entrada do changelog soma fontes de conhecimento nos detalhes de
+              sessão e métricas de latência e fala no trace de voz.</dd></div>
+            <div><dt>Por que importa</dt><dd>É a tela que mostra o que um agente decidiu e por quê —
+              inclusive agentes de Agentforce Marketing construídos sobre a mesma plataforma. Mais
+              detalhe de sessão é menos tempo adivinhando por que uma resposta saiu diferente do
+              esperado.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Quem acompanha agente de marketing em produção,
+              abrir o Observability Center esta semana e comparar a visão nova de sessões com o que
+              havia antes.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://help.salesforce.com/s/articleView?language=en_US&id=release-notes.rn_change_log.htm&type=5">Salesforce Help · Release Note Changes</a></p>
+        </article>
+
+        <article class="item preparar">
+          <p class="faixa"><span class="rot preparar">Preparar</span>
+            <span class="rot prazo">vigente</span> Data 360 · Segmentação
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Data 360 passa a validar a lógica de um segmento mostrando o tamanho da população filtrada</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O changelog consolidado do Salesforce Help, relido nesta
+              sessão, registra que a tela de Segments do Data 360 ganhou validação da lógica de
+              segmento com detalhamento da população filtrada, na semana de 12 de outubro de
+              2026.</dd></div>
+            <div><dt>Por que importa</dt><dd>Reduz o erro clássico de montar um segmento e só
+              descobrir o tamanho real dele depois de a campanha já estar ativada.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Ao criar ou revisar um segmento no Data 360,
+              usar a nova validação antes de aprovar o envio, não depois.</dd></div>
+            <div><dt>Conferir</dt><dd>O artigo de release notes dedicado a essa tela não foi aberto
+              separadamente nesta sessão; a confirmação acima vem do changelog consolidado, não do
+              detalhe funcional completo da validação.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://help.salesforce.com/s/articleView?language=en_US&id=release-notes.rn_change_log.htm&type=5">Salesforce Help · Release Note Changes</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Data 360 · APIs
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Data 360 passa a permitir criar e gerenciar segmentos pelo MCP Server</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O mesmo changelog consolidado do Salesforce Help, relido
+              nesta sessão, registra que a criação e a gestão de segmentos (Segment and Act) agora
+              podem ser feitas pelo Data 360 MCP Server, também na semana de 12 de outubro de
+              2026.</dd></div>
+            <div><dt>Por que importa</dt><dd>Abre caminho para automatizar a criação de segmento fora
+              da interface do Data 360 — relevante para quem já usa agente ou script para orquestrar
+              campanha.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Nenhuma ação imediata; vale mapear, com o time
+              técnico, se algum fluxo de segmentação hoje manual poderia passar pelo MCP
+              Server.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://help.salesforce.com/s/articleView?language=en_US&id=release-notes.rn_change_log.htm&type=5">Salesforce Help · Release Note Changes</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Agentforce · Prompt Builder
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>O Prompt Builder do Agentforce ganha lógica condicional e novas fontes de grounding, agora em disponibilidade geral</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O changelog consolidado do Salesforce Help, relido nesta
+              sessão, confirma a disponibilidade geral (GA) de lógica condicional em prompt templates
+              do Prompt Builder, além de grounding de prompt templates com arquivos do Microsoft
+              Office, texto e e-mail — ambos na semana de 12 de outubro de 2026.</dd></div>
+            <div><dt>Por que importa</dt><dd>Quem personaliza os agentes de Agentforce Marketing
+              (Goals Agent, Content Agent) via Prompt Builder ganha mais controle sobre o que o agente
+              lê antes de responder, e pode ramificar a lógica do prompt sem manter templates
+              paralelos.</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Revisar os prompt templates em produção e
+              avaliar onde a lógica condicional substitui templates hoje mantidos à mão em
+              duplicidade.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://help.salesforce.com/s/articleView?language=en_US&id=release-notes.rn_change_log.htm&type=5">Salesforce Help · Release Note Changes</a></p>
+        </article>
+
+        <article class="item observar">
+          <p class="faixa"><span class="rot observar">Observar</span>
+            <span class="rot prazo">vigente</span> Agentforce · Modelos
+            <span class="conf">confiança alta · fonte oficial</span></p>
+          <h3>Novos modelos de IA chegam à disponibilidade geral dentro do Agentforce</h3>
+          <dl class="campos">
+            <div><dt>O que mudou</dt><dd>O mesmo changelog consolidado, relido nesta sessão, registra
+              que a família GPT-6 (Luna, Sol e Astra) e o Claude Opus 5.5 passaram a estar disponíveis
+              em geral (GA) dentro do Agentforce, na semana de 12 de outubro de 2026.</dd></div>
+            <div><dt>Por que importa</dt><dd>Mais opção de modelo por agente é mais variável a testar
+              antes de trocar — principalmente na mesma semana em que o Agentforce já está reroteando
+              por conta própria os modelos Gemini usados por agente (ver item acima).</dd></div>
+            <div><dt>O que fazer</dt><dd class="fazer">Antes de trocar o modelo de um agente de
+              marketing para um dos novos, testar em sandbox com os mesmos prompts já usados em
+              produção.</dd></div>
+          </dl>
+          <p class="fontes"><a href="https://help.salesforce.com/s/articleView?language=en_US&id=release-notes.rn_change_log.htm&type=5">Salesforce Help · Release Note Changes</a></p>
+        </article>
+
+      <!-- ITENS-FIM -->
+      </div>
+    </div>
+
+    <aside>
+      <div class="agenda">
+        <h2>Agenda</h2>
+        <p class="nota">Contagem a partir de 19 de outubro de 2026.</p>
+
+        <div class="linha quente">
+          <div class="dias">1<span>dia</span></div>
+          <div class="oque"><b>Reroteamento dos modelos Gemini no Agentforce</b><time datetime="2026-10-20">20 out</time></div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <section class="limites">
+    <h2>O que este jornal não enxerga</h2>
+    <p>Esta edição foi montada só com fontes públicas, e o nível de confiança vem declarado item a
+      item. Onde a fonte é secundária, está escrito — e a recomendação é conferir antes de a
+      informação virar compromisso com alguém.</p>
+    <ul>
+      <li><b>Nenhuma novidade oficial de Marketing Cloud Engagement ou Marketing Cloud Next nesta
+        semana.</b> Esta sessão consultou o changelog consolidado de notas de versão do Salesforce
+        Help cobrindo 12 a 18 de outubro, e também as páginas dedicadas de release notes dos dois
+        produtos, e não encontrou nenhuma entrada datada da semana para nenhum dos dois — o foco
+        principal declarado deste boletim. Pode ser semana fraca de fato, ou pode ser que a mudança
+        tenha entrado sem data visível no changelog; esta sessão não tem como distinguir as duas
+        coisas. É por isso que esta edição tem mais itens de Agentforce e Data 360 do que o padrão
+        deste caderno, em vez de menos itens no total.</li>
+      <li><b>status.salesforce.com</b> continua a exigir JavaScript e não carregou nesta sessão — a
+        mesma falha registrada desde a edição nº 6. Não foi possível confirmar por essa via se há
+        janela de manutenção ou incidente afetando alguma instância esta semana.</li>
+      <li><b>investor.salesforce.com</b> não trouxe nenhum comunicado financeiro novo relevante para
+        Marketing Cloud ou Data 360 publicado nesta semana — o release de resultados mais recente
+        encontrado é do terceiro trimestre fiscal, de dezembro de 2025.</li>
+      <li><b>Comunicados de Partner Community e de PAM</b> não entram aqui: são canais fechados.</li>
+      <li><b>Nada específico de cliente</b> entra neste jornal, em nenhuma edição. Ele fala de
+        plataforma, não de conta.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <p><strong>Boletim Salesforce</strong> · edição nº 9, publicada em 19 de outubro de 2026 ·
+      <a href="/jornal/salesforce/">todas as edições</a> · <a href="/jornal/">capa</a></p>
+    <p><strong>Kauê Walter</strong> · Gerente de Marketing e Marketing Cloud Lead na Visum Digital ·
+      Caraguatatuba, São Paulo</p>
+    <p>Página pessoal e profissional. As opiniões e projetos aqui apresentados são de
+      responsabilidade individual e não representam posições de empregadores ou clientes.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BLOCO-MODELO · copie daqui para acrescentar um item à mão
+
+     Cole dentro de <div class="itens">, entre ITENS-INICIO e ITENS-FIM.
+     Troque a palavra "acao" por "preparar" ou "observar" nos DOIS lugares
+     (na classe do article e na classe do span do rótulo).
+     A linha "Conferir" só existe quando a fonte é secundária: apague-a
+     quando a fonte for oficial.
+
+<article class="item acao">
+  <p class="faixa"><span class="rot acao">Ação</span>
+    <span class="rot prazo">N dias</span> Assunto
+    <span class="conf">confiança alta · fonte oficial</span></p>
+  <h3>Manchete do item, curta e afirmativa</h3>
+  <dl class="campos">
+    <div><dt>O que mudou</dt><dd>O fato, com data e nome próprio.</dd></div>
+    <div><dt>Por que importa</dt><dd>A consequência prática, sem adjetivo.</dd></div>
+    <div><dt>O que fazer</dt><dd class="fazer">Prática profissional genérica. Nunca movimento comercial, nunca nome de cliente.</dd></div>
+    <div><dt>Conferir</dt><dd>Onde confirmar antes de isso virar compromisso.</dd></div>
+  </dl>
+  <p class="fontes"><a href="https://">Nome da fonte</a></p>
+</article>
+
+     E uma linha da agenda lateral, para colar dentro de div class="agenda".
+     Use "quente" até 7 dias, "morna" de 8 a 45, e sem classe acima disso:
+
+<div class="linha quente">
+  <div class="dias">N<span>dias</span></div>
+  <div class="oque"><b>O que acontece</b><time datetime="2026-01-01">1 jan</time></div>
+</div>
+
+     ============================================================ -->
+
+<script>
+/* A restauração do tema já rodou no <head>. Aqui só o botão. */
+(function(){
+  var b = document.getElementById('tgl');
+  if(!b) return;
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function escuroAgora(){
+    var a = document.documentElement.getAttribute('data-theme');
+    return a ? a === 'dark' : mq.matches;
+  }
+  function sincroniza(){ b.setAttribute('aria-pressed', escuroAgora() ? 'true' : 'false'); }
+  sincroniza();
+  if (mq.addEventListener) mq.addEventListener('change', sincroniza);
+  b.addEventListener('click', function(){
+    var novo = escuroAgora() ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', novo);
+    try{ localStorage.setItem('kw-tema', novo); }catch(e){}
+    sincroniza();
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -56,5 +56,12 @@
     atualizaBotao();
   });
 
-  wrap.hidden = false;
+  /* Só mostra o player se o resumo.mp3 existir de fato. Edição publicada antes do áudio
+     ficar pronto (ou sem áudio) não exibe um botão que não toca. Sem fetch, mostra como antes. */
+  var src = audio.getAttribute('src');
+  if (!src) return;
+  if (typeof window.fetch !== 'function') { wrap.hidden = false; return; }
+  fetch(src, { method: 'HEAD' }).then(function(r){
+    if (r.ok) wrap.hidden = false;
+  }).catch(function(){ /* rede falhou: mantém escondido */ });
 })();
