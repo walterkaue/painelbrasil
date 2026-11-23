@@ -124,6 +124,13 @@ edição já publicada pra tapar o buraco.
      usados e a regra de prioridade se o mês apertar), salvar como `resumo.mp3` na pasta da edição,
      e colar o bloco `<div class="ouvir" data-ouvir-edicao hidden>...</div>` (copie de qualquer
      edição existente) logo abaixo de `.nav-edicoes`.
+- **Rotina na nuvem (desde 23/11/2026).** As duas edições são produzidas toda segunda às 4h (Brasília)
+  por uma rotina do Claude Code na nuvem, que segue [.claude/rotinas/banca-semanal.md](.claude/rotinas/banca-semanal.md):
+  apura, escreve, passa pelo agente [revisor-banca](.claude/agents/revisor-banca.md), gera o áudio
+  pela API do ElevenLabs (`ELEVENLABS_API_KEY` no ambiente da nuvem) e abre um PR no branch
+  `claude/banca-AAAA-MM-DD`. A Vercel gera a prévia do branch (`vercel.json` desliga o deploy da
+  `main` lá — o site oficial continua só no GitHub Pages). **Nada vai ao ar sem o merge do Kauê.**
+  Mudou o método? Edite o roteiro da rotina no repositório, não o prompt da rotina.
 - **Agrupar por ano só quando fizer sentido.** A lista em `.edicoes` fica simples (sem separador) até
   conter edições de mais de um ano civil. A partir daí, inserir `<h3>{ano}</h3>` acima do primeiro
   item de cada ano, ano mais recente primeiro. Não implementar isso antes de precisar.
