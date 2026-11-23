@@ -30,6 +30,9 @@ texto foi escrito pra leitura na tela, não pra fala.
 | 12/10/2026 | Boletim Salesforce nº 8 (12/10) | 671 | 2.092 / 10.000* | [jornal/salesforce/2026-10-12/resumo.mp3](salesforce/2026-10-12/resumo.mp3) |
 | 12/10/2026 | Análise de Mercado nº 8 (12/10) | 716 | 2.808 / 10.000* | [jornal/mercado/2026-10-12/resumo.mp3](mercado/2026-10-12/resumo.mp3) |
 | 23/11/2026 | Teste do conector ElevenLabs para a rotina na nuvem (1 frase, Rafael Valente) | 71 | 71 / 10.000 (ciclo de novembro) | — (teste, não publicado) |
+| 23/11/2026 | Ensaio da rotina na nuvem pelo conector (1 frase) | 84 | 155 / 10.000 | — (teste, não publicado) |
+| 23/11/2026 | Boletim Salesforce nº 14 (23/11) | 705 | 860 / 10.000 | [jornal/salesforce/2026-11-23/resumo.mp3](salesforce/2026-11-23/resumo.mp3) |
+| 23/11/2026 | Análise de Mercado nº 14 (23/11) | 735 | 1.595 / 10.000 | [jornal/mercado/2026-11-23/resumo.mp3](mercado/2026-11-23/resumo.mp3) |
 
 \* calculado pelo padrão 1:1 já confirmado no primeiro áudio — não conferido com o saldo real da
 conta nesta linha, atualizar se divergir.
