@@ -88,9 +88,22 @@ Para cada caderno:
    pensado para fala, 650 a 800 caracteres de narração, teto 900, sem afirmar nada que a página não
    afirme. Rode `check_roteiro_budget.py`.
 2. O roteiro passa pela revisão (passo 3) antes de gerar o áudio: cada geração gasta crédito.
-3. Gere com `python .claude/skills/recording-audio-summary/scripts/gerar_audio.py <roteiro> jornal/{caderno}/{data}/resumo.mp3`
-   (voz Rafael Valente). **Uma tentativa por caderno.** Se falhar, não insista: registre o erro no
-   PR e siga sem áudio para aquele caderno.
+3. Gere pelo **conector ElevenLabs** (o plano Free recusa voz da biblioteca pela API direta, com
+   HTTP 402; pelo conector ela funciona — testado em 23/11/2026):
+   1. `creative_generate_speech` com `prompt` = só a narração (o texto depois do `---` do roteiro),
+      `model_id` = `eleven_multilingual_v2`, `voice_id` = `dX7gRq1dIvLTgUaWpEFn` (Rafael Valente),
+      `generations_count` = **1**. Use um `flow_id` só para os dois cadernos da semana (crie com
+      `creative_create_flow` antes, se a ferramenta existir).
+   2. `creative_get_generations` com o `flow_id` e o `generation_id` devolvido. Se o status ainda não
+      for `completed`, espere 15 segundos e consulte de novo (consultar não gasta crédito).
+   3. Baixe o `full_res_url` com `curl -fsSL -o jornal/{caderno}/{data}/resumo.mp3 "<url>"` e confira
+      que o arquivo tem mais de 20 KB e começa com `ID3` (`head -c 3 arquivo`).
+   - Se a geração responder que a fila gratuita está ocupada ("Free generations are busy"), nada foi
+     cobrado: espere 2 minutos e tente de novo, até 4 vezes. Qualquer outro erro: **não tente de
+     novo** (cada geração cobra), registre no PR e siga sem áudio naquele caderno.
+   - Caminho alternativo, só se o conector não existir na sessão:
+     `python .claude/skills/recording-audio-summary/scripts/gerar_audio.py <roteiro> jornal/{caderno}/{data}/resumo.mp3`
+     (API direta; hoje só funciona com plano pago ou voz que não seja da biblioteca).
 4. Só se o mp3 foi gerado: cole o bloco `<div class="ouvir" data-ouvir-edicao hidden>…</div>` logo
    abaixo de `.nav-edicoes` (copie de uma edição existente, trocando o `src`), atualize o status do
    roteiro e acrescente a linha no "Log de geração" de `jornal/creditos-elevenlabs.md`.

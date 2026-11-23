@@ -48,7 +48,10 @@ mês apertado).
 ## Gerar e publicar
 
 1. Gerar no ElevenLabs com a voz corrente (Rafael Valente, `dX7gRq1dIvLTgUaWpEFn`, até a decisão
-   final da issue #12). Pela API: `python .claude/skills/recording-audio-summary/scripts/gerar_audio.py <roteiro> <pasta-da-edição>/resumo.mp3`
+   final da issue #12). **Caminho principal: o conector ElevenLabs** (`creative_generate_speech` com
+   `eleven_multilingual_v2` e 1 geração, depois `creative_get_generations` e baixar o
+   `full_res_url`) — ver o passo a passo em `.claude/rotinas/banca-semanal.md`. No plano Free a API
+   direta recusa voz da biblioteca (HTTP 402, confirmado em 23/11/2026). Pela API, só com plano pago: `python .claude/skills/recording-audio-summary/scripts/gerar_audio.py <roteiro> <pasta-da-edição>/resumo.mp3`
    (na nuvem a chave vem do segredo do ambiente; localmente, `ELEVENLABS_API_KEY`; `--ensaio` testa com uma frase curta). Uma tentativa
    só — se a API recusar, registre o motivo e siga sem áudio.
 2. Salvar como `resumo.mp3` na pasta da edição (`jornal/{caderno}/{AAAA-MM-DD}/resumo.mp3`).
